@@ -35,7 +35,7 @@ http {
     }
 
     # v0 — serve public/ static files directly (standalone doesn't serve them)
-    location ~ ^/v0/(.+\.(?:png|jpe?g|gif|webp|svg|ico|pdf|mp4|woff2?|ttf|eot|css|js))$ {
+    location ~ ^/v0/(.+\.(?:png|jpe?g|gif|webp|svg|ico|pdf|mp4|woff2?|ttf|eot))$ {
       alias /app/v0/public/$1;
       expires 30d;
       add_header Cache-Control "public";
@@ -56,7 +56,7 @@ http {
     }
 
     # v1 — serve public/ static files directly
-    location ~ ^/v1/(.+\.(?:png|jpe?g|gif|webp|svg|ico|pdf|mp4|woff2?|ttf|eot|css|js))$ {
+    location ~ ^/v1/(.+\.(?:png|jpe?g|gif|webp|svg|ico|pdf|mp4|woff2?|ttf|eot))$ {
       alias /app/v1/public/$1;
       expires 30d;
       add_header Cache-Control "public";
@@ -77,7 +77,7 @@ http {
     }
 
     # v2 — serve public/ static files directly
-    location ~ ^/v2/(.+\.(?:png|jpe?g|gif|webp|svg|ico|pdf|mp4|woff2?|ttf|eot|css|js))$ {
+    location ~ ^/v2/(.+\.(?:png|jpe?g|gif|webp|svg|ico|pdf|mp4|woff2?|ttf|eot))$ {
       alias /app/v2/public/$1;
       expires 30d;
       add_header Cache-Control "public";
@@ -98,7 +98,7 @@ http {
     }
 
     # v3 — serve public/ static files directly
-    location ~ ^/v3/(.+\.(?:png|jpe?g|gif|webp|svg|ico|pdf|mp4|woff2?|ttf|eot|css|js))$ {
+    location ~ ^/v3/(.+\.(?:png|jpe?g|gif|webp|svg|ico|pdf|mp4|woff2?|ttf|eot))$ {
       alias /app/v3/public/$1;
       expires 30d;
       add_header Cache-Control "public";
