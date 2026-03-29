@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import { Car, Globe, Handshake, BookOpen, Puzzle, Zap, MessageCircle, Mic, Waves, BookText, Home, School, Monitor, MapPin, Phone, Mail } from "lucide-react";
+import { Car, Globe, Handshake, BookOpen, Puzzle, Zap, MessageCircle, Mic, Waves, BookText, Home as HomeIcon, School, Monitor, MapPin, Phone, Mail } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Speech Pathologist Sydney NSW | Shine and Speak",
@@ -239,7 +239,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-white/5 border border-white/10 backdrop-blur-sm p-10 rounded-2xl hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
               <h3 className="text-xl font-bold mb-4 text-golden-amber flex items-center gap-4">
-                <div className="bg-white/10 p-3 rounded-xl"><Home className="w-6 h-6 text-white" strokeWidth={1.5} /></div> Home sessions
+                <div className="bg-white/10 p-3 rounded-xl"><HomeIcon className="w-6 h-6 text-white" strokeWidth={1.5} /></div> Home sessions
               </h3>
               <p className="text-blue-50/80 leading-relaxed">Therapy in the comfort of your own home. I bring everything needed. No travel stress for your family.</p>
             </div>
