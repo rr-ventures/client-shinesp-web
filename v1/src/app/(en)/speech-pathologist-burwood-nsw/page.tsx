@@ -161,8 +161,8 @@ export default function BurwoodPage() {
             <div className="md:col-span-1">
               <div className="sticky top-24 bg-primary text-white p-8 rounded-2xl shadow-xl">
                 <h3 className="text-2xl font-bold mb-4">Book a session in Burwood</h3>
-                <p className="text-gray-200 mb-6">I have current availability for mobile visits in Burwood and surrounding areas.</p>
-                <ul className="space-y-3 mb-8 text-gray-200">
+                <p className="text-white/90 mb-6">I have current availability for mobile visits in Burwood and surrounding areas.</p>
+                <ul className="space-y-3 mb-8 text-white/90">
                   <li className="flex items-center gap-2"><CheckCircle2 size={18} className="text-secondary" /> Home visits</li>
                   <li className="flex items-center gap-2"><CheckCircle2 size={18} className="text-secondary" /> School visits</li>
                   <li className="flex items-center gap-2"><CheckCircle2 size={18} className="text-secondary" /> Telehealth</li>
@@ -182,11 +182,11 @@ export default function BurwoodPage() {
         <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-r from-primary via-primary/90 to-primary/80"></div>
         <div className="container-custom relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">Ready to help your child thrive?</h2>
-          <p className="text-xl text-gray-200 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+          <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
             Book a free discovery call to talk about your child's needs — no obligation, no pressure.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-8 mb-12 text-white font-medium text-xl">
-            <a href="tel:+61400000000" className="flex items-center gap-3 hover:text-secondary transition-colors"><span className="bg-white/10 p-3 rounded-full">📞</span> 0400 000 000</a>
+            <a href="tel:+61421608819" className="flex items-center gap-3 hover:text-secondary transition-colors"><span className="bg-white/10 p-3 rounded-full">📞</span> 0421 608 819</a>
             <span className="hidden sm:block opacity-30">|</span>
             <a href="mailto:admin@shineandspeak.com.au" className="flex items-center gap-3 hover:text-secondary transition-colors"><span className="bg-white/10 p-3 rounded-full">✉️</span> admin@shineandspeak.com.au</a>
           </div>

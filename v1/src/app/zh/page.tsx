@@ -69,8 +69,8 @@ export default function ZhPage() {
               <Link href="/book" className="btn-secondary text-lg px-8 py-4">
                 预约免费咨询通话
               </Link>
-              <a href="tel:+61400000000" className="btn-outline text-lg px-8 py-4">
-                📞 0400 000 000
+              <a href="tel:+61421608819" className="btn-outline text-lg px-8 py-4">
+                📞 0421 608 819
               </a>
             </div>
           </div>
@@ -118,7 +118,7 @@ export default function ZhPage() {
                 如有任何问题，欢迎致电或发送电子邮件。我们会在24小时内回复。
               </p>
               <div className="space-y-3 text-lg">
-                <p>📞 <a href="tel:+61400000000" className="text-primary font-bold hover:text-secondary">0400 000 000</a></p>
+                <p>📞 <a href="tel:+61421608819" className="text-primary font-bold hover:text-secondary">0421 608 819</a></p>
                 <p>✉️ <a href="mailto:admin@shineandspeak.com.au" className="text-primary font-bold hover:text-secondary">admin@shineandspeak.com.au</a></p>
               </div>
             </div>

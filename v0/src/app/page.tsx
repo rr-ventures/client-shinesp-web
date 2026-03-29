@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Brain, Focus, MessageCircle, Mic, Activity, BookOpen } from 'lucide-react';
 import JsonLd from '@/components/JsonLd';
 import {
   medicalBusinessSchema,
@@ -75,20 +76,20 @@ export default function HomePage() {
         </div>
         <div className="container mx-auto px-4 lg:px-8 grid md:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10">
           <div className="max-w-2xl">
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium text-[#112A46] mb-6 leading-[1.15] tracking-tight text-balance">
+            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-medium text-[#112A46] mb-8 leading-[1.1] tracking-tight text-balance">
               Helping your child communicate with confidence
             </h1>
-            <p className="text-lg md:text-xl text-slate-600 mb-10 leading-relaxed font-light">
-              Personalised speech therapy — delivered to your home, school, or online. Available in English and Mandarin (普通话). Serving Inner West Sydney and surrounds.
+            <p className="text-xl md:text-2xl text-slate-600 mb-12 leading-relaxed font-light">
+              Personalised speech therapy — delivered to your home, school, or online. Serving Inner West Sydney and surrounds.
             </p>
             <div className="flex flex-col sm:flex-row gap-5">
               {/* REPLACE: swap /book href with real Calendly URL if needed */}
               <Link href="/book" className="bg-[#C89B66] text-white text-center px-8 py-4 rounded-full font-medium text-lg hover:bg-[#b58956] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
                 Book a Free Discovery Call
               </Link>
-              <a href="#services" className="border border-[#112A46]/20 text-[#112A46] text-center px-8 py-4 rounded-full font-medium text-lg hover:bg-[#112A46] hover:text-white transition-all duration-300">
-                Learn More ↓
-              </a>
+              <Link href="/refer-a-client" className="border border-[#112A46]/20 text-[#112A46] text-center px-8 py-4 rounded-full font-medium text-lg hover:bg-[#112A46] hover:text-white transition-all duration-300">
+                Refer a Client →
+              </Link>
             </div>
             <div className="mt-10 flex flex-wrap gap-6 text-sm font-medium text-[#112A46]/80">
               <span className="flex items-center gap-2"><span className="text-[#C89B66]">✓</span> CPSP Certified</span>
@@ -99,11 +100,11 @@ export default function HomePage() {
           <div className="flex justify-center relative">
             <div className="absolute inset-0 bg-[#E3E7E4] rounded-[40px] rotate-3 scale-105 opacity-50"></div>
             <Image
-              src="/shine-and-speak-logo-mark-transparent.png"
-              alt="Shine and Speak speech pathology brand mark — mobile therapy Sydney"
-              width={500}
-              height={500}
-              className="w-full max-w-lg object-contain relative z-10 drop-shadow-xl"
+              src="/hero-stock-placeholder-unsplash.jpg"
+              alt="Shine and Speak speech pathology — mobile therapy Sydney"
+              width={600}
+              height={400}
+              className="w-full max-w-lg object-cover rounded-3xl relative z-10 drop-shadow-xl"
               priority
             />
           </div>
@@ -133,22 +134,27 @@ export default function HomePage() {
       </section>
 
       {/* SECTION 3: CONDITION CARDS */}
-      <section id="services" className="py-24 md:py-32 bg-[#FAFAF8]">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section id="services" className="py-24 md:py-32 bg-white relative">
+        <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:24px_24px] opacity-40 pointer-events-none"></div>
+        <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="font-serif text-3xl md:text-4xl font-medium text-[#112A46] mb-4">How we can help your child</h2>
             <p className="text-slate-600 text-lg font-light">Evidence-based therapy tailored to your child's unique strengths and challenges.</p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
             {[
-              { title: 'Autism & ASD', desc: 'Supporting children on the autism spectrum with communication, social skills, and language development.', link: '/speech-therapy-autism-sydney-nsw', anchor: 'Speech therapy for autism and ASD' },
-              { title: 'ADHD & Attention', desc: 'Helping children with ADHD develop focus, listening skills, and social communication strategies.', link: '/speech-therapy-adhd-sydney-nsw', anchor: 'Speech therapy for ADHD and attention' },
-              { title: 'Language Delay', desc: 'Building receptive and expressive language skills so your child can understand and be understood.', link: '/speech-therapy-language-delay-sydney-nsw', anchor: 'Language delay speech therapy' },
-              { title: 'Speech Sounds', desc: 'Helping children pronounce sounds clearly so they can be understood by family, friends, and teachers.', link: '/speech-therapy-speech-sounds-sydney-nsw', anchor: 'Speech sounds and pronunciation therapy' },
-              { title: 'Stuttering & Fluency', desc: 'Evidence-based support for children and adults experiencing stuttering or other fluency difficulties.', link: '/speech-therapy-stuttering-sydney-nsw', anchor: 'Stuttering and fluency support' },
-              { title: 'Literacy & Reading', desc: 'Supporting reading, writing, and spelling development for children who are finding literacy challenging.', link: '/speech-therapy-literacy-sydney-nsw', anchor: 'Literacy and reading support' },
+              { title: 'Autism & ASD', desc: 'Supporting children on the autism spectrum with communication, social skills, and language development.', link: '/speech-therapy-autism-sydney-nsw', anchor: 'Speech therapy for autism and ASD', icon: Brain },
+              { title: 'ADHD & Attention', desc: 'Helping children with ADHD develop focus, listening skills, and social communication strategies.', link: '/speech-therapy-adhd-sydney-nsw', anchor: 'Speech therapy for ADHD and attention', icon: Focus },
+              { title: 'Language Delay', desc: 'Building receptive and expressive language skills so your child can understand and be understood.', link: '/speech-therapy-language-delay-sydney-nsw', anchor: 'Language delay speech therapy', icon: MessageCircle },
+              { title: 'Speech Sounds', desc: 'Helping children pronounce sounds clearly so they can be understood by family, friends, and teachers.', link: '/speech-therapy-speech-sounds-sydney-nsw', anchor: 'Speech sounds and pronunciation therapy', icon: Mic },
+              { title: 'Stuttering & Fluency', desc: 'Evidence-based support for children and adults experiencing stuttering or other fluency difficulties.', link: '/speech-therapy-stuttering-sydney-nsw', anchor: 'Stuttering and fluency support', icon: Activity },
+              { title: 'Literacy & Reading', desc: 'Supporting reading, writing, and spelling development for children who are finding literacy challenging.', link: '/speech-therapy-literacy-sydney-nsw', anchor: 'Literacy and reading support', icon: BookOpen },
             ].map((service, idx) => (
-              <Link href={service.link} key={idx} className="block p-10 bg-white rounded-[24px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 group border border-slate-100">
+              <Link href={service.link} key={idx} className="block p-10 bg-white rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 group border border-slate-100 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[#F4EBE1]/50 to-transparent rounded-bl-[100px] -z-10 transition-transform duration-500 group-hover:scale-110"></div>
+                <div className="w-14 h-14 rounded-2xl bg-[#F4EBE1] text-[#C89B66] flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-[#C89B66] group-hover:text-white transition-all duration-300 shadow-sm">
+                  <service.icon className="w-7 h-7" strokeWidth={1.5} />
+                </div>
                 <h3 className="font-serif text-2xl font-medium text-[#112A46] mb-4 group-hover:text-[#C89B66] transition-colors">{service.title}</h3>
                 <p className="text-slate-600 mb-8 font-light leading-relaxed">{service.desc}</p>
                 <span className="text-[#C89B66] font-medium flex items-center text-sm tracking-wide">{service.anchor} <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span></span>
@@ -161,26 +167,6 @@ export default function HomePage() {
             or learn about{' '}
             <Link href="/adult-speech-therapy-sydney-nsw" className="text-[#112A46] font-medium underline decoration-[#C89B66]/30 hover:decoration-[#C89B66] underline-offset-4 transition-all">adult speech therapy options in Sydney</Link>.
           </p>
-        </div>
-      </section>
-
-      {/* SECTION 4: BILINGUAL CALLOUT */}
-      <section className="py-24 bg-[#112A46] text-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-full h-full opacity-10 pointer-events-none">
-          <div className="absolute top-[-20%] right-[-10%] w-[50%] h-[100%] rounded-full bg-[#C89B66] blur-[120px]"></div>
-        </div>
-        <div className="container mx-auto px-4 text-center max-w-3xl relative z-10">
-          <div className="text-[#C89B66] font-medium mb-4 text-lg tracking-widest">我們提供中文語言治療服務</div>
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium mb-8 leading-tight">Speech therapy in English and Mandarin</h2>
-          <p className="text-lg md:text-xl mb-6 text-white/80 font-light leading-relaxed">
-            We provide bilingual speech pathology services in English and Mandarin. This means more accurate assessment of your child&apos;s true language abilities, clearer communication with your family, and therapy that respects your cultural and linguistic background.
-          </p>
-          <p className="text-white/60 mb-10 font-light text-lg">
-            Assessing a child in only one language can underestimate their true abilities. Working with a bilingual therapist ensures nothing is missed.
-          </p>
-          <Link href="/zh" className="inline-block bg-[#C89B66] text-white px-8 py-4 rounded-full font-medium hover:bg-[#b58956] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
-            了解更多 / Learn More in Chinese →
-          </Link>
         </div>
       </section>
 
@@ -232,8 +218,9 @@ export default function HomePage() {
       </section>
 
       {/* SECTION 6: DIFFERENTIATORS */}
-      <section className="py-24 md:py-32 bg-white">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="py-24 md:py-32 bg-white relative">
+        <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:24px_24px] opacity-40 pointer-events-none"></div>
+        <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <h2 className="font-serif text-3xl md:text-4xl font-medium text-[#112A46] text-center mb-16">Why families choose Shine and Speak</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
             <div className="text-center group">
@@ -299,11 +286,11 @@ export default function HomePage() {
           <div className="flex justify-center relative">
             <div className="absolute inset-0 bg-[#E3E7E4] rounded-[40px] -rotate-3 scale-105 opacity-50"></div>
             <Image
-              src="/shine-and-speak-logo-mark-transparent.png"
-              alt="Shine and Speak — our approach to speech pathology"
+              src="/shine-headshot-1200x1200.webp"
+              alt="Shine Teoh, Certified Practising Speech Pathologist"
               width={500}
               height={500}
-              className="w-full max-w-sm object-contain bg-white rounded-[32px] p-12 shadow-xl relative z-10"
+              className="w-full max-w-sm object-cover bg-white rounded-[32px] shadow-xl relative z-10"
               loading="lazy"
             />
           </div>
@@ -319,6 +306,7 @@ export default function HomePage() {
               <li className="flex items-center gap-3"><span className="text-[#C89B66] text-xl">✓</span> Certified Practising Member, Speech Pathology Australia (CPSP)</li>
               <li className="flex items-center gap-3"><span className="text-[#C89B66] text-xl">✓</span> NDIS Registered Provider</li>
               <li className="flex items-center gap-3"><span className="text-[#C89B66] text-xl">✓</span> Medicare Registered Provider</li>
+              <li className="flex items-center gap-3"><span className="text-[#C89B66] text-xl">✓</span> Bilingual services in English and Mandarin (普通话)</li>
               {/* PLACEHOLDER: List training certifications here e.g. Hanen, Sounds Write, Lidcombe Program */}
               <li className="flex items-center gap-3"><span className="text-[#C89B66] text-xl">✓</span> Evidence-based training certifications</li>
             </ul>
@@ -326,6 +314,26 @@ export default function HomePage() {
               Read more about our clinical approach and qualifications →
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* BILINGUAL CALLOUT */}
+      <section className="py-24 bg-[#112A46] text-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-full h-full opacity-10 pointer-events-none">
+          <div className="absolute top-[-20%] right-[-10%] w-[50%] h-[100%] rounded-full bg-[#C89B66] blur-[120px]"></div>
+        </div>
+        <div className="container mx-auto px-4 text-center max-w-3xl relative z-10">
+          <div className="text-[#C89B66] font-medium mb-4 text-lg tracking-widest">我們提供中文語言治療服務</div>
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium mb-8 leading-tight">Speech therapy in English and Mandarin</h2>
+          <p className="text-lg md:text-xl mb-6 text-white/80 font-light leading-relaxed">
+            We provide bilingual speech pathology services in English and Mandarin. This means more accurate assessment of your child&apos;s true language abilities, clearer communication with your family, and therapy that respects your cultural and linguistic background.
+          </p>
+          <p className="text-white/60 mb-10 font-light text-lg">
+            Assessing a child in only one language can underestimate their true abilities. Working with a bilingual therapist ensures nothing is missed.
+          </p>
+          <Link href="/zh" className="inline-block bg-[#C89B66] text-white px-8 py-4 rounded-full font-medium hover:bg-[#b58956] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+            了解更多 / Learn More in Chinese →
+          </Link>
         </div>
       </section>
 
@@ -444,7 +452,7 @@ export default function HomePage() {
       <div className="bg-[#FAFAF8] py-6 border-t border-slate-200">
         <div className="container mx-auto px-4 text-center">
           <p className="text-sm text-slate-500 font-light">
-            <Link href="/about" className="underline decoration-slate-300 hover:decoration-[#112A46] hover:text-[#112A46] transition-all">Written by a Certified Practising Speech Pathologist</Link>
+            <Link href="/about" className="underline decoration-slate-300 hover:decoration-[#112A46] hover:text-[#112A46] transition-all">Written by Shine Teoh, Certified Practising Speech Pathologist</Link>
           </p>
         </div>
       </div>

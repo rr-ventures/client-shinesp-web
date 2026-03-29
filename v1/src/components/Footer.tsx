@@ -26,17 +26,17 @@ export default function Footer() {
           {/* Brand + Contact */}
           <div>
             <Image
-              src="/logo-stacked.png"
+              src="/shine-and-speak-logo-stacked-transparent.png"
               alt="Shine and Speak"
               width={160}
               height={90}
               className="mb-8 brightness-0 invert opacity-90"
             />
-            <p className="text-gray-300 mb-8 text-sm leading-loose font-light">
+            <p className="text-white/80 mb-8 text-sm leading-loose font-light">
               Personalised speech therapy delivered to your home, school, or online. Bilingual English &amp; Mandarin.
             </p>
-            <div className="space-y-4 text-gray-300 text-sm font-light">
-              <p className="flex items-center gap-3"><span className="text-secondary">📞</span> <a href="tel:+61400000000" className="hover:text-secondary transition-colors">0400 000 000</a></p>
+            <div className="space-y-4 text-white/80 text-sm font-light">
+              <p className="flex items-center gap-3"><span className="text-secondary">📞</span> <a href="tel:0421608819" className="hover:text-secondary transition-colors">0421 608 819</a></p>
               <p className="flex items-center gap-3"><span className="text-secondary">✉️</span> <a href="mailto:admin@shineandspeak.com.au" className="hover:text-secondary transition-colors">admin@shineandspeak.com.au</a></p>
             </div>
 
@@ -96,7 +96,7 @@ export default function Footer() {
           {/* Services */}
           <div>
             <h4 className="text-lg font-serif font-bold mb-6 text-white tracking-wide">Services</h4>
-            <ul className="space-y-3.5 text-gray-300 text-sm font-light">
+            <ul className="space-y-3.5 text-white/80 text-sm font-light">
               <li><Link href="/paediatric-speech-therapy-sydney-nsw" className="hover:text-secondary hover:translate-x-1 inline-block transition-all">Paediatric Speech Therapy</Link></li>
               <li><Link href="/adult-speech-therapy-sydney-nsw" className="hover:text-secondary hover:translate-x-1 inline-block transition-all">Adult Speech Therapy</Link></li>
               <li><Link href="/speech-therapy-autism-sydney-nsw" className="hover:text-secondary hover:translate-x-1 inline-block transition-all">Autism Support</Link></li>
@@ -107,7 +107,7 @@ export default function Footer() {
               <li><Link href="/telehealth-speech-therapy-sydney-nsw" className="hover:text-secondary hover:translate-x-1 inline-block transition-all">Telehealth</Link></li>
             </ul>
             <h4 className="text-lg font-serif font-bold mt-8 mb-6 text-white tracking-wide">Quick Links</h4>
-            <ul className="space-y-3.5 text-gray-300 text-sm font-light">
+            <ul className="space-y-3.5 text-white/80 text-sm font-light">
               <li><Link href="/about" className="hover:text-secondary hover:translate-x-1 inline-block transition-all">About Shine Teoh</Link></li>
               <li><Link href="/how-it-works" className="hover:text-secondary hover:translate-x-1 inline-block transition-all">How It Works</Link></li>
               <li><Link href="/ndis-speech-therapy-sydney-nsw" className="hover:text-secondary hover:translate-x-1 inline-block transition-all">NDIS Speech Therapy</Link></li>
@@ -121,7 +121,7 @@ export default function Footer() {
           {/* Service Areas */}
           <div>
             <h4 className="text-lg font-serif font-bold mb-6 text-white tracking-wide">Service Areas</h4>
-            <ul className="space-y-3.5 text-gray-300 text-sm font-light">
+            <ul className="space-y-3.5 text-white/80 text-sm font-light">
               {suburbLinks.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="hover:text-secondary hover:translate-x-1 inline-block transition-all">
@@ -163,7 +163,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-white/10 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 text-sm text-gray-400 font-light">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 text-sm text-white/60 font-light">
             <div className="flex flex-wrap gap-x-8 gap-y-2 items-center">
               <span>© 2026 Shine and Speak</span>
               {/* REPLACE: Update ABN once registered — format: ABN XX XXX XXX XXX */}

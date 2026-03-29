@@ -147,7 +147,7 @@ export default function Footer() {
             {/* REPLACE: Insert WeChat QR code image */}
             <div className="w-36 h-36 bg-white rounded-lg flex flex-col items-center justify-center p-2 mb-4 overflow-hidden">
               <img 
-                src="/shared/communication/wechat-qr-placeholder.webp" 
+                src="/wechat-qr-placeholder.webp" 
                 alt="WeChat QR Code" 
                 className="w-full h-full object-cover"
               />

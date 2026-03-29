@@ -9,7 +9,7 @@ export default function Footer() {
         {/* Column 1: Brand + attribution */}
         <div className="space-y-6">
           <Image
-            src="/shared_images/brand/shine-and-speak-logo-stacked-transparent.png"
+            src="/shine-and-speak-logo-stacked-transparent.png"
             alt="Shine and Speak Logo"
             width={160}
             height={128}
@@ -105,7 +105,7 @@ export default function Footer() {
           <div className="bg-white/5 p-4 rounded-2xl inline-block border border-white/10 backdrop-blur-sm">
             <div className="relative w-28 h-28 bg-white rounded-xl overflow-hidden shadow-inner">
               <Image
-                src="/shared_images/communication/wechat-qr-placeholder.webp"
+                src="/wechat-qr-placeholder.webp"
                 alt="Scan to add on WeChat"
                 fill
                 className="object-contain p-2"

@@ -184,7 +184,7 @@ export default function AutismPage() {
               {/* 9. Funding your child's therapy */}
               <div className="bg-primary text-white p-8 rounded-2xl">
                 <h2 className="text-2xl font-bold mb-4 text-white">Funding your child's therapy</h2>
-                <p className="text-gray-200 text-lg mb-6">
+                <p className="text-white/90 text-lg mb-6">
                   Speech therapy for autism is covered under most NDIS plans and may be eligible for Medicare rebates with a referral from your GP. I accept all NDIS management types. Find out more about <Link href="/ndis-speech-therapy-sydney-nsw" className="text-secondary font-bold underline hover:text-white">NDIS funding for speech therapy</Link> or check the full list of <Link href="/fees" className="text-secondary font-bold underline hover:text-white">funding options and fees</Link>.
                 </p>
               </div>
@@ -222,11 +222,11 @@ export default function AutismPage() {
         <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-r from-primary via-primary/90 to-primary/80"></div>
         <div className="container-custom relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">Ready to help your child thrive?</h2>
-          <p className="text-xl text-gray-200 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+          <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
             Book a free discovery call to talk about your child's needs — no obligation, no pressure.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-8 mb-12 text-white font-medium text-xl">
-            <a href="tel:+61400000000" className="flex items-center gap-3 hover:text-secondary transition-colors"><span className="bg-white/10 p-3 rounded-full">📞</span> 0400 000 000</a>
+            <a href="tel:+61421608819" className="flex items-center gap-3 hover:text-secondary transition-colors"><span className="bg-white/10 p-3 rounded-full">📞</span> 0421 608 819</a>
             <span className="hidden sm:block opacity-30">|</span>
             <a href="mailto:admin@shineandspeak.com.au" className="flex items-center gap-3 hover:text-secondary transition-colors"><span className="bg-white/10 p-3 rounded-full">✉️</span> admin@shineandspeak.com.au</a>
           </div>

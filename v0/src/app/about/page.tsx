@@ -42,13 +42,13 @@ export default function AboutPage() {
       <div className="container mx-auto px-4 py-12 md:py-20 max-w-4xl">
 
         {/* H1 — Privacy variant: practice-focused, no personal name */}
-        <h1 className="text-4xl md:text-5xl font-bold text-[#1B365D] mb-6">About Shine and Speak</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-[#1B365D] mb-6">Meet Shine Teoh</h1>
 
         {/* Photo placeholder */}
         <div className="mb-12 max-w-lg">
           <Image
             src="/shine-headshot-1200x1200.webp"
-            alt="Shine - Certified Practising Speech Pathologist"
+            alt="Shine Teoh - Certified Practising Speech Pathologist"
             width={800}
             height={800}
             className="w-full h-auto rounded-[32px] shadow-xl object-cover"
@@ -58,7 +58,7 @@ export default function AboutPage() {
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-[#1B365D] mb-4">Our mission</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            We started Shine and Speak because we believe every person deserves access to high-quality, personalised speech therapy that makes a genuine difference in their everyday life — not just therapy for the sake of therapy.
+            I'm Shine Teoh, a Certified Practising Speech Pathologist. I started Shine and Speak because I believe every person deserves access to high-quality, personalised speech therapy that makes a genuine difference in their everyday life — not just therapy for the sake of therapy.
           </p>
           <p className="text-gray-700 leading-relaxed">
             Our team is dedicated to providing warm, professional, and evidence-based speech pathology services to the Inner West Sydney community and beyond via telehealth. Learn more about{' '}
@@ -69,10 +69,10 @@ export default function AboutPage() {
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-[#1B365D] mb-4">Our approach</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            We take a client-centred, strengths-based approach. We start with what you or your child can already do, what matters to you, and what goals will make the biggest difference in daily life. We tailor every session to the individual — their interests, their strengths, and their real-world needs.
+            I take a client-centred, strengths-based approach. I start with what you or your child can already do, what matters to you, and what goals will make the biggest difference in daily life. I tailor every session to the individual — their interests, their strengths, and their real-world needs.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            We&apos;re big believers in collaboration. We work closely with families, teachers, support coordinators, and other professionals to make sure therapy is consistent and coordinated across all environments.
+            I'm a big believer in collaboration. I work closely with families, teachers, support coordinators, and other professionals to make sure therapy is consistent and coordinated across all environments.
           </p>
         </section>
 
@@ -95,7 +95,7 @@ export default function AboutPage() {
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-[#1B365D] mb-4">Bilingual practice</h2>
           <p className="text-gray-700 leading-relaxed">
-            We provide speech therapy and assessments in English and Mandarin (普通话). Assessing a child in only one language can underestimate their true abilities. We ensure assessments are accurate, therapy is accessible, and communication with your family is clear — especially for families who speak Mandarin at home but need therapy delivered in an English-speaking school environment.
+            I provide speech therapy and assessments in English and Mandarin (普通话). Assessing a child in only one language can underestimate their true abilities. I ensure assessments are accurate, therapy is accessible, and communication with your family is clear — especially for families who speak Mandarin at home but need therapy delivered in an English-speaking school environment.
           </p>
         </section>
 
@@ -158,7 +158,7 @@ export default function AboutPage() {
 
         <div className="border-t border-gray-200 pt-8">
           <p className="text-gray-500 text-sm italic">
-            Written by a Certified Practising Speech Pathologist. Last reviewed March 2026.
+            Written by Shine Teoh, Certified Practising Speech Pathologist. Last reviewed March 2026.
           </p>
         </div>
       </div>

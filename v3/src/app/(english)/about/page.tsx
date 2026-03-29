@@ -62,7 +62,7 @@ export default function AboutPage() {
             {/* Mobile headshot */}
             <div className="bg-gray-200 aspect-square rounded-2xl flex items-center justify-center text-gray-500 text-center p-8 shadow-xl mb-8 md:hidden">
               {/* REPLACE: Professional headshot of Shine Teoh, warm and approachable */}
-              <span className="text-sm text-gray-400">[Placeholder: Professional headshot]</span>
+              <img src="/shine-headshot-1200x1200.webp" alt="Shine Teoh, Certified Practising Speech Pathologist" className="absolute inset-0 w-full h-full object-cover" />
             </div>
 
             <h2 className="text-3xl font-bold text-navy-blue mb-4">About me</h2>
@@ -97,7 +97,7 @@ export default function AboutPage() {
           <div className="hidden md:block">
             <div className="bg-gray-200 aspect-square rounded-2xl flex items-center justify-center text-gray-500 text-center p-8 shadow-xl sticky top-24">
               {/* REPLACE: Professional headshot of Shine Teoh, warm and approachable */}
-              <span className="text-sm text-gray-400">[Placeholder: Professional headshot]</span>
+              <img src="/shine-headshot-1200x1200.webp" alt="Shine Teoh, Certified Practising Speech Pathologist" className="absolute inset-0 w-full h-full object-cover" />
             </div>
           </div>
         </div>

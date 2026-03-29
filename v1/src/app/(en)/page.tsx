@@ -145,7 +145,7 @@ export default function HomePage() {
                 Helping your child communicate with confidence
               </h1>
               <p className="text-lg md:text-xl text-gray-600 mb-10 font-light">
-                Personalised speech therapy — delivered to your home, school, or online. Available in English and Mandarin (普通话). Serving Inner West Sydney and surrounds.
+                Personalised speech therapy — delivered to your home, school, or online. Serving Inner West Sydney and surrounds.
               </p>
               <div className="flex flex-col sm:flex-row gap-5 mb-10">
                 <Link href="/book" className="btn-secondary text-lg px-8 py-4">
@@ -165,7 +165,7 @@ export default function HomePage() {
             </div>
             <div className="relative h-[550px] rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white transform hover:-translate-y-2 transition-transform duration-500">
               {/* <!-- REPLACE: Professional photo of Shine Teoh working with a child --> */}
-              <img src="/shine-teoh-welcome-banner-reference.jpg" alt="Shine Teoh working with a child" className="absolute inset-0 w-full h-full object-cover" />
+              <img src="/hero-stock-placeholder-unsplash.jpg" alt="Shine Teoh working with a child" className="absolute inset-0 w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-60"></div>
             </div>
           </div>
@@ -185,8 +185,9 @@ export default function HomePage() {
       </section>
 
       {/* 3. DIFFERENTIATORS */}
-      <section id="differentiators" className="section-padding bg-accent-blue">
-        <div className="container-custom">
+      <section id="differentiators" className="section-padding bg-white relative">
+        <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:24px_24px] opacity-40 pointer-events-none"></div>
+        <div className="container-custom relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <h2 className="text-3xl md:text-5xl font-bold text-primary mb-6">Why families choose Shine and Speak</h2>
             <div className="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
@@ -231,10 +232,10 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-20 items-center">
             <div>
               <h2 className="text-3xl md:text-5xl font-bold mb-8 text-white">Therapy where your child is most comfortable</h2>
-              <p className="text-gray-300 text-lg mb-6 font-light">
+              <p className="text-white/90 text-lg mb-6 font-light">
                 Research shows that children learn communication skills best in their everyday environments. That's why I come to you — whether that's your home, your child's school, kindergarten, or daycare. Therapy happens where your child naturally communicates, which means skills transfer more easily into daily life.
               </p>
-              <p className="text-gray-300 text-lg mb-8 font-light">
+              <p className="text-white/90 text-lg mb-8 font-light">
                 This is not a compromise — it's a clinical advantage. Children are more relaxed, more engaged, and more likely to use new skills when they're learning in familiar settings.
               </p>
             </div>
@@ -243,25 +244,25 @@ export default function HomePage() {
                 <h3 className="text-xl font-bold text-white flex items-center gap-4 mb-3">
                   <span className="bg-secondary/20 p-3 rounded-xl text-secondary"><Home size={24} /></span> Home sessions
                 </h3>
-                <p className="text-gray-300 font-light pl-16">Therapy in the comfort of your own home. I bring everything needed. No travel stress for your family.</p>
+                <p className="text-white/90 font-light pl-16">Therapy in the comfort of your own home. I bring everything needed. No travel stress for your family.</p>
               </div>
               <div className="bg-white/5 p-8 rounded-2xl backdrop-blur-md border border-white/10 hover:bg-white/10 transition-all duration-300">
                 <h3 className="text-xl font-bold text-white flex items-center gap-4 mb-3">
                   <span className="bg-secondary/20 p-3 rounded-xl text-secondary"><School size={24} /></span> School & kindergarten visits
                 </h3>
-                <p className="text-gray-300 font-light pl-16">Working with your child in their learning environment, with the option to coordinate directly with their teachers.</p>
+                <p className="text-white/90 font-light pl-16">Working with your child in their learning environment, with the option to coordinate directly with their teachers.</p>
               </div>
               <div className="bg-white/5 p-8 rounded-2xl backdrop-blur-md border border-white/10 hover:bg-white/10 transition-all duration-300">
                 <h3 className="text-xl font-bold text-white flex items-center gap-4 mb-3">
                   <span className="bg-secondary/20 p-3 rounded-xl text-secondary"><Globe size={24} /></span> Telehealth across Australia
                 </h3>
-                <p className="text-gray-300 font-light pl-16"><Link href="/telehealth-speech-therapy-sydney-nsw" className="text-secondary hover:underline">Flexible online sessions</Link> from anywhere. Ideal for families in regional areas, or when in-person isn't possible.</p>
+                <p className="text-white/90 font-light pl-16"><Link href="/telehealth-speech-therapy-sydney-nsw" className="text-secondary hover:underline">Flexible online sessions</Link> from anywhere. Ideal for families in regional areas, or when in-person isn't possible.</p>
               </div>
               <div className="bg-white/5 p-8 rounded-2xl backdrop-blur-md border border-white/10 hover:bg-white/10 transition-all duration-300">
                 <h3 className="text-xl font-bold text-white flex items-center gap-4 mb-3">
                   <span className="bg-secondary/20 p-3 rounded-xl text-secondary"><MapPin size={24} /></span> Inner West Sydney & surrounds
                 </h3>
-                <p className="text-gray-300 font-light pl-16">I travel within 30 minutes of Arncliffe, including <Link href="/speech-pathologist-burwood-nsw" className="text-secondary hover:underline">Burwood</Link>, Hurstville, Strathfield, and surrounding suburbs.</p>
+                <p className="text-white/90 font-light pl-16">I travel within 30 minutes of Arncliffe, including <Link href="/speech-pathologist-burwood-nsw" className="text-secondary hover:underline">Burwood</Link>, Hurstville, Strathfield, and surrounding suburbs.</p>
               </div>
             </div>
           </div>
@@ -269,8 +270,9 @@ export default function HomePage() {
       </section>
 
       {/* 5. CONDITION CARDS */}
-      <section className="section-padding bg-accent">
-        <div className="container-custom">
+      <section className="section-padding bg-white relative">
+        <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:24px_24px] opacity-40 pointer-events-none"></div>
+        <div className="container-custom relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <h2 className="text-3xl md:text-5xl font-bold text-primary mb-6">How I can help your child</h2>
             <div className="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
@@ -379,25 +381,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 7. BILINGUAL CALLOUT */}
-      <section className="bg-gradient-to-r from-accent to-accent-blue py-20 border-y border-gray-100">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="text-secondary font-medium tracking-widest text-lg mb-4">我們提供中文語言治療服務</div>
-            <h2 className="text-3xl md:text-5xl font-bold text-primary mb-8">Speech therapy in English and Mandarin</h2>
-            <p className="text-gray-600 text-lg mb-6 font-light leading-relaxed">
-              I provide bilingual speech pathology services in English and Mandarin. This means more accurate assessment of your child's true language abilities, clearer communication with your family, and therapy that respects your cultural and linguistic background.
-            </p>
-            <p className="text-gray-600 text-lg mb-10 font-light leading-relaxed">
-              Assessing a child in only one language can underestimate their true abilities. Working with a bilingual therapist ensures nothing is missed.
-            </p>
-            <Link href="/zh" className="btn-outline text-lg px-8 py-4">
-              了解更多 / Learn More in Chinese
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* 8. MEET THE THERAPIST */}
       <section className="section-padding bg-white">
         <div className="container-custom">
@@ -405,7 +388,7 @@ export default function HomePage() {
             <div className="order-2 md:order-1">
               <h2 className="text-3xl md:text-5xl font-bold text-primary mb-8">Meet Shine Teoh</h2>
               <p className="text-gray-600 text-lg mb-6 font-light leading-relaxed">
-                Hi, I'm Shine — a Certified Practising Speech Pathologist. I'm passionate about providing high-quality, personalised speech therapy that makes a genuine difference in everyday life.
+                Hi, I'm Shine Teoh — a Certified Practising Speech Pathologist. I'm passionate about providing high-quality, personalised speech therapy that makes a genuine difference in everyday life.
               </p>
               <p className="text-gray-600 text-lg mb-6 font-light leading-relaxed">
                 I specialise in working with children and adults with a wide range of communication needs, including children on the autism spectrum, children with ADHD, developmental delay, language disorders, and literacy difficulties. I also support adults recovering from stroke, brain injury, and other neurological conditions.
@@ -413,6 +396,12 @@ export default function HomePage() {
               <p className="text-gray-600 text-lg mb-10 font-light leading-relaxed">
                 I speak English and Mandarin, and I'm committed to providing culturally responsive services for diverse families. I believe therapy should be practical, collaborative, and built around your goals — not a one-size-fits-all approach.
               </p>
+              
+              <div className="mb-10">
+                <Link href="/zh" className="text-primary font-medium hover:text-secondary underline decoration-secondary/30 underline-offset-4">
+                  了解更多 / Learn More in Chinese
+                </Link>
+              </div>
               
               <div className="bg-accent p-8 rounded-2xl mb-10 border border-gray-100 shadow-sm">
                 <ul className="space-y-4 font-medium text-primary">
@@ -472,7 +461,7 @@ export default function HomePage() {
             <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-white/5 rounded-full blur-[60px] translate-y-1/3 -translate-x-1/3"></div>
             <div className="relative z-10 max-w-3xl">
               <h2 className="text-3xl md:text-5xl font-bold mb-8 text-white">Are you a Support Coordinator?</h2>
-              <p className="text-xl text-gray-200 mb-10 font-light leading-relaxed">
+              <p className="text-xl text-white/90 mb-10 font-light leading-relaxed">
                 I work closely with NDIS support coordinators to provide timely, high-quality speech therapy with clear communication and detailed reporting. I understand the referral process and I make it easy for you.
               </p>
               <ul className="space-y-5 mb-12 text-lg">
@@ -564,11 +553,11 @@ export default function HomePage() {
         <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-r from-primary via-primary/90 to-primary/80"></div>
         <div className="container-custom relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">Ready to help your child thrive?</h2>
-          <p className="text-xl text-gray-200 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+          <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
             Book a free discovery call to talk about your child's needs — no obligation, no pressure.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-8 mb-12 text-white font-medium text-xl">
-            <a href="tel:+61400000000" className="flex items-center gap-3 hover:text-secondary transition-colors"><span className="bg-white/10 p-3 rounded-full"><Ear size={20} /></span> 0400 000 000</a>
+            <a href="tel:0421608819" className="flex items-center gap-3 hover:text-secondary transition-colors"><span className="bg-white/10 p-3 rounded-full"><Ear size={20} /></span> 0421 608 819</a>
             <span className="hidden sm:block opacity-30">|</span>
             <a href="mailto:admin@shineandspeak.com.au" className="flex items-center gap-3 hover:text-secondary transition-colors"><span className="bg-white/10 p-3 rounded-full"><MessageCircle size={20} /></span> admin@shineandspeak.com.au</a>
           </div>

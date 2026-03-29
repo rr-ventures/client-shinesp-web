@@ -3,7 +3,7 @@
 export default function FloatingCallButton() {
   return (
     <a
-      href="tel:+61400000000"
+      href="tel:+61421608819"
       className="md:hidden fixed bottom-6 left-6 bg-primary text-white p-4 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all z-50 flex items-center justify-center"
       aria-label="Call Shine and Speak"
     >

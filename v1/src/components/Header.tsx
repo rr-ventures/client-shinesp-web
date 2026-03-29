@@ -58,7 +58,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 shrink-0 group">
             <Image
-              src="/logo-horizontal.png"
+              src="/shine-and-speak-logo-horizontal-transparent.png"
               alt="Shine and Speak logo"
               width={200}
               height={54}
@@ -69,8 +69,8 @@ export default function Header() {
 
           {/* Desktop top-right */}
           <div className="hidden md:flex items-center gap-5">
-            <a href="tel:+61400000000" className="text-primary font-medium hover:text-secondary transition-colors text-sm flex items-center gap-2">
-              <Ear size={16} /> 0400 000 000
+            <a href="tel:0421608819" className="text-primary font-medium hover:text-secondary transition-colors text-sm flex items-center gap-2">
+              <Ear size={16} /> 0421 608 819
             </a>
             <Link
               href="/book"
@@ -272,8 +272,8 @@ export default function Header() {
             </Link>
 
             <div className="pt-4 flex flex-col gap-3">
-              <a href="tel:+61400000000" className="bg-primary text-white px-6 py-3 rounded-full font-bold text-center">
-                📞 Call 0400 000 000
+              <a href="tel:0421608819" className="bg-primary text-white px-6 py-3 rounded-full font-bold text-center">
+                📞 Call 0421 608 819
               </a>
               <Link href="/zh" className="text-center text-gray-600 font-medium py-2" onClick={() => setIsMobileMenuOpen(false)}>
                 中文 (Chinese)

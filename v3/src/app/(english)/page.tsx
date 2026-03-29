@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import { Car, Globe, Handshake, BookOpen, Puzzle, Zap, MessageCircle, Mic, Waves, BookText, Home, School, Monitor, MapPin, Phone, Mail } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Speech Pathologist Sydney NSW | Shine and Speak",
@@ -115,45 +116,46 @@ export default function Home() {
       <BreadcrumbSchema items={[{ name: "Home", href: "/" }]} />
 
       {/* Section 1: HERO */}
-      <section className="relative bg-gradient-to-b from-soft-blue to-white py-24 md:py-32 overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-sage-green/20 rounded-l-full blur-3xl -z-10 transform translate-x-1/3"></div>
-        <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center">
+      <section className="relative min-h-[90vh] flex items-center py-24 md:py-32 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/hero-stock-placeholder-unsplash.jpg"
+            alt="Professional photo of Shine Teoh working with a child"
+            fill
+            className="object-cover"
+            priority
+          />
+          {/* Dark gradient overlay for readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-navy-blue/90 via-navy-blue/70 to-navy-blue/30"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-2xl">
-            <div className="inline-block bg-white px-4 py-1.5 rounded-full text-sm font-semibold text-navy-blue border border-gray-100 shadow-sm mb-6">
+            <div className="inline-block bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full text-sm font-semibold text-white border border-white/20 shadow-sm mb-6">
               <span className="text-golden-amber mr-2">✦</span>
               Premium Mobile Speech Pathology
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy-blue mb-6 leading-[1.15] text-balance">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[1.15] text-balance">
               Helping your child communicate with confidence
             </h1>
-            <p className="text-lg md:text-xl text-stone mb-10 leading-relaxed">
-              Personalised speech therapy — delivered to your home, school, or online. Available in English and Mandarin (普通话). Serving Inner West Sydney and surrounds.
+            <p className="text-lg md:text-xl text-blue-50 mb-10 leading-relaxed font-light">
+              Personalised speech therapy — delivered to your home, school, or online. Serving Inner West Sydney and surrounds.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               {/* REPLACE: Swap /contact for your Calendly/TidyCal booking URL */}
               <Link href="/contact" className="btn-primary text-center text-lg py-4">
                 Book a Free Discovery Call
               </Link>
-              <a href="#trust" className="btn-secondary text-center text-lg py-4 bg-white">
+              <a href="#trust" className="btn-secondary text-center text-lg py-4 border-white text-white hover:bg-white hover:text-navy-blue">
                 Learn More ↓
               </a>
             </div>
-            <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-medium text-charcoal/80">
+            <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-medium text-white/90">
               <span className="flex items-center gap-2"><span className="w-5 h-5 rounded-full bg-sage-green flex items-center justify-center text-navy-blue text-xs">✓</span> CPSP Certified</span>
               <span className="flex items-center gap-2"><span className="w-5 h-5 rounded-full bg-sage-green flex items-center justify-center text-navy-blue text-xs">✓</span> NDIS Registered</span>
               <span className="flex items-center gap-2"><span className="w-5 h-5 rounded-full bg-sage-green flex items-center justify-center text-navy-blue text-xs">✓</span> Medicare Provider</span>
             </div>
-          </div>
-          <div className="relative h-[400px] md:h-[600px] rounded-[2rem] overflow-hidden premium-shadow group">
-            <div className="absolute inset-0 bg-navy-blue/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
-            {/* REPLACE: Professional photo of Shine Teoh working with a child — warm, natural setting */}
-            <Image
-              src="/shared_images/placeholders/hero-stock-placeholder-unsplash.jpg"
-              alt="Professional photo of Shine Teoh working with a child"
-              fill
-              className="object-cover transition-transform duration-700 group-hover:scale-105"
-              priority
-            />
           </div>
         </div>
       </section>
@@ -180,30 +182,43 @@ export default function Home() {
       </section>
 
       {/* Section 3: DIFFERENTIATORS */}
-      <section className="py-24 bg-warm-white">
-        <div className="container mx-auto px-4 max-w-7xl">
+      <section className="py-24 bg-white relative">
+        <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:24px_24px] opacity-40 pointer-events-none"></div>
+        <div className="container mx-auto px-4 max-w-7xl relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy-blue mb-4">Why families choose Shine and Speak</h2>
             <div className="w-24 h-1 bg-golden-amber mx-auto rounded-full"></div>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="premium-card p-8 text-center group">
-              <div className="w-16 h-16 mx-auto bg-soft-blue rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300 shadow-sm">🚗</div>
+            <div className="bg-white rounded-2xl p-10 text-center group shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100/50 relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-soft-blue to-sage-green transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+              <div className="w-20 h-20 mx-auto bg-soft-blue/50 rounded-full flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300 shadow-sm border border-soft-blue">
+                <Car className="w-8 h-8 text-navy-blue" strokeWidth={1.5} />
+              </div>
               <h3 className="text-xl font-bold text-navy-blue mb-4">We come to you</h3>
               <p className="text-stone text-sm leading-relaxed">No clinic visits needed. I travel to your home, school, or daycare — wherever your child is most comfortable and most likely to thrive.</p>
             </div>
-            <div className="premium-card p-8 text-center group">
-              <div className="w-16 h-16 mx-auto bg-soft-blue rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300 shadow-sm">🌏</div>
+            <div className="bg-white rounded-2xl p-10 text-center group shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100/50 relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-soft-blue to-sage-green transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+              <div className="w-20 h-20 mx-auto bg-soft-blue/50 rounded-full flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300 shadow-sm border border-soft-blue">
+                <Globe className="w-8 h-8 text-navy-blue" strokeWidth={1.5} />
+              </div>
               <h3 className="text-xl font-bold text-navy-blue mb-4">Bilingual — English & Mandarin</h3>
               <p className="text-stone text-sm leading-relaxed">I provide speech therapy and assessments in both English and Mandarin, ensuring accurate evaluation of your child's true language abilities.</p>
             </div>
-            <div className="premium-card p-8 text-center group">
-              <div className="w-16 h-16 mx-auto bg-soft-blue rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300 shadow-sm">🤝</div>
+            <div className="bg-white rounded-2xl p-10 text-center group shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100/50 relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-soft-blue to-sage-green transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+              <div className="w-20 h-20 mx-auto bg-soft-blue/50 rounded-full flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300 shadow-sm border border-soft-blue">
+                <Handshake className="w-8 h-8 text-navy-blue" strokeWidth={1.5} />
+              </div>
               <h3 className="text-xl font-bold text-navy-blue mb-4">NDIS, Medicare & private</h3>
               <p className="text-stone text-sm leading-relaxed">Registered NDIS provider (all management types), Medicare provider, and private clients. <Link href="/ndis-speech-therapy-sydney-nsw" className="text-golden-amber font-semibold hover:underline underline-offset-2">Learn more about funding options for speech therapy</Link>.</p>
             </div>
-            <div className="premium-card p-8 text-center group">
-              <div className="w-16 h-16 mx-auto bg-soft-blue rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300 shadow-sm">📚</div>
+            <div className="bg-white rounded-2xl p-10 text-center group shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100/50 relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-soft-blue to-sage-green transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+              <div className="w-20 h-20 mx-auto bg-soft-blue/50 rounded-full flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300 shadow-sm border border-soft-blue">
+                <BookOpen className="w-8 h-8 text-navy-blue" strokeWidth={1.5} />
+              </div>
               <h3 className="text-xl font-bold text-navy-blue mb-4">Evidence-based, goal-focused</h3>
               <p className="text-stone text-sm leading-relaxed">Every therapy plan is grounded in current evidence and focused on practical goals that make a real difference in your child's daily life.</p>
             </div>
@@ -222,27 +237,27 @@ export default function Home() {
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white/5 border border-white/10 backdrop-blur-sm p-8 rounded-2xl hover:bg-white/10 transition-colors">
-              <h3 className="text-xl font-bold mb-3 text-golden-amber flex items-center gap-3">
-                <span className="text-2xl">🏠</span> Home sessions
+            <div className="bg-white/5 border border-white/10 backdrop-blur-sm p-10 rounded-2xl hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
+              <h3 className="text-xl font-bold mb-4 text-golden-amber flex items-center gap-4">
+                <div className="bg-white/10 p-3 rounded-xl"><Home className="w-6 h-6 text-white" strokeWidth={1.5} /></div> Home sessions
               </h3>
               <p className="text-blue-50/80 leading-relaxed">Therapy in the comfort of your own home. I bring everything needed. No travel stress for your family.</p>
             </div>
-            <div className="bg-white/5 border border-white/10 backdrop-blur-sm p-8 rounded-2xl hover:bg-white/10 transition-colors">
-              <h3 className="text-xl font-bold mb-3 text-golden-amber flex items-center gap-3">
-                <span className="text-2xl">🏫</span> School & kindergarten visits
+            <div className="bg-white/5 border border-white/10 backdrop-blur-sm p-10 rounded-2xl hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
+              <h3 className="text-xl font-bold mb-4 text-golden-amber flex items-center gap-4">
+                <div className="bg-white/10 p-3 rounded-xl"><School className="w-6 h-6 text-white" strokeWidth={1.5} /></div> School & kindergarten visits
               </h3>
               <p className="text-blue-50/80 leading-relaxed">Working with your child in their learning environment, with the option to coordinate directly with their teachers.</p>
             </div>
-            <div className="bg-white/5 border border-white/10 backdrop-blur-sm p-8 rounded-2xl hover:bg-white/10 transition-colors">
-              <h3 className="text-xl font-bold mb-3 text-golden-amber flex items-center gap-3">
-                <span className="text-2xl">💻</span> Telehealth across Australia
+            <div className="bg-white/5 border border-white/10 backdrop-blur-sm p-10 rounded-2xl hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
+              <h3 className="text-xl font-bold mb-4 text-golden-amber flex items-center gap-4">
+                <div className="bg-white/10 p-3 rounded-xl"><Monitor className="w-6 h-6 text-white" strokeWidth={1.5} /></div> Telehealth across Australia
               </h3>
               <p className="text-blue-50/80 leading-relaxed"><Link href="/telehealth-speech-therapy-sydney-nsw" className="underline underline-offset-4 hover:text-white transition-colors">Flexible online sessions</Link> from anywhere. Ideal for families in regional areas, those managing busy schedules, or when in-person isn't possible.</p>
             </div>
-            <div className="bg-white/5 border border-white/10 backdrop-blur-sm p-8 rounded-2xl hover:bg-white/10 transition-colors">
-              <h3 className="text-xl font-bold mb-3 text-golden-amber flex items-center gap-3">
-                <span className="text-2xl">📍</span> Inner West Sydney & surrounds
+            <div className="bg-white/5 border border-white/10 backdrop-blur-sm p-10 rounded-2xl hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
+              <h3 className="text-xl font-bold mb-4 text-golden-amber flex items-center gap-4">
+                <div className="bg-white/10 p-3 rounded-xl"><MapPin className="w-6 h-6 text-white" strokeWidth={1.5} /></div> Inner West Sydney & surrounds
               </h3>
               <p className="text-blue-50/80 leading-relaxed">I travel within 30 minutes of Arncliffe, including <Link href="/speech-pathologist-burwood-nsw" className="underline underline-offset-4 hover:text-white transition-colors">Burwood and nearby suburbs</Link>. Also available across greater Sydney for one-off assessments.</p>
             </div>
@@ -251,48 +266,67 @@ export default function Home() {
       </section>
 
       {/* Section 5: CONDITION CARDS */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 max-w-7xl">
+      <section className="py-24 bg-white relative">
+        <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:24px_24px] opacity-40 pointer-events-none"></div>
+        <div className="container mx-auto px-4 max-w-7xl relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy-blue mb-4">How I can help your child</h2>
             <div className="w-24 h-1 bg-golden-amber mx-auto rounded-full"></div>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            <Link href="/speech-therapy-autism-sydney-nsw" className="premium-card p-8 group flex flex-col h-full">
-              <div className="w-14 h-14 bg-sage-green rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">🧩</div>
-              <h3 className="text-xl font-bold text-navy-blue mb-3 group-hover:text-golden-amber transition-colors">Autism & ASD</h3>
+            <Link href="/speech-therapy-autism-sydney-nsw" className="bg-white border border-gray-100 rounded-2xl p-10 group flex flex-col h-full shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-sage-green transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+              <div className="w-16 h-16 bg-sage-green/20 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300 text-navy-blue">
+                <Puzzle className="w-8 h-8" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-xl font-bold text-navy-blue mb-4 group-hover:text-golden-amber transition-colors">Autism & ASD</h3>
               <p className="text-stone text-sm leading-relaxed flex-grow">Supporting children on the autism spectrum with communication, social skills, and language development.</p>
-              <span className="text-golden-amber font-medium text-sm mt-6 flex items-center gap-2 group-hover:translate-x-2 transition-transform">Learn more <span>→</span></span>
+              <span className="text-golden-amber font-semibold text-sm mt-8 flex items-center gap-2 group-hover:translate-x-2 transition-transform uppercase tracking-wide">Learn more <span className="text-lg">→</span></span>
             </Link>
-            <Link href="/speech-therapy-adhd-sydney-nsw" className="premium-card p-8 group flex flex-col h-full">
-              <div className="w-14 h-14 bg-sage-green rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">⚡</div>
-              <h3 className="text-xl font-bold text-navy-blue mb-3 group-hover:text-golden-amber transition-colors">ADHD & Attention</h3>
+            <Link href="/speech-therapy-adhd-sydney-nsw" className="bg-white border border-gray-100 rounded-2xl p-10 group flex flex-col h-full shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-sage-green transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+              <div className="w-16 h-16 bg-sage-green/20 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300 text-navy-blue">
+                <Zap className="w-8 h-8" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-xl font-bold text-navy-blue mb-4 group-hover:text-golden-amber transition-colors">ADHD & Attention</h3>
               <p className="text-stone text-sm leading-relaxed flex-grow">Helping children with ADHD develop focus, listening skills, and social communication strategies.</p>
-              <span className="text-golden-amber font-medium text-sm mt-6 flex items-center gap-2 group-hover:translate-x-2 transition-transform">Learn more <span>→</span></span>
+              <span className="text-golden-amber font-semibold text-sm mt-8 flex items-center gap-2 group-hover:translate-x-2 transition-transform uppercase tracking-wide">Learn more <span className="text-lg">→</span></span>
             </Link>
-            <Link href="/speech-therapy-language-delay-sydney-nsw" className="premium-card p-8 group flex flex-col h-full">
-              <div className="w-14 h-14 bg-sage-green rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">💬</div>
-              <h3 className="text-xl font-bold text-navy-blue mb-3 group-hover:text-golden-amber transition-colors">Language Delay</h3>
+            <Link href="/speech-therapy-language-delay-sydney-nsw" className="bg-white border border-gray-100 rounded-2xl p-10 group flex flex-col h-full shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-sage-green transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+              <div className="w-16 h-16 bg-sage-green/20 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300 text-navy-blue">
+                <MessageCircle className="w-8 h-8" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-xl font-bold text-navy-blue mb-4 group-hover:text-golden-amber transition-colors">Language Delay</h3>
               <p className="text-stone text-sm leading-relaxed flex-grow">Building receptive and expressive language skills so your child can understand and be understood.</p>
-              <span className="text-golden-amber font-medium text-sm mt-6 flex items-center gap-2 group-hover:translate-x-2 transition-transform">Learn more <span>→</span></span>
+              <span className="text-golden-amber font-semibold text-sm mt-8 flex items-center gap-2 group-hover:translate-x-2 transition-transform uppercase tracking-wide">Learn more <span className="text-lg">→</span></span>
             </Link>
-            <Link href="/speech-therapy-speech-sounds-sydney-nsw" className="premium-card p-8 group flex flex-col h-full">
-              <div className="w-14 h-14 bg-sage-green rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">🗣️</div>
-              <h3 className="text-xl font-bold text-navy-blue mb-3 group-hover:text-golden-amber transition-colors">Speech Sounds</h3>
+            <Link href="/speech-therapy-speech-sounds-sydney-nsw" className="bg-white border border-gray-100 rounded-2xl p-10 group flex flex-col h-full shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-sage-green transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+              <div className="w-16 h-16 bg-sage-green/20 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300 text-navy-blue">
+                <Mic className="w-8 h-8" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-xl font-bold text-navy-blue mb-4 group-hover:text-golden-amber transition-colors">Speech Sounds</h3>
               <p className="text-stone text-sm leading-relaxed flex-grow">Helping children pronounce sounds clearly so they can be understood by family, friends, and teachers.</p>
-              <span className="text-golden-amber font-medium text-sm mt-6 flex items-center gap-2 group-hover:translate-x-2 transition-transform">Learn more <span>→</span></span>
+              <span className="text-golden-amber font-semibold text-sm mt-8 flex items-center gap-2 group-hover:translate-x-2 transition-transform uppercase tracking-wide">Learn more <span className="text-lg">→</span></span>
             </Link>
-            <Link href="/speech-therapy-stuttering-sydney-nsw" className="premium-card p-8 group flex flex-col h-full">
-              <div className="w-14 h-14 bg-sage-green rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">🌊</div>
-              <h3 className="text-xl font-bold text-navy-blue mb-3 group-hover:text-golden-amber transition-colors">Stuttering & Fluency</h3>
+            <Link href="/speech-therapy-stuttering-sydney-nsw" className="bg-white border border-gray-100 rounded-2xl p-10 group flex flex-col h-full shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-sage-green transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+              <div className="w-16 h-16 bg-sage-green/20 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300 text-navy-blue">
+                <Waves className="w-8 h-8" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-xl font-bold text-navy-blue mb-4 group-hover:text-golden-amber transition-colors">Stuttering & Fluency</h3>
               <p className="text-stone text-sm leading-relaxed flex-grow">Evidence-based support for children and adults experiencing stuttering or other fluency difficulties.</p>
-              <span className="text-golden-amber font-medium text-sm mt-6 flex items-center gap-2 group-hover:translate-x-2 transition-transform">Learn more <span>→</span></span>
+              <span className="text-golden-amber font-semibold text-sm mt-8 flex items-center gap-2 group-hover:translate-x-2 transition-transform uppercase tracking-wide">Learn more <span className="text-lg">→</span></span>
             </Link>
-            <Link href="/speech-therapy-literacy-sydney-nsw" className="premium-card p-8 group flex flex-col h-full">
-              <div className="w-14 h-14 bg-sage-green rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">📖</div>
-              <h3 className="text-xl font-bold text-navy-blue mb-3 group-hover:text-golden-amber transition-colors">Literacy & Reading</h3>
+            <Link href="/speech-therapy-literacy-sydney-nsw" className="bg-white border border-gray-100 rounded-2xl p-10 group flex flex-col h-full shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-sage-green transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+              <div className="w-16 h-16 bg-sage-green/20 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300 text-navy-blue">
+                <BookText className="w-8 h-8" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-xl font-bold text-navy-blue mb-4 group-hover:text-golden-amber transition-colors">Literacy & Reading</h3>
               <p className="text-stone text-sm leading-relaxed flex-grow">Supporting reading, writing, and spelling development for children who are finding literacy challenging.</p>
-              <span className="text-golden-amber font-medium text-sm mt-6 flex items-center gap-2 group-hover:translate-x-2 transition-transform">Learn more <span>→</span></span>
+              <span className="text-golden-amber font-semibold text-sm mt-8 flex items-center gap-2 group-hover:translate-x-2 transition-transform uppercase tracking-wide">Learn more <span className="text-lg">→</span></span>
             </Link>
           </div>
           <div className="bg-soft-blue rounded-2xl p-8 md:p-10 text-center max-w-4xl mx-auto border border-blue-100">
@@ -401,7 +435,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-navy-blue/5 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
               {/* REPLACE: Professional headshot of Shine Teoh, warm and approachable */}
               <Image
-                src="/shared_images/shine/shine-headshot-1200x1200.webp"
+                src="/shine-headshot-1200x1200.webp"
                 alt="Professional headshot of Shine Teoh"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -574,11 +608,11 @@ export default function Home() {
             Book a free discovery call to talk about your child's needs — no obligation, no pressure.
           </p>
           <div className="text-xl font-bold mb-10 flex flex-wrap justify-center gap-8 text-navy-blue">
-            <a href="tel:+61421608819" className="hover:text-white transition-colors flex items-center gap-2">
-              <span className="bg-navy-blue/10 p-2 rounded-full">📞</span> 0421 608 819
+            <a href="tel:+61421608819" className="hover:text-white transition-colors flex items-center gap-3">
+              <div className="bg-navy-blue/10 p-2.5 rounded-full flex items-center justify-center"><Phone className="w-5 h-5" /></div> 0421 608 819
             </a>
-            <a href="mailto:admin@shineandspeak.com.au" className="hover:text-white transition-colors flex items-center gap-2">
-              <span className="bg-navy-blue/10 p-2 rounded-full">✉️</span> admin@shineandspeak.com.au
+            <a href="mailto:admin@shineandspeak.com.au" className="hover:text-white transition-colors flex items-center gap-3">
+              <div className="bg-navy-blue/10 p-2.5 rounded-full flex items-center justify-center"><Mail className="w-5 h-5" /></div> admin@shineandspeak.com.au
             </a>
           </div>
           {/* REPLACE: Swap /contact for your Calendly/TidyCal booking URL */}

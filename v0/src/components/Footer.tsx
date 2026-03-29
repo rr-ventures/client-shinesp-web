@@ -30,7 +30,7 @@ export default function Footer() {
               alt="Shine and Speak Speech Pathology"
               width={160}
               height={160}
-              className="mb-6 bg-white p-3 rounded-[24px] object-contain shadow-lg"
+              className="mb-6 bg-white p-3 rounded-xl object-contain shadow-lg"
             />
             <p className="text-sm text-white/80 mb-6 font-light leading-relaxed">
               Mobile and telehealth speech pathology across Inner West Sydney and Australia-wide.
@@ -137,7 +137,7 @@ export default function Footer() {
             </ul>
 
             {/* WeChat QR placeholder */}
-            <div className="bg-white/5 border border-white/10 rounded-[24px] p-4 text-center mb-8 w-36 backdrop-blur-sm">
+            <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-center mb-8 w-36 backdrop-blur-sm">
               <Image 
                 src="/wechat-qr-placeholder.webp" 
                 alt="WeChat QR Code" 
@@ -163,7 +163,7 @@ export default function Footer() {
           <p>© 2026 Shine and Speak. All rights reserved.</p>
           <p>
             <Link href="/about" className="hover:text-white transition-colors underline decoration-white/20 hover:decoration-white">
-              Written by a Certified Practising Speech Pathologist
+              Written by Shine Teoh, Certified Practising Speech Pathologist
             </Link>
           </p>
           <p>Inner West Sydney &amp; Telehealth Australia-wide</p>

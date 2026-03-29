@@ -105,7 +105,7 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
           <Image
-            src="/shared/brand/shine-and-speak-logo-horizontal-transparent.png"
+            src="/shine-and-speak-logo-horizontal-transparent.png"
             alt="Shine and Speak — Speech Pathology Sydney"
             width={200}
             height={50}
