@@ -9,8 +9,8 @@ RUN apk add --no-cache libc6-compat
 # ─────────────────────────────────────────
 FROM base AS builder-v0
 WORKDIR /build
-COPY v0/package*.json ./
-RUN npm ci
+COPY v0/package.json ./
+RUN npm install
 COPY v0/ .
 RUN npm run build
 
@@ -19,8 +19,8 @@ RUN npm run build
 # ─────────────────────────────────────────
 FROM base AS builder-v1
 WORKDIR /build
-COPY v1/package*.json ./
-RUN npm ci
+COPY v1/package.json ./
+RUN npm install
 COPY v1/ .
 RUN npm run build
 
@@ -29,8 +29,8 @@ RUN npm run build
 # ─────────────────────────────────────────
 FROM base AS builder-v2
 WORKDIR /build
-COPY v2/package*.json ./
-RUN npm ci
+COPY v2/package.json ./
+RUN npm install
 COPY v2/ .
 RUN npm run build
 
@@ -39,8 +39,8 @@ RUN npm run build
 # ─────────────────────────────────────────
 FROM base AS builder-v3
 WORKDIR /build
-COPY v3/package*.json ./
-RUN npm ci
+COPY v3/package.json ./
+RUN npm install
 COPY v3/ .
 RUN npm run build
 
