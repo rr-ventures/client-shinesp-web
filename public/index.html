@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shine Speech Pathology - Design Review</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #0a0e1a;
+      color: #f1f5f9;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+    .badge {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #4f9cf9;
+      border: 1px solid #4f9cf9;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 0.75rem;
+    }
+    p.sub {
+      color: #94a3b8;
+      font-size: 1rem;
+      text-align: center;
+      max-width: 480px;
+      line-height: 1.6;
+      margin-bottom: 3rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.25rem;
+      width: 100%;
+      max-width: 900px;
+    }
+    a.card {
+      background: #111827;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 1rem;
+      padding: 2rem 1.5rem;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    a.card:hover {
+      transform: translateY(-4px);
+      border-color: #4f9cf9;
+    }
+    .num { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: #a78bfa; }
+    .name { font-size: 1.3rem; font-weight: 700; }
+    .desc { font-size: 0.875rem; color: #94a3b8; }
+    .go { margin-top: 1rem; font-size: 0.8rem; color: #4f9cf9; font-weight: 600; }
+    footer { margin-top: 3rem; font-size: 0.75rem; color: #94a3b8; }
+  </style>
+</head>
+<body>
+  <div class="badge">Design Review</div>
+  <h1>Shine Speech Pathology</h1>
+  <p class="sub">Four homepage concepts. Select a version below to preview the full site.</p>
+  <div class="grid">
+    <a class="card" href="/v0">
+      <span class="num">Version 0</span>
+      <span class="name">V0</span>
+      <span class="desc">Initial concept - baseline homepage layout.</span>
+      <span class="go">View site</span>
+    </a>
+    <a class="card" href="/v1">
+      <span class="num">Version 1</span>
+      <span class="name">V1</span>
+      <span class="desc">Personal brand, differentiators-first homepage.</span>
+      <span class="go">View site</span>
+    </a>
+    <a class="card" href="/v2">
+      <span class="num">Version 2</span>
+      <span class="name">V2</span>
+      <span class="desc">Services-first with condition cards early in the flow.</span>
+      <span class="go">View site</span>
+    </a>
+    <a class="card" href="/v3">
+      <span class="num">Version 3</span>
+      <span class="name">V3</span>
+      <span class="desc">Latest iteration - most refined design and content.</span>
+      <span class="go">View site</span>
+    </a>
+  </div>
+  <footer>Internal design review only - not indexed by search engines.</footer>
+</body>
+</html>

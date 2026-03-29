@@ -1,0 +1,30 @@
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+
+const inter = Inter({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  title: "Speech Pathologist Sydney NSW | Shine and Speak — Mobile & Telehealth",
+  description: "Personalised speech therapy delivered to your home, school, or online. Bilingual English & Mandarin. NDIS, Medicare & private. Serving Inner West Sydney.",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body className={`${inter.className} min-h-screen flex flex-col`}>
+        <Header />
+        <main className="flex-grow">
+          {children}
+        </main>
+        <Footer />
+      </body>
+    </html>
+  );
+}

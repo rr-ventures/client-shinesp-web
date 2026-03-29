@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-blue: #1B365D;
+  --color-golden-amber: #E8A84C;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

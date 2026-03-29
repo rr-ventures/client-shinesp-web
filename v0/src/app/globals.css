@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-navy: #1B365D;
+  --color-brand-gold: #E8A84C;
+  --color-brand-white: #FFFFFF;
+  --color-brand-light-blue: #F0F4F8;
+}
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: var(--color-brand-white);
+  --foreground: var(--color-brand-navy);
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}

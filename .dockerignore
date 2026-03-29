@@ -1,0 +1,21 @@
+# Exclude built artifacts — they're rebuilt inside Docker
+**/node_modules
+**/.next
+**/.turbo
+
+# Non-version directories not needed in the build
+v1-app
+v2-app
+_temp
+docs
+
+# Misc dev files
+*.md
+SEO_AUDIT_PROMPT.md
+shine-v2-build-brief.md
+temp_gemini_4_build_prompts.md
+generate-components.js
+generate-pages.js
+generate-placeholders.js
+generate_pages.py
+.cursorrules
