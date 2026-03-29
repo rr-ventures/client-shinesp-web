@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Nunito, Merriweather } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import "../globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
 import ScrollToTop from "@/components/ScrollToTop";
 
-const nunito = Nunito({ subsets: ["latin"], variable: "--font-nunito" });
-const merriweather = Merriweather({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-merriweather" });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://shineandspeak.com.au"),
@@ -73,7 +73,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
       </head>
-      <body className={`${nunito.variable} ${merriweather.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`}>
         <ScrollToTop />
         <Header />
         {children}

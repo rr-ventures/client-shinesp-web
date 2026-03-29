@@ -31,9 +31,9 @@ export default function ParentEnquiryForm() {
     router.push('/thank-you');
   };
 
-  const labelClass = 'block text-sm font-semibold text-[#1B365D] mb-1';
+  const labelClass = 'block text-sm font-semibold text-[#112A46] mb-1';
   const inputClass =
-    'w-full border border-gray-300 rounded-md px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#E8A84C] focus:border-transparent';
+    'w-full border border-gray-300 rounded-full px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#C89B66] focus:border-transparent';
 
   return (
     <form onSubmit={handleSubmit} noValidate className="space-y-6">
@@ -117,7 +117,7 @@ export default function ParentEnquiryForm() {
       <button
         type="submit"
         disabled={submitting}
-        className="w-full bg-[#E8A84C] text-white font-bold py-4 rounded-md text-lg hover:bg-amber-600 transition disabled:opacity-60"
+        className="w-full bg-[#C89B66] text-white font-bold py-4 rounded-full text-lg hover:bg-[#b58956] transition disabled:opacity-60"
       >
         {submitting ? 'Sending…' : 'Send Enquiry'}
       </button>

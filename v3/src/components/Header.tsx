@@ -44,31 +44,33 @@ function NavDropdown({ label, links }: { label: string; links: { label: string; 
 
   return (
     <div
-      className="relative"
+      className="relative group"
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
     >
       <button
-        className="flex items-center gap-1 hover:text-golden-amber transition text-sm font-medium"
+        className="flex items-center gap-1.5 text-charcoal hover:text-golden-amber transition text-sm font-medium py-2"
         aria-expanded={open}
         aria-haspopup="true"
       >
         {label}
-        <svg className={`w-4 h-4 transition-transform ${open ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        <svg className={`w-3.5 h-3.5 transition-transform duration-200 ${open ? "rotate-180 text-golden-amber" : "text-stone"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
         </svg>
       </button>
       {open && (
-        <div className="absolute top-full left-0 bg-white text-navy-blue shadow-xl rounded-lg py-2 min-w-56 z-50 border border-gray-100">
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="block px-4 py-2 text-sm hover:bg-blue-50 hover:text-golden-amber transition"
-            >
-              {link.label}
-            </Link>
-          ))}
+        <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2">
+          <div className="bg-white text-charcoal shadow-[0_10px_40px_-10px_rgba(17,42,70,0.15)] rounded-xl py-3 min-w-[240px] z-50 border border-gray-100 relative before:absolute before:-top-2 before:left-1/2 before:-translate-x-1/2 before:border-8 before:border-transparent before:border-b-white">
+            {links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="block px-5 py-2.5 text-sm hover:bg-soft-blue hover:text-navy-blue transition-colors font-medium"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
         </div>
       )}
     </div>
@@ -84,46 +86,46 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-md">
+    <header className="sticky top-0 z-50 glass-nav transition-all duration-300">
       {/* Top bar: logo + CTAs */}
-      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        <Link href="/" aria-label="Shine and Speak — home">
+      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+        <Link href="/" aria-label="Shine and Speak — home" className="flex-shrink-0">
           <Image
-            src="/shine-and-speak-logo-horizontal-transparent.png"
+            src="/shared_images/brand/shine-and-speak-logo-horizontal-transparent.png"
             alt="Shine and Speak — Mobile Speech Pathology Sydney"
-            width={200}
-            height={56}
+            width={220}
+            height={62}
             priority
-            className="h-12 w-auto"
+            className="h-12 md:h-14 w-auto object-contain"
           />
         </Link>
 
         {/* Desktop top-bar items */}
-        <div className="hidden md:flex items-center gap-4">
-          <a href="tel:+61421608819" className="text-navy-blue font-semibold text-sm hover:text-golden-amber transition">
-            📞 0421 608 819
+        <div className="hidden lg:flex items-center gap-6">
+          <a href="tel:+61421608819" className="text-navy-blue font-medium text-sm hover:text-golden-amber transition flex items-center gap-2">
+            <span className="text-golden-amber">📞</span> 0421 608 819
           </a>
           {/* REPLACE: Insert Calendly/TidyCal booking URL below */}
           <Link
             href="/contact"
-            className="bg-golden-amber text-white px-5 py-2 rounded-md font-bold text-sm hover:bg-yellow-600 transition shadow-sm"
+            className="btn-primary text-sm py-2.5 px-6"
           >
             Book a Free Discovery Call
           </Link>
           <Link
             href="/refer-a-client"
-            className="border-2 border-navy-blue text-navy-blue px-5 py-2 rounded-md font-bold text-sm hover:bg-navy-blue hover:text-white transition"
+            className="btn-secondary text-sm py-2.5 px-6"
           >
             Refer a Client
           </Link>
-          <Link href="/zh" className="text-navy-blue font-semibold text-sm hover:text-golden-amber transition" lang="zh" hrefLang="zh">
-            中文
+          <Link href="/zh" className="text-stone font-medium text-sm hover:text-navy-blue transition flex items-center gap-1 bg-gray-50 px-3 py-1.5 rounded-full border border-gray-200" lang="zh" hrefLang="zh">
+            <span>🌐</span> 中文
           </Link>
         </div>
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden p-2 rounded-md text-navy-blue hover:bg-blue-50 transition"
+          className="lg:hidden p-2 rounded-full text-navy-blue hover:bg-soft-blue transition"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileOpen}
@@ -141,18 +143,18 @@ export default function Header() {
       </div>
 
       {/* Desktop nav bar */}
-      <nav className="hidden md:block bg-navy-blue text-white" aria-label="Main navigation">
-        <div className="container mx-auto px-4 py-2 flex items-center gap-6">
+      <nav className="hidden lg:block border-t border-gray-100 bg-white/50" aria-label="Main navigation">
+        <div className="container mx-auto px-4 py-3 flex items-center justify-center gap-8">
           <NavDropdown label="Services" links={servicesLinks} />
-          <Link href="/how-it-works" className="text-sm font-medium hover:text-golden-amber transition">
+          <Link href="/how-it-works" className="text-sm font-medium text-charcoal hover:text-golden-amber transition">
             How It Works
           </Link>
           <NavDropdown label="Funding & Fees" links={fundingLinks} />
-          <Link href="/about" className="text-sm font-medium hover:text-golden-amber transition">
+          <Link href="/about" className="text-sm font-medium text-charcoal hover:text-golden-amber transition">
             About
           </Link>
           <NavDropdown label="Areas" links={areasLinks} />
-          <Link href="/contact" className="text-sm font-medium hover:text-golden-amber transition">
+          <Link href="/contact" className="text-sm font-medium text-charcoal hover:text-golden-amber transition">
             Contact
           </Link>
         </div>
@@ -160,7 +162,7 @@ export default function Header() {
 
       {/* Mobile nav drawer */}
       {mobileOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200 shadow-xl">
+        <div className="lg:hidden bg-white border-t border-gray-100 shadow-2xl absolute w-full left-0">
           {/* Mobile CTAs — always visible */}
           <div className="flex flex-col gap-3 p-4 border-b border-gray-100">
             {/* REPLACE: Insert Calendly/TidyCal booking URL below */}

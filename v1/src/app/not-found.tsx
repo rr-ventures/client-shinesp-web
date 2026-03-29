@@ -16,10 +16,10 @@ export default function NotFound() {
             Sorry, we couldn't find the page you're looking for. It might have been moved or deleted.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/" className="bg-primary text-white px-8 py-4 rounded-full font-bold hover:bg-opacity-90 transition-all shadow-md">
+            <Link href="/" className="btn-primary px-8 py-4 shadow-md">
               Return to Homepage
             </Link>
-            <Link href="/contact" className="border-2 border-primary text-primary px-8 py-4 rounded-full font-bold hover:bg-primary hover:text-white transition-all">
+            <Link href="/contact" className="btn-outline px-8 py-4">
               Contact Us
             </Link>
           </div>

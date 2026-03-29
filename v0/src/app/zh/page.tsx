@@ -36,9 +36,9 @@ export default function ZhHomePage() {
       />
 
       {/* Hero */}
-      <section className="bg-[#F0F4F8] py-16 md:py-24">
+      <section className="bg-[#FAFAF8] py-16 md:py-24">
         <div className="container mx-auto px-4 max-w-3xl text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#1B365D] mb-6 leading-tight">
+          <h1 className="text-4xl md:text-5xl font-serif font-medium text-[#112A46] mb-6 leading-tight">
             幫助您的孩子自信地溝通
           </h1>
           <p className="text-lg text-gray-700 mb-8">
@@ -48,19 +48,19 @@ export default function ZhHomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/book"
-              className="bg-[#E8A84C] text-white text-center px-8 py-4 rounded-md font-bold text-lg hover:bg-amber-600 transition"
+              className="bg-[#C89B66] text-white text-center px-8 py-4 rounded-full font-bold text-lg hover:bg-[#b58956] transition"
             >
               {/* REPLACE: swap with Calendly URL */}
               預約免費諮詢
             </Link>
             <Link
               href="/"
-              className="border-2 border-[#1B365D] text-[#1B365D] text-center px-8 py-4 rounded-md font-bold text-lg hover:bg-[#1B365D] hover:text-white transition"
+              className="border-2 border-[#112A46] text-[#112A46] text-center px-8 py-4 rounded-full font-bold text-lg hover:bg-[#112A46] hover:text-white transition"
             >
               查看英文頁面 (English)
             </Link>
           </div>
-          <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm font-semibold text-[#1B365D]">
+          <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm font-semibold text-[#112A46]">
             <span>✓ 認証言語治療師 (CPSP)</span>
             <span>✓ NDIS 註冊服務提供商</span>
             <span>✓ Medicare 服務提供商</span>
@@ -71,7 +71,7 @@ export default function ZhHomePage() {
       {/* Why bilingual */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="text-3xl font-bold text-[#1B365D] mb-6 text-center">為什麼選擇雙語言語治療？</h2>
+          <h2 className="text-3xl font-serif font-medium text-[#112A46] mb-6 text-center">為什麼選擇雙語言語治療？</h2>
           <p className="text-gray-700 leading-relaxed mb-6">
             如果只以單一語言評估孩子，可能會低估其真實語言能力。使用雙語治療師進行評估，確保評估結果更準確，並且治療更適合您家庭的文化和語言背景。
           </p>
@@ -81,7 +81,7 @@ export default function ZhHomePage() {
           <div className="text-center">
             <a
               href={`tel:0421608819`}
-              className="inline-block bg-[#E8A84C] text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-amber-600 transition"
+              className="inline-block bg-[#C89B66] text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-[#b58956] transition"
             >
               致電 {PHONE_DISPLAY} 查詢
             </a>
@@ -92,7 +92,7 @@ export default function ZhHomePage() {
       {/* Services */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-3xl font-bold text-[#1B365D] text-center mb-12">我們的服務</h2>
+          <h2 className="text-3xl font-serif font-medium text-[#112A46] text-center mb-12">我們的服務</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {[
               { zh: '自閉症及ASD', en: 'Autism & ASD', href: '/speech-therapy-autism-sydney-nsw' },
@@ -105,9 +105,9 @@ export default function ZhHomePage() {
               <Link
                 key={s.href}
                 href={s.href}
-                className="block p-6 border border-gray-200 rounded-xl hover:shadow-md transition bg-white"
+                className="block p-6 border border-gray-200 rounded-[24px] hover:shadow-md transition bg-white"
               >
-                <h3 className="text-lg font-bold text-[#1B365D] mb-1">{s.zh}</h3>
+                <h3 className="text-lg font-serif font-medium text-[#112A46] mb-1">{s.zh}</h3>
                 <p className="text-gray-500 text-sm">{s.en}</p>
               </Link>
             ))}
@@ -116,7 +116,7 @@ export default function ZhHomePage() {
       </section>
 
       {/* Contact */}
-      <section className="py-16 bg-[#1B365D] text-white text-center">
+      <section className="py-16 bg-[#112A46] text-white text-center">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-6">聯絡我們</h2>
           <div className="flex flex-col sm:flex-row justify-center gap-6 mb-8">
@@ -125,7 +125,7 @@ export default function ZhHomePage() {
           </div>
           <a
             href="https://wa.me/61421608819"
-            className="inline-block bg-green-500 text-white px-8 py-3 rounded-md font-bold hover:bg-green-600 transition mb-4"
+            className="inline-block bg-green-500 text-white px-8 py-3 rounded-full font-bold hover:bg-green-600 transition mb-4"
           >
             💬 WhatsApp 聯絡
           </a>
@@ -136,7 +136,7 @@ export default function ZhHomePage() {
       <div className="bg-gray-50 py-4 border-t border-gray-100">
         <div className="container mx-auto px-4 text-center">
           <p className="text-sm text-gray-500">
-            <Link href="/about" className="underline hover:text-[#1B365D]">由認証執業言語治療師撰寫</Link>
+            <Link href="/about" className="underline hover:text-[#112A46]">由認証執業言語治療師撰寫</Link>
           </p>
         </div>
       </div>

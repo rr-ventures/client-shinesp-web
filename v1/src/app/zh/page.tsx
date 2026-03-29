@@ -66,10 +66,10 @@ export default function ZhPage() {
               我们提供专业的儿童及成人言语治疗服务，可以上门、到校或通过网络进行治疗。我们用普通话和英语提供服务，确保评估准确、沟通顺畅。支持NDIS、Medicare及自费。
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/book" className="bg-secondary text-primary-foreground px-8 py-4 rounded-full font-bold text-center hover:bg-opacity-90 transition-all text-lg shadow-lg">
+              <Link href="/book" className="btn-secondary text-lg px-8 py-4">
                 预约免费咨询通话
               </Link>
-              <a href="tel:+61400000000" className="border-2 border-primary text-primary px-8 py-4 rounded-full font-bold text-center hover:bg-primary hover:text-white transition-all text-lg">
+              <a href="tel:+61400000000" className="btn-outline text-lg px-8 py-4">
                 📞 0400 000 000
               </a>
             </div>
@@ -123,11 +123,14 @@ export default function ZhPage() {
               </div>
             </div>
 
-            <div className="bg-primary text-white p-8 rounded-2xl text-center">
-              <p className="text-xl mb-6">准备好开始了吗？预约一个免费的电话咨询，了解我们如何帮助您的孩子。</p>
-              <Link href="/book" className="inline-block bg-secondary text-primary-foreground px-8 py-4 rounded-full font-bold hover:bg-opacity-90 transition-all">
-                预约免费咨询通话 →
-              </Link>
+            <div className="bg-primary text-white p-12 rounded-[2rem] text-center shadow-2xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-secondary/10 rounded-full blur-[60px] -translate-y-1/2 translate-x-1/3"></div>
+              <div className="relative z-10">
+                <p className="text-2xl mb-8 font-light">准备好开始了吗？预约一个免费的电话咨询，了解我们如何帮助您的孩子。</p>
+                <Link href="/book" className="btn-secondary text-lg px-10 py-4">
+                  预约免费咨询通话 →
+                </Link>
+              </div>
             </div>
           </div>
         </div>

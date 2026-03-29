@@ -30,11 +30,11 @@ export default function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
             <li key={item.href} className="flex items-center">
               {index > 0 && <ChevronRight className="w-4 h-4 mx-1 text-gray-400" />}
               {index === items.length - 1 ? (
-                <span className="text-navy-900 font-medium" aria-current="page">
+                <span className="text-[#1B365D] font-medium" aria-current="page">
                   {item.label}
                 </span>
               ) : (
-                <Link href={item.href} className="hover:text-gold-600 transition-colors">
+                <Link href={item.href} className="hover:text-[#E8A84C] transition-colors">
                   {item.label}
                 </Link>
               )}

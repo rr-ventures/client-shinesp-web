@@ -29,7 +29,7 @@ export default function ThankYouPage() {
               Your enquiry has been received. I'm looking forward to speaking with you about how we can support your speech therapy goals.
             </p>
             
-            <div className="bg-accent p-8 rounded-2xl border border-gray-100 mb-10">
+            <div className="premium-card p-8 bg-accent/50 mb-10">
               <h2 className="text-2xl font-bold text-primary mb-4">What happens next?</h2>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
@@ -57,10 +57,10 @@ export default function ThankYouPage() {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/" className="bg-primary text-white px-8 py-4 rounded-full font-bold text-center hover:bg-opacity-90 transition-all shadow-md flex items-center justify-center gap-2">
+              <Link href="/" className="btn-primary px-8 py-4 shadow-md gap-2">
                 Return to Homepage <ArrowRight size={20} />
               </Link>
-              <Link href="/" className="border-2 border-primary text-primary px-8 py-4 rounded-full font-bold text-center hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2">
+              <Link href="/" className="btn-outline px-8 py-4 gap-2">
                 <FileText size={20} /> Download Free Checklist
               </Link>
             </div>

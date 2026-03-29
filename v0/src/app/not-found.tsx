@@ -9,29 +9,29 @@ export const metadata: Metadata = {
 export default function NotFound() {
   return (
     <div className="min-h-[70vh] flex flex-col items-center justify-center text-center px-4 py-20">
-      <div className="text-8xl font-bold text-[#1B365D] mb-4">404</div>
-      <h1 className="text-3xl md:text-4xl font-bold text-[#1B365D] mb-4">Page not found</h1>
+      <div className="text-8xl font-serif font-medium text-[#112A46] mb-4">404</div>
+      <h1 className="text-3xl md:text-4xl font-serif font-medium text-[#112A46] mb-4">Page not found</h1>
       <p className="text-gray-600 text-lg mb-10 max-w-xl">
         Sorry, we couldn&apos;t find that page. It may have moved or the URL may be incorrect.
       </p>
 
       <div className="grid sm:grid-cols-2 gap-4 mb-12 max-w-lg w-full">
-        <Link href="/" className="bg-[#1B365D] text-white px-6 py-3 rounded-md font-bold hover:bg-blue-900 transition text-center">
+        <Link href="/" className="bg-[#112A46] text-white px-6 py-3 rounded-full font-bold hover:bg-[#1a3f69] transition text-center">
           Go to Homepage
         </Link>
-        <Link href="/book" className="bg-[#E8A84C] text-white px-6 py-3 rounded-md font-bold hover:bg-amber-600 transition text-center">
+        <Link href="/book" className="bg-[#C89B66] text-white px-6 py-3 rounded-full font-bold hover:bg-[#b58956] transition text-center">
           Book a Discovery Call
         </Link>
       </div>
 
       <div className="text-left max-w-md">
-        <p className="font-semibold text-[#1B365D] mb-3">Popular pages:</p>
+        <p className="font-semibold text-[#112A46] mb-3">Popular pages:</p>
         <ul className="space-y-2 text-gray-700">
-          <li><Link href="/speech-therapy-autism-sydney-nsw" className="underline hover:text-[#E8A84C]">Speech Therapy for Autism</Link></li>
-          <li><Link href="/ndis-speech-therapy-sydney-nsw" className="underline hover:text-[#E8A84C]">NDIS Speech Therapy</Link></li>
-          <li><Link href="/about" className="underline hover:text-[#E8A84C]">About Shine and Speak</Link></li>
-          <li><Link href="/contact" className="underline hover:text-[#E8A84C]">Contact us</Link></li>
-          <li><Link href="/refer-a-client" className="underline hover:text-[#E8A84C]">Refer a client</Link></li>
+          <li><Link href="/speech-therapy-autism-sydney-nsw" className="underline hover:text-[#C89B66]">Speech Therapy for Autism</Link></li>
+          <li><Link href="/ndis-speech-therapy-sydney-nsw" className="underline hover:text-[#C89B66]">NDIS Speech Therapy</Link></li>
+          <li><Link href="/about" className="underline hover:text-[#C89B66]">About Shine and Speak</Link></li>
+          <li><Link href="/contact" className="underline hover:text-[#C89B66]">Contact us</Link></li>
+          <li><Link href="/refer-a-client" className="underline hover:text-[#C89B66]">Refer a client</Link></li>
         </ul>
       </div>
     </div>

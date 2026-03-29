@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Ear } from 'lucide-react';
 
 const services = [
   { href: '/paediatric-speech-therapy-sydney-nsw', label: 'Paediatric Speech Therapy' },
@@ -52,70 +52,70 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
-      <div className="container-custom py-3">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-[0_2px_10px_rgba(27,54,93,0.02)] transition-all">
+      <div className="container-custom py-4">
         {/* Top bar */}
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 shrink-0">
+          <Link href="/" className="flex items-center gap-2 shrink-0 group">
             <Image
               src="/logo-horizontal.png"
               alt="Shine and Speak logo"
-              width={180}
-              height={48}
-              className="h-10 w-auto"
+              width={200}
+              height={54}
+              className="h-12 w-auto group-hover:opacity-90 transition-opacity"
               priority
             />
           </Link>
 
           {/* Desktop top-right */}
-          <div className="hidden md:flex items-center gap-4">
-            <a href="tel:+61400000000" className="text-primary font-semibold hover:text-secondary transition-colors text-sm">
-              📞 0400 000 000
+          <div className="hidden md:flex items-center gap-5">
+            <a href="tel:+61400000000" className="text-primary font-medium hover:text-secondary transition-colors text-sm flex items-center gap-2">
+              <Ear size={16} /> 0400 000 000
             </a>
             <Link
               href="/book"
-              className="bg-secondary text-primary-foreground px-5 py-2.5 rounded-full font-bold hover:bg-opacity-90 transition-all text-sm"
+              className="btn-secondary text-sm px-6 py-2.5"
             >
               Book a Free Discovery Call
             </Link>
             <Link
               href="/refer-a-client"
-              className="border-2 border-primary text-primary px-5 py-2.5 rounded-full font-bold hover:bg-primary hover:text-primary-foreground transition-all text-sm"
+              className="btn-outline text-sm px-6 py-2.5"
             >
               Refer a Client
             </Link>
-            <Link href="/zh" className="text-sm font-medium text-gray-600 hover:text-primary" lang="zh">
+            <Link href="/zh" className="text-sm font-medium text-gray-500 hover:text-primary transition-colors" lang="zh">
               中文
             </Link>
           </div>
 
           {/* Mobile top-right — both CTAs visible */}
-          <div className="flex md:hidden items-center gap-2">
+          <div className="flex md:hidden items-center gap-3">
             <Link
               href="/book"
-              className="bg-secondary text-primary-foreground px-3 py-2 rounded-full font-bold text-xs"
+              className="btn-secondary text-xs px-4 py-2"
             >
               Book
             </Link>
             <Link
               href="/refer-a-client"
-              className="border-2 border-primary text-primary px-3 py-2 rounded-full font-bold text-xs"
+              className="btn-outline text-xs px-4 py-2"
             >
               Refer
             </Link>
             <button
-              className="text-primary ml-1"
+              className="text-primary ml-2 p-1 hover:bg-gray-50 rounded-lg transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle navigation menu"
               aria-expanded={isMobileMenuOpen}
             >
-              {isMobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
+              {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
           </div>
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-6 mt-3 pt-3 border-t border-gray-50" aria-label="Main navigation">
+        <nav className="hidden md:flex items-center gap-8 mt-4 pt-4 border-t border-gray-50/50" aria-label="Main navigation">
           {/* Services dropdown */}
           <div className="relative group">
             <button className="font-medium text-primary hover:text-secondary flex items-center gap-1 text-sm">

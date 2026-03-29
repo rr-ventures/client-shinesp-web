@@ -19,57 +19,57 @@ const allSuburbs = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1B365D] text-white">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+    <footer className="bg-[#112A46] text-white">
+      <div className="container mx-auto px-4 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
 
           {/* Brand column */}
           <div>
             <Image
               src="/shine-and-speak-logo-stacked-transparent.png"
               alt="Shine and Speak Speech Pathology"
-              width={140}
-              height={140}
-              className="mb-4 bg-white p-2 rounded-lg object-contain"
+              width={160}
+              height={160}
+              className="mb-6 bg-white p-3 rounded-[24px] object-contain shadow-lg"
             />
-            <p className="text-sm text-gray-300 mb-4 leading-relaxed">
+            <p className="text-sm text-white/80 mb-6 font-light leading-relaxed">
               Mobile and telehealth speech pathology across Inner West Sydney and Australia-wide.
             </p>
 
             {/* Trust badges */}
-            <div className="space-y-1 text-xs font-semibold text-gray-300 mb-4">
-              <div>✓ Certified Practising Speech Pathologist (CPSP)</div>
-              <div>✓ NDIS Registered Provider</div>
-              <div>✓ Medicare Provider</div>
+            <div className="space-y-2 text-xs font-medium text-white/90 mb-8">
+              <div className="flex items-center gap-2"><span className="text-[#C89B66]">✓</span> Certified Practising Speech Pathologist (CPSP)</div>
+              <div className="flex items-center gap-2"><span className="text-[#C89B66]">✓</span> NDIS Registered Provider</div>
+              <div className="flex items-center gap-2"><span className="text-[#C89B66]">✓</span> Medicare Provider</div>
             </div>
 
             {/* Social media links */}
-            <div className="flex gap-3">
+            <div className="flex gap-4">
               <a
                 href="https://www.linkedin.com/company/shineandspeak" /* REPLACE: real LinkedIn URL */
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-[#E8A84C] transition text-sm"
+                className="text-white/60 hover:text-[#C89B66] transition-colors text-sm font-medium"
                 aria-label="Shine and Speak on LinkedIn"
               >
                 LinkedIn
               </a>
-              <span className="text-gray-500">·</span>
+              <span className="text-white/20">·</span>
               <a
                 href="https://www.facebook.com/shineandspeak" /* REPLACE: real Facebook URL */
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-[#E8A84C] transition text-sm"
+                className="text-white/60 hover:text-[#C89B66] transition-colors text-sm font-medium"
                 aria-label="Shine and Speak on Facebook"
               >
                 Facebook
               </a>
-              <span className="text-gray-500">·</span>
+              <span className="text-white/20">·</span>
               <a
                 href="https://www.instagram.com/shineandspeak" /* REPLACE: real Instagram URL */
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-[#E8A84C] transition text-sm"
+                className="text-white/60 hover:text-[#C89B66] transition-colors text-sm font-medium"
                 aria-label="Shine and Speak on Instagram"
               >
                 Instagram
@@ -79,30 +79,30 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-bold text-[#E8A84C] mb-4">Quick Links</h3>
-            <ul className="space-y-2 text-sm text-gray-300">
-              <li><Link href="/paediatric-speech-therapy-sydney-nsw" className="hover:text-white transition">Paediatric Speech Therapy</Link></li>
-              <li><Link href="/adult-speech-therapy-sydney-nsw" className="hover:text-white transition">Adult Speech Therapy</Link></li>
-              <li><Link href="/mobile-speech-therapy-sydney-nsw" className="hover:text-white transition">Mobile Speech Therapy</Link></li>
-              <li><Link href="/telehealth-speech-therapy-sydney-nsw" className="hover:text-white transition">Telehealth Speech Therapy</Link></li>
-              <li><Link href="/ndis-speech-therapy-sydney-nsw" className="hover:text-white transition">NDIS Speech Therapy</Link></li>
-              <li><Link href="/medicare-speech-therapy-sydney-nsw" className="hover:text-white transition">Medicare Rebates</Link></li>
-              <li><Link href="/fees" className="hover:text-white transition">Fees &amp; Pricing</Link></li>
-              <li><Link href="/how-it-works" className="hover:text-white transition">How It Works</Link></li>
-              <li><Link href="/about" className="hover:text-white transition">About Us</Link></li>
-              <li><Link href="/refer-a-client" className="hover:text-white transition">Refer a Client</Link></li>
-              <li><Link href="/contact" className="hover:text-white transition">Contact</Link></li>
-              <li><Link href="/zh" className="hover:text-white transition">中文页面</Link></li>
+            <h3 className="font-serif text-xl font-medium text-[#C89B66] mb-6">Quick Links</h3>
+            <ul className="space-y-3 text-sm text-white/80 font-light">
+              <li><Link href="/paediatric-speech-therapy-sydney-nsw" className="hover:text-white hover:translate-x-1 inline-block transition-all">Paediatric Speech Therapy</Link></li>
+              <li><Link href="/adult-speech-therapy-sydney-nsw" className="hover:text-white hover:translate-x-1 inline-block transition-all">Adult Speech Therapy</Link></li>
+              <li><Link href="/mobile-speech-therapy-sydney-nsw" className="hover:text-white hover:translate-x-1 inline-block transition-all">Mobile Speech Therapy</Link></li>
+              <li><Link href="/telehealth-speech-therapy-sydney-nsw" className="hover:text-white hover:translate-x-1 inline-block transition-all">Telehealth Speech Therapy</Link></li>
+              <li><Link href="/ndis-speech-therapy-sydney-nsw" className="hover:text-white hover:translate-x-1 inline-block transition-all">NDIS Speech Therapy</Link></li>
+              <li><Link href="/medicare-speech-therapy-sydney-nsw" className="hover:text-white hover:translate-x-1 inline-block transition-all">Medicare Rebates</Link></li>
+              <li><Link href="/fees" className="hover:text-white hover:translate-x-1 inline-block transition-all">Fees &amp; Pricing</Link></li>
+              <li><Link href="/how-it-works" className="hover:text-white hover:translate-x-1 inline-block transition-all">How It Works</Link></li>
+              <li><Link href="/about" className="hover:text-white hover:translate-x-1 inline-block transition-all">About Us</Link></li>
+              <li><Link href="/refer-a-client" className="hover:text-white hover:translate-x-1 inline-block transition-all">Refer a Client</Link></li>
+              <li><Link href="/contact" className="hover:text-white hover:translate-x-1 inline-block transition-all">Contact</Link></li>
+              <li><Link href="/zh" className="hover:text-white hover:translate-x-1 inline-block transition-all">中文页面</Link></li>
             </ul>
           </div>
 
           {/* Areas Served — full list, visible for SEO */}
           <div>
-            <h3 className="font-bold text-[#E8A84C] mb-4">Areas Served</h3>
-            <ul className="space-y-2 text-sm text-gray-300">
+            <h3 className="font-serif text-xl font-medium text-[#C89B66] mb-6">Areas Served</h3>
+            <ul className="space-y-3 text-sm text-white/80 font-light">
               {allSuburbs.map((suburb) => (
                 <li key={suburb.href}>
-                  <Link href={suburb.href} className="hover:text-white transition">
+                  <Link href={suburb.href} className="hover:text-white hover:translate-x-1 inline-block transition-all">
                     {suburb.label}
                   </Link>
                 </li>
@@ -112,16 +112,16 @@ export default function Footer() {
 
           {/* Contact & Info */}
           <div>
-            <h3 className="font-bold text-[#E8A84C] mb-4">Contact</h3>
-            <ul className="space-y-2 text-sm text-gray-300 mb-6">
+            <h3 className="font-serif text-xl font-medium text-[#C89B66] mb-6">Contact</h3>
+            <ul className="space-y-4 text-sm text-white/80 font-light mb-8">
               <li>
-                <a href="tel:0421608819" className="hover:text-white transition">
-                  📞 {PHONE_DISPLAY}
+                <a href="tel:0421608819" className="hover:text-white transition-colors flex items-center gap-3">
+                  <span className="text-lg">📞</span> {PHONE_DISPLAY}
                 </a>
               </li>
               <li>
-                <a href={`mailto:${EMAIL}`} className="hover:text-white transition break-all">
-                  ✉️ {EMAIL}
+                <a href={`mailto:${EMAIL}`} className="hover:text-white transition-colors flex items-center gap-3 break-all">
+                  <span className="text-lg">✉️</span> {EMAIL}
                 </a>
               </li>
               <li>
@@ -129,37 +129,40 @@ export default function Footer() {
                   href="https://wa.me/61421608819"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white transition"
+                  className="hover:text-white transition-colors flex items-center gap-3"
                 >
-                  💬 WhatsApp Us
+                  <span className="text-lg">💬</span> WhatsApp Us
                 </a>
               </li>
             </ul>
 
             {/* WeChat QR placeholder */}
-            <div className="bg-white/10 border border-white/20 rounded-lg p-3 text-center mb-6 w-32">
-              {/* REPLACE: Insert WeChat QR code image */}
-              <div className="bg-gray-400/30 w-full aspect-square rounded flex items-center justify-center mb-2">
-                <span className="text-xs text-gray-300">QR</span>
-              </div>
-              <p className="text-xs text-gray-300">Scan to add on WeChat</p>
+            <div className="bg-white/5 border border-white/10 rounded-[24px] p-4 text-center mb-8 w-36 backdrop-blur-sm">
+              <Image 
+                src="/wechat-qr-placeholder.webp" 
+                alt="WeChat QR Code" 
+                width={120} 
+                height={120} 
+                className="w-full aspect-square rounded-lg mb-3 object-cover bg-white"
+              />
+              <p className="text-xs text-white/70 font-medium">Scan to add on WeChat</p>
             </div>
 
             {/* Provider numbers */}
-            <div className="text-xs text-gray-400 space-y-1">
+            <div className="text-xs text-white/40 space-y-2 font-light">
               <p>ABN: {/* PLACEHOLDER: ABN */}<span className="italic">Coming soon</span></p>
               <p>NDIS Provider No: {/* PLACEHOLDER: NDIS Provider Number */}<span className="italic">Coming soon</span></p>
             </div>
           </div>
         </div>
 
-        <hr className="border-white/10 my-8" />
+        <hr className="border-white/10 my-10" />
 
         {/* Footer bottom bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-white/50 font-light">
           <p>© 2026 Shine and Speak. All rights reserved.</p>
           <p>
-            <Link href="/about" className="text-gray-300 hover:text-white transition underline">
+            <Link href="/about" className="hover:text-white transition-colors underline decoration-white/20 hover:decoration-white">
               Written by a Certified Practising Speech Pathologist
             </Link>
           </p>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter, Playfair_Display } from 'next/font/google';
 import { headers } from 'next/headers';
 import './globals.css';
 import Header from '@/components/Header';
@@ -9,7 +9,8 @@ import FloatingButtons from '@/components/FloatingButtons';
 import JsonLd from '@/components/JsonLd';
 import { organizationSchema, SITE_URL } from '@/lib/schema';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair' });
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -48,7 +49,7 @@ export default async function RootLayout({
 
   return (
     <html lang={lang}>
-      <body className={`${inter.className} min-h-screen flex flex-col`}>
+      <body className={`${inter.variable} ${playfair.variable} font-sans min-h-screen flex flex-col antialiased bg-[#FAFAF8] text-slate-800`}>
         <JsonLd data={organizationSchema} />
         <ScrollToTop />
         <Header />

@@ -145,7 +145,7 @@ export default function AutismPage() {
               </div>
 
               {/* 5. Signs to look for */}
-              <div className="bg-accent p-8 rounded-2xl border border-gray-100">
+              <div className="premium-card p-8 bg-accent/50">
                 <h2 className="text-2xl font-bold text-primary mb-6">Signs to look for</h2>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3"><CheckCircle2 className="text-secondary shrink-0 mt-1" /> <span className="text-gray-700 text-lg">Limited or no spoken language for their age</span></li>
@@ -204,10 +204,10 @@ export default function AutismPage() {
               <div className="sticky top-24 bg-accent p-8 rounded-2xl border border-gray-200">
                 <h3 className="text-2xl font-bold text-primary mb-4">Ready to get started?</h3>
                 <p className="text-gray-700 mb-6">Book a free discovery call to discuss your child's needs and see if we're the right fit.</p>
-                <Link href="/book" className="block w-full bg-secondary text-primary-foreground px-6 py-4 rounded-full font-bold text-center hover:bg-opacity-90 transition-all mb-4 shadow-md">
+                <Link href="/book" className="block w-full btn-secondary text-center mb-4">
                   Book a Free Call
                 </Link>
-                <Link href="/refer-a-client" className="block w-full border-2 border-primary text-primary px-6 py-4 rounded-full font-bold text-center hover:bg-primary hover:text-primary-foreground transition-all">
+                <Link href="/refer-a-client" className="block w-full btn-outline text-center">
                   Refer a Client
                 </Link>
               </div>
@@ -217,18 +217,20 @@ export default function AutismPage() {
       </section>
 
       {/* 11. CTA band */}
-      <section className="bg-secondary py-16 text-primary-foreground text-center">
-        <div className="container-custom">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">Ready to help your child thrive?</h2>
-          <p className="text-xl text-primary/80 mb-8 max-w-2xl mx-auto font-medium">
+      <section className="bg-primary py-24 text-white text-center relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/hero-stock-placeholder-unsplash.jpg')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
+        <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-r from-primary via-primary/90 to-primary/80"></div>
+        <div className="container-custom relative z-10">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">Ready to help your child thrive?</h2>
+          <p className="text-xl text-gray-200 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
             Book a free discovery call to talk about your child's needs — no obligation, no pressure.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-8 text-primary font-bold text-lg">
-            <a href="tel:+61400000000" className="flex items-center gap-2 hover:opacity-80">📞 0400 000 000</a>
-            <span className="hidden sm:block opacity-50">•</span>
-            <a href="mailto:admin@shineandspeak.com.au" className="flex items-center gap-2 hover:opacity-80">✉️ admin@shineandspeak.com.au</a>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-8 mb-12 text-white font-medium text-xl">
+            <a href="tel:+61400000000" className="flex items-center gap-3 hover:text-secondary transition-colors"><span className="bg-white/10 p-3 rounded-full">📞</span> 0400 000 000</a>
+            <span className="hidden sm:block opacity-30">|</span>
+            <a href="mailto:admin@shineandspeak.com.au" className="flex items-center gap-3 hover:text-secondary transition-colors"><span className="bg-white/10 p-3 rounded-full">✉️</span> admin@shineandspeak.com.au</a>
           </div>
-          <Link href="/book" className="inline-block bg-primary text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-opacity-90 transition-all shadow-lg hover:-translate-y-1">
+          <Link href="/book" className="btn-secondary text-lg px-12 py-5 shadow-2xl">
             Book a Free Discovery Call →
           </Link>
         </div>

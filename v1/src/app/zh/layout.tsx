@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Lora } from "next/font/google";
+import { Plus_Jakarta_Sans, Playfair_Display } from "next/font/google";
 import "../globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -7,12 +7,12 @@ import ScrollToTop from "@/components/ScrollToTop";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import FloatingCallButton from "@/components/FloatingCallButton";
 
-const inter = Inter({
+const sans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
 });
 
-const lora = Lora({
+const serif = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-serif",
 });
@@ -52,7 +52,7 @@ export default function ZhLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="zh" className={`${inter.variable} ${lora.variable} scroll-smooth`}>
+    <html lang="zh" className={`${sans.variable} ${serif.variable} scroll-smooth`}>
       <head>
         <script
           type="application/ld+json"

@@ -68,13 +68,10 @@ export default function AboutPage() {
                 </a>
               </div>
             </div>
-            <div className="relative aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden shadow-xl border-8 border-white">
+            <div className="relative aspect-square md:aspect-[4/3] rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white transform hover:scale-[1.02] transition-transform duration-500">
               {/* <!-- REPLACE: Professional headshot, warm and approachable --> */}
-              <div className="absolute inset-0 bg-primary/10 flex items-center justify-center bg-gradient-to-br from-primary/20 to-secondary/20">
-                <span className="text-primary font-bold bg-white/80 px-6 py-3 rounded-full backdrop-blur-sm">
-                  [Shine Teoh Headshot]
-                </span>
-              </div>
+              <img src="/shine-headshot-1200x1200.webp" alt="Shine Teoh Headshot" className="absolute inset-0 w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-40"></div>
             </div>
           </div>
         </div>
@@ -105,7 +102,7 @@ export default function AboutPage() {
             </div>
 
             {/* 5. Qualifications */}
-            <div className="bg-accent p-8 rounded-2xl border border-gray-100">
+            <div className="premium-card p-8 bg-accent/50">
               <h2 className="text-2xl font-bold text-primary mb-6">Qualifications & Registrations</h2>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3"><CheckCircle2 className="text-secondary shrink-0 mt-1" /> <span className="text-gray-700 text-lg">Bachelor of Speech Pathology</span></li>
@@ -167,18 +164,20 @@ export default function AboutPage() {
       </section>
 
       {/* 11. CTA band */}
-      <section className="bg-secondary py-16 text-primary-foreground text-center">
-        <div className="container-custom">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">Ready to help your child thrive?</h2>
-          <p className="text-xl text-primary/80 mb-8 max-w-2xl mx-auto font-medium">
+      <section className="bg-primary py-24 text-white text-center relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/hero-stock-placeholder-unsplash.jpg')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
+        <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-r from-primary via-primary/90 to-primary/80"></div>
+        <div className="container-custom relative z-10">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">Ready to help your child thrive?</h2>
+          <p className="text-xl text-gray-200 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
             Book a free discovery call to talk about your child's needs — no obligation, no pressure.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-8 text-primary font-bold text-lg">
-            <a href="tel:+61400000000" className="flex items-center gap-2 hover:opacity-80">📞 0400 000 000</a>
-            <span className="hidden sm:block opacity-50">•</span>
-            <a href="mailto:admin@shineandspeak.com.au" className="flex items-center gap-2 hover:opacity-80">✉️ admin@shineandspeak.com.au</a>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-8 mb-12 text-white font-medium text-xl">
+            <a href="tel:+61400000000" className="flex items-center gap-3 hover:text-secondary transition-colors"><span className="bg-white/10 p-3 rounded-full">📞</span> 0400 000 000</a>
+            <span className="hidden sm:block opacity-30">|</span>
+            <a href="mailto:admin@shineandspeak.com.au" className="flex items-center gap-3 hover:text-secondary transition-colors"><span className="bg-white/10 p-3 rounded-full">✉️</span> admin@shineandspeak.com.au</a>
           </div>
-          <Link href="/book" className="inline-block bg-primary text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-opacity-90 transition-all shadow-lg hover:-translate-y-1">
+          <Link href="/book" className="btn-secondary text-lg px-12 py-5 shadow-2xl">
             Book a Free Discovery Call →
           </Link>
         </div>

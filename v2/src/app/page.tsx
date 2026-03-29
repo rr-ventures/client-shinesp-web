@@ -263,167 +263,183 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalBusinessSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div>
+      <div className="bg-[#FDFBF7]">
         <Breadcrumbs items={[{ label: 'Home', href: '/' }]} />
       </div>
 
       {/* ── SECTION 1: HERO ─────────────────────────────── */}
-      <section className="bg-gradient-to-br from-[#1B365D] to-[#0d2240] text-white">
-        <div className="max-w-7xl mx-auto px-4 md:px-8 py-20 lg:py-28 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+      <section className="relative bg-[#FDFBF7] overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 py-20 lg:py-28 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10">
+          <div className="max-w-2xl">
+            <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-gray-100 mb-8">
+              <span className="flex h-2 w-2 rounded-full bg-green-500"></span>
+              <span className="text-sm font-medium text-gray-800 tracking-wide uppercase">Accepting new clients in Inner West Sydney</span>
+            </div>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-[#1B365D] leading-[1.1] mb-6">
               Helping your child communicate with confidence
             </h1>
-            <p className="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed font-light">
               Personalised speech therapy — delivered to your home, school, or online. Available in English
               and Mandarin (普通话). Serving Inner West Sydney and surrounds.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              {/* REPLACE: update href to your real Calendly URL */}
+            <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <a
                 href="https://calendly.com/shineandspeak"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center bg-[#E8A84C] text-[#1B365D] font-bold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg shadow-lg"
+                className="inline-flex items-center justify-center bg-[#1B365D] text-white font-medium px-8 py-4 rounded-full hover:bg-[#0d2240] transition-all duration-300 text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
                 Book a Free Discovery Call
               </a>
               <Link
                 href="/refer-a-client"
-                className="inline-flex items-center justify-center border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white hover:text-[#1B365D] transition-colors text-lg"
+                className="inline-flex items-center justify-center bg-white border border-gray-200 text-[#1B365D] font-medium px-8 py-4 rounded-full hover:border-[#1B365D] transition-all duration-300 text-lg shadow-sm hover:shadow-md"
               >
                 Refer a Client
               </Link>
             </div>
             {/* Inline trust strip */}
-            <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-blue-100">
-              <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-[#E8A84C]" /> CPSP Certified</span>
-              <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-[#E8A84C]" /> NDIS Registered</span>
-              <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-[#E8A84C]" /> Medicare Provider</span>
+            <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-gray-500 font-medium">
+              <span className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#E8A84C]" /> CPSP Certified</span>
+              <span className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#E8A84C]" /> NDIS Registered</span>
+              <span className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#E8A84C]" /> Medicare Provider</span>
             </div>
           </div>
-          <div className="relative h-80 lg:h-[480px] rounded-2xl overflow-hidden shadow-2xl bg-[#0d2240] flex items-center justify-center">
-            {/* REPLACE: Professional photo of Shine Teoh working with a child. Must be a real photo — not stock. Warm, mobile-therapy context (home visit). */}
-            <div className="text-center px-8">
-              <p className="text-blue-300 text-sm mb-2">[ Image placeholder ]</p>
-              {/* REPLACE: Professional photo of Shine Teoh working with a child in a home-visit context */}
-            </div>
+          <div className="relative h-[400px] lg:h-[600px] rounded-[2rem] overflow-hidden shadow-2xl">
+            <img 
+              src="/shared/placeholders/hero-stock-placeholder-unsplash.jpg" 
+              alt="Speech therapy session with a child" 
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#1B365D]/40 to-transparent"></div>
           </div>
         </div>
+        {/* Decorative background element */}
+        <div className="absolute top-0 right-0 -mr-40 -mt-40 w-[800px] h-[800px] bg-[#F0F4F8] rounded-full blur-3xl opacity-50 pointer-events-none"></div>
       </section>
 
       {/* ── SECTION 2: TRUST LOGO BAR ───────────────────── */}
-      <section className="bg-gray-50 border-b border-gray-200">
-        <div className="max-w-5xl mx-auto px-4 md:px-8 py-8">
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-            <div className="flex items-center gap-2 text-[#1B365D]">
+      <section className="bg-white border-y border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 py-10">
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+            <div className="flex items-center gap-3 text-[#1B365D] opacity-80 hover:opacity-100 transition-opacity">
               <CheckCircle2 className="w-6 h-6 text-[#E8A84C] flex-shrink-0" />
-              <span className="font-semibold text-sm">Certified Practising Speech Pathologist (SPA)</span>
+              <span className="font-medium text-sm tracking-wide">Certified Practising Speech Pathologist (SPA)</span>
             </div>
-            <div className="flex items-center gap-2 text-[#1B365D]">
+            <div className="flex items-center gap-3 text-[#1B365D] opacity-80 hover:opacity-100 transition-opacity">
               <CheckCircle2 className="w-6 h-6 text-[#E8A84C] flex-shrink-0" />
-              <span className="font-semibold text-sm">NDIS Registered Provider</span>
+              <span className="font-medium text-sm tracking-wide">NDIS Registered Provider</span>
             </div>
-            <div className="flex items-center gap-2 text-[#1B365D]">
+            <div className="flex items-center gap-3 text-[#1B365D] opacity-80 hover:opacity-100 transition-opacity">
               <CheckCircle2 className="w-6 h-6 text-[#E8A84C] flex-shrink-0" />
-              <span className="font-semibold text-sm">Medicare Provider</span>
+              <span className="font-medium text-sm tracking-wide">Medicare Provider</span>
             </div>
-            <div className="flex items-center gap-2 text-[#1B365D]">
+            <div className="flex items-center gap-3 text-[#1B365D] opacity-80 hover:opacity-100 transition-opacity">
               <CheckCircle2 className="w-6 h-6 text-[#E8A84C] flex-shrink-0" />
-              <span className="font-semibold text-sm">Bilingual — English &amp; Mandarin</span>
+              <span className="font-medium text-sm tracking-wide">Bilingual — English &amp; Mandarin</span>
             </div>
-            {/* PLACEHOLDER: Training certification badges (e.g. Hanen, Sounds Write, Lidcombe Program) */}
           </div>
         </div>
       </section>
 
       {/* ── SECTION 3: CONDITION CARDS ──────────────────── */}
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-[#FDFBF7]">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1B365D] text-center mb-4">
-            How I can help your child
-          </h2>
-          <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Every child is different. I provide evidence-based speech therapy tailored to your child&apos;s individual strengths, goals, and everyday environments.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-4xl md:text-5xl font-serif text-[#1B365D] mb-6">
+              How I can help your child
+            </h2>
+            <p className="text-lg text-gray-600 leading-relaxed font-light">
+              Every child is different. I provide evidence-based speech therapy tailored to your child&apos;s individual strengths, goals, and everyday environments.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {CONDITIONS.map((condition) => (
               <Link
                 key={condition.href}
                 href={condition.href}
-                className="group border border-gray-200 rounded-xl p-6 hover:border-[#E8A84C] hover:shadow-md transition-all duration-200"
+                className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl border border-gray-100 hover:border-[#E8A84C]/30 transition-all duration-300 transform hover:-translate-y-1"
               >
-                <div className="text-3xl mb-3">{condition.icon}</div>
-                <h3 className="text-lg font-bold text-[#1B365D] mb-2 group-hover:text-[#E8A84C] transition-colors">
+                <div className="w-14 h-14 bg-[#F0F4F8] rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-[#E8A84C]/10 transition-colors">
+                  {condition.icon}
+                </div>
+                <h3 className="text-xl font-serif font-semibold text-[#1B365D] mb-3 group-hover:text-[#E8A84C] transition-colors">
                   {condition.title}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">{condition.description}</p>
-                <span className="inline-flex items-center text-sm font-semibold text-[#E8A84C] group-hover:gap-2 transition-all">
-                  Learn more <ArrowRight className="w-4 h-4 ml-1" />
+                <p className="text-gray-600 leading-relaxed mb-6 font-light">{condition.description}</p>
+                <span className="inline-flex items-center text-sm font-medium text-[#1B365D] group-hover:text-[#E8A84C] transition-colors">
+                  Learn more <ArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" />
                 </span>
               </Link>
             ))}
           </div>
-          <p className="text-gray-600 mt-8 text-center text-sm leading-relaxed">
-            I also support children and adults with developmental delay, intellectual disability, social
-            communication difficulties, AAC and multimodal communication, and adults recovering from stroke, brain
-            injury, and neurological conditions.{' '}
-            <Link href="/paediatric-speech-therapy-sydney-nsw" className="text-[#1B365D] underline underline-offset-2 hover:text-[#E8A84C]">
-              Explore all paediatric speech therapy services
-            </Link>{' '}
-            or learn about{' '}
-            <Link href="/adult-speech-therapy-sydney-nsw" className="text-[#1B365D] underline underline-offset-2 hover:text-[#E8A84C]">
-              adult speech therapy options in Sydney
-            </Link>.
-          </p>
+          <div className="mt-16 text-center">
+            <p className="text-gray-500 text-sm leading-relaxed max-w-4xl mx-auto font-light">
+              I also support children and adults with developmental delay, intellectual disability, social
+              communication difficulties, AAC and multimodal communication, and adults recovering from stroke, brain
+              injury, and neurological conditions.{' '}
+              <Link href="/paediatric-speech-therapy-sydney-nsw" className="text-[#1B365D] font-medium underline underline-offset-4 hover:text-[#E8A84C] transition-colors">
+                Explore all paediatric speech therapy services
+              </Link>{' '}
+              or learn about{' '}
+              <Link href="/adult-speech-therapy-sydney-nsw" className="text-[#1B365D] font-medium underline underline-offset-4 hover:text-[#E8A84C] transition-colors">
+                adult speech therapy options in Sydney
+              </Link>.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* ── SECTION 4: BILINGUAL CALLOUT ────────────────── */}
-      <section className="py-16 bg-[#1B365D] text-white">
-        <div className="max-w-4xl mx-auto px-4 md:px-8 text-center">
-          <p className="text-2xl font-bold text-[#E8A84C] mb-3">我們提供中文語言治療服務</p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Speech therapy in English and Mandarin</h2>
-          <p className="text-blue-100 text-lg mb-4 leading-relaxed">
+      <section className="py-24 bg-[#1B365D] relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
+        <div className="max-w-4xl mx-auto px-4 md:px-8 text-center relative z-10">
+          <p className="text-xl font-medium tracking-widest text-[#E8A84C] mb-4 uppercase">我們提供中文語言治療服務</p>
+          <h2 className="text-4xl md:text-5xl font-serif text-white mb-8">Speech therapy in English and Mandarin</h2>
+          <p className="text-blue-100 text-lg md:text-xl mb-6 leading-relaxed font-light">
             I provide bilingual speech pathology services in English and Mandarin. This means more accurate
             assessment of your child&apos;s true language abilities, clearer communication with your family, and
             therapy that respects your cultural and linguistic background.
           </p>
-          <p className="text-blue-200 mb-8">
+          <p className="text-blue-200/80 mb-10 font-light">
             Assessing a child in only one language can underestimate their true abilities. Working with a
             bilingual therapist ensures nothing is missed.
           </p>
           <Link
             href="/zh"
-            className="inline-flex items-center gap-2 bg-[#E8A84C] text-[#1B365D] font-bold px-8 py-3 rounded-lg hover:bg-amber-400 transition-colors"
+            className="inline-flex items-center gap-3 bg-[#E8A84C] text-[#1B365D] font-medium px-8 py-4 rounded-full hover:bg-white transition-colors duration-300 text-lg shadow-lg"
           >
-            了解更多 / Learn More in Chinese <ArrowRight className="w-4 h-4" />
+            了解更多 / Learn More in Chinese <ArrowRight className="w-5 h-5" />
           </Link>
         </div>
       </section>
 
       {/* ── SECTION 5: MOBILE ADVANTAGE ─────────────────── */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1B365D] text-center mb-6">
-            Therapy where your child is most comfortable
-          </h2>
-          <p className="text-gray-600 text-center mb-4 max-w-3xl mx-auto leading-relaxed">
-            Research shows that children learn communication skills best in their everyday environments.
-            That&apos;s why I come to you — whether that&apos;s your home, your child&apos;s school, kindergarten, or
-            daycare. This is not a compromise — it&apos;s a clinical advantage.
-          </p>
-          <p className="text-gray-600 text-center mb-12 max-w-3xl mx-auto leading-relaxed">
-            Children are more relaxed, more engaged, and more likely to use new skills when they&apos;re learning
-            in familiar settings. Parents and educators can observe sessions and learn strategies to use
-            throughout the day.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-4xl md:text-5xl font-serif text-[#1B365D] mb-6">
+              Therapy where your child is most comfortable
+            </h2>
+            <p className="text-lg text-gray-600 mb-6 leading-relaxed font-light">
+              Research shows that children learn communication skills best in their everyday environments.
+              That&apos;s why I come to you — whether that&apos;s your home, your child&apos;s school, kindergarten, or
+              daycare. This is not a compromise — it&apos;s a clinical advantage.
+            </p>
+            <p className="text-lg text-gray-600 leading-relaxed font-light">
+              Children are more relaxed, more engaged, and more likely to use new skills when they&apos;re learning
+              in familiar settings. Parents and educators can observe sessions and learn strategies to use
+              throughout the day.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {DELIVERY_MODES.map((mode) => (
-              <div key={mode.title} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                <div className="mb-4">{mode.icon}</div>
-                <h3 className="font-bold text-[#1B365D] mb-2">{mode.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{mode.description}</p>
+              <div key={mode.title} className="bg-[#FDFBF7] rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm mb-6">
+                  {mode.icon}
+                </div>
+                <h3 className="text-xl font-serif font-semibold text-[#1B365D] mb-3">{mode.title}</h3>
+                <p className="text-gray-600 leading-relaxed font-light">{mode.description}</p>
               </div>
             ))}
           </div>
@@ -431,150 +447,182 @@ export default function HomePage() {
       </section>
 
       {/* ── SECTION 6: DIFFERENTIATORS ──────────────────── */}
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-[#F0F4F8]">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1B365D] text-center mb-12">
-            Why families choose Shine and Speak
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: '🏠',
-                title: 'We come to you',
-                body: 'No clinic visits needed. I travel to your home, school, or daycare — wherever your child is most comfortable and most likely to thrive.',
-              },
-              {
-                icon: '🇨🇳',
-                title: 'Bilingual — English & Mandarin',
-                body: 'I provide speech therapy and assessments in both English and Mandarin, ensuring accurate evaluation of your child\'s true language abilities.',
-              },
-              {
-                icon: '💳',
-                title: 'NDIS, Medicare & private',
-                body: (
-                  <>
-                    Registered NDIS provider (all management types), Medicare provider, and private clients welcome.{' '}
-                    <Link href="/ndis-speech-therapy-sydney-nsw" className="text-[#1B365D] underline underline-offset-2 hover:text-[#E8A84C] text-sm">
-                      Explore funding options for speech therapy
-                    </Link>.
-                  </>
-                ),
-              },
-              {
-                icon: '🎯',
-                title: 'Evidence-based, goal-focused',
-                body: 'Every therapy plan is grounded in current evidence and focused on practical goals that make a real difference in your child\'s daily life.',
-              },
-            ].map((diff) => (
-              <div key={diff.title} className="text-center p-6">
-                <div className="text-4xl mb-4">{diff.icon}</div>
-                <h3 className="font-bold text-[#1B365D] text-lg mb-3">{diff.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{diff.body}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="order-2 lg:order-1 relative">
+              <div className="absolute inset-0 bg-[#1B365D] rounded-[2rem] transform -rotate-3 scale-105 opacity-10"></div>
+              <div className="bg-white rounded-[2rem] p-10 md:p-12 shadow-xl relative z-10">
+                <h3 className="text-2xl font-serif font-semibold text-[#1B365D] mb-8">The Shine and Speak Difference</h3>
+                <ul className="space-y-6">
+                  <li className="flex items-start gap-4">
+                    <div className="w-8 h-8 rounded-full bg-[#E8A84C]/20 flex items-center justify-center flex-shrink-0 mt-1">
+                      <CheckCircle2 className="w-5 h-5 text-[#E8A84C]" />
+                    </div>
+                    <div>
+                      <strong className="block text-[#1B365D] mb-1 font-medium">Bilingual Expertise</strong>
+                      <span className="text-gray-600 font-light">Therapy in English and Mandarin, ensuring accurate assessment and culturally responsive care.</span>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <div className="w-8 h-8 rounded-full bg-[#E8A84C]/20 flex items-center justify-center flex-shrink-0 mt-1">
+                      <CheckCircle2 className="w-5 h-5 text-[#E8A84C]" />
+                    </div>
+                    <div>
+                      <strong className="block text-[#1B365D] mb-1 font-medium">Neurodiversity-Affirming</strong>
+                      <span className="text-gray-600 font-light">Focusing on your child&apos;s strengths and natural communication style, rather than trying to &quot;fix&quot; them.</span>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <div className="w-8 h-8 rounded-full bg-[#E8A84C]/20 flex items-center justify-center flex-shrink-0 mt-1">
+                      <CheckCircle2 className="w-5 h-5 text-[#E8A84C]" />
+                    </div>
+                    <div>
+                      <strong className="block text-[#1B365D] mb-1 font-medium">Family-Centred</strong>
+                      <span className="text-gray-600 font-light">You are the expert on your child. We work together to set goals that matter to your family.</span>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <div className="w-8 h-8 rounded-full bg-[#E8A84C]/20 flex items-center justify-center flex-shrink-0 mt-1">
+                      <CheckCircle2 className="w-5 h-5 text-[#E8A84C]" />
+                    </div>
+                    <div>
+                      <strong className="block text-[#1B365D] mb-1 font-medium">Evidence-Based</strong>
+                      <span className="text-gray-600 font-light">Using the latest research and clinical guidelines to ensure therapy is effective and efficient.</span>
+                    </div>
+                  </li>
+                </ul>
               </div>
-            ))}
+            </div>
+            <div className="order-1 lg:order-2">
+              <h2 className="text-4xl md:text-5xl font-serif text-[#1B365D] mb-6 leading-tight">
+                A different approach to speech therapy
+              </h2>
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed font-light">
+                Therapy shouldn&apos;t feel like a chore. By using play, following your child&apos;s interests, and
+                working in their natural environment, we create a positive, engaging experience where real
+                learning happens.
+              </p>
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-2 text-[#1B365D] font-medium hover:text-[#E8A84C] transition-colors text-lg"
+              >
+                Learn more about our approach <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ── SECTION 7: HOW IT WORKS ─────────────────────── */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-5xl mx-auto px-4 md:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1B365D] mb-12">Getting started is simple</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            {[
-              {
-                step: '1',
-                title: 'Book a free call',
-                body: "We'll have a quick chat about your child's needs, answer your questions, and work out whether I'm the right fit. No obligation, no pressure.",
-              },
-              {
-                step: '2',
-                title: 'Assessment',
-                body: "I'll complete a thorough assessment — at your home, your child's school, or online — to understand their strengths, challenges, and goals. You'll receive a detailed report with clear recommendations.",
-              },
-              {
-                step: '3',
-                title: 'Your child\'s therapy plan',
-                body: "You'll receive a personalised therapy plan focused on practical, real-life progress. I'll work closely with you, teachers, and other professionals to keep therapy consistent across all settings.",
-              },
-            ].map((s) => (
-              <div key={s.step} className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-                <div className="w-12 h-12 bg-[#E8A84C] text-[#1B365D] font-bold text-xl rounded-full flex items-center justify-center mx-auto mb-4">
-                  {s.step}
-                </div>
-                <h3 className="font-bold text-[#1B365D] text-lg mb-3">{s.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{s.body}</p>
-              </div>
-            ))}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-4xl md:text-5xl font-serif text-[#1B365D] mb-6">
+              How it works
+            </h2>
+            <p className="text-lg text-gray-600 leading-relaxed font-light">
+              Getting started is simple. Here is what you can expect when you partner with Shine and Speak.
+            </p>
           </div>
-          {/* REPLACE: update href to your real Calendly URL */}
-          <a
-            href="https://calendly.com/shineandspeak"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#1B365D] text-white font-bold px-8 py-4 rounded-lg hover:bg-[#0d2240] transition-colors text-lg shadow-md"
-          >
-            Book Your Free Discovery Call <ArrowRight className="w-5 h-5" />
-          </a>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+            {/* Connecting line for desktop */}
+            <div className="hidden md:block absolute top-12 left-[16%] right-[16%] h-0.5 bg-gray-100"></div>
+            
+            <div className="relative text-center">
+              <div className="w-24 h-24 mx-auto bg-white border-4 border-[#F0F4F8] rounded-full flex items-center justify-center text-2xl font-serif font-bold text-[#1B365D] mb-6 relative z-10 shadow-sm">
+                1
+              </div>
+              <h3 className="text-xl font-serif font-semibold text-[#1B365D] mb-4">Discovery Call</h3>
+              <p className="text-gray-600 leading-relaxed font-light">
+                A free 15-minute phone call to discuss your concerns, answer your questions, and see if we&apos;re a good fit.
+              </p>
+            </div>
+            
+            <div className="relative text-center">
+              <div className="w-24 h-24 mx-auto bg-[#1B365D] border-4 border-[#1B365D] rounded-full flex items-center justify-center text-2xl font-serif font-bold text-white mb-6 relative z-10 shadow-md transform scale-110">
+                2
+              </div>
+              <h3 className="text-xl font-serif font-semibold text-[#1B365D] mb-4">Initial Assessment</h3>
+              <p className="text-gray-600 leading-relaxed font-light">
+                A comprehensive evaluation of your child&apos;s communication skills, followed by a detailed report and goal-setting session.
+              </p>
+            </div>
+            
+            <div className="relative text-center">
+              <div className="w-24 h-24 mx-auto bg-white border-4 border-[#F0F4F8] rounded-full flex items-center justify-center text-2xl font-serif font-bold text-[#1B365D] mb-6 relative z-10 shadow-sm">
+                3
+              </div>
+              <h3 className="text-xl font-serif font-semibold text-[#1B365D] mb-4">Ongoing Therapy</h3>
+              <p className="text-gray-600 leading-relaxed font-light">
+                Regular, engaging sessions at your home, school, or online, with practical strategies for you to use between visits.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* ── SECTION 8: MEET THE THERAPIST ───────────────── */}
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-[#FDFBF7]">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative h-[400px] lg:h-[520px] rounded-2xl overflow-hidden bg-gray-100 shadow-lg flex items-center justify-center">
-              {/* REPLACE: Professional headshot of Shine Teoh, warm and approachable — different photo from hero */}
-              <p className="text-gray-400 text-sm text-center px-6">
-                [ Placeholder: Professional headshot of Shine Teoh ]
-              </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="relative">
+              <div className="absolute inset-0 bg-[#E8A84C] rounded-[2rem] transform rotate-3 scale-105 opacity-20"></div>
+              <img 
+                src="/shared/shine/shine-headshot-1200x1200.webp" 
+                alt="Shine Teoh, Certified Practising Speech Pathologist" 
+                className="relative z-10 rounded-[2rem] shadow-xl w-full object-cover aspect-square md:aspect-[4/5]"
+              />
             </div>
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1B365D] mb-4">Meet Shine Teoh</h2>
-              <p className="text-gray-700 text-lg leading-relaxed mb-4">
-                Hi, I&apos;m Shine — a Certified Practising Speech Pathologist. I&apos;m passionate about providing
-                high-quality, personalised speech therapy that makes a genuine difference in everyday life.
+              <h2 className="text-4xl md:text-5xl font-serif text-[#1B365D] mb-6">
+                Meet Shine Teoh
+              </h2>
+              <p className="text-xl text-[#E8A84C] font-medium mb-6">
+                Certified Practising Speech Pathologist
               </p>
-              <p className="text-gray-700 leading-relaxed mb-6">
-                I specialise in working with children and adults across a wide range of communication needs,
-                including autism, ADHD, developmental delay, language disorders, and literacy difficulties.
-                I also support adults recovering from stroke, brain injury, and other neurological conditions.
-              </p>
-              <p className="text-gray-700 leading-relaxed mb-8">
-                I speak English and Mandarin, and I&apos;m committed to providing culturally responsive services for
-                diverse families.
-              </p>
-              {/* Credentials block — visible, not collapsed */}
-              <div className="bg-gray-50 rounded-xl p-6 mb-6 space-y-2">
-                <p className="font-bold text-[#1B365D] mb-3">Qualifications &amp; credentials</p>
-                <div className="flex items-start gap-2 text-sm text-gray-700">
-                  <CheckCircle2 className="w-4 h-4 text-[#E8A84C] mt-0.5 flex-shrink-0" />
-                  {/* PLACEHOLDER: Bachelor of Speech Pathology, [University] */}
-                  <span>University degree — placeholder</span>
-                </div>
-                <div className="flex items-start gap-2 text-sm text-gray-700">
-                  <CheckCircle2 className="w-4 h-4 text-[#E8A84C] mt-0.5 flex-shrink-0" />
-                  <span>Certified Practising Member, Speech Pathology Australia (CPSP)</span>
-                </div>
-                <div className="flex items-start gap-2 text-sm text-gray-700">
-                  <CheckCircle2 className="w-4 h-4 text-[#E8A84C] mt-0.5 flex-shrink-0" />
-                  <span>NDIS Registered Provider {/* PLACEHOLDER: Provider number */}</span>
-                </div>
-                <div className="flex items-start gap-2 text-sm text-gray-700">
-                  <CheckCircle2 className="w-4 h-4 text-[#E8A84C] mt-0.5 flex-shrink-0" />
-                  <span>Medicare Registered Provider</span>
-                </div>
-                <div className="flex items-start gap-2 text-sm text-gray-700">
-                  <CheckCircle2 className="w-4 h-4 text-[#E8A84C] mt-0.5 flex-shrink-0" />
-                  {/* PLACEHOLDER: Training certifications (e.g. Hanen, Sounds Write, Lidcombe Program) */}
-                  <span>Training certifications — placeholder</span>
-                </div>
+              <div className="space-y-6 text-gray-600 text-lg leading-relaxed font-light mb-8">
+                <p>
+                  Hello! I&apos;m Shine, the founder and principal speech pathologist at Shine and Speak. I am
+                  passionate about helping children find their voice and empowering families to support their
+                  child&apos;s development.
+                </p>
+                <p>
+                  With experience across private practice, schools, and community health, I bring a warm,
+                  playful, and evidence-based approach to every session. Being bilingual in English and
+                  Mandarin allows me to connect deeply with culturally diverse families.
+                </p>
+              </div>
+              <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 mb-8">
+                <h4 className="font-serif font-semibold text-[#1B365D] mb-4">Qualifications &amp; Memberships</h4>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-[#E8A84C] mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700 font-light">Master of Speech Language Pathology</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-[#E8A84C] mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700 font-light">Certified Practising Member of Speech Pathology Australia (CPSP)</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-[#E8A84C] mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700 font-light">NDIS Registered Provider {/* PLACEHOLDER: Provider number */}</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-[#E8A84C] mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700 font-light">Medicare Registered Provider</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-[#E8A84C] mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700 font-light">Training certifications — placeholder</span>
+                  </li>
+                </ul>
               </div>
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2 text-[#1B365D] font-semibold hover:text-[#E8A84C] transition-colors"
+                className="inline-flex items-center gap-2 text-[#1B365D] font-medium hover:text-[#E8A84C] transition-colors text-lg"
               >
-                Read more about Shine&apos;s approach and qualifications <ArrowRight className="w-4 h-4" />
+                Read more about Shine&apos;s approach and qualifications <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
           </div>
@@ -582,22 +630,26 @@ export default function HomePage() {
       </section>
 
       {/* ── SECTION 9: SOCIAL PROOF ──────────────────────── */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 md:px-8 text-center">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            {[1,2,3,4,5].map(i => <Star key={i} className="w-6 h-6 fill-[#E8A84C] text-[#E8A84C]" />)}
+      <section className="py-24 bg-white border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 md:px-8 text-center">
+          <div className="flex items-center justify-center gap-2 mb-6">
+            {[1,2,3,4,5].map(i => <Star key={i} className="w-8 h-8 fill-[#E8A84C] text-[#E8A84C]" />)}
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1B365D] mb-4">What families say</h2>
-          {/* PASTE GOOGLE REVIEWS EMBED CODE HERE */}
-          <div className="bg-white rounded-xl border-2 border-dashed border-gray-200 p-12 mb-6">
-            <p className="text-gray-400 font-medium mb-2">Google Reviews will appear here</p>
+          <h2 className="text-4xl md:text-5xl font-serif text-[#1B365D] mb-10">What families say</h2>
+          
+          <div className="bg-[#FDFBF7] rounded-[2rem] border border-gray-100 p-12 md:p-16 mb-10 shadow-sm relative">
+            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white px-4">
+              <span className="text-6xl text-[#E8A84C] font-serif leading-none">&quot;</span>
+            </div>
+            <p className="text-gray-400 font-medium mb-4 uppercase tracking-widest text-sm">Google Reviews will appear here</p>
             {/* PASTE GOOGLE REVIEWS EMBED CODE HERE */}
-            <p className="text-gray-500 text-sm mt-6">
+            <p className="text-gray-500 text-lg mt-6 font-light italic">
               Shine and Speak is a new practice. In the meantime, the credentials, training, and clinical
               approach are what underpin every session.
             </p>
           </div>
-          <div className="flex flex-wrap justify-center gap-6 text-sm">
+          
+          <div className="flex flex-wrap justify-center gap-8 text-sm font-medium">
             <div className="flex items-center gap-2 text-[#1B365D]">
               <CheckCircle2 className="w-5 h-5 text-[#E8A84C]" /> Certified Practising Speech Pathologist
             </div>
@@ -612,57 +664,62 @@ export default function HomePage() {
       </section>
 
       {/* ── SECTION 10: FOR SUPPORT COORDINATORS ────────── */}
-      <section className="py-20 bg-[#1B365D] text-white">
-        <div className="max-w-5xl mx-auto px-4 md:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section className="py-24 bg-[#1B365D] text-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-[#0d2240] transform skew-x-12 translate-x-20"></div>
+        <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Are you a Support Coordinator?</h2>
-              <p className="text-blue-100 leading-relaxed mb-6">
+              <h2 className="text-4xl md:text-5xl font-serif mb-8">Are you a Support Coordinator?</h2>
+              <p className="text-blue-100 text-lg leading-relaxed mb-8 font-light">
                 I work closely with NDIS support coordinators to provide timely, high-quality speech therapy
                 with clear communication and detailed reporting. I understand the referral process and I make
                 it easy for you.
               </p>
-              <ul className="space-y-3 mb-8 text-blue-100">
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-[#E8A84C] mt-0.5 flex-shrink-0" />
-                  Fast response to referrals — I aim to respond within 24 hours
+              <ul className="space-y-4 mb-10 text-blue-100 font-light">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-[#E8A84C] mt-0.5 flex-shrink-0" />
+                  <span className="text-lg">Fast response to referrals — I aim to respond within 24 hours</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-[#E8A84C] mt-0.5 flex-shrink-0" />
-                  Detailed <Link href="/speech-therapy-reports-sydney-nsw" className="text-[#E8A84C] underline underline-offset-2 hover:text-amber-300">progress reports and session summaries</Link>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-[#E8A84C] mt-0.5 flex-shrink-0" />
+                  <span className="text-lg">Detailed <Link href="/speech-therapy-reports-sydney-nsw" className="text-[#E8A84C] font-medium underline underline-offset-4 hover:text-white transition-colors">progress reports and session summaries</Link></span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-[#E8A84C] mt-0.5 flex-shrink-0" />
-                  Flexible scheduling — mobile and telehealth
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-[#E8A84C] mt-0.5 flex-shrink-0" />
+                  <span className="text-lg">Flexible scheduling — mobile and telehealth</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-[#E8A84C] mt-0.5 flex-shrink-0" />
-                  Support for plan reviews with clear, specific recommendations
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-[#E8A84C] mt-0.5 flex-shrink-0" />
+                  <span className="text-lg">Support for plan reviews with clear, specific recommendations</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-[#E8A84C] mt-0.5 flex-shrink-0" />
-                  All NDIS management types accepted (self-managed, plan-managed, NDIA-managed)
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-[#E8A84C] mt-0.5 flex-shrink-0" />
+                  <span className="text-lg">All NDIS management types accepted (self-managed, plan-managed, NDIA-managed)</span>
                 </li>
               </ul>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/refer-a-client"
-                  className="inline-flex items-center justify-center gap-2 bg-[#E8A84C] text-[#1B365D] font-bold px-7 py-3 rounded-lg hover:bg-amber-400 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 bg-[#E8A84C] text-[#1B365D] font-medium px-8 py-4 rounded-full hover:bg-white transition-colors duration-300 text-lg shadow-lg"
                 >
-                  Refer a Client <ArrowRight className="w-4 h-4" />
+                  Refer a Client <ArrowRight className="w-5 h-5" />
                 </Link>
                 <Link
                   href="/ndis-service-guide-support-coordinators"
-                  className="inline-flex items-center justify-center gap-2 border-2 border-white text-white font-semibold px-7 py-3 rounded-lg hover:bg-white hover:text-[#1B365D] transition-colors"
+                  className="inline-flex items-center justify-center gap-2 bg-transparent border border-white/30 text-white font-medium px-8 py-4 rounded-full hover:bg-white/10 transition-colors duration-300 text-lg"
                 >
                   Download NDIS Service Guide
                 </Link>
               </div>
             </div>
-            <div className="hidden lg:block">
-              <div className="bg-[#0d2240] rounded-2xl p-8 text-center h-64 flex items-center justify-center">
-                {/* REPLACE: Professional image of Shine with coordinator/referrer context */}
-                <p className="text-blue-400 text-sm">[ Image placeholder — coordinator context ]</p>
+            <div className="hidden lg:block relative">
+              <div className="relative h-[500px] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white/10">
+                <img 
+                  src="/shared/placeholders/coordinator-stock-placeholder-unsplash.jpg" 
+                  alt="Professional collaboration" 
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-[#1B365D]/20 mix-blend-multiply"></div>
               </div>
             </div>
           </div>
@@ -670,16 +727,18 @@ export default function HomePage() {
       </section>
 
       {/* ── SECTION 11: FAQ ──────────────────────────────── */}
-      <section className="py-20 bg-white">
-        <div className="max-w-3xl mx-auto px-4 md:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1B365D] text-center mb-12">
-            Common questions from parents
-          </h2>
-          <div className="space-y-10">
+      <section className="py-24 bg-[#FDFBF7]">
+        <div className="max-w-4xl mx-auto px-4 md:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-serif text-[#1B365D] mb-6">
+              Common questions from parents
+            </h2>
+          </div>
+          <div className="space-y-8">
             {FAQS.map((faq) => (
-              <div key={faq.q}>
-                <h3 className="text-lg font-bold text-[#1B365D] mb-3">{faq.q}</h3>
-                <p className="text-gray-700 leading-relaxed">{faq.a}</p>
+              <div key={faq.q} className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+                <h3 className="text-xl font-serif font-semibold text-[#1B365D] mb-4">{faq.q}</h3>
+                <p className="text-gray-600 leading-relaxed font-light text-lg">{faq.a}</p>
               </div>
             ))}
           </div>
@@ -687,16 +746,16 @@ export default function HomePage() {
       </section>
 
       {/* ── SECTION 12: SERVICE AREA GRID ───────────────── */}
-      <section className="py-12 bg-gray-50">
+      <section className="py-16 bg-white border-y border-gray-100">
         <div className="max-w-5xl mx-auto px-4 md:px-8 text-center">
-          <h2 className="text-2xl font-bold text-[#1B365D] mb-6">Areas I serve in Sydney</h2>
-          <div className="flex flex-wrap justify-center gap-x-4 gap-y-2">
+          <h2 className="text-2xl font-serif font-semibold text-[#1B365D] mb-8">Areas I serve in Sydney</h2>
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-4">
             {SUBURBS.map((suburb, i) => (
-              <span key={suburb.href} className="text-gray-600 text-sm">
-                <Link href={suburb.href} className="hover:text-[#E8A84C] hover:underline transition-colors font-medium">
+              <span key={suburb.href} className="text-gray-500 text-sm md:text-base">
+                <Link href={suburb.href} className="hover:text-[#E8A84C] transition-colors font-medium">
                   {suburb.label}
                 </Link>
-                {i < SUBURBS.length - 1 && <span className="ml-4 text-gray-300">·</span>}
+                {i < SUBURBS.length - 1 && <span className="ml-6 text-gray-300">|</span>}
               </span>
             ))}
           </div>
@@ -704,18 +763,19 @@ export default function HomePage() {
       </section>
 
       {/* ── SECTION 13: FINAL CTA BAND ──────────────────── */}
-      <section className="py-20 bg-[#E8A84C]">
-        <div className="max-w-4xl mx-auto px-4 md:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1B365D] mb-4">
+      <section className="py-24 bg-[#E8A84C] relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/shared/brand/shine-and-speak-logo-mark-transparent.png')] bg-no-repeat bg-center bg-contain opacity-5 mix-blend-overlay transform scale-150"></div>
+        <div className="max-w-4xl mx-auto px-4 md:px-8 text-center relative z-10">
+          <h2 className="text-4xl md:text-5xl md:leading-tight font-serif text-[#1B365D] mb-6">
             Ready to help your child thrive?
           </h2>
-          <p className="text-[#1B365D] text-lg mb-4 opacity-90">
+          <p className="text-[#1B365D] text-xl mb-10 opacity-90 font-light">
             Book a free discovery call to talk about your child&apos;s needs — no obligation, no pressure.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6">
+          <div className="flex flex-col sm:flex-row justify-center gap-6 mb-8">
             <a
               href="tel:0421608819"
-              className="inline-flex items-center justify-center gap-2 bg-[#1B365D] text-white font-bold px-8 py-4 rounded-lg hover:bg-[#0d2240] transition-colors text-lg"
+              className="inline-flex items-center justify-center gap-3 bg-[#1B365D] text-white font-medium px-10 py-5 rounded-full hover:bg-[#0d2240] transition-all duration-300 text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               📞 Call 0421 608 819
             </a>
@@ -724,22 +784,22 @@ export default function HomePage() {
               href="https://calendly.com/shineandspeak"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-white text-[#1B365D] font-bold px-8 py-4 rounded-lg hover:bg-gray-50 transition-colors text-lg shadow-md"
+              className="inline-flex items-center justify-center gap-3 bg-white text-[#1B365D] font-medium px-10 py-5 rounded-full hover:bg-gray-50 transition-all duration-300 text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               Book a Free Discovery Call <ArrowRight className="w-5 h-5" />
             </a>
           </div>
-          <p className="text-[#1B365D] text-sm opacity-75">
-            Or email <a href="mailto:admin@shineandspeak.com.au" className="underline underline-offset-2 hover:opacity-100">admin@shineandspeak.com.au</a>
+          <p className="text-[#1B365D] text-base opacity-80 font-medium">
+            Or email <a href="mailto:admin@shineandspeak.com.au" className="underline underline-offset-4 hover:opacity-100 transition-opacity">admin@shineandspeak.com.au</a>
           </p>
         </div>
       </section>
 
       {/* Author attribution */}
-      <div className="bg-white py-4 text-center">
-        <p className="text-xs text-gray-500">
+      <div className="bg-[#1B365D] py-6 text-center">
+        <p className="text-sm text-blue-200/60 font-light">
           Written by{' '}
-          <Link href="/about" className="text-[#1B365D] hover:text-[#E8A84C] underline underline-offset-2">
+          <Link href="/about" className="text-blue-200 hover:text-white transition-colors">
             Shine Teoh, Certified Practising Speech Pathologist
           </Link>
         </p>

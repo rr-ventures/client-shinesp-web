@@ -20,7 +20,7 @@ export default function Page() {
   return (
     <main className="min-h-screen py-20 px-4 md:px-8 max-w-7xl mx-auto">
       <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Speech Pathologist in Strathfield', href: '/speech-pathologist-strathfield-nsw' }]} />
-      <h1 className="text-4xl font-bold text-navy-900 mt-8 mb-4">Speech Pathologist in Strathfield</h1>
+      <h1 className="text-4xl font-bold text-[#1B365D] mt-8 mb-4">Speech Pathologist in Strathfield</h1>
       <p className="text-lg text-gray-700">Content coming soon.</p>
     </main>
   );

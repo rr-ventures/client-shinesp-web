@@ -54,7 +54,7 @@ export default function BookForm() {
       </div>
 
       <div className="pt-4">
-        <button type="submit" className="w-full bg-secondary text-primary-foreground px-8 py-4 rounded-full font-bold text-lg hover:bg-opacity-90 transition-all shadow-md">
+        <button type="submit" className="w-full btn-secondary text-lg py-4">
           Request a Call
         </button>
       </div>

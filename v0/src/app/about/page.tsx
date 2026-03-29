@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import JsonLd from '@/components/JsonLd';
 import { breadcrumbSchema, SITE_URL } from '@/lib/schema';
 
@@ -44,9 +45,14 @@ export default function AboutPage() {
         <h1 className="text-4xl md:text-5xl font-bold text-[#1B365D] mb-6">About Shine and Speak</h1>
 
         {/* Photo placeholder */}
-        <div className="mb-12 bg-gray-100 rounded-2xl aspect-video flex items-center justify-center border-2 border-dashed border-gray-300 max-w-lg">
-          {/* REPLACE: Professional photo of therapist — warm and approachable, NOT a stock photo */}
-          <p className="text-gray-400 text-center px-8">Therapist photo coming soon</p>
+        <div className="mb-12 max-w-lg">
+          <Image
+            src="/shine-headshot-1200x1200.webp"
+            alt="Shine - Certified Practising Speech Pathologist"
+            width={800}
+            height={800}
+            className="w-full h-auto rounded-[32px] shadow-xl object-cover"
+          />
         </div>
 
         <section className="mb-12">

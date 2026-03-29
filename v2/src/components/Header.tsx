@@ -104,13 +104,12 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-3 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
-          {/* REPLACE: swap this text logo with the actual image once built */}
           <Image
-            src="/og-image.png"
+            src="/shared/brand/shine-and-speak-logo-horizontal-transparent.png"
             alt="Shine and Speak — Speech Pathology Sydney"
-            width={160}
-            height={40}
-            className="h-10 w-auto object-contain"
+            width={200}
+            height={50}
+            className="h-12 w-auto object-contain"
             priority
           />
         </Link>

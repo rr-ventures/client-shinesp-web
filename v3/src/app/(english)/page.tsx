@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
@@ -114,283 +115,369 @@ export default function Home() {
       <BreadcrumbSchema items={[{ name: "Home", href: "/" }]} />
 
       {/* Section 1: HERO */}
-      <section className="bg-blue-50 py-20">
-        <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h1 className="text-4xl md:text-5xl font-bold text-navy-blue mb-6 leading-tight">
+      <section className="relative bg-gradient-to-b from-soft-blue to-white py-24 md:py-32 overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-sage-green/20 rounded-l-full blur-3xl -z-10 transform translate-x-1/3"></div>
+        <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center">
+          <div className="max-w-2xl">
+            <div className="inline-block bg-white px-4 py-1.5 rounded-full text-sm font-semibold text-navy-blue border border-gray-100 shadow-sm mb-6">
+              <span className="text-golden-amber mr-2">✦</span>
+              Premium Mobile Speech Pathology
+            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy-blue mb-6 leading-[1.15] text-balance">
               Helping your child communicate with confidence
             </h1>
-            <p className="text-xl text-gray-700 mb-8">
+            <p className="text-lg md:text-xl text-stone mb-10 leading-relaxed">
               Personalised speech therapy — delivered to your home, school, or online. Available in English and Mandarin (普通话). Serving Inner West Sydney and surrounds.
             </p>
-            <div className="flex flex-wrap gap-4 mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 mb-10">
               {/* REPLACE: Swap /contact for your Calendly/TidyCal booking URL */}
-              <Link href="/contact" className="bg-golden-amber text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-yellow-600 transition shadow-lg">
+              <Link href="/contact" className="btn-primary text-center text-lg py-4">
                 Book a Free Discovery Call
               </Link>
-              <a href="#trust" className="border-2 border-navy-blue text-navy-blue px-8 py-4 rounded-md font-bold text-lg hover:bg-navy-blue hover:text-white transition">
+              <a href="#trust" className="btn-secondary text-center text-lg py-4 bg-white">
                 Learn More ↓
               </a>
             </div>
-            <div className="flex flex-wrap gap-4 text-sm font-semibold text-navy-blue">
-              <span>✓ CPSP Certified</span>
-              <span>✓ NDIS Registered</span>
-              <span>✓ Medicare Provider</span>
+            <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-medium text-charcoal/80">
+              <span className="flex items-center gap-2"><span className="w-5 h-5 rounded-full bg-sage-green flex items-center justify-center text-navy-blue text-xs">✓</span> CPSP Certified</span>
+              <span className="flex items-center gap-2"><span className="w-5 h-5 rounded-full bg-sage-green flex items-center justify-center text-navy-blue text-xs">✓</span> NDIS Registered</span>
+              <span className="flex items-center gap-2"><span className="w-5 h-5 rounded-full bg-sage-green flex items-center justify-center text-navy-blue text-xs">✓</span> Medicare Provider</span>
             </div>
           </div>
-          <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-2xl bg-gray-200 flex items-center justify-center text-gray-500 text-center p-8">
+          <div className="relative h-[400px] md:h-[600px] rounded-[2rem] overflow-hidden premium-shadow group">
+            <div className="absolute inset-0 bg-navy-blue/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
             {/* REPLACE: Professional photo of Shine Teoh working with a child — warm, natural setting */}
-            <span className="text-sm text-gray-400">[Placeholder: Professional photo of Shine Teoh working with a child]</span>
+            <Image
+              src="/shared_images/placeholders/hero-stock-placeholder-unsplash.jpg"
+              alt="Professional photo of Shine Teoh working with a child"
+              fill
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+              priority
+            />
           </div>
         </div>
       </section>
 
       {/* Section 2: TRUST LOGO BAR */}
-      <section id="trust" className="py-10 border-b border-gray-200 bg-white">
-        <div className="container mx-auto px-4 flex flex-wrap justify-center gap-8 md:gap-16 items-center">
-          <div className="text-center">
-            <div className="font-bold text-lg text-navy-blue">Speech Pathology Australia</div>
-            <div className="text-sm text-gray-500">Certified Practising Member</div>
+      <section id="trust" className="py-12 border-y border-gray-100 bg-white relative z-20 -mt-8 mx-4 md:mx-auto max-w-6xl rounded-2xl shadow-sm">
+        <div className="container mx-auto px-4 flex flex-wrap justify-center gap-10 md:gap-20 items-center">
+          <div className="text-center group">
+            <div className="font-serif font-bold text-xl text-navy-blue mb-1 group-hover:text-golden-amber transition-colors">Speech Pathology Australia</div>
+            <div className="text-sm text-stone font-medium uppercase tracking-wider">Certified Practising Member</div>
           </div>
-          <div className="text-center">
-            <div className="font-bold text-lg text-navy-blue">NDIS Registered</div>
-            <div className="text-sm text-gray-500">All management types</div>
+          <div className="w-px h-12 bg-gray-200 hidden md:block"></div>
+          <div className="text-center group">
+            <div className="font-serif font-bold text-xl text-navy-blue mb-1 group-hover:text-golden-amber transition-colors">NDIS Registered</div>
+            <div className="text-sm text-stone font-medium uppercase tracking-wider">All management types</div>
           </div>
-          <div className="text-center">
-            <div className="font-bold text-lg text-navy-blue">Medicare Provider</div>
-            <div className="text-sm text-gray-500">Registered provider</div>
+          <div className="w-px h-12 bg-gray-200 hidden md:block"></div>
+          <div className="text-center group">
+            <div className="font-serif font-bold text-xl text-navy-blue mb-1 group-hover:text-golden-amber transition-colors">Medicare Provider</div>
+            <div className="text-sm text-stone font-medium uppercase tracking-wider">Registered provider</div>
           </div>
           {/* PLACEHOLDER: Add Hanen, Sounds Write, Lidcombe or other certification badges here */}
         </div>
       </section>
 
       {/* Section 3: DIFFERENTIATORS */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-navy-blue text-center mb-12">Why families choose Shine and Speak</h2>
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="bg-blue-50 p-8 rounded-xl text-center">
-              <div className="text-4xl mb-4">🚗</div>
-              <h3 className="text-xl font-bold text-navy-blue mb-3">We come to you</h3>
-              <p className="text-gray-700 text-sm">No clinic visits needed. I travel to your home, school, or daycare — wherever your child is most comfortable and most likely to thrive.</p>
+      <section className="py-24 bg-warm-white">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy-blue mb-4">Why families choose Shine and Speak</h2>
+            <div className="w-24 h-1 bg-golden-amber mx-auto rounded-full"></div>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="premium-card p-8 text-center group">
+              <div className="w-16 h-16 mx-auto bg-soft-blue rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300 shadow-sm">🚗</div>
+              <h3 className="text-xl font-bold text-navy-blue mb-4">We come to you</h3>
+              <p className="text-stone text-sm leading-relaxed">No clinic visits needed. I travel to your home, school, or daycare — wherever your child is most comfortable and most likely to thrive.</p>
             </div>
-            <div className="bg-blue-50 p-8 rounded-xl text-center">
-              <div className="text-4xl mb-4">🌏</div>
-              <h3 className="text-xl font-bold text-navy-blue mb-3">Bilingual — English & Mandarin</h3>
-              <p className="text-gray-700 text-sm">I provide speech therapy and assessments in both English and Mandarin, ensuring accurate evaluation of your child's true language abilities.</p>
+            <div className="premium-card p-8 text-center group">
+              <div className="w-16 h-16 mx-auto bg-soft-blue rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300 shadow-sm">🌏</div>
+              <h3 className="text-xl font-bold text-navy-blue mb-4">Bilingual — English & Mandarin</h3>
+              <p className="text-stone text-sm leading-relaxed">I provide speech therapy and assessments in both English and Mandarin, ensuring accurate evaluation of your child's true language abilities.</p>
             </div>
-            <div className="bg-blue-50 p-8 rounded-xl text-center">
-              <div className="text-4xl mb-4">🤝</div>
-              <h3 className="text-xl font-bold text-navy-blue mb-3">NDIS, Medicare & private</h3>
-              <p className="text-gray-700 text-sm">Registered NDIS provider (all management types), Medicare provider, and private clients. <Link href="/ndis-speech-therapy-sydney-nsw" className="text-golden-amber font-semibold hover:underline">Learn more about funding options for speech therapy</Link>.</p>
+            <div className="premium-card p-8 text-center group">
+              <div className="w-16 h-16 mx-auto bg-soft-blue rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300 shadow-sm">🤝</div>
+              <h3 className="text-xl font-bold text-navy-blue mb-4">NDIS, Medicare & private</h3>
+              <p className="text-stone text-sm leading-relaxed">Registered NDIS provider (all management types), Medicare provider, and private clients. <Link href="/ndis-speech-therapy-sydney-nsw" className="text-golden-amber font-semibold hover:underline underline-offset-2">Learn more about funding options for speech therapy</Link>.</p>
             </div>
-            <div className="bg-blue-50 p-8 rounded-xl text-center">
-              <div className="text-4xl mb-4">📚</div>
-              <h3 className="text-xl font-bold text-navy-blue mb-3">Evidence-based, goal-focused</h3>
-              <p className="text-gray-700 text-sm">Every therapy plan is grounded in current evidence and focused on practical goals that make a real difference in your child's daily life.</p>
+            <div className="premium-card p-8 text-center group">
+              <div className="w-16 h-16 mx-auto bg-soft-blue rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300 shadow-sm">📚</div>
+              <h3 className="text-xl font-bold text-navy-blue mb-4">Evidence-based, goal-focused</h3>
+              <p className="text-stone text-sm leading-relaxed">Every therapy plan is grounded in current evidence and focused on practical goals that make a real difference in your child's daily life.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Section 4: MOBILE ADVANTAGE */}
-      <section className="py-20 bg-navy-blue text-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">Therapy where your child is most comfortable</h2>
-          <p className="text-xl text-center max-w-3xl mx-auto mb-12 text-blue-100">
-            Research shows that children learn communication skills best in their everyday environments. That's why I come to you — whether that's your home, your child's school, kindergarten, or daycare. Therapy happens where your child naturally communicates, which means skills transfer more easily into daily life.
-          </p>
-          <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <div className="bg-blue-900 p-6 rounded-xl">
-              <h3 className="text-lg font-bold mb-2 text-golden-amber">🏠 Home sessions</h3>
-              <p className="text-blue-100 text-sm">Therapy in the comfort of your own home. I bring everything needed. No travel stress for your family.</p>
+      <section className="py-24 bg-navy-blue text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
+        <div className="container mx-auto px-4 relative z-10 max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Therapy where your child is most comfortable</h2>
+            <p className="text-lg md:text-xl max-w-3xl mx-auto text-blue-100/90 leading-relaxed font-light">
+              Research shows that children learn communication skills best in their everyday environments. That's why I come to you — whether that's your home, your child's school, kindergarten, or daycare. Therapy happens where your child naturally communicates, which means skills transfer more easily into daily life.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="bg-white/5 border border-white/10 backdrop-blur-sm p-8 rounded-2xl hover:bg-white/10 transition-colors">
+              <h3 className="text-xl font-bold mb-3 text-golden-amber flex items-center gap-3">
+                <span className="text-2xl">🏠</span> Home sessions
+              </h3>
+              <p className="text-blue-50/80 leading-relaxed">Therapy in the comfort of your own home. I bring everything needed. No travel stress for your family.</p>
             </div>
-            <div className="bg-blue-900 p-6 rounded-xl">
-              <h3 className="text-lg font-bold mb-2 text-golden-amber">🏫 School & kindergarten visits</h3>
-              <p className="text-blue-100 text-sm">Working with your child in their learning environment, with the option to coordinate directly with their teachers.</p>
+            <div className="bg-white/5 border border-white/10 backdrop-blur-sm p-8 rounded-2xl hover:bg-white/10 transition-colors">
+              <h3 className="text-xl font-bold mb-3 text-golden-amber flex items-center gap-3">
+                <span className="text-2xl">🏫</span> School & kindergarten visits
+              </h3>
+              <p className="text-blue-50/80 leading-relaxed">Working with your child in their learning environment, with the option to coordinate directly with their teachers.</p>
             </div>
-            <div className="bg-blue-900 p-6 rounded-xl">
-              <h3 className="text-lg font-bold mb-2 text-golden-amber">💻 Telehealth across Australia</h3>
-              <p className="text-blue-100 text-sm"><Link href="/telehealth-speech-therapy-sydney-nsw" className="underline hover:text-golden-amber">Flexible online sessions</Link> from anywhere. Ideal for families in regional areas, those managing busy schedules, or when in-person isn't possible.</p>
+            <div className="bg-white/5 border border-white/10 backdrop-blur-sm p-8 rounded-2xl hover:bg-white/10 transition-colors">
+              <h3 className="text-xl font-bold mb-3 text-golden-amber flex items-center gap-3">
+                <span className="text-2xl">💻</span> Telehealth across Australia
+              </h3>
+              <p className="text-blue-50/80 leading-relaxed"><Link href="/telehealth-speech-therapy-sydney-nsw" className="underline underline-offset-4 hover:text-white transition-colors">Flexible online sessions</Link> from anywhere. Ideal for families in regional areas, those managing busy schedules, or when in-person isn't possible.</p>
             </div>
-            <div className="bg-blue-900 p-6 rounded-xl">
-              <h3 className="text-lg font-bold mb-2 text-golden-amber">📍 Inner West Sydney & surrounds</h3>
-              <p className="text-blue-100 text-sm">I travel within 30 minutes of Arncliffe, including <Link href="/speech-pathologist-burwood-nsw" className="underline hover:text-golden-amber">Burwood and nearby suburbs</Link>. Also available across greater Sydney for one-off assessments.</p>
+            <div className="bg-white/5 border border-white/10 backdrop-blur-sm p-8 rounded-2xl hover:bg-white/10 transition-colors">
+              <h3 className="text-xl font-bold mb-3 text-golden-amber flex items-center gap-3">
+                <span className="text-2xl">📍</span> Inner West Sydney & surrounds
+              </h3>
+              <p className="text-blue-50/80 leading-relaxed">I travel within 30 minutes of Arncliffe, including <Link href="/speech-pathologist-burwood-nsw" className="underline underline-offset-4 hover:text-white transition-colors">Burwood and nearby suburbs</Link>. Also available across greater Sydney for one-off assessments.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Section 5: CONDITION CARDS */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-navy-blue text-center mb-12">How I can help your child</h2>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 mb-10">
-            <Link href="/speech-therapy-autism-sydney-nsw" className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition group">
-              <div className="text-3xl mb-3">🧩</div>
-              <h3 className="text-xl font-bold text-navy-blue mb-3 group-hover:text-golden-amber transition">Autism & ASD</h3>
-              <p className="text-gray-700 text-sm">Supporting children on the autism spectrum with communication, social skills, and language development.</p>
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy-blue mb-4">How I can help your child</h2>
+            <div className="w-24 h-1 bg-golden-amber mx-auto rounded-full"></div>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <Link href="/speech-therapy-autism-sydney-nsw" className="premium-card p-8 group flex flex-col h-full">
+              <div className="w-14 h-14 bg-sage-green rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">🧩</div>
+              <h3 className="text-xl font-bold text-navy-blue mb-3 group-hover:text-golden-amber transition-colors">Autism & ASD</h3>
+              <p className="text-stone text-sm leading-relaxed flex-grow">Supporting children on the autism spectrum with communication, social skills, and language development.</p>
+              <span className="text-golden-amber font-medium text-sm mt-6 flex items-center gap-2 group-hover:translate-x-2 transition-transform">Learn more <span>→</span></span>
             </Link>
-            <Link href="/speech-therapy-adhd-sydney-nsw" className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition group">
-              <div className="text-3xl mb-3">⚡</div>
-              <h3 className="text-xl font-bold text-navy-blue mb-3 group-hover:text-golden-amber transition">ADHD & Attention</h3>
-              <p className="text-gray-700 text-sm">Helping children with ADHD develop focus, listening skills, and social communication strategies.</p>
+            <Link href="/speech-therapy-adhd-sydney-nsw" className="premium-card p-8 group flex flex-col h-full">
+              <div className="w-14 h-14 bg-sage-green rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">⚡</div>
+              <h3 className="text-xl font-bold text-navy-blue mb-3 group-hover:text-golden-amber transition-colors">ADHD & Attention</h3>
+              <p className="text-stone text-sm leading-relaxed flex-grow">Helping children with ADHD develop focus, listening skills, and social communication strategies.</p>
+              <span className="text-golden-amber font-medium text-sm mt-6 flex items-center gap-2 group-hover:translate-x-2 transition-transform">Learn more <span>→</span></span>
             </Link>
-            <Link href="/speech-therapy-language-delay-sydney-nsw" className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition group">
-              <div className="text-3xl mb-3">💬</div>
-              <h3 className="text-xl font-bold text-navy-blue mb-3 group-hover:text-golden-amber transition">Language Delay</h3>
-              <p className="text-gray-700 text-sm">Building receptive and expressive language skills so your child can understand and be understood.</p>
+            <Link href="/speech-therapy-language-delay-sydney-nsw" className="premium-card p-8 group flex flex-col h-full">
+              <div className="w-14 h-14 bg-sage-green rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">💬</div>
+              <h3 className="text-xl font-bold text-navy-blue mb-3 group-hover:text-golden-amber transition-colors">Language Delay</h3>
+              <p className="text-stone text-sm leading-relaxed flex-grow">Building receptive and expressive language skills so your child can understand and be understood.</p>
+              <span className="text-golden-amber font-medium text-sm mt-6 flex items-center gap-2 group-hover:translate-x-2 transition-transform">Learn more <span>→</span></span>
             </Link>
-            <Link href="/speech-therapy-speech-sounds-sydney-nsw" className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition group">
-              <div className="text-3xl mb-3">🗣️</div>
-              <h3 className="text-xl font-bold text-navy-blue mb-3 group-hover:text-golden-amber transition">Speech Sounds</h3>
-              <p className="text-gray-700 text-sm">Helping children pronounce sounds clearly so they can be understood by family, friends, and teachers.</p>
+            <Link href="/speech-therapy-speech-sounds-sydney-nsw" className="premium-card p-8 group flex flex-col h-full">
+              <div className="w-14 h-14 bg-sage-green rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">🗣️</div>
+              <h3 className="text-xl font-bold text-navy-blue mb-3 group-hover:text-golden-amber transition-colors">Speech Sounds</h3>
+              <p className="text-stone text-sm leading-relaxed flex-grow">Helping children pronounce sounds clearly so they can be understood by family, friends, and teachers.</p>
+              <span className="text-golden-amber font-medium text-sm mt-6 flex items-center gap-2 group-hover:translate-x-2 transition-transform">Learn more <span>→</span></span>
             </Link>
-            <Link href="/speech-therapy-stuttering-sydney-nsw" className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition group">
-              <div className="text-3xl mb-3">🌊</div>
-              <h3 className="text-xl font-bold text-navy-blue mb-3 group-hover:text-golden-amber transition">Stuttering & Fluency</h3>
-              <p className="text-gray-700 text-sm">Evidence-based support for children and adults experiencing stuttering or other fluency difficulties.</p>
+            <Link href="/speech-therapy-stuttering-sydney-nsw" className="premium-card p-8 group flex flex-col h-full">
+              <div className="w-14 h-14 bg-sage-green rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">🌊</div>
+              <h3 className="text-xl font-bold text-navy-blue mb-3 group-hover:text-golden-amber transition-colors">Stuttering & Fluency</h3>
+              <p className="text-stone text-sm leading-relaxed flex-grow">Evidence-based support for children and adults experiencing stuttering or other fluency difficulties.</p>
+              <span className="text-golden-amber font-medium text-sm mt-6 flex items-center gap-2 group-hover:translate-x-2 transition-transform">Learn more <span>→</span></span>
             </Link>
-            <Link href="/speech-therapy-literacy-sydney-nsw" className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition group">
-              <div className="text-3xl mb-3">📖</div>
-              <h3 className="text-xl font-bold text-navy-blue mb-3 group-hover:text-golden-amber transition">Literacy & Reading</h3>
-              <p className="text-gray-700 text-sm">Supporting reading, writing, and spelling development for children who are finding literacy challenging.</p>
+            <Link href="/speech-therapy-literacy-sydney-nsw" className="premium-card p-8 group flex flex-col h-full">
+              <div className="w-14 h-14 bg-sage-green rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">📖</div>
+              <h3 className="text-xl font-bold text-navy-blue mb-3 group-hover:text-golden-amber transition-colors">Literacy & Reading</h3>
+              <p className="text-stone text-sm leading-relaxed flex-grow">Supporting reading, writing, and spelling development for children who are finding literacy challenging.</p>
+              <span className="text-golden-amber font-medium text-sm mt-6 flex items-center gap-2 group-hover:translate-x-2 transition-transform">Learn more <span>→</span></span>
             </Link>
           </div>
-          <p className="text-center text-gray-700 max-w-3xl mx-auto">
-            I also support children and adults with developmental delay, intellectual disability, social communication difficulties, AAC and multimodal communication, and adults recovering from stroke, brain injury, and neurological conditions.{" "}
-            <Link href="/paediatric-speech-therapy-sydney-nsw" className="text-navy-blue font-bold hover:underline">Explore all paediatric services</Link>{" "}
-            or learn about{" "}
-            <Link href="/adult-speech-therapy-sydney-nsw" className="text-navy-blue font-bold hover:underline">adult speech therapy options</Link>.
-          </p>
+          <div className="bg-soft-blue rounded-2xl p-8 md:p-10 text-center max-w-4xl mx-auto border border-blue-100">
+            <p className="text-stone leading-relaxed text-lg">
+              I also support children and adults with developmental delay, intellectual disability, social communication difficulties, AAC and multimodal communication, and adults recovering from stroke, brain injury, and neurological conditions.{" "}
+              <Link href="/paediatric-speech-therapy-sydney-nsw" className="text-navy-blue font-bold hover:text-golden-amber transition-colors underline underline-offset-4">Explore all paediatric services</Link>{" "}
+              or learn about{" "}
+              <Link href="/adult-speech-therapy-sydney-nsw" className="text-navy-blue font-bold hover:text-golden-amber transition-colors underline underline-offset-4">adult speech therapy options</Link>.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Section 6: HOW IT WORKS */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-navy-blue mb-12">Getting started is simple</h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
-            <div>
-              <div className="w-16 h-16 bg-golden-amber text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">1</div>
-              <h3 className="text-xl font-bold text-navy-blue mb-3">Book a free call</h3>
-              <p className="text-gray-700 text-sm">We'll have a quick chat about your child's needs, answer your questions, and work out whether I'm the right fit. No obligation, no pressure.</p>
+      <section className="py-24 bg-warm-white">
+        <div className="container mx-auto px-4 text-center max-w-6xl">
+          <div className="mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy-blue mb-4">Getting started is simple</h2>
+            <div className="w-24 h-1 bg-golden-amber mx-auto rounded-full"></div>
+          </div>
+          <div className="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto mb-16 relative">
+            <div className="hidden md:block absolute top-10 left-[20%] right-[20%] h-0.5 bg-gray-200 -z-10"></div>
+            <div className="relative z-10">
+              <div className="w-20 h-20 bg-white border-4 border-sage-green text-navy-blue rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-8 shadow-sm">1</div>
+              <h3 className="text-xl font-bold text-navy-blue mb-4">Book a free call</h3>
+              <p className="text-stone text-sm leading-relaxed">We'll have a quick chat about your child's needs, answer your questions, and work out whether I'm the right fit. No obligation, no pressure.</p>
             </div>
-            <div>
-              <div className="w-16 h-16 bg-golden-amber text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">2</div>
-              <h3 className="text-xl font-bold text-navy-blue mb-3">Assessment</h3>
-              <p className="text-gray-700 text-sm">I'll complete a thorough assessment — at your home, your child's school, or online — to understand their strengths, challenges, and goals.</p>
+            <div className="relative z-10">
+              <div className="w-20 h-20 bg-white border-4 border-sage-green text-navy-blue rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-8 shadow-sm">2</div>
+              <h3 className="text-xl font-bold text-navy-blue mb-4">Assessment</h3>
+              <p className="text-stone text-sm leading-relaxed">I'll complete a thorough assessment — at your home, your child's school, or online — to understand their strengths, challenges, and goals.</p>
             </div>
-            <div>
-              <div className="w-16 h-16 bg-golden-amber text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">3</div>
-              <h3 className="text-xl font-bold text-navy-blue mb-3">Your child's therapy plan</h3>
-              <p className="text-gray-700 text-sm">You'll receive a personalised therapy plan focused on practical, real-life progress. I'll work closely with you, your child's teachers, and other professionals.</p>
+            <div className="relative z-10">
+              <div className="w-20 h-20 bg-white border-4 border-sage-green text-navy-blue rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-8 shadow-sm">3</div>
+              <h3 className="text-xl font-bold text-navy-blue mb-4">Your child's therapy plan</h3>
+              <p className="text-stone text-sm leading-relaxed">You'll receive a personalised therapy plan focused on practical, real-life progress. I'll work closely with you, your child's teachers, and other professionals.</p>
             </div>
           </div>
           {/* REPLACE: Swap /contact for your Calendly/TidyCal booking URL */}
-          <Link href="/contact" className="inline-block bg-golden-amber text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-yellow-600 transition shadow-lg">
-            Book Your Free Discovery Call →
+          <Link href="/contact" className="btn-primary text-lg py-4 px-10 inline-flex items-center gap-2">
+            Book Your Free Discovery Call <span>→</span>
           </Link>
         </div>
       </section>
 
       {/* Section 7: BILINGUAL CALLOUT */}
-      <section className="py-20 bg-blue-50">
-        <div className="container mx-auto px-4 text-center max-w-3xl">
-          <div className="text-golden-amber font-bold text-lg mb-2">我們提供中文語言治療服務</div>
-          <h2 className="text-3xl md:text-4xl font-bold text-navy-blue mb-6">Speech therapy in English and Mandarin</h2>
-          <p className="text-lg text-gray-700 mb-4">
+      <section className="py-24 bg-soft-blue relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full blur-3xl opacity-60 -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute bottom-0 right-0 w-64 h-64 bg-sage-green rounded-full blur-3xl opacity-60 translate-x-1/2 translate-y-1/2"></div>
+        <div className="container mx-auto px-4 text-center max-w-3xl relative z-10">
+          <div className="inline-block bg-white px-6 py-2 rounded-full text-golden-amber font-bold text-sm mb-8 shadow-sm tracking-widest">我們提供中文語言治療服務</div>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy-blue mb-8">Speech therapy in English and Mandarin</h2>
+          <p className="text-lg md:text-xl text-stone mb-6 leading-relaxed">
             I provide bilingual speech pathology services in English and Mandarin. This means more accurate assessment of your child's true language abilities, clearer communication with your family, and therapy that respects your cultural and linguistic background.
           </p>
-          <p className="text-gray-700 mb-8">
+          <p className="text-stone mb-10 leading-relaxed">
             Assessing a child in only one language can underestimate their true abilities. Working with a bilingual therapist ensures nothing is missed.
           </p>
-          <Link href="/zh" className="inline-block border-2 border-navy-blue text-navy-blue px-8 py-3 rounded-md font-bold hover:bg-navy-blue hover:text-white transition">
-            了解更多 / Learn More in Chinese →
+          <Link href="/zh" className="btn-secondary text-lg py-3 px-8 inline-flex items-center gap-2 bg-white">
+            了解更多 / Learn More in Chinese <span>→</span>
           </Link>
         </div>
       </section>
 
       {/* Section 8: MEET THE THERAPIST */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
-          <div className="order-2 md:order-1">
-            <h2 className="text-3xl md:text-4xl font-bold text-navy-blue mb-6">Meet Shine Teoh</h2>
-            <p className="text-lg text-gray-700 mb-4">
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center max-w-7xl">
+          <div className="order-2 lg:order-1">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy-blue mb-8">Meet Shine Teoh</h2>
+            <p className="text-lg text-stone mb-6 leading-relaxed">
               Hi, I'm Shine Teoh — a Certified Practising Speech Pathologist. I'm passionate about providing high-quality, personalised speech therapy that makes a genuine difference in everyday life.
             </p>
-            <p className="text-lg text-gray-700 mb-6">
+            <p className="text-lg text-stone mb-8 leading-relaxed">
               I specialise in working with children and adults with a wide range of communication needs. I speak English and Mandarin, and I'm committed to providing culturally responsive services for diverse families.
             </p>
-            <div className="bg-blue-50 p-6 rounded-xl mb-6">
-              <ul className="space-y-2 text-navy-blue font-semibold text-sm">
-                <li>✓ {/* PLACEHOLDER: Bachelor of Speech Pathology, [University] */} Bachelor of Speech Pathology</li>
-                <li>✓ Certified Practising Member, Speech Pathology Australia (CPSP)</li>
-                <li>✓ NDIS Registered Provider</li>
-                <li>✓ Medicare Registered Provider</li>
-                <li>✓ {/* PLACEHOLDER: Training certifications e.g. Hanen, Sounds Write, Lidcombe Program */}</li>
+            <div className="bg-warm-white p-8 rounded-2xl mb-10 border border-gray-100">
+              <ul className="space-y-4 text-charcoal font-medium">
+                <li className="flex items-start gap-3">
+                  <span className="text-golden-amber mt-0.5">✦</span>
+                  <span>{/* PLACEHOLDER: Bachelor of Speech Pathology, [University] */} Bachelor of Speech Pathology</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-golden-amber mt-0.5">✦</span>
+                  <span>Certified Practising Member, Speech Pathology Australia (CPSP)</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-golden-amber mt-0.5">✦</span>
+                  <span>NDIS Registered Provider</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-golden-amber mt-0.5">✦</span>
+                  <span>Medicare Registered Provider</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-golden-amber mt-0.5">✦</span>
+                  <span>{/* PLACEHOLDER: Training certifications e.g. Hanen, Sounds Write, Lidcombe Program */}</span>
+                </li>
               </ul>
             </div>
-            <Link href="/about" className="text-golden-amber font-bold hover:underline text-lg">
-              Read more about my approach and qualifications →
+            <Link href="/about" className="text-navy-blue font-bold hover:text-golden-amber transition-colors text-lg inline-flex items-center gap-2 group">
+              Read more about my approach and qualifications <span className="group-hover:translate-x-1 transition-transform">→</span>
             </Link>
           </div>
-          <div className="order-1 md:order-2">
-            <div className="bg-gray-200 aspect-square rounded-2xl flex items-center justify-center text-gray-500 text-center p-8 shadow-xl">
+          <div className="order-1 lg:order-2">
+            <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden premium-shadow group">
+              <div className="absolute inset-0 bg-navy-blue/5 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
               {/* REPLACE: Professional headshot of Shine Teoh, warm and approachable */}
-              <span className="text-sm text-gray-400">[Placeholder: Professional headshot of Shine Teoh]</span>
+              <Image
+                src="/shared_images/shine/shine-headshot-1200x1200.webp"
+                alt="Professional headshot of Shine Teoh"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
             </div>
           </div>
         </div>
       </section>
 
       {/* Section 9: SOCIAL PROOF */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-navy-blue mb-12">What families say</h2>
+      <section className="py-24 bg-warm-white">
+        <div className="container mx-auto px-4 text-center max-w-6xl">
+          <div className="mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy-blue mb-4">What families say</h2>
+            <div className="w-24 h-1 bg-golden-amber mx-auto rounded-full"></div>
+          </div>
           {/* PASTE GOOGLE REVIEWS EMBED CODE HERE */}
-          <div className="max-w-4xl mx-auto bg-white p-12 rounded-xl shadow-md border border-gray-100">
-            <p className="text-xl text-gray-600 italic mb-6">
-              Review coming soon — Shine and Speak is a new practice. In the meantime, here are the credentials and training that back our work.
+          <div className="max-w-4xl mx-auto premium-card p-12">
+            <p className="text-xl text-stone italic mb-10 leading-relaxed font-serif">
+              "Review coming soon — Shine and Speak is a new practice. In the meantime, here are the credentials and training that back our work."
             </p>
-            <div className="flex flex-wrap justify-center gap-6 text-sm font-semibold text-navy-blue">
-              <span className="bg-blue-50 px-4 py-2 rounded-lg">✓ Certified Practising Speech Pathologist</span>
-              <span className="bg-blue-50 px-4 py-2 rounded-lg">✓ NDIS Registered Provider</span>
-              <span className="bg-blue-50 px-4 py-2 rounded-lg">✓ Medicare Provider</span>
-              <span className="bg-blue-50 px-4 py-2 rounded-lg">✓ Bilingual English & Mandarin</span>
+            <div className="flex flex-wrap justify-center gap-4 text-sm font-medium text-navy-blue">
+              <span className="bg-sage-green/50 border border-sage-green px-5 py-2.5 rounded-full flex items-center gap-2"><span className="text-golden-amber">✦</span> Certified Practising Speech Pathologist</span>
+              <span className="bg-sage-green/50 border border-sage-green px-5 py-2.5 rounded-full flex items-center gap-2"><span className="text-golden-amber">✦</span> NDIS Registered Provider</span>
+              <span className="bg-sage-green/50 border border-sage-green px-5 py-2.5 rounded-full flex items-center gap-2"><span className="text-golden-amber">✦</span> Medicare Provider</span>
+              <span className="bg-sage-green/50 border border-sage-green px-5 py-2.5 rounded-full flex items-center gap-2"><span className="text-golden-amber">✦</span> Bilingual English & Mandarin</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* Section 10: FOR SUPPORT COORDINATORS */}
-      <section className="py-20 bg-navy-blue text-white">
-        <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-start">
+      <section className="py-24 bg-navy-blue text-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-blue-900/20 blur-3xl -z-10 rounded-full"></div>
+        <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center max-w-7xl">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Are you a Support Coordinator?</h2>
-            <p className="text-lg text-blue-100 mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Are you a Support Coordinator?</h2>
+            <p className="text-lg text-blue-100/90 mb-8 leading-relaxed font-light">
               I work closely with NDIS support coordinators to provide timely, high-quality speech therapy with clear communication and detailed reporting. I understand the referral process and I make it easy for you.
             </p>
-            <ul className="space-y-3 mb-8 text-blue-50">
-              <li>✓ Fast response to referrals — I aim to respond within 24 hours</li>
-              <li>✓ Detailed <Link href="/speech-therapy-reports-sydney-nsw" className="underline hover:text-golden-amber">progress reports and session summaries</Link></li>
-              <li>✓ Flexible scheduling — mobile and telehealth</li>
-              <li>✓ Support for plan reviews with clear, specific recommendations</li>
-              <li>✓ All NDIS management types accepted (self-managed, plan-managed, NDIA-managed)</li>
+            <ul className="space-y-4 mb-10 text-white/90 font-medium">
+              <li className="flex items-start gap-3">
+                <span className="text-golden-amber mt-1">✓</span>
+                <span>Fast response to referrals — I aim to respond within 24 hours</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-golden-amber mt-1">✓</span>
+                <span>Detailed <Link href="/speech-therapy-reports-sydney-nsw" className="underline underline-offset-4 hover:text-golden-amber transition-colors">progress reports and session summaries</Link></span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-golden-amber mt-1">✓</span>
+                <span>Flexible scheduling — mobile and telehealth</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-golden-amber mt-1">✓</span>
+                <span>Support for plan reviews with clear, specific recommendations</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-golden-amber mt-1">✓</span>
+                <span>All NDIS management types accepted (self-managed, plan-managed, NDIA-managed)</span>
+              </li>
             </ul>
-            <div className="flex flex-wrap gap-4">
-              <Link href="/refer-a-client" className="bg-golden-amber text-white px-6 py-3 rounded-md font-bold hover:bg-yellow-600 transition">
-                Refer a Client →
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link href="/refer-a-client" className="btn-primary text-center">
+                Refer a Client
               </Link>
-              <Link href="/ndis-service-guide-support-coordinators" className="border-2 border-white text-white px-6 py-3 rounded-md font-bold hover:bg-white hover:text-navy-blue transition">
-                Download NDIS Service Guide →
+              <Link href="/ndis-service-guide-support-coordinators" className="btn-secondary border-white text-white hover:bg-white hover:text-navy-blue text-center">
+                Download NDIS Service Guide
               </Link>
             </div>
           </div>
-          <div className="bg-blue-800 p-8 rounded-xl shadow-2xl">
-            <h3 className="text-2xl font-bold mb-4 text-golden-amber">Quick Referral</h3>
-            <p className="mb-6 text-blue-100">Submit a referral in under 2 minutes. I'll contact the family directly to arrange an initial consultation.</p>
-            <Link href="/refer-a-client" className="block w-full text-center bg-golden-amber text-white px-6 py-3 rounded-md font-bold hover:bg-yellow-600 transition">
+          <div className="bg-white/5 border border-white/10 backdrop-blur-md p-10 rounded-[2rem] shadow-2xl relative">
+            <div className="absolute -top-6 -right-6 w-24 h-24 bg-golden-amber rounded-full blur-2xl opacity-20"></div>
+            <h3 className="text-2xl font-bold mb-4 text-golden-amber font-serif">Quick Referral</h3>
+            <p className="mb-8 text-blue-100/80 leading-relaxed">Submit a referral in under 2 minutes. I'll contact the family directly to arrange an initial consultation.</p>
+            <Link href="/refer-a-client" className="block w-full text-center bg-white text-navy-blue px-6 py-4 rounded-full font-bold hover:bg-golden-amber hover:text-white transition-all shadow-lg hover:-translate-y-1">
               Open Referral Form →
             </Link>
           </div>
@@ -398,79 +485,105 @@ export default function Home() {
       </section>
 
       {/* Section 11: FAQ — FULLY VISIBLE, NO ACCORDIONS */}
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-navy-blue text-center mb-12">Common questions from parents</h2>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy-blue mb-4">Common questions from parents</h2>
+            <div className="w-24 h-1 bg-golden-amber mx-auto rounded-full"></div>
+          </div>
 
-          <div className="space-y-10">
-            <div>
-              <h3 className="text-xl font-bold text-navy-blue mb-3">How do I know if my child needs speech therapy?</h3>
-              <p className="text-gray-700">If you're concerned about how your child communicates — whether it's how they pronounce words, how much they understand, how they put sentences together, or how they interact with others — it's worth getting an assessment. I offer a free discovery call where we can talk through your concerns and I can help you decide whether a full assessment would be helpful.</p>
+          <div className="space-y-12">
+            <div className="bg-warm-white p-8 rounded-2xl border border-gray-100 flex gap-4">
+              <span className="text-golden-amber font-serif text-3xl leading-none mt-1">Q.</span>
+              <div>
+                <h3 className="text-xl font-bold text-navy-blue mb-3">How do I know if my child needs speech therapy?</h3>
+                <p className="text-stone leading-relaxed">If you're concerned about how your child communicates — whether it's how they pronounce words, how much they understand, how they put sentences together, or how they interact with others — it's worth getting an assessment. I offer a free discovery call where we can talk through your concerns and I can help you decide whether a full assessment would be helpful.</p>
+              </div>
             </div>
 
-            <div>
-              <h3 className="text-xl font-bold text-navy-blue mb-3">What does a typical session look like?</h3>
-              <p className="text-gray-700">Sessions are usually 45–60 minutes and take place at your home, your child's school, or online. I use play-based, evidence-based activities tailored to your child's interests and goals. I also spend time coaching you on strategies you can use between sessions so progress doesn't stop when I leave.</p>
+            <div className="bg-warm-white p-8 rounded-2xl border border-gray-100 flex gap-4">
+              <span className="text-golden-amber font-serif text-3xl leading-none mt-1">Q.</span>
+              <div>
+                <h3 className="text-xl font-bold text-navy-blue mb-3">What does a typical session look like?</h3>
+                <p className="text-stone leading-relaxed">Sessions are usually 45–60 minutes and take place at your home, your child's school, or online. I use play-based, evidence-based activities tailored to your child's interests and goals. I also spend time coaching you on strategies you can use between sessions so progress doesn't stop when I leave.</p>
+              </div>
             </div>
 
-            <div>
-              <h3 className="text-xl font-bold text-navy-blue mb-3">How much does speech therapy cost?</h3>
-              <p className="text-gray-700">Fees depend on the type of session and funding source. I'm a registered NDIS provider and Medicare provider, and I also see private clients. Visit my <Link href="/fees" className="text-navy-blue font-semibold hover:underline">fees and pricing page</Link> for current rates and information about what your fund covers.</p>
+            <div className="bg-warm-white p-8 rounded-2xl border border-gray-100 flex gap-4">
+              <span className="text-golden-amber font-serif text-3xl leading-none mt-1">Q.</span>
+              <div>
+                <h3 className="text-xl font-bold text-navy-blue mb-3">How much does speech therapy cost?</h3>
+                <p className="text-stone leading-relaxed">Fees depend on the type of session and funding source. I'm a registered NDIS provider and Medicare provider, and I also see private clients. Visit my <Link href="/fees" className="text-navy-blue font-semibold hover:text-golden-amber transition-colors underline underline-offset-4">fees and pricing page</Link> for current rates and information about what your fund covers.</p>
+              </div>
             </div>
 
-            <div>
-              <h3 className="text-xl font-bold text-navy-blue mb-3">Do you offer telehealth?</h3>
-              <p className="text-gray-700">Yes. I provide telehealth sessions to clients across Australia. Telehealth works well for many children and adults, and I can deliver sessions to your home, your child's school, or any setting with a stable internet connection. Learn more about <Link href="/telehealth-speech-therapy-sydney-nsw" className="text-navy-blue font-semibold hover:underline">telehealth speech therapy options</Link>.</p>
+            <div className="bg-warm-white p-8 rounded-2xl border border-gray-100 flex gap-4">
+              <span className="text-golden-amber font-serif text-3xl leading-none mt-1">Q.</span>
+              <div>
+                <h3 className="text-xl font-bold text-navy-blue mb-3">Do you offer telehealth?</h3>
+                <p className="text-stone leading-relaxed">Yes. I provide telehealth sessions to clients across Australia. Telehealth works well for many children and adults, and I can deliver sessions to your home, your child's school, or any setting with a stable internet connection. Learn more about <Link href="/telehealth-speech-therapy-sydney-nsw" className="text-navy-blue font-semibold hover:text-golden-amber transition-colors underline underline-offset-4">telehealth speech therapy options</Link>.</p>
+              </div>
             </div>
 
-            <div>
-              <h3 className="text-xl font-bold text-navy-blue mb-3">What areas do you travel to?</h3>
-              <p className="text-gray-700">I travel within a 30-minute radius of Arncliffe for ongoing therapy — including Burwood, Hurstville, Strathfield, Canterbury-Bankstown, Campsie, Rockdale, Kogarah, and Marrickville. I also travel across greater Sydney for one-off assessments and report writing. <Link href="/speech-pathologist-burwood-nsw" className="text-navy-blue font-semibold hover:underline">Find your nearest service area</Link>.</p>
+            <div className="bg-warm-white p-8 rounded-2xl border border-gray-100 flex gap-4">
+              <span className="text-golden-amber font-serif text-3xl leading-none mt-1">Q.</span>
+              <div>
+                <h3 className="text-xl font-bold text-navy-blue mb-3">What areas do you travel to?</h3>
+                <p className="text-stone leading-relaxed">I travel within a 30-minute radius of Arncliffe for ongoing therapy — including Burwood, Hurstville, Strathfield, Canterbury-Bankstown, Campsie, Rockdale, Kogarah, and Marrickville. I also travel across greater Sydney for one-off assessments and report writing. <Link href="/speech-pathologist-burwood-nsw" className="text-navy-blue font-semibold hover:text-golden-amber transition-colors underline underline-offset-4">Find your nearest service area</Link>.</p>
+              </div>
             </div>
 
-            <div>
-              <h3 className="text-xl font-bold text-navy-blue mb-3">How do I get started?</h3>
-              <p className="text-gray-700">Book a free discovery call. We'll chat about your child's needs and I'll explain how the process works. You can also call me directly on <a href="tel:+61421608819" className="text-navy-blue font-semibold hover:underline">0421 608 819</a> or email <a href="mailto:admin@shineandspeak.com.au" className="text-navy-blue font-semibold hover:underline">admin@shineandspeak.com.au</a>.</p>
+            <div className="bg-warm-white p-8 rounded-2xl border border-gray-100 flex gap-4">
+              <span className="text-golden-amber font-serif text-3xl leading-none mt-1">Q.</span>
+              <div>
+                <h3 className="text-xl font-bold text-navy-blue mb-3">How do I get started?</h3>
+                <p className="text-stone leading-relaxed">Book a free discovery call. We'll chat about your child's needs and I'll explain how the process works. You can also call me directly on <a href="tel:+61421608819" className="text-navy-blue font-semibold hover:text-golden-amber transition-colors underline underline-offset-4">0421 608 819</a> or email <a href="mailto:admin@shineandspeak.com.au" className="text-navy-blue font-semibold hover:text-golden-amber transition-colors underline underline-offset-4">admin@shineandspeak.com.au</a>.</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Section 12: SERVICE AREA */}
-      <section className="py-12 bg-gray-50 border-t border-gray-200">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl font-bold text-navy-blue mb-6">Areas I serve in Sydney</h2>
-          <div className="flex flex-wrap justify-center gap-x-3 gap-y-2 text-gray-700">
-            <Link href="/speech-pathologist-arncliffe-nsw" className="hover:text-golden-amber">Arncliffe</Link><span className="text-gray-400">·</span>
-            <Link href="/speech-pathologist-burwood-nsw" className="hover:text-golden-amber">Burwood</Link><span className="text-gray-400">·</span>
-            <Link href="/speech-pathologist-hurstville-nsw" className="hover:text-golden-amber">Hurstville</Link><span className="text-gray-400">·</span>
-            <Link href="/speech-pathologist-strathfield-nsw" className="hover:text-golden-amber">Strathfield</Link><span className="text-gray-400">·</span>
-            <Link href="/speech-pathologist-canterbury-bankstown-nsw" className="hover:text-golden-amber">Canterbury-Bankstown</Link><span className="text-gray-400">·</span>
-            <Link href="/speech-pathologist-campsie-nsw" className="hover:text-golden-amber">Campsie</Link><span className="text-gray-400">·</span>
-            <Link href="/speech-pathologist-rockdale-nsw" className="hover:text-golden-amber">Rockdale</Link><span className="text-gray-400">·</span>
-            <Link href="/speech-pathologist-kogarah-nsw" className="hover:text-golden-amber">Kogarah</Link><span className="text-gray-400">·</span>
-            <Link href="/speech-pathologist-marrickville-nsw" className="hover:text-golden-amber">Marrickville</Link><span className="text-gray-400">·</span>
-            <Link href="/speech-pathologist-inner-west-sydney-nsw" className="hover:text-golden-amber">Inner West Sydney</Link><span className="text-gray-400">·</span>
-            <Link href="/speech-pathologist-st-george-nsw" className="hover:text-golden-amber">St George</Link><span className="text-gray-400">·</span>
-            <Link href="/telehealth-speech-therapy-sydney-nsw" className="hover:text-golden-amber">Telehealth Australia-wide</Link>
+      <section className="py-16 bg-soft-blue border-t border-blue-100">
+        <div className="container mx-auto px-4 text-center max-w-5xl">
+          <h2 className="text-2xl font-bold text-navy-blue mb-8 font-serif">Areas I serve in Sydney</h2>
+          <div className="flex flex-wrap justify-center gap-x-4 gap-y-3 text-stone font-medium">
+            <Link href="/speech-pathologist-arncliffe-nsw" className="hover:text-golden-amber transition-colors">Arncliffe</Link><span className="text-blue-200">·</span>
+            <Link href="/speech-pathologist-burwood-nsw" className="hover:text-golden-amber transition-colors">Burwood</Link><span className="text-blue-200">·</span>
+            <Link href="/speech-pathologist-hurstville-nsw" className="hover:text-golden-amber transition-colors">Hurstville</Link><span className="text-blue-200">·</span>
+            <Link href="/speech-pathologist-strathfield-nsw" className="hover:text-golden-amber transition-colors">Strathfield</Link><span className="text-blue-200">·</span>
+            <Link href="/speech-pathologist-canterbury-bankstown-nsw" className="hover:text-golden-amber transition-colors">Canterbury-Bankstown</Link><span className="text-blue-200">·</span>
+            <Link href="/speech-pathologist-campsie-nsw" className="hover:text-golden-amber transition-colors">Campsie</Link><span className="text-blue-200">·</span>
+            <Link href="/speech-pathologist-rockdale-nsw" className="hover:text-golden-amber transition-colors">Rockdale</Link><span className="text-blue-200">·</span>
+            <Link href="/speech-pathologist-kogarah-nsw" className="hover:text-golden-amber transition-colors">Kogarah</Link><span className="text-blue-200">·</span>
+            <Link href="/speech-pathologist-marrickville-nsw" className="hover:text-golden-amber transition-colors">Marrickville</Link><span className="text-blue-200">·</span>
+            <Link href="/speech-pathologist-inner-west-sydney-nsw" className="hover:text-golden-amber transition-colors">Inner West Sydney</Link><span className="text-blue-200">·</span>
+            <Link href="/speech-pathologist-st-george-nsw" className="hover:text-golden-amber transition-colors">St George</Link><span className="text-blue-200">·</span>
+            <Link href="/telehealth-speech-therapy-sydney-nsw" className="hover:text-golden-amber transition-colors">Telehealth Australia-wide</Link>
           </div>
         </div>
       </section>
 
       {/* Section 13: FINAL CTA BAND */}
-      <section className="py-20 bg-golden-amber text-white text-center">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to help your child thrive?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
+      <section className="py-24 bg-golden-amber text-white text-center relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIi8+PC9zdmc+')] opacity-30"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-navy-blue">Ready to help your child thrive?</h2>
+          <p className="text-xl mb-10 max-w-2xl mx-auto text-navy-blue/80 font-medium">
             Book a free discovery call to talk about your child's needs — no obligation, no pressure.
           </p>
-          <div className="text-xl font-bold mb-8 flex flex-wrap justify-center gap-6">
-            <a href="tel:+61421608819" className="hover:underline">📞 0421 608 819</a>
-            <a href="mailto:admin@shineandspeak.com.au" className="hover:underline">✉️ admin@shineandspeak.com.au</a>
+          <div className="text-xl font-bold mb-10 flex flex-wrap justify-center gap-8 text-navy-blue">
+            <a href="tel:+61421608819" className="hover:text-white transition-colors flex items-center gap-2">
+              <span className="bg-navy-blue/10 p-2 rounded-full">📞</span> 0421 608 819
+            </a>
+            <a href="mailto:admin@shineandspeak.com.au" className="hover:text-white transition-colors flex items-center gap-2">
+              <span className="bg-navy-blue/10 p-2 rounded-full">✉️</span> admin@shineandspeak.com.au
+            </a>
           </div>
           {/* REPLACE: Swap /contact for your Calendly/TidyCal booking URL */}
-          <Link href="/contact" className="inline-block bg-navy-blue text-white px-10 py-4 rounded-md font-bold text-xl hover:bg-blue-900 transition shadow-xl">
-            Book a Free Discovery Call →
+          <Link href="/contact" className="inline-flex items-center gap-2 bg-navy-blue text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-charcoal transition-all shadow-xl hover:-translate-y-1">
+            Book a Free Discovery Call <span>→</span>
           </Link>
         </div>
       </section>

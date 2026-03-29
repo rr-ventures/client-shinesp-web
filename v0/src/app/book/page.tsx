@@ -29,14 +29,14 @@ export default function BookPage() {
 
       <nav className="bg-gray-50 py-3 border-b border-gray-200 text-sm" aria-label="Breadcrumb">
         <div className="container mx-auto px-4 text-gray-500">
-          <Link href="/" className="hover:text-[#1B365D]">Home</Link>
+          <Link href="/" className="hover:text-[#112A46]">Home</Link>
           <span className="mx-2">›</span>
-          <span className="text-[#1B365D]">Book a Free Discovery Call</span>
+          <span className="text-[#112A46]">Book a Free Discovery Call</span>
         </div>
       </nav>
 
       <div className="container mx-auto px-4 py-12 md:py-20 max-w-5xl">
-        <h1 className="text-4xl md:text-5xl font-bold text-[#1B365D] mb-6 text-center">Book a Free Discovery Call</h1>
+        <h1 className="text-4xl md:text-5xl font-serif font-medium text-[#112A46] mb-6 text-center">Book a Free Discovery Call</h1>
         <p className="text-xl text-gray-600 text-center mb-12 max-w-2xl mx-auto">
           Chat with our speech pathologist about your child&apos;s needs — no obligation, no pressure. We&apos;ll answer your questions and help you decide on the best next step.
         </p>
@@ -44,7 +44,7 @@ export default function BookPage() {
         <div className="grid md:grid-cols-2 gap-12">
           {/* Calendly placeholder */}
           <div>
-            <h2 className="text-2xl font-bold text-[#1B365D] mb-4">Schedule online</h2>
+            <h2 className="text-2xl font-serif font-medium text-[#112A46] mb-4">Schedule online</h2>
             <div className="bg-gray-100 rounded-2xl aspect-video flex items-center justify-center border-2 border-dashed border-gray-300">
               {/* REPLACE: Paste your Calendly embed code here
                   e.g. <iframe src="https://calendly.com/shineandspeak/discovery-call" ... />
@@ -56,7 +56,7 @@ export default function BookPage() {
             </div>
             <div className="mt-6 text-center">
               <p className="text-gray-600 mb-2">Or call us directly:</p>
-              <a href="tel:0421608819" className="text-2xl font-bold text-[#1B365D] hover:text-[#E8A84C] transition">
+              <a href="tel:0421608819" className="text-2xl font-serif font-medium text-[#112A46] hover:text-[#C89B66] transition">
                 📞 {PHONE_DISPLAY}
               </a>
             </div>
@@ -64,7 +64,7 @@ export default function BookPage() {
 
           {/* Parent enquiry form */}
           <div>
-            <h2 className="text-2xl font-bold text-[#1B365D] mb-4">Or send an enquiry</h2>
+            <h2 className="text-2xl font-serif font-medium text-[#112A46] mb-4">Or send an enquiry</h2>
             <p className="text-gray-600 mb-6">Fill in your details and we&apos;ll call you back within 24 hours.</p>
             <ParentEnquiryForm />
           </div>
@@ -74,7 +74,7 @@ export default function BookPage() {
       <div className="bg-gray-50 py-4 border-t border-gray-100">
         <div className="container mx-auto px-4 text-center">
           <p className="text-sm text-gray-500">
-            <Link href="/about" className="underline hover:text-[#1B365D]">Written by a Certified Practising Speech Pathologist</Link>
+            <Link href="/about" className="underline hover:text-[#112A46]">Written by a Certified Practising Speech Pathologist</Link>
           </p>
         </div>
       </div>

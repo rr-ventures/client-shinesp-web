@@ -145,9 +145,12 @@ export default function Footer() {
           <div>
             <h3 className="text-[#E8A84C] font-bold mb-4 text-sm uppercase tracking-wider">Connect on WeChat</h3>
             {/* REPLACE: Insert WeChat QR code image */}
-            <div className="w-36 h-36 bg-gray-600 rounded-lg flex flex-col items-center justify-center text-center p-3 mb-4">
-              <p className="text-xs text-gray-300 leading-tight">Scan to add on WeChat</p>
-              {/* REPLACE: Insert WeChat QR code image */}
+            <div className="w-36 h-36 bg-white rounded-lg flex flex-col items-center justify-center p-2 mb-4 overflow-hidden">
+              <img 
+                src="/shared/communication/wechat-qr-placeholder.webp" 
+                alt="WeChat QR Code" 
+                className="w-full h-full object-cover"
+              />
             </div>
             <p className="text-xs text-gray-400 leading-relaxed">
               Bilingual services in English and Mandarin (普通话).

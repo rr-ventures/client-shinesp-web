@@ -18,25 +18,26 @@ const suburbLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-primary text-white pt-16 pb-8 mt-auto">
-      <div className="container-custom">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+    <footer className="bg-primary text-white pt-20 pb-10 mt-auto relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-secondary/5 blur-[100px] rounded-full"></div>
+      <div className="container-custom relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-16">
 
           {/* Brand + Contact */}
           <div>
             <Image
               src="/logo-stacked.png"
               alt="Shine and Speak"
-              width={140}
-              height={80}
-              className="mb-6 brightness-0 invert"
+              width={160}
+              height={90}
+              className="mb-8 brightness-0 invert opacity-90"
             />
-            <p className="text-gray-300 mb-6 text-sm leading-relaxed">
+            <p className="text-gray-300 mb-8 text-sm leading-loose font-light">
               Personalised speech therapy delivered to your home, school, or online. Bilingual English &amp; Mandarin.
             </p>
-            <div className="space-y-2 text-gray-300 text-sm">
-              <p>📞 <a href="tel:+61400000000" className="hover:text-secondary transition-colors">0400 000 000</a></p>
-              <p>✉️ <a href="mailto:admin@shineandspeak.com.au" className="hover:text-secondary transition-colors">admin@shineandspeak.com.au</a></p>
+            <div className="space-y-4 text-gray-300 text-sm font-light">
+              <p className="flex items-center gap-3"><span className="text-secondary">📞</span> <a href="tel:+61400000000" className="hover:text-secondary transition-colors">0400 000 000</a></p>
+              <p className="flex items-center gap-3"><span className="text-secondary">✉️</span> <a href="mailto:admin@shineandspeak.com.au" className="hover:text-secondary transition-colors">admin@shineandspeak.com.au</a></p>
             </div>
 
             {/* Social media links */}
@@ -94,36 +95,36 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-base font-bold mb-5 text-white">Services</h4>
-            <ul className="space-y-2.5 text-gray-300 text-sm">
-              <li><Link href="/paediatric-speech-therapy-sydney-nsw" className="hover:text-secondary transition-colors">Paediatric Speech Therapy</Link></li>
-              <li><Link href="/adult-speech-therapy-sydney-nsw" className="hover:text-secondary transition-colors">Adult Speech Therapy</Link></li>
-              <li><Link href="/speech-therapy-autism-sydney-nsw" className="hover:text-secondary transition-colors">Autism Support</Link></li>
-              <li><Link href="/speech-therapy-language-delay-sydney-nsw" className="hover:text-secondary transition-colors">Language Delay</Link></li>
-              <li><Link href="/speech-therapy-speech-sounds-sydney-nsw" className="hover:text-secondary transition-colors">Speech Sounds</Link></li>
-              <li><Link href="/speech-therapy-literacy-sydney-nsw" className="hover:text-secondary transition-colors">Literacy &amp; Reading</Link></li>
-              <li><Link href="/mobile-speech-therapy-sydney-nsw" className="hover:text-secondary transition-colors">Mobile Therapy</Link></li>
-              <li><Link href="/telehealth-speech-therapy-sydney-nsw" className="hover:text-secondary transition-colors">Telehealth</Link></li>
+            <h4 className="text-lg font-serif font-bold mb-6 text-white tracking-wide">Services</h4>
+            <ul className="space-y-3.5 text-gray-300 text-sm font-light">
+              <li><Link href="/paediatric-speech-therapy-sydney-nsw" className="hover:text-secondary hover:translate-x-1 inline-block transition-all">Paediatric Speech Therapy</Link></li>
+              <li><Link href="/adult-speech-therapy-sydney-nsw" className="hover:text-secondary hover:translate-x-1 inline-block transition-all">Adult Speech Therapy</Link></li>
+              <li><Link href="/speech-therapy-autism-sydney-nsw" className="hover:text-secondary hover:translate-x-1 inline-block transition-all">Autism Support</Link></li>
+              <li><Link href="/speech-therapy-language-delay-sydney-nsw" className="hover:text-secondary hover:translate-x-1 inline-block transition-all">Language Delay</Link></li>
+              <li><Link href="/speech-therapy-speech-sounds-sydney-nsw" className="hover:text-secondary hover:translate-x-1 inline-block transition-all">Speech Sounds</Link></li>
+              <li><Link href="/speech-therapy-literacy-sydney-nsw" className="hover:text-secondary hover:translate-x-1 inline-block transition-all">Literacy &amp; Reading</Link></li>
+              <li><Link href="/mobile-speech-therapy-sydney-nsw" className="hover:text-secondary hover:translate-x-1 inline-block transition-all">Mobile Therapy</Link></li>
+              <li><Link href="/telehealth-speech-therapy-sydney-nsw" className="hover:text-secondary hover:translate-x-1 inline-block transition-all">Telehealth</Link></li>
             </ul>
-            <h4 className="text-base font-bold mt-6 mb-4 text-white">Quick Links</h4>
-            <ul className="space-y-2.5 text-gray-300 text-sm">
-              <li><Link href="/about" className="hover:text-secondary transition-colors">About Shine Teoh</Link></li>
-              <li><Link href="/how-it-works" className="hover:text-secondary transition-colors">How It Works</Link></li>
-              <li><Link href="/ndis-speech-therapy-sydney-nsw" className="hover:text-secondary transition-colors">NDIS Speech Therapy</Link></li>
-              <li><Link href="/medicare-speech-therapy-sydney-nsw" className="hover:text-secondary transition-colors">Medicare Rebates</Link></li>
-              <li><Link href="/fees" className="hover:text-secondary transition-colors">Fees &amp; Funding</Link></li>
-              <li><Link href="/refer-a-client" className="hover:text-secondary transition-colors">Refer a Client</Link></li>
-              <li><Link href="/contact" className="hover:text-secondary transition-colors">Contact</Link></li>
+            <h4 className="text-lg font-serif font-bold mt-8 mb-6 text-white tracking-wide">Quick Links</h4>
+            <ul className="space-y-3.5 text-gray-300 text-sm font-light">
+              <li><Link href="/about" className="hover:text-secondary hover:translate-x-1 inline-block transition-all">About Shine Teoh</Link></li>
+              <li><Link href="/how-it-works" className="hover:text-secondary hover:translate-x-1 inline-block transition-all">How It Works</Link></li>
+              <li><Link href="/ndis-speech-therapy-sydney-nsw" className="hover:text-secondary hover:translate-x-1 inline-block transition-all">NDIS Speech Therapy</Link></li>
+              <li><Link href="/medicare-speech-therapy-sydney-nsw" className="hover:text-secondary hover:translate-x-1 inline-block transition-all">Medicare Rebates</Link></li>
+              <li><Link href="/fees" className="hover:text-secondary hover:translate-x-1 inline-block transition-all">Fees &amp; Funding</Link></li>
+              <li><Link href="/refer-a-client" className="hover:text-secondary hover:translate-x-1 inline-block transition-all">Refer a Client</Link></li>
+              <li><Link href="/contact" className="hover:text-secondary hover:translate-x-1 inline-block transition-all">Contact</Link></li>
             </ul>
           </div>
 
           {/* Service Areas */}
           <div>
-            <h4 className="text-base font-bold mb-5 text-white">Service Areas</h4>
-            <ul className="space-y-2.5 text-gray-300 text-sm">
+            <h4 className="text-lg font-serif font-bold mb-6 text-white tracking-wide">Service Areas</h4>
+            <ul className="space-y-3.5 text-gray-300 text-sm font-light">
               {suburbLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="hover:text-secondary transition-colors">
+                  <Link href={link.href} className="hover:text-secondary hover:translate-x-1 inline-block transition-all">
                     {link.label}
                   </Link>
                 </li>
@@ -133,37 +134,37 @@ export default function Footer() {
 
           {/* Trust Badges + WeChat */}
           <div>
-            <h4 className="text-base font-bold mb-5 text-white">Accreditations</h4>
-            <div className="space-y-3 mb-8">
-              <div className="bg-white/10 rounded-xl px-4 py-3 text-sm font-semibold text-white flex items-center gap-2">
+            <h4 className="text-lg font-serif font-bold mb-6 text-white tracking-wide">Accreditations</h4>
+            <div className="space-y-3 mb-10">
+              <div className="bg-white/5 border border-white/10 rounded-xl px-5 py-3 text-sm font-light text-white flex items-center gap-3 hover:bg-white/10 transition-colors">
                 <span className="text-secondary">✓</span> Speech Pathology Australia (CPSP)
               </div>
-              <div className="bg-white/10 rounded-xl px-4 py-3 text-sm font-semibold text-white flex items-center gap-2">
+              <div className="bg-white/5 border border-white/10 rounded-xl px-5 py-3 text-sm font-light text-white flex items-center gap-3 hover:bg-white/10 transition-colors">
                 <span className="text-secondary">✓</span> NDIS Registered Provider
               </div>
-              <div className="bg-white/10 rounded-xl px-4 py-3 text-sm font-semibold text-white flex items-center gap-2">
+              <div className="bg-white/5 border border-white/10 rounded-xl px-5 py-3 text-sm font-light text-white flex items-center gap-3 hover:bg-white/10 transition-colors">
                 <span className="text-secondary">✓</span> Medicare Provider
               </div>
-              <div className="bg-white/10 rounded-xl px-4 py-3 text-sm font-semibold text-white flex items-center gap-2">
+              <div className="bg-white/5 border border-white/10 rounded-xl px-5 py-3 text-sm font-light text-white flex items-center gap-3 hover:bg-white/10 transition-colors">
                 <span className="text-secondary">✓</span> Hanen Certified
               </div>
             </div>
 
             {/* WeChat QR Placeholder */}
             <div>
-              <p className="text-sm font-bold text-white mb-3">WeChat / 微信</p>
+              <p className="text-sm font-bold text-white mb-4 tracking-wide">WeChat / 微信</p>
               {/* REPLACE: Insert WeChat QR code image here — replace the placeholder box with <Image> tag */}
-              <div className="bg-white/10 border-2 border-dashed border-white/30 rounded-xl w-28 h-28 flex flex-col items-center justify-center text-center p-2">
-                <span className="text-white/60 text-xs leading-tight">Scan to add<br />on WeChat<br />微信扫码</span>
+              <div className="bg-white p-2 rounded-2xl w-32 h-32 shadow-lg inline-block">
+                <img src="/wechat-qr-placeholder.webp" alt="WeChat QR Code" className="w-full h-full object-cover rounded-xl" />
               </div>
             </div>
           </div>
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-gray-700 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-sm text-gray-400">
-            <div className="flex flex-wrap gap-x-6 gap-y-1 items-center">
+        <div className="border-t border-white/10 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 text-sm text-gray-400 font-light">
+            <div className="flex flex-wrap gap-x-8 gap-y-2 items-center">
               <span>© 2026 Shine and Speak</span>
               {/* REPLACE: Update ABN once registered — format: ABN XX XXX XXX XXX */}
               <span>ABN: XX XXX XXX XXX</span>
@@ -172,7 +173,7 @@ export default function Footer() {
             </div>
             <p>
               Written by{' '}
-              <Link href="/about" className="hover:text-secondary underline transition-colors">
+              <Link href="/about" className="text-white hover:text-secondary underline decoration-white/30 underline-offset-4 transition-colors font-medium">
                 Shine Teoh
               </Link>
               , Certified Practising Speech Pathologist
