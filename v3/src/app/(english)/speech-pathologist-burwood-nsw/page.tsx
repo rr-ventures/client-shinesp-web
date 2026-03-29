@@ -62,9 +62,12 @@ export default function BurwoodPage() {
           Speech Pathologist Burwood
         </nav>
 
-        <h1 className="text-4xl font-bold text-navy-blue mb-6">Speech Pathologist in Burwood</h1>
+        <h1 className="text-4xl font-bold text-navy-blue mb-6">Speech Pathologist in Burwood NSW</h1>
+        <p className="text-lg text-gray-700 mb-4">
+          Looking for a speech pathologist in Burwood? I provide mobile speech therapy for children and adults in Burwood NSW and surrounding suburbs. I travel to your home, your child&apos;s school, or local kindergarten — so there&apos;s no need to visit a clinic. I also offer telehealth sessions if that suits your family better.
+        </p>
         <p className="text-lg text-gray-700 mb-8">
-          Looking for a speech pathologist in Burwood? I provide mobile speech therapy for children and adults in Burwood and surrounding suburbs. I travel to your home, your child's school, or local kindergarten — so there's no need to visit a clinic. I also offer telehealth sessions if that suits your family better.
+          Burwood is a vibrant, multicultural suburb in Sydney&apos;s Inner West, known for landmarks like Burwood Park and Westfield Burwood. I service families across Burwood and local schools and kindergartens, and also cover neighbouring Strathfield, Croydon, and Enfield. From Arncliffe, Burwood is a short 15-minute drive via the M5. Learn more about <a href="https://www.burwood.nsw.gov.au" target="_blank" rel="noopener noreferrer" className="text-navy-blue font-semibold underline underline-offset-4 hover:text-golden-amber transition-colors">the Burwood local community</a> via Burwood Council.
         </p>
 
         {/* Trust signals */}
@@ -108,7 +111,7 @@ export default function BurwoodPage() {
         </div>
 
         <p className="text-sm text-gray-500 italic">
-          Written by Shine Yin Teoh, Certified Practising Speech Pathologist.{" "}
+          Written by Shine Teoh, Certified Practising Speech Pathologist.{" "}
           <Link href="/about" className="underline hover:text-golden-amber">Learn about Shine's qualifications</Link>.
         </p>
       </div>

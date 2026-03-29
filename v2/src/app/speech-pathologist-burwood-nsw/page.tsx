@@ -41,7 +41,7 @@ export default function BurwoodPage() {
       />
 
       {/* Hero Section */}
-      <section className="bg-[#F0F4F8] py-16">
+      <section className="bg-navy-50 py-16">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <Breadcrumbs items={[
             { label: 'Home', href: '/' },
@@ -50,18 +50,21 @@ export default function BurwoodPage() {
           ]} />
           
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#1B365D] mb-6">
-              Speech Pathologist in Burwood
+            <h1 className="text-4xl md:text-5xl font-bold text-navy-900 mb-6">
+              Speech Pathologist in Burwood NSW
             </h1>
+            <p className="text-lg text-gray-700 mb-4">
+              Looking for a speech pathologist in Burwood? I provide mobile speech therapy for children and adults in Burwood NSW and surrounding suburbs. I travel to your home, your child&apos;s school, or local kindergarten — so there&apos;s no need to visit a clinic. I also offer telehealth sessions if that suits your family better.
+            </p>
             <p className="text-lg text-gray-700 mb-8">
-              Looking for a speech pathologist in Burwood? I provide mobile speech therapy for children and adults in Burwood and surrounding suburbs. I travel to your home, your child's school, or local kindergarten — so there's no need to visit a clinic. I also offer telehealth sessions if that suits your family better.
+              Burwood is a vibrant, multicultural suburb in Sydney&apos;s Inner West, known for landmarks like Burwood Park and Westfield Burwood. I service families across Burwood and nearby schools and kindergartens, and also cover neighbouring Strathfield, Croydon, and Enfield. From Arncliffe, Burwood is a short 15-minute drive via the M5. Find out more about <a href="https://www.burwood.nsw.gov.au" target="_blank" rel="noopener noreferrer" className="text-[#1B365D] font-medium underline underline-offset-2 hover:text-[#E8A84C] transition-colors">the Burwood local community</a> via Burwood Council.
             </p>
             
             {/* Trust signals strip */}
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-medium text-[#1B365D]">
-              <span className="flex items-center"><CheckCircle2 className="w-4 h-4 mr-1 text-[#E8A84C]" /> CPSP Certified</span>
-              <span className="flex items-center"><CheckCircle2 className="w-4 h-4 mr-1 text-[#E8A84C]" /> NDIS Registered</span>
-              <span className="flex items-center"><CheckCircle2 className="w-4 h-4 mr-1 text-[#E8A84C]" /> Medicare Provider</span>
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-medium text-navy-800">
+              <span className="flex items-center"><CheckCircle2 className="w-4 h-4 mr-1 text-gold-500" /> CPSP Certified</span>
+              <span className="flex items-center"><CheckCircle2 className="w-4 h-4 mr-1 text-gold-500" /> NDIS Registered</span>
+              <span className="flex items-center"><CheckCircle2 className="w-4 h-4 mr-1 text-gold-500" /> Medicare Provider</span>
             </div>
           </div>
         </div>
@@ -70,33 +73,33 @@ export default function BurwoodPage() {
       {/* Content Sections */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 md:px-8">
-          <h2 className="text-3xl font-bold text-[#1B365D] mb-6">Services available in Burwood</h2>
+          <h2 className="text-3xl font-bold text-navy-900 mb-6">Services available in Burwood</h2>
           <p className="text-lg text-gray-700 mb-12">
-            Speech therapy for <Link href="/speech-therapy-autism-sydney-nsw" className="text-[#1B365D] underline font-medium hover:text-[#E8A84C]">children with autism</Link>, ADHD, developmental delay, language delay, speech sounds, stuttering, literacy, and more. Adult speech therapy for aphasia, cognitive-communication, fluency, and neurological rehabilitation. I also provide <Link href="/speech-therapy-assessment-sydney-nsw" className="text-[#1B365D] underline font-medium hover:text-[#E8A84C]">comprehensive assessments</Link> and detailed reports, and offer coaching for parents and support workers.
+            Speech therapy for <Link href="/speech-therapy-autism-sydney-nsw" className="text-navy-900 underline font-medium hover:text-gold-600">children with autism</Link>, ADHD, developmental delay, language delay, speech sounds, stuttering, literacy, and more. Adult speech therapy for aphasia, cognitive-communication, fluency, and neurological rehabilitation. I also provide <Link href="/speech-therapy-assessment-sydney-nsw" className="text-navy-900 underline font-medium hover:text-gold-600">comprehensive assessments</Link> and detailed reports, and offer coaching for parents and support workers.
           </p>
 
-          <h2 className="text-3xl font-bold text-[#1B365D] mb-6">How mobile therapy works in Burwood</h2>
+          <h2 className="text-3xl font-bold text-navy-900 mb-6">How mobile therapy works in Burwood</h2>
           <p className="text-lg text-gray-700 mb-12">
             I bring everything needed for a full therapy session directly to your home or your child's school in Burwood. Sessions typically run 45-60 minutes. Parents and carers are welcome to observe and I'll coach you on strategies to use between sessions.
           </p>
 
-          <h2 className="text-3xl font-bold text-[#1B365D] mb-6">Funding options</h2>
+          <h2 className="text-3xl font-bold text-navy-900 mb-6">Funding options</h2>
           <p className="text-lg text-gray-700 mb-12">
-            NDIS registered (all management types), Medicare provider, private pay, Home Care Packages, DVA. Visit the <Link href="/fees" className="text-[#1B365D] underline font-medium hover:text-[#E8A84C]">funding and fees page</Link> for full details on what's covered and current session rates.
+            NDIS registered (all management types), Medicare provider, private pay, Home Care Packages, DVA. Visit the <Link href="/fees" className="text-navy-900 underline font-medium hover:text-gold-600">funding and fees page</Link> for full details on what's covered and current session rates.
           </p>
 
-          <h2 className="text-3xl font-bold text-[#1B365D] mb-6">Languages</h2>
+          <h2 className="text-3xl font-bold text-navy-900 mb-6">Languages</h2>
           <p className="text-lg text-gray-700 mb-12">
             English and Mandarin (普通话).
           </p>
 
-          <h2 className="text-3xl font-bold text-[#1B365D] mb-6">Nearby suburbs</h2>
+          <h2 className="text-3xl font-bold text-navy-900 mb-6">Nearby suburbs</h2>
           <div className="flex flex-wrap gap-x-4 gap-y-2 text-lg text-gray-700 mb-12">
-            <Link href="/speech-pathologist-strathfield-nsw" className="hover:text-[#E8A84C] hover:underline">Strathfield</Link> <span className="text-gray-300">•</span>
-            <Link href="/speech-pathologist-canterbury-bankstown-nsw" className="hover:text-[#E8A84C] hover:underline">Canterbury-Bankstown</Link> <span className="text-gray-300">•</span>
-            <Link href="/speech-pathologist-campsie-nsw" className="hover:text-[#E8A84C] hover:underline">Campsie</Link> <span className="text-gray-300">•</span>
-            <Link href="/speech-pathologist-inner-west-sydney-nsw" className="hover:text-[#E8A84C] hover:underline">Inner West Sydney</Link> <span className="text-gray-300">•</span>
-            <Link href="/speech-pathologist-arncliffe-nsw" className="hover:text-[#E8A84C] hover:underline">Arncliffe</Link>
+            <Link href="/speech-pathologist-strathfield-nsw" className="hover:text-gold-600 hover:underline">Strathfield</Link> <span className="text-gray-300">•</span>
+            <Link href="/speech-pathologist-canterbury-bankstown-nsw" className="hover:text-gold-600 hover:underline">Canterbury-Bankstown</Link> <span className="text-gray-300">•</span>
+            <Link href="/speech-pathologist-campsie-nsw" className="hover:text-gold-600 hover:underline">Campsie</Link> <span className="text-gray-300">•</span>
+            <Link href="/speech-pathologist-inner-west-sydney-nsw" className="hover:text-gold-600 hover:underline">Inner West Sydney</Link> <span className="text-gray-300">•</span>
+            <Link href="/speech-pathologist-arncliffe-nsw" className="hover:text-gold-600 hover:underline">Arncliffe</Link>
           </div>
         </div>
       </section>
@@ -125,7 +128,7 @@ export default function BurwoodPage() {
         <p className="text-xs text-gray-500">
           Written by{' '}
           <Link href="/about" className="text-[#1B365D] hover:text-[#E8A84C] underline underline-offset-2">
-            Shine Yin Teoh, Certified Practising Speech Pathologist
+            Shine Teoh, Certified Practising Speech Pathologist
           </Link>
         </p>
       </div>

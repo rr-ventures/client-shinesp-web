@@ -1,13 +1,13 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Speech Pathologist Canterbury-Bankstown | Shine and Speak',
+  title: 'Speech Pathologist Canterbury-Bankstown NSW | Shine and Speak',
   description: 'Mobile speech pathologist in Canterbury-Bankstown, Sydney NSW. Home visits, school & telehealth. NDIS, Medicare & private. Bilingual English & Mandarin.',
   alternates: {
     canonical: 'https://shineandspeak.com.au/speech-pathologist-canterbury-bankstown-nsw',
   },
   openGraph: {
-    title: 'Speech Pathologist Canterbury-Bankstown | Shine and Speak',
+    title: 'Speech Pathologist Canterbury-Bankstown NSW | Shine and Speak',
     description: 'Mobile speech pathologist in Canterbury-Bankstown, Sydney NSW. Home visits, school & telehealth. NDIS, Medicare & private. Bilingual English & Mandarin.',
     url: 'https://shineandspeak.com.au/speech-pathologist-canterbury-bankstown-nsw',
     type: 'website',
@@ -46,7 +46,7 @@ export default function PlaceholderPage() {
         <div className="container-custom">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-              Speech Pathologist in Canterbury-Bankstown
+              Speech Pathologist in Canterbury-Bankstown NSW
             </h1>
           </div>
         </div>

@@ -84,10 +84,13 @@ export default function BurwoodPage() {
               <MapPin size={18} className="text-secondary" /> Burwood, NSW
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-              Speech Pathologist in Burwood
+              Speech Pathologist in Burwood NSW
             </h1>
+            <p className="text-xl text-gray-700 leading-relaxed mb-4">
+              Looking for a speech pathologist in Burwood? I provide mobile speech therapy for children and adults in Burwood NSW and surrounding suburbs. I travel to your home, your child&apos;s school, or local kindergarten — so there&apos;s no need to visit a clinic. I also offer telehealth sessions if that suits your family better.
+            </p>
             <p className="text-xl text-gray-700 leading-relaxed">
-              Looking for a speech pathologist in Burwood? I provide mobile speech therapy for children and adults in Burwood and surrounding suburbs. I travel to your home, your child's school, or local kindergarten — so there's no need to visit a clinic. I also offer telehealth sessions if that suits your family better.
+              Burwood is a vibrant, multicultural suburb in Sydney&apos;s Inner West, known for landmarks like Burwood Park and Westfield Burwood. I service families across Burwood and the local schools and kindergartens, and also cover neighbouring Strathfield, Croydon, and Enfield. From Arncliffe, Burwood is a short 15-minute drive via the M5. Learn more about <a href="https://www.burwood.nsw.gov.au" target="_blank" rel="noopener noreferrer" className="text-primary font-medium underline decoration-secondary/30 hover:text-secondary underline-offset-4">the Burwood local community</a> via the Burwood Council website.
             </p>
           </div>
         </div>
@@ -186,7 +189,7 @@ export default function BurwoodPage() {
             Book a free discovery call to talk about your child's needs — no obligation, no pressure.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-8 mb-12 text-white font-medium text-xl">
-            <a href="tel:+61421608819" className="flex items-center gap-3 hover:text-secondary transition-colors"><span className="bg-white/10 p-3 rounded-full">📞</span> 0421 608 819</a>
+            <a href="tel:+61400000000" className="flex items-center gap-3 hover:text-secondary transition-colors"><span className="bg-white/10 p-3 rounded-full">📞</span> 0400 000 000</a>
             <span className="hidden sm:block opacity-30">|</span>
             <a href="mailto:admin@shineandspeak.com.au" className="flex items-center gap-3 hover:text-secondary transition-colors"><span className="bg-white/10 p-3 rounded-full">✉️</span> admin@shineandspeak.com.au</a>
           </div>

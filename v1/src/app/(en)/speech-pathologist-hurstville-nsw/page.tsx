@@ -46,7 +46,7 @@ export default function PlaceholderPage() {
         <div className="container-custom">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-              Speech Pathologist in Hurstville
+              Speech Pathologist in Hurstville NSW
             </h1>
           </div>
         </div>

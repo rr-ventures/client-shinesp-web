@@ -4,14 +4,14 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { CheckCircle2, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'About Shine Yin Teoh | Speech Pathologist Sydney NSW',
-  description: 'Meet Shine Yin Teoh, Certified Practising Speech Pathologist in Sydney. Mobile & telehealth. Bilingual English & Mandarin. NDIS & Medicare registered provider.',
+  title: 'About Shine Teoh | Speech Pathologist Sydney NSW',
+  description: 'Meet Shine Teoh, Certified Practising Speech Pathologist in Sydney. Mobile & telehealth. Bilingual English & Mandarin. NDIS & Medicare registered provider.',
   alternates: {
     canonical: 'https://www.shineandspeak.com.au/about',
   },
   openGraph: {
-    title: 'About Shine Yin Teoh | Speech Pathologist Sydney NSW',
-    description: 'Meet Shine Yin Teoh, Certified Practising Speech Pathologist in Sydney. Mobile & telehealth. Bilingual English & Mandarin. NDIS & Medicare registered provider.',
+    title: 'About Shine Teoh | Speech Pathologist Sydney NSW',
+    description: 'Meet Shine Teoh, Certified Practising Speech Pathologist in Sydney. Mobile & telehealth. Bilingual English & Mandarin. NDIS & Medicare registered provider.',
     url: 'https://www.shineandspeak.com.au/about',
     images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
@@ -31,7 +31,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold text-navy-900 mb-6">
-                Meet Shine Yin Teoh
+                Meet Shine Teoh
               </h1>
               <p className="text-xl text-gray-700 mb-6 font-medium">
                 Certified Practising Speech Pathologist
@@ -39,14 +39,15 @@ export default function AboutPage() {
               
               <div className="space-y-4 text-lg text-gray-700">
                 <p>
-                  I'm Shine Yin Teoh, a Certified Practising Speech Pathologist. I started Shine and Speak because I believe every person deserves access to high-quality, personalised speech therapy that makes a genuine difference in their everyday life — not just therapy for the sake of therapy.
+                  I'm Shine Teoh, a Certified Practising Speech Pathologist. I started Shine and Speak because I believe every person deserves access to high-quality, personalised speech therapy that makes a genuine difference in their everyday life — not just therapy for the sake of therapy.
                 </p>
               </div>
             </div>
             
             <div className="relative h-[500px] rounded-[2rem] overflow-hidden shadow-xl">
-              <img src="/v2/shine-headshot-1200x1200.webp" 
-                alt="Shine Yin Teoh, Certified Practising Speech Pathologist" 
+              <img 
+                src="/shine-headshot-1200x1200.webp" 
+                alt="Shine Teoh, Certified Practising Speech Pathologist" 
                 className="absolute inset-0 w-full h-full object-cover"
               />
             </div>
@@ -68,7 +69,7 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold text-navy-900 mb-6">Qualifications</h2>
           <ul className="space-y-4 mb-12 text-lg text-gray-700">
             <li className="flex items-start"><CheckCircle2 className="w-6 h-6 mr-3 text-gold-500 flex-shrink-0 mt-0.5" /> Bachelor of Speech Pathology, University of Sydney</li>
-            <li className="flex items-start"><CheckCircle2 className="w-6 h-6 mr-3 text-gold-500 flex-shrink-0 mt-0.5" /> Certified Practising Member, Speech Pathology Australia (CPSP)</li>
+            <li className="flex items-start"><CheckCircle2 className="w-6 h-6 mr-3 text-gold-500 flex-shrink-0 mt-0.5" /> Meets <a href="https://www.speechpathologyaustralia.org.au" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:opacity-80 transition-opacity">Speech Pathology Australia&apos;s certification standards</a> — Certified Practising Member (CPSP)</li>
             <li className="flex items-start"><CheckCircle2 className="w-6 h-6 mr-3 text-gold-500 flex-shrink-0 mt-0.5" /> NDIS Registered Provider — [Placeholder: Provider number]</li>
             <li className="flex items-start"><CheckCircle2 className="w-6 h-6 mr-3 text-gold-500 flex-shrink-0 mt-0.5" /> Medicare Registered Provider</li>
             <li className="flex items-start"><CheckCircle2 className="w-6 h-6 mr-3 text-gold-500 flex-shrink-0 mt-0.5" /> Hanen Certified (More Than Words)</li>
@@ -107,7 +108,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Band */}
-      <section className="py-20 bg-[#0096d3] text-[#1B365D] text-center">
+      <section className="py-20 bg-[#E8A84C] text-[#1B365D] text-center">
         <div className="max-w-4xl mx-auto px-4 md:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to help your child thrive?</h2>
           <p className="text-xl mb-8 opacity-90">
@@ -129,8 +130,8 @@ export default function AboutPage() {
       <div className="py-4 text-center bg-white">
         <p className="text-xs text-gray-500">
           Written by{' '}
-          <Link href="/about" className="text-[#1B365D] hover:text-[#0096d3] underline underline-offset-2">
-            Shine Yin Teoh, Certified Practising Speech Pathologist
+          <Link href="/about" className="text-[#1B365D] hover:text-[#E8A84C] underline underline-offset-2">
+            Shine Teoh, Certified Practising Speech Pathologist
           </Link>
         </p>
       </div>

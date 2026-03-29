@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Speech Pathologist St George Sydney | Shine and Speak',
+  title: 'Speech Pathologist St George NSW | Shine and Speak',
   description: 'Mobile speech therapy in St George area, Sydney. Home, school & telehealth. NDIS, Medicare & private. Bilingual English & Mandarin.',
 };
 
@@ -36,7 +36,7 @@ export default function PlaceholderPage() {
         <div className="container-custom">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-              Speech Pathologist in St George
+              Speech Pathologist in St George NSW
             </h1>
           </div>
         </div>

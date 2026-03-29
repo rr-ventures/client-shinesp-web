@@ -1,13 +1,13 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Speech Pathologist Inner West Sydney | Shine and Speak',
+  title: 'Speech Pathologist Inner West Sydney NSW | Shine and Speak',
   description: 'Mobile speech pathologist in Inner West Sydney, NSW. Home visits, school visits & telehealth. NDIS, Medicare & private pay. Bilingual English & Mandarin.',
   alternates: {
     canonical: 'https://shineandspeak.com.au/speech-pathologist-inner-west-sydney-nsw',
   },
   openGraph: {
-    title: 'Speech Pathologist Inner West Sydney | Shine and Speak',
+    title: 'Speech Pathologist Inner West Sydney NSW | Shine and Speak',
     description: 'Mobile speech pathologist in Inner West Sydney, NSW. Home visits, school visits & telehealth. NDIS, Medicare & private pay. Bilingual English & Mandarin.',
     url: 'https://shineandspeak.com.au/speech-pathologist-inner-west-sydney-nsw',
     type: 'website',
@@ -46,7 +46,7 @@ export default function PlaceholderPage() {
         <div className="container-custom">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-              Speech Pathologist in Inner West Sydney
+              Speech Pathologist in Inner West Sydney NSW
             </h1>
           </div>
         </div>

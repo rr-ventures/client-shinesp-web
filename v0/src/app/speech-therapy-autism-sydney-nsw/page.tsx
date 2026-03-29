@@ -55,36 +55,39 @@ export default function AutismPage() {
       {/* Breadcrumb nav */}
       <nav className="bg-gray-50 py-3 border-b border-gray-200 text-sm" aria-label="Breadcrumb">
         <div className="container mx-auto px-4 text-gray-500">
-          <Link href="/" className="hover:text-[#112A46]">Home</Link>
+          <Link href="/" className="hover:text-[#1B365D]">Home</Link>
           <span className="mx-2">›</span>
-          <Link href="/paediatric-speech-therapy-sydney-nsw" className="hover:text-[#112A46]">Paediatric Services</Link>
+          <Link href="/paediatric-speech-therapy-sydney-nsw" className="hover:text-[#1B365D]">Paediatric Services</Link>
           <span className="mx-2">›</span>
-          <span className="text-[#112A46]">Speech Therapy for Autism</span>
+          <span className="text-[#1B365D]">Speech Therapy for Autism</span>
         </div>
       </nav>
 
       <div className="container mx-auto px-4 py-12 md:py-20 max-w-4xl">
-        <h1 className="text-4xl md:text-5xl font-serif font-medium text-[#112A46] mb-6">Speech Therapy for Autism and ASD in Sydney</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-[#1B365D] mb-6">Speech Therapy for Autism and ASD in Sydney</h1>
         <p className="text-lg text-gray-700 mb-12 leading-relaxed">
           We provide personalised, strengths-based speech therapy for children on the autism spectrum in Sydney&apos;s Inner West and surrounds. We focus on building communication skills that help your child connect with others, express their needs, and participate more fully in everyday life — at home, at school, and in the community.
         </p>
 
         {/* Trust signals */}
-        <div className="flex flex-wrap gap-6 text-sm font-serif font-medium text-[#112A46] mb-16 pb-8 border-b border-gray-200">
+        <div className="flex flex-wrap gap-6 text-sm font-bold text-[#1B365D] mb-16 pb-8 border-b border-gray-200">
           <span>✓ CPSP Certified</span>
           <span>✓ NDIS Registered</span>
           <span>✓ Medicare Provider</span>
         </div>
 
         <section className="mb-12">
-          <h2 className="text-3xl font-serif font-medium text-[#112A46] mb-4">What is autism spectrum disorder?</h2>
-          <p className="text-gray-700 leading-relaxed">
+          <h2 className="text-3xl font-bold text-[#1B365D] mb-4">What is autism spectrum disorder?</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
             Autism is a neurodevelopmental condition that affects how a person communicates, interacts with others, and experiences the world. Every child on the spectrum is different — some may have difficulty with spoken language, others may find social communication challenging, and some may benefit from alternative communication methods like AAC. There&apos;s no single approach that works for everyone, which is why therapy needs to be tailored to your child&apos;s individual strengths, interests, and goals.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            For families wanting to learn more, <a href="https://raisingchildren.net.au" target="_blank" rel="noopener noreferrer" className="text-[#1B365D] font-medium underline underline-offset-4 hover:text-[#C89B66] transition-colors">understanding how autism affects communication</a> is covered in depth by Raising Children Network, Australia&apos;s leading parenting resource.
           </p>
         </section>
 
         <section className="mb-12">
-          <h2 className="text-3xl font-serif font-medium text-[#112A46] mb-4">Signs to look for</h2>
+          <h2 className="text-3xl font-bold text-[#1B365D] mb-4">Signs to look for</h2>
           <ul className="list-disc pl-6 space-y-2 text-gray-700">
             <li>Limited or no spoken language for their age</li>
             <li>Difficulty with back-and-forth conversation or taking turns</li>
@@ -96,42 +99,42 @@ export default function AutismPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-3xl font-serif font-medium text-[#112A46] mb-4">How speech therapy helps</h2>
+          <h2 className="text-3xl font-bold text-[#1B365D] mb-4">How speech therapy helps</h2>
           <p className="text-gray-700 leading-relaxed">
             We work on building vocabulary and sentence structure, developing social communication and play skills, exploring AAC options for children who need alternative ways to communicate, supporting transitions between activities and environments, and coaching parents and support workers on strategies they can use at home and school every day.
           </p>
         </section>
 
         <section className="mb-12">
-          <h2 className="text-3xl font-serif font-medium text-[#112A46] mb-4">What to expect in sessions</h2>
+          <h2 className="text-3xl font-bold text-[#1B365D] mb-4">What to expect in sessions</h2>
           <p className="text-gray-700 leading-relaxed">
             Sessions are play-based, structured around your child&apos;s interests, and take place in familiar environments — your home, their school, or online. We also provide practical coaching for parents and support workers so communication strategies are used consistently across all settings. Learn more about{' '}
-            <Link href="/how-it-works" className="text-[#112A46] underline font-semibold">how therapy sessions are structured</Link> and what your first appointment looks like.
+            <Link href="/how-it-works" className="text-[#1B365D] underline font-semibold">how therapy sessions are structured</Link> and what your first appointment looks like.
           </p>
         </section>
 
         <section className="mb-12">
-          <h2 className="text-3xl font-serif font-medium text-[#112A46] mb-4">Parent and support worker coaching</h2>
+          <h2 className="text-3xl font-bold text-[#1B365D] mb-4">Parent and support worker coaching</h2>
           <p className="text-gray-700 leading-relaxed">
             We believe parents and support workers are essential partners in therapy. We provide practical coaching and training so you can confidently support your child&apos;s communication development between sessions — during mealtimes, play, outings, and transitions. This means your child gets more practice throughout the day, not just during therapy sessions.
           </p>
         </section>
 
         <section className="mb-12">
-          <h2 className="text-3xl font-serif font-medium text-[#112A46] mb-4">Funding your child&apos;s therapy</h2>
+          <h2 className="text-3xl font-bold text-[#1B365D] mb-4">Funding your child&apos;s therapy</h2>
           <p className="text-gray-700 leading-relaxed">
             Speech therapy for autism is covered under most NDIS plans and may be eligible for Medicare rebates with a referral from your GP. We accept all NDIS management types. Find out more about{' '}
-            <Link href="/ndis-speech-therapy-sydney-nsw" className="text-[#112A46] underline font-semibold">NDIS funding for speech pathology</Link> or check the full list of{' '}
-            <Link href="/fees" className="text-[#112A46] underline font-semibold">session rates and funding options</Link>.
+            <Link href="/ndis-speech-therapy-sydney-nsw" className="text-[#1B365D] underline font-semibold">NDIS funding for speech pathology</Link> or check the full list of{' '}
+            <Link href="/fees" className="text-[#1B365D] underline font-semibold">session rates and funding options</Link>.
           </p>
         </section>
 
         <section className="mb-12">
-          <h2 className="text-3xl font-serif font-medium text-[#112A46] mb-4">Frequently asked questions</h2>
+          <h2 className="text-3xl font-bold text-[#1B365D] mb-4">Frequently asked questions</h2>
           <div className="space-y-6">
             {autismFaqs.map((faq, i) => (
               <div key={i}>
-                <h3 className="text-lg font-serif font-medium text-[#112A46] mb-1">{faq.question}</h3>
+                <h3 className="text-lg font-bold text-[#1B365D] mb-1">{faq.question}</h3>
                 <p className="text-gray-700">{faq.answer}</p>
               </div>
             ))}
@@ -139,32 +142,32 @@ export default function AutismPage() {
         </section>
 
         <section className="mb-16">
-          <h2 className="text-3xl font-serif font-medium text-[#112A46] mb-4">Related conditions we support</h2>
+          <h2 className="text-3xl font-bold text-[#1B365D] mb-4">Related conditions we support</h2>
           <p className="text-gray-700 leading-relaxed">
             Many children on the autism spectrum also experience challenges with{' '}
-            <Link href="/speech-therapy-adhd-sydney-nsw" className="text-[#112A46] underline">attention and focus difficulties (ADHD)</Link>,{' '}
-            <Link href="/speech-therapy-language-delay-sydney-nsw" className="text-[#112A46] underline">receptive and expressive language delays</Link>,{' '}
-            <Link href="/social-communication-speech-therapy-sydney-nsw" className="text-[#112A46] underline">social communication and pragmatic skills</Link>, or may benefit from{' '}
-            <Link href="/aac-speech-therapy-sydney-nsw" className="text-[#112A46] underline">AAC and multimodal communication systems</Link>. We work across all of these areas.
+            <Link href="/speech-therapy-adhd-sydney-nsw" className="text-[#1B365D] underline">attention and focus difficulties (ADHD)</Link>,{' '}
+            <Link href="/speech-therapy-language-delay-sydney-nsw" className="text-[#1B365D] underline">receptive and expressive language delays</Link>,{' '}
+            <Link href="/social-communication-speech-therapy-sydney-nsw" className="text-[#1B365D] underline">social communication and pragmatic skills</Link>, or may benefit from{' '}
+            <Link href="/aac-speech-therapy-sydney-nsw" className="text-[#1B365D] underline">AAC and multimodal communication systems</Link>. We work across all of these areas.
           </p>
         </section>
 
         <div className="border-t border-gray-200 pt-8">
           <p className="text-gray-500 text-sm italic">
-            <Link href="/about" className="underline hover:text-[#112A46]">Written by a Certified Practising Speech Pathologist</Link>.
+            <Link href="/about" className="underline hover:text-[#1B365D]">Written by a Certified Practising Speech Pathologist</Link>.
             Last reviewed March 2026.
           </p>
         </div>
       </div>
 
       {/* CTA Band */}
-      <section className="py-16 bg-[#C89B66] text-white text-center">
+      <section className="py-16 bg-[#E8A84C] text-white text-center">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to help your child thrive?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Book a free discovery call — no obligation, no pressure.
           </p>
-          <Link href="/book" className="inline-block bg-[#112A46] text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-[#1a3f69] transition shadow-lg">
+          <Link href="/book" className="inline-block bg-[#1B365D] text-white px-10 py-4 rounded-md font-bold text-lg hover:bg-blue-900 transition shadow-lg">
             Book a Free Discovery Call →
           </Link>
         </div>

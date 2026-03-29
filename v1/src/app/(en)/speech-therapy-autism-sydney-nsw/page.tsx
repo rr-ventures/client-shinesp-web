@@ -137,7 +137,7 @@ export default function AutismPage() {
               <div>
                 <h2 className="text-3xl font-bold text-primary mb-6">What is autism spectrum disorder?</h2>
                 <p className="text-lg text-gray-700 mb-4">
-                  Autism is a neurodevelopmental condition that affects how a person communicates, interacts with others, and experiences the world. Every child on the spectrum is different — some may have difficulty with spoken language, others may find social communication challenging, and some may benefit from alternative communication methods like AAC.
+                  Autism is a neurodevelopmental condition that affects how a person communicates, interacts with others, and experiences the world. Every child on the spectrum is different — some may have difficulty with spoken language, others may find social communication challenging, and some may benefit from alternative communication methods like AAC. For families wanting to learn more, <a href="https://raisingchildren.net.au" target="_blank" rel="noopener noreferrer" className="text-primary font-bold underline decoration-secondary/30 hover:text-secondary underline-offset-4">understanding how autism affects communication</a> is covered in depth by Raising Children Network.
                 </p>
                 <p className="text-lg text-gray-700">
                   There's no single approach that works for everyone, which is why therapy needs to be tailored to your child's individual strengths, interests, and goals.
@@ -226,7 +226,7 @@ export default function AutismPage() {
             Book a free discovery call to talk about your child's needs — no obligation, no pressure.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-8 mb-12 text-white font-medium text-xl">
-            <a href="tel:+61421608819" className="flex items-center gap-3 hover:text-secondary transition-colors"><span className="bg-white/10 p-3 rounded-full">📞</span> 0421 608 819</a>
+            <a href="tel:+61400000000" className="flex items-center gap-3 hover:text-secondary transition-colors"><span className="bg-white/10 p-3 rounded-full">📞</span> 0400 000 000</a>
             <span className="hidden sm:block opacity-30">|</span>
             <a href="mailto:admin@shineandspeak.com.au" className="flex items-center gap-3 hover:text-secondary transition-colors"><span className="bg-white/10 p-3 rounded-full">✉️</span> admin@shineandspeak.com.au</a>
           </div>

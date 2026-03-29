@@ -78,8 +78,11 @@ export default function AutismPage() {
         </div>
 
         <h2 className="text-3xl font-bold text-navy-blue mb-4">What is autism spectrum disorder?</h2>
+        <p className="text-gray-700 mb-4">
+          Autism is a neurodevelopmental condition that affects how a person communicates, interacts with others, and experiences the world. Every child on the spectrum is different — some may have difficulty with spoken language, others may find social communication challenging, and some may benefit from alternative communication methods like AAC. There&apos;s no single approach that works for everyone, which is why therapy needs to be tailored to your child&apos;s individual strengths, interests, and goals.
+        </p>
         <p className="text-gray-700 mb-8">
-          Autism is a neurodevelopmental condition that affects how a person communicates, interacts with others, and experiences the world. Every child on the spectrum is different — some may have difficulty with spoken language, others may find social communication challenging, and some may benefit from alternative communication methods like AAC. There's no single approach that works for everyone, which is why therapy needs to be tailored to your child's individual strengths, interests, and goals.
+          For families wanting to learn more, <a href="https://raisingchildren.net.au" target="_blank" rel="noopener noreferrer" className="text-navy-blue font-semibold underline underline-offset-4 hover:text-golden-amber transition-colors">understanding how autism affects communication</a> is covered in depth by Raising Children Network, Australia&apos;s leading parenting resource.
         </p>
 
         <h2 className="text-3xl font-bold text-navy-blue mb-4">Signs to look for</h2>
@@ -118,7 +121,7 @@ export default function AutismPage() {
         </p>
 
         <p className="text-sm text-gray-500 italic">
-          Written by Shine Yin Teoh, Certified Practising Speech Pathologist.{" "}
+          Written by Shine Teoh, Certified Practising Speech Pathologist.{" "}
           <Link href="/about" className="underline hover:text-golden-amber">Learn about Shine's qualifications</Link>.
         </p>
       </div>

@@ -81,7 +81,7 @@ export default function AboutPage() {
           <ul className="list-disc pl-6 space-y-3 text-gray-700">
             {/* PLACEHOLDER: University degree and institution — e.g. "Bachelor of Speech Pathology, University of Sydney" */}
             <li>Bachelor of Speech Pathology — <em>details coming soon</em></li>
-            <li>Certified Practising Member, Speech Pathology Australia (CPSP)</li>
+            <li><a href="https://www.speechpathologyaustralia.org.au" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:opacity-80 transition-opacity">Speech Pathology Australia&apos;s certification standards</a> — Certified Practising Member (CPSP)</li>
             {/* PLACEHOLDER: NDIS Provider number */}
             <li>NDIS Registered Provider — provider number coming soon</li>
             <li>Medicare Registered Provider</li>

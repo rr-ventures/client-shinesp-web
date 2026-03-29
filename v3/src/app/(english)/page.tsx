@@ -5,7 +5,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Car, Globe, Handshake, BookOpen, Puzzle, Zap, MessageCircle, Mic, Waves, BookText, Home as HomeIcon, School, Monitor, MapPin, Phone, Mail } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Speech Pathologist Sydney NSW | Shine and Speak",
+  title: "Sydney Speech Pathologist | Shine and Speak",
   description:
     "Personalised speech therapy delivered to your home, school, or online. Bilingual English & Mandarin. NDIS, Medicare & private. Serving Inner West Sydney.",
   alternates: {
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Speech Pathologist Sydney NSW | Shine and Speak",
+    title: "Sydney Speech Pathologist | Shine and Speak",
     description:
       "Personalised speech therapy delivered to your home, school, or online. Bilingual English & Mandarin. NDIS, Medicare & private. Serving Inner West Sydney.",
     url: "https://shineandspeak.com.au/",
@@ -140,7 +140,7 @@ export default function Home() {
               Sydney Speech Pathologist | NDIS Mobile &amp; Telehealth Services
             </h1>
             <p className="text-lg md:text-xl text-blue-50 mb-10 leading-relaxed font-light">
-              Personalised speech therapy delivered to your home, school, or online. Helping your child communicate with confidence. Available in English and Mandarin (普通话). Serving Inner West Sydney and surrounds.
+              Helping your child communicate with confidence. Personalised speech therapy delivered to your home, school, or online. Available in English and Mandarin (普通话). Serving Inner West Sydney and surrounds.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               {/* REPLACE: Swap /contact for your Calendly/TidyCal booking URL */}
@@ -181,7 +181,67 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 3: DIFFERENTIATORS */}
+      {/* OUR SPEECH THERAPY SERVICES — GBP Category H2 alignment */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <p className="text-center text-golden-amber font-bold text-sm tracking-widest uppercase mb-4">Our Services</p>
+          <p className="text-center text-stone text-lg mb-16 max-w-3xl mx-auto">Comprehensive speech pathology for children and adults across Sydney&apos;s Inner West and beyond.</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div>
+              <h2 className="text-xl font-bold text-navy-blue mb-4">Paediatric Speech Therapy in Sydney</h2>
+              <p className="text-stone leading-relaxed mb-4">I provide personalised paediatric speech therapy for children with autism, ADHD, developmental delay, language disorders, and speech sound difficulties. Therapy is tailored to your child&apos;s individual strengths and goals, delivered in familiar environments — home, school, or kindergarten.</p>
+              <Link href="/paediatric-speech-therapy-sydney-nsw" className="text-golden-amber font-semibold hover:underline underline-offset-4 inline-flex items-center gap-1">Explore paediatric speech therapy services <span>→</span></Link>
+            </div>
+            <div>
+              <h2 className="text-xl font-bold text-navy-blue mb-4">Adult Speech Therapy in Sydney</h2>
+              <p className="text-stone leading-relaxed mb-4">Adult speech therapy at Shine and Speak supports people living with aphasia, cognitive-communication difficulties, fluency disorders, and challenges following stroke, brain injury, or neurological events. Sessions available at home or via telehealth anywhere in Australia.</p>
+              <Link href="/adult-speech-therapy-sydney-nsw" className="text-golden-amber font-semibold hover:underline underline-offset-4 inline-flex items-center gap-1">Learn about adult speech therapy in Sydney <span>→</span></Link>
+            </div>
+            <div>
+              <h2 className="text-xl font-bold text-navy-blue mb-4">Mobile Speech Therapy</h2>
+              <p className="text-stone leading-relaxed mb-4">Mobile therapy means I come to you — your home, your child&apos;s school, kindergarten, or daycare. Research shows communication skills are learned more effectively in familiar environments. No clinic visits required. I coordinate directly with families and educators.</p>
+              <Link href="/mobile-speech-therapy-sydney-nsw" className="text-golden-amber font-semibold hover:underline underline-offset-4 inline-flex items-center gap-1">Discover how mobile speech therapy works <span>→</span></Link>
+            </div>
+            <div>
+              <h2 className="text-xl font-bold text-navy-blue mb-4">Telehealth Speech Therapy</h2>
+              <p className="text-stone leading-relaxed mb-4">Telehealth speech therapy is available to clients across New South Wales and Australia-wide. Online sessions are effective for many conditions and offer flexibility for families with busy schedules or those in regional areas. Connect from home with a full therapy session.</p>
+              <Link href="/telehealth-speech-therapy-sydney-nsw" className="text-golden-amber font-semibold hover:underline underline-offset-4 inline-flex items-center gap-1">Find out about telehealth speech therapy options <span>→</span></Link>
+            </div>
+            <div>
+              <h2 className="text-xl font-bold text-navy-blue mb-4">School-Based Speech Therapy</h2>
+              <p className="text-stone leading-relaxed mb-4">I visit schools, kindergartens, and early childhood centres across Inner West Sydney to deliver therapy in your child&apos;s learning environment. Working on-site allows direct coordination with teachers and support staff, ensuring strategies are applied consistently all day.</p>
+              <Link href="/school-based-speech-therapy-sydney-nsw" className="text-golden-amber font-semibold hover:underline underline-offset-4 inline-flex items-center gap-1">Learn about school-based speech therapy services <span>→</span></Link>
+            </div>
+            <div>
+              <h2 className="text-xl font-bold text-navy-blue mb-4">NDIS Speech Therapy</h2>
+              <p className="text-stone leading-relaxed mb-4">As a registered NDIS provider, I accept all plan management types — self-managed, plan-managed, and NDIA-managed. Speech therapy for language delays, autism, AAC, and communication difficulties can be funded through <a href="https://www.ndis.gov.au" target="_blank" rel="noopener noreferrer" className="text-navy-blue font-semibold underline underline-offset-4 hover:text-golden-amber transition-colors">the National Disability Insurance Scheme</a>. I respond within 24 hours.</p>
+              <Link href="/ndis-speech-therapy-sydney-nsw" className="text-golden-amber font-semibold hover:underline underline-offset-4 inline-flex items-center gap-1">Access NDIS-funded speech therapy <span>→</span></Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SOCIAL PROOF — moved to position 4 for conversion */}
+      <section className="py-24 bg-warm-white">
+        <div className="container mx-auto px-4 text-center max-w-6xl">
+          <div className="mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy-blue mb-4">What families say</h2>
+            <div className="w-24 h-1 bg-golden-amber mx-auto rounded-full"></div>
+          </div>
+          {/* PASTE GOOGLE REVIEWS EMBED CODE HERE */}
+          <div className="max-w-4xl mx-auto premium-card p-12">
+            <p className="text-xl text-stone italic mb-10 leading-relaxed font-serif">&ldquo;Review coming soon — Shine and Speak is a new practice. In the meantime, here are the credentials and training that back our work.&rdquo;</p>
+            <div className="flex flex-wrap justify-center gap-4 text-sm font-medium text-navy-blue">
+              <span className="bg-sage-green/50 border border-sage-green px-5 py-2.5 rounded-full flex items-center gap-2"><span className="text-golden-amber">✦</span> Certified Practising Speech Pathologist</span>
+              <span className="bg-sage-green/50 border border-sage-green px-5 py-2.5 rounded-full flex items-center gap-2"><span className="text-golden-amber">✦</span> NDIS Registered Provider</span>
+              <span className="bg-sage-green/50 border border-sage-green px-5 py-2.5 rounded-full flex items-center gap-2"><span className="text-golden-amber">✦</span> Medicare Provider</span>
+              <span className="bg-sage-green/50 border border-sage-green px-5 py-2.5 rounded-full flex items-center gap-2"><span className="text-golden-amber">✦</span> Bilingual English &amp; Mandarin</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* DIFFERENTIATORS */}
       <section className="py-24 bg-white relative">
         <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:24px_24px] opacity-40 pointer-events-none"></div>
         <div className="container mx-auto px-4 max-w-7xl relative z-10">
@@ -340,6 +400,55 @@ export default function Home() {
         </div>
       </section>
 
+      {/* LEAD CAPTURE FORM — homepage conversion */}
+      <section className="py-24 bg-navy-blue">
+        <div className="container mx-auto px-4 max-w-2xl text-center">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">Book Your Free Discovery Call</h2>
+          <p className="text-blue-100/80 text-lg mb-10 leading-relaxed">Tell us about your child and we&apos;ll be in touch within 24 hours.</p>
+          <form action="/thank-you" method="GET" className="bg-white rounded-[2rem] p-10 shadow-2xl text-left space-y-6">
+            <div>
+              <label htmlFor="hp-name" className="block text-sm font-bold text-navy-blue mb-2">Your name</label>
+              <input type="text" id="hp-name" name="name" required className="w-full border border-gray-200 rounded-xl px-4 py-3 text-charcoal focus:outline-none focus:ring-2 focus:ring-golden-amber focus:border-transparent" placeholder="Jane Smith" />
+            </div>
+            <div>
+              <label htmlFor="hp-phone" className="block text-sm font-bold text-navy-blue mb-2">Phone number</label>
+              <input type="tel" id="hp-phone" name="phone" required className="w-full border border-gray-200 rounded-xl px-4 py-3 text-charcoal focus:outline-none focus:ring-2 focus:ring-golden-amber focus:border-transparent" placeholder="04XX XXX XXX" />
+            </div>
+            <div>
+              <label htmlFor="hp-email" className="block text-sm font-bold text-navy-blue mb-2">Email</label>
+              <input type="email" id="hp-email" name="email" required className="w-full border border-gray-200 rounded-xl px-4 py-3 text-charcoal focus:outline-none focus:ring-2 focus:ring-golden-amber focus:border-transparent" placeholder="you@example.com" />
+            </div>
+            <div>
+              <label htmlFor="hp-age" className="block text-sm font-bold text-navy-blue mb-2">Child&apos;s age</label>
+              <input type="text" id="hp-age" name="childAge" required className="w-full border border-gray-200 rounded-xl px-4 py-3 text-charcoal focus:outline-none focus:ring-2 focus:ring-golden-amber focus:border-transparent" placeholder="e.g. 4 years" />
+            </div>
+            <div>
+              <label htmlFor="hp-help" className="block text-sm font-bold text-navy-blue mb-2">What are you looking for help with?</label>
+              <select id="hp-help" name="helpWith" required className="w-full border border-gray-200 rounded-xl px-4 py-3 text-charcoal focus:outline-none focus:ring-2 focus:ring-golden-amber focus:border-transparent">
+                <option value="">Select an area...</option>
+                <option value="Speech Sounds">Speech Sounds</option>
+                <option value="Language">Language</option>
+                <option value="Stuttering">Stuttering</option>
+                <option value="Literacy">Literacy</option>
+                <option value="Autism">Autism</option>
+                <option value="ADHD">ADHD</option>
+                <option value="Developmental Delay">Developmental Delay</option>
+                <option value="Intellectual Disability">Intellectual Disability</option>
+                <option value="Social Communication">Social Communication</option>
+                <option value="AAC">AAC</option>
+                <option value="Adult Speech">Adult Speech</option>
+                <option value="Not sure">Not sure</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <button type="submit" className="w-full bg-golden-amber text-navy-blue font-bold py-4 rounded-xl text-lg hover:bg-amber-400 transition-colors shadow-lg">
+              Book My Free Discovery Call →
+            </button>
+          </form>
+          <p className="text-blue-100/50 text-sm mt-6">No obligation. We&apos;ll respond within 24 hours.</p>
+        </div>
+      </section>
+
       {/* Section 6: HOW IT WORKS */}
       <section className="py-24 bg-warm-white">
         <div className="container mx-auto px-4 text-center max-w-6xl">
@@ -410,7 +519,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-golden-amber mt-0.5">✦</span>
-                  <span>Certified Practising Member, Speech Pathology Australia (CPSP)</span>
+                  <span><a href="https://www.speechpathologyaustralia.org.au" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-golden-amber transition-colors">Certified Practising member of Speech Pathology Australia</a> (CPSP)</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-golden-amber mt-0.5">✦</span>
@@ -440,28 +549,6 @@ export default function Home() {
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 9: SOCIAL PROOF */}
-      <section className="py-24 bg-warm-white">
-        <div className="container mx-auto px-4 text-center max-w-6xl">
-          <div className="mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy-blue mb-4">What families say</h2>
-            <div className="w-24 h-1 bg-golden-amber mx-auto rounded-full"></div>
-          </div>
-          {/* PASTE GOOGLE REVIEWS EMBED CODE HERE */}
-          <div className="max-w-4xl mx-auto premium-card p-12">
-            <p className="text-xl text-stone italic mb-10 leading-relaxed font-serif">
-              "Review coming soon — Shine and Speak is a new practice. In the meantime, here are the credentials and training that back our work."
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm font-medium text-navy-blue">
-              <span className="bg-sage-green/50 border border-sage-green px-5 py-2.5 rounded-full flex items-center gap-2"><span className="text-golden-amber">✦</span> Certified Practising Speech Pathologist</span>
-              <span className="bg-sage-green/50 border border-sage-green px-5 py-2.5 rounded-full flex items-center gap-2"><span className="text-golden-amber">✦</span> NDIS Registered Provider</span>
-              <span className="bg-sage-green/50 border border-sage-green px-5 py-2.5 rounded-full flex items-center gap-2"><span className="text-golden-amber">✦</span> Medicare Provider</span>
-              <span className="bg-sage-green/50 border border-sage-green px-5 py-2.5 rounded-full flex items-center gap-2"><span className="text-golden-amber">✦</span> Bilingual English & Mandarin</span>
             </div>
           </div>
         </div>
