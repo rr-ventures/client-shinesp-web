@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import FloatingCallButton from "@/components/FloatingCallButton";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -17,8 +18,8 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: "Speech Pathologist Sydney NSW | Shine and Speak — Mobile & Telehealth",
-  description: "Personalised speech therapy delivered to your home, school, or online. Bilingual English & Mandarin. NDIS, Medicare & private. Serving Inner West Sydney.",
+  title: "Speech Pathologist Sydney | Shine and Speak",
+  description: "Personalised speech therapy delivered to your home, school, or online. Bilingual English & Mandarin. NDIS, Medicare & private. Serving Inner West Sydney, NSW.",
   metadataBase: new URL("https://shineandspeak.com.au"),
   alternates: {
     canonical: "/",
@@ -28,12 +29,21 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Speech Pathologist Sydney NSW | Shine and Speak",
-    description: "Personalised speech therapy delivered to your home, school, or online. Bilingual English & Mandarin.",
+    title: "Speech Pathologist Sydney | Shine and Speak",
+    description: "Personalised speech therapy delivered to your home, school, or online. Bilingual English & Mandarin. NDIS, Medicare & private.",
     url: "https://shineandspeak.com.au",
     siteName: "Shine and Speak",
     locale: "en_AU",
     type: "website",
+    images: [
+      {
+        // REPLACE: Swap og-image.png for a proper 1200x630 social sharing card
+        url: "https://shineandspeak.com.au/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Shine and Speak — Mobile Speech Pathology Sydney",
+      },
+    ],
   },
 };
 
@@ -53,10 +63,19 @@ export default function RootLayout({
               "@type": "Organization",
               "name": "Shine and Speak",
               "url": "https://shineandspeak.com.au",
-              "logo": "https://shineandspeak.com.au/logo.png",
+              "logo": "https://shineandspeak.com.au/logo-horizontal.png",
+              "sameAs": [
+                // REPLACE: Add LinkedIn profile URL — e.g. "https://www.linkedin.com/in/shine-teoh/"
+                "https://www.linkedin.com/in/shine-teoh/",
+                // REPLACE: Add Facebook page URL — e.g. "https://www.facebook.com/shineandspeak"
+                "https://www.facebook.com/shineandspeak",
+                // REPLACE: Add Instagram URL — e.g. "https://www.instagram.com/shineandspeak"
+                "https://www.instagram.com/shineandspeak"
+              ],
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+61-400-000-000",
+                "email": "admin@shineandspeak.com.au",
                 "contactType": "customer service"
               }
             })
@@ -69,6 +88,7 @@ export default function RootLayout({
         <main className="flex-grow">{children}</main>
         <Footer />
         <FloatingWhatsApp />
+        <FloatingCallButton />
       </body>
     </html>
   );
