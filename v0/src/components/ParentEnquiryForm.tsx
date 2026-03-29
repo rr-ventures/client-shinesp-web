@@ -117,7 +117,7 @@ export default function ParentEnquiryForm() {
       <button
         type="submit"
         disabled={submitting}
-        className="w-full bg-[#C89B66] text-white font-bold py-4 rounded-full text-lg hover:bg-[#b58956] transition disabled:opacity-60"
+        className="w-full bg-[#C89B66] text-[#112A46] font-bold py-4 rounded-full text-lg hover:bg-[#b58956] transition disabled:opacity-60"
       >
         {submitting ? 'Sending…' : 'Send Enquiry'}
       </button>

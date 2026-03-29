@@ -85,7 +85,7 @@ export default function Header() {
             </a>
             <Link
               href="/book"
-              className="bg-[#C89B66] text-white px-6 py-2.5 rounded-full font-medium text-sm hover:bg-[#b58956] hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+              className="bg-[#C89B66] text-[#112A46] px-6 py-2.5 rounded-full font-medium text-sm hover:bg-[#b58956] hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
             >
               Book a Free Discovery Call
             </Link>
@@ -162,7 +162,7 @@ export default function Header() {
               <Link
                 href="/book"
                 onClick={() => setMobileOpen(false)}
-                className="block w-full text-center bg-[#C89B66] text-white px-5 py-3.5 rounded-full font-medium shadow-sm"
+                className="block w-full text-center bg-[#C89B66] text-[#112A46] px-5 py-3.5 rounded-full font-medium shadow-sm"
               >
                 Book a Free Discovery Call
               </Link>

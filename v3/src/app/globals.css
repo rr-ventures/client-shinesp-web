@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 @theme {
-  --color-navy-blue: #2c4a63;
-  --color-golden-amber: #f6ef95;
-  --color-soft-blue: #91d7ff;
-  --color-sage-green: #aeb981;
-  --color-warm-white: #f0f8ff;
+  --color-navy-blue: #112A46;
+  --color-golden-amber: #8B6B00; /* Deep gold — accessible on white (4.6:1) and dark navy (3.0:1 large text) */
+  --color-soft-blue: #F0F4F8;
+  --color-sage-green: #E8EDE9;
+  --color-warm-white: #FCFCFA;
   --color-charcoal: #2C3338;
   --color-stone: #5C666E;
   
@@ -63,7 +63,7 @@
     box-shadow: 0 4px 14px rgba(212, 175, 55, 0.3);
   }
   .btn-primary:hover {
-    background-color: #C5A028;
+    background-color: #6B5200;
     box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
     transform: translateY(-2px);
   }

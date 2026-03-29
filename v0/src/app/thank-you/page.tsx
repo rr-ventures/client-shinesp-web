@@ -39,7 +39,7 @@ export default function ThankYouPage() {
 
           <div className="space-y-6">
             <div className="flex gap-4">
-              <div className="flex-shrink-0 bg-[#C89B66] text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">1</div>
+              <div className="flex-shrink-0 bg-[#C89B66] text-[#112A46] w-10 h-10 rounded-full flex items-center justify-center font-bold">1</div>
               <div>
                 <h3 className="font-serif font-medium text-[#112A46] mb-1">We&apos;ll call you back</h3>
                 <p className="text-gray-600 text-sm">Our speech pathologist will contact you within 24 hours to schedule your free discovery call at a time that suits you.</p>
@@ -47,7 +47,7 @@ export default function ThankYouPage() {
             </div>
 
             <div className="flex gap-4">
-              <div className="flex-shrink-0 bg-[#C89B66] text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">2</div>
+              <div className="flex-shrink-0 bg-[#C89B66] text-[#112A46] w-10 h-10 rounded-full flex items-center justify-center font-bold">2</div>
               <div>
                 <h3 className="font-serif font-medium text-[#112A46] mb-1">Your free discovery call (15–20 min)</h3>
                 <p className="text-gray-600 text-sm">We&apos;ll chat about your child&apos;s needs, answer your questions, and discuss whether a formal assessment would be helpful. No obligation.</p>
@@ -55,7 +55,7 @@ export default function ThankYouPage() {
             </div>
 
             <div className="flex gap-4">
-              <div className="flex-shrink-0 bg-[#C89B66] text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">3</div>
+              <div className="flex-shrink-0 bg-[#C89B66] text-[#112A46] w-10 h-10 rounded-full flex items-center justify-center font-bold">3</div>
               <div>
                 <h3 className="font-serif font-medium text-[#112A46] mb-1">What to prepare</h3>
                 <p className="text-gray-600 text-sm">Think about your main concerns, any previous reports or assessments you have, and the goals that matter most to your child and family.</p>
@@ -73,7 +73,7 @@ export default function ThankYouPage() {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="tel:0421608819" className="bg-[#C89B66] text-white text-center px-8 py-4 rounded-full font-bold hover:bg-[#b58956] transition">
+          <a href="tel:0421608819" className="bg-[#C89B66] text-[#112A46] text-center px-8 py-4 rounded-full font-bold hover:bg-[#b58956] transition">
             📞 Call {PHONE_DISPLAY}
           </a>
           <Link href="/" className="border-2 border-[#112A46] text-[#112A46] text-center px-8 py-4 rounded-full font-bold hover:bg-[#112A46] hover:text-white transition">

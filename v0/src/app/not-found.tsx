@@ -19,7 +19,7 @@ export default function NotFound() {
         <Link href="/" className="bg-[#112A46] text-white px-6 py-3 rounded-full font-bold hover:bg-[#1a3f69] transition text-center">
           Go to Homepage
         </Link>
-        <Link href="/book" className="bg-[#C89B66] text-white px-6 py-3 rounded-full font-bold hover:bg-[#b58956] transition text-center">
+        <Link href="/book" className="bg-[#C89B66] text-[#112A46] px-6 py-3 rounded-full font-bold hover:bg-[#b58956] transition text-center">
           Book a Discovery Call
         </Link>
       </div>

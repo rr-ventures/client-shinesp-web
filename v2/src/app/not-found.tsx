@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 export default function NotFound() {
   return (
     <div className="min-h-[60vh] flex flex-col items-center justify-center text-center px-4 py-20">
-      <p className="text-7xl font-bold text-[#E8A84C] mb-4">404</p>
+      <p className="text-7xl font-bold text-[#2B4C7E] mb-4">404</p>
       <h1 className="text-3xl font-bold text-[#1B365D] mb-4">Page not found</h1>
       <p className="text-gray-600 mb-8 max-w-md">
         Sorry, we couldn&apos;t find the page you&apos;re looking for. It may have moved, or the link might be incorrect.

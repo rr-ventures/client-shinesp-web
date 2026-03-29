@@ -441,7 +441,7 @@ export default function Home() {
                 <option value="Other">Other</option>
               </select>
             </div>
-            <button type="submit" className="w-full bg-golden-amber text-navy-blue font-bold py-4 rounded-xl text-lg hover:bg-amber-400 transition-colors shadow-lg">
+            <button type="submit" className="w-full bg-golden-amber text-white font-bold py-4 rounded-xl text-lg hover:bg-[#6B5200] transition-colors shadow-lg">
               Book My Free Discovery Call →
             </button>
           </form>

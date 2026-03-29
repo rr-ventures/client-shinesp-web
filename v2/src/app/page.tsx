@@ -339,7 +339,7 @@ export default function HomePage() {
       {/* ── OUR SPEECH THERAPY SERVICES — GBP Category H2 alignment ── */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <p className="text-center text-[#E8A84C] font-semibold text-sm tracking-widest uppercase mb-4">Our Services</p>
+          <p className="text-center text-[#2B4C7E] font-semibold text-sm tracking-widest uppercase mb-4">Our Services</p>
           <p className="text-center text-slate-500 text-lg mb-16 max-w-3xl mx-auto">Comprehensive speech pathology for children and adults across Sydney&apos;s Inner West and beyond.</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
             <div>
@@ -347,42 +347,42 @@ export default function HomePage() {
               <p className="text-slate-600 leading-relaxed mb-4">
                 I provide personalised paediatric speech therapy for children with autism, ADHD, developmental delay, language disorders, and speech sound difficulties. Therapy is tailored to your child&apos;s individual strengths and goals, delivered in familiar environments — home, school, or kindergarten.
               </p>
-              <Link href="/paediatric-speech-therapy-sydney-nsw" className="inline-flex items-center gap-1 text-[#E8A84C] font-semibold hover:underline underline-offset-2">Explore paediatric speech therapy services <ArrowRight className="w-4 h-4" /></Link>
+              <Link href="/paediatric-speech-therapy-sydney-nsw" className="inline-flex items-center gap-1 text-[#2B4C7E] font-semibold hover:underline underline-offset-2">Explore paediatric speech therapy services <ArrowRight className="w-4 h-4" /></Link>
             </div>
             <div>
               <h2 className="text-xl font-semibold tracking-tight text-[#2B4C7E] mb-4">Adult Speech Therapy in Sydney</h2>
               <p className="text-slate-600 leading-relaxed mb-4">
                 Adult speech therapy at Shine and Speak supports people living with aphasia, cognitive-communication difficulties, fluency disorders, and challenges following stroke, brain injury, or neurological events. Sessions available at home or via telehealth anywhere in Australia.
               </p>
-              <Link href="/adult-speech-therapy-sydney-nsw" className="inline-flex items-center gap-1 text-[#E8A84C] font-semibold hover:underline underline-offset-2">Learn about adult speech therapy in Sydney <ArrowRight className="w-4 h-4" /></Link>
+              <Link href="/adult-speech-therapy-sydney-nsw" className="inline-flex items-center gap-1 text-[#2B4C7E] font-semibold hover:underline underline-offset-2">Learn about adult speech therapy in Sydney <ArrowRight className="w-4 h-4" /></Link>
             </div>
             <div>
               <h2 className="text-xl font-semibold tracking-tight text-[#2B4C7E] mb-4">Mobile Speech Therapy</h2>
               <p className="text-slate-600 leading-relaxed mb-4">
                 Mobile therapy means I come to you — your home, your child&apos;s school, kindergarten, or daycare. Research shows communication skills are learned more effectively in familiar environments. No clinic visits required. I coordinate directly with families and educators.
               </p>
-              <Link href="/mobile-speech-therapy-sydney-nsw" className="inline-flex items-center gap-1 text-[#E8A84C] font-semibold hover:underline underline-offset-2">Discover how mobile speech therapy works <ArrowRight className="w-4 h-4" /></Link>
+              <Link href="/mobile-speech-therapy-sydney-nsw" className="inline-flex items-center gap-1 text-[#2B4C7E] font-semibold hover:underline underline-offset-2">Discover how mobile speech therapy works <ArrowRight className="w-4 h-4" /></Link>
             </div>
             <div>
               <h2 className="text-xl font-semibold tracking-tight text-[#2B4C7E] mb-4">Telehealth Speech Therapy</h2>
               <p className="text-slate-600 leading-relaxed mb-4">
                 Telehealth speech therapy is available to clients across New South Wales and Australia-wide. Online sessions are effective for many conditions and offer flexibility for families with busy schedules or those in regional areas. Connect from home with a full therapy session.
               </p>
-              <Link href="/telehealth-speech-therapy-sydney-nsw" className="inline-flex items-center gap-1 text-[#E8A84C] font-semibold hover:underline underline-offset-2">Find out about telehealth speech therapy options <ArrowRight className="w-4 h-4" /></Link>
+              <Link href="/telehealth-speech-therapy-sydney-nsw" className="inline-flex items-center gap-1 text-[#2B4C7E] font-semibold hover:underline underline-offset-2">Find out about telehealth speech therapy options <ArrowRight className="w-4 h-4" /></Link>
             </div>
             <div>
               <h2 className="text-xl font-semibold tracking-tight text-[#2B4C7E] mb-4">School-Based Speech Therapy</h2>
               <p className="text-slate-600 leading-relaxed mb-4">
                 I visit schools, kindergartens, and early childhood centres across Inner West Sydney to deliver therapy in your child&apos;s learning environment. Working on-site allows direct coordination with teachers and support staff, ensuring strategies are applied consistently all day.
               </p>
-              <Link href="/school-based-speech-therapy-sydney-nsw" className="inline-flex items-center gap-1 text-[#E8A84C] font-semibold hover:underline underline-offset-2">Learn about school-based speech therapy services <ArrowRight className="w-4 h-4" /></Link>
+              <Link href="/school-based-speech-therapy-sydney-nsw" className="inline-flex items-center gap-1 text-[#2B4C7E] font-semibold hover:underline underline-offset-2">Learn about school-based speech therapy services <ArrowRight className="w-4 h-4" /></Link>
             </div>
             <div>
               <h2 className="text-xl font-semibold tracking-tight text-[#2B4C7E] mb-4">NDIS Speech Therapy</h2>
               <p className="text-slate-600 leading-relaxed mb-4">
                 As a registered NDIS provider, I accept all plan management types — self-managed, plan-managed, and NDIA-managed. Speech therapy for language delays, autism, AAC, and communication difficulties can be funded through <a href="https://www.ndis.gov.au" target="_blank" rel="noopener noreferrer" className="text-[#2B4C7E] underline underline-offset-2 hover:text-[#E8A84C]">the National Disability Insurance Scheme</a>. I respond within 24 hours.
               </p>
-              <Link href="/ndis-speech-therapy-sydney-nsw" className="inline-flex items-center gap-1 text-[#E8A84C] font-semibold hover:underline underline-offset-2">Access NDIS-funded speech therapy <ArrowRight className="w-4 h-4" /></Link>
+              <Link href="/ndis-speech-therapy-sydney-nsw" className="inline-flex items-center gap-1 text-[#2B4C7E] font-semibold hover:underline underline-offset-2">Access NDIS-funded speech therapy <ArrowRight className="w-4 h-4" /></Link>
             </div>
           </div>
         </div>
@@ -432,7 +432,7 @@ export default function HomePage() {
                   {condition.title}
                 </h3>
                 <p className="text-slate-600 text-sm leading-relaxed mb-4">{condition.description}</p>
-                <span className="inline-flex items-center text-sm font-semibold text-[#E8A84C] group-hover:gap-2 transition-all">
+                <span className="inline-flex items-center text-sm font-semibold text-[#2B4C7E] group-hover:gap-2 transition-all">
                   Learn more <ArrowRight className="w-4 h-4 ml-1" />
                 </span>
               </Link>

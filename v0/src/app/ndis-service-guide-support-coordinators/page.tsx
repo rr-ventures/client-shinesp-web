@@ -110,7 +110,7 @@ export default function NdisServiceGuidePage() {
       <section className="py-16 bg-[#112A46] text-white text-center">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-6">Ready to refer a client?</h2>
-          <Link href="/refer-a-client" className="inline-block bg-[#C89B66] text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-[#b58956] transition">
+          <Link href="/refer-a-client" className="inline-block bg-[#C89B66] text-[#112A46] px-10 py-4 rounded-full font-bold text-lg hover:bg-[#b58956] transition">
             Submit a Referral →
           </Link>
         </div>

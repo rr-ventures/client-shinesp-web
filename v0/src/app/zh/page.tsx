@@ -48,7 +48,7 @@ export default function ZhHomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/book"
-              className="bg-[#C89B66] text-white text-center px-8 py-4 rounded-full font-bold text-lg hover:bg-[#b58956] transition"
+              className="bg-[#C89B66] text-[#112A46] text-center px-8 py-4 rounded-full font-bold text-lg hover:bg-[#b58956] transition"
             >
               {/* REPLACE: swap with Calendly URL */}
               預約免費諮詢
@@ -81,7 +81,7 @@ export default function ZhHomePage() {
           <div className="text-center">
             <a
               href={`tel:0421608819`}
-              className="inline-block bg-[#C89B66] text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-[#b58956] transition"
+              className="inline-block bg-[#C89B66] text-[#112A46] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#b58956] transition"
             >
               致電 {PHONE_DISPLAY} 查詢
             </a>

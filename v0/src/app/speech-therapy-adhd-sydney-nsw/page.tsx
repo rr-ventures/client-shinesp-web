@@ -104,7 +104,7 @@ export default function Page() {
           </p>
         </div>
       </div>
-      <section className="py-16 bg-[#C89B66] text-white text-center">
+      <section className="py-16 bg-[#C89B66] text-[#112A46] text-center">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-6">Book a free discovery call</h2>
           <p className="text-lg mb-8 max-w-xl mx-auto">Talk to our speech pathologist about your needs — no obligation.</p>
