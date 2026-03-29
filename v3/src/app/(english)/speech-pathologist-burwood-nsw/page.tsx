@@ -108,7 +108,7 @@ export default function BurwoodPage() {
         </div>
 
         <p className="text-sm text-gray-500 italic">
-          Written by Shine Teoh, Certified Practising Speech Pathologist.{" "}
+          Written by Shine Yin Teoh, Certified Practising Speech Pathologist.{" "}
           <Link href="/about" className="underline hover:text-golden-amber">Learn about Shine's qualifications</Link>.
         </p>
       </div>

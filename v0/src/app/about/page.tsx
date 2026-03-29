@@ -42,13 +42,13 @@ export default function AboutPage() {
       <div className="container mx-auto px-4 py-12 md:py-20 max-w-4xl">
 
         {/* H1 — Privacy variant: practice-focused, no personal name */}
-        <h1 className="text-4xl md:text-5xl font-bold text-[#1B365D] mb-6">Meet Shine Teoh</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-[#1B365D] mb-6">Meet Shine Yin Teoh</h1>
 
         {/* Photo placeholder */}
         <div className="mb-12 max-w-lg">
           <Image
             src="/shine-headshot-1200x1200.webp"
-            alt="Shine Teoh - Certified Practising Speech Pathologist"
+            alt="Shine Yin Teoh - Certified Practising Speech Pathologist"
             width={800}
             height={800}
             className="w-full h-auto rounded-[32px] shadow-xl object-cover"
@@ -58,7 +58,7 @@ export default function AboutPage() {
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-[#1B365D] mb-4">Our mission</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            I'm Shine Teoh, a Certified Practising Speech Pathologist. I started Shine and Speak because I believe every person deserves access to high-quality, personalised speech therapy that makes a genuine difference in their everyday life — not just therapy for the sake of therapy.
+            I'm Shine Yin Teoh, a Certified Practising Speech Pathologist. I started Shine and Speak because I believe every person deserves access to high-quality, personalised speech therapy that makes a genuine difference in their everyday life — not just therapy for the sake of therapy.
           </p>
           <p className="text-gray-700 leading-relaxed">
             Our team is dedicated to providing warm, professional, and evidence-based speech pathology services to the Inner West Sydney community and beyond via telehealth. Learn more about{' '}
@@ -158,7 +158,7 @@ export default function AboutPage() {
 
         <div className="border-t border-gray-200 pt-8">
           <p className="text-gray-500 text-sm italic">
-            Written by Shine Teoh, Certified Practising Speech Pathologist. Last reviewed March 2026.
+            Written by Shine Yin Teoh, Certified Practising Speech Pathologist. Last reviewed March 2026.
           </p>
         </div>
       </div>

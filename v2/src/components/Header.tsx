@@ -43,7 +43,7 @@ function DropdownMenu({ label, links }: { label: string; links: { label: string;
   return (
     <div className="relative group">
       <button
-        className="flex items-center gap-1 text-[#1B365D] font-medium hover:text-[#E8A84C] transition-colors text-sm"
+        className="flex items-center gap-1 text-[#1B365D] font-medium hover:text-[#0096d3] transition-colors text-sm"
         aria-haspopup="true"
       >
         {label}
@@ -54,7 +54,7 @@ function DropdownMenu({ label, links }: { label: string; links: { label: string;
           <Link
             key={link.href}
             href={link.href}
-            className="px-4 py-2.5 text-sm text-[#1B365D] hover:bg-amber-50 hover:text-[#E8A84C] transition-colors"
+            className="px-4 py-2.5 text-sm text-[#1B365D] hover:bg-amber-50 hover:text-[#0096d3] transition-colors"
           >
             {link.label}
           </Link>
@@ -80,20 +80,20 @@ export default function Header() {
           <div className="flex items-center gap-6">
             <a
               href="tel:0421608819"
-              className="flex items-center gap-2 hover:text-[#E8A84C] transition-colors"
+              className="flex items-center gap-2 hover:text-[#0096d3] transition-colors"
             >
               <Phone className="w-4 h-4" />
               <span>0421 608 819</span>
             </a>
             <a
               href="mailto:admin@shineandspeak.com.au"
-              className="hidden sm:inline hover:text-[#E8A84C] transition-colors"
+              className="hidden sm:inline hover:text-[#0096d3] transition-colors"
             >
               admin@shineandspeak.com.au
             </a>
           </div>
           <div className="flex items-center gap-4">
-            <Link href="/zh" className="hover:text-[#E8A84C] transition-colors text-xs font-medium tracking-wide">
+            <Link href="/zh" className="hover:text-[#0096d3] transition-colors text-xs font-medium tracking-wide">
               EN / 中文
             </Link>
           </div>
@@ -117,15 +117,15 @@ export default function Header() {
         {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-7" aria-label="Main navigation">
           <DropdownMenu label="Services" links={serviceLinks} />
-          <Link href="/how-it-works" className="text-[#1B365D] font-medium hover:text-[#E8A84C] transition-colors text-sm">
+          <Link href="/how-it-works" className="text-[#1B365D] font-medium hover:text-[#0096d3] transition-colors text-sm">
             How It Works
           </Link>
           <DropdownMenu label="Funding & Fees" links={fundingLinks} />
-          <Link href="/about" className="text-[#1B365D] font-medium hover:text-[#E8A84C] transition-colors text-sm">
+          <Link href="/about" className="text-[#1B365D] font-medium hover:text-[#0096d3] transition-colors text-sm">
             About
           </Link>
           <DropdownMenu label="Areas" links={areaLinks} />
-          <Link href="/contact" className="text-[#1B365D] font-medium hover:text-[#E8A84C] transition-colors text-sm">
+          <Link href="/contact" className="text-[#1B365D] font-medium hover:text-[#0096d3] transition-colors text-sm">
             Contact
           </Link>
         </nav>
@@ -143,7 +143,7 @@ export default function Header() {
             href="https://calendly.com/shineandspeak"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-bold bg-[#E8A84C] text-[#1B365D] px-5 py-2 rounded-md hover:bg-amber-400 transition-colors"
+            className="text-sm font-bold bg-[#0096d3] text-[#1B365D] px-5 py-2 rounded-md hover:bg-amber-400 transition-colors"
           >
             Book a Free Discovery Call
           </a>
@@ -174,7 +174,7 @@ export default function Header() {
             {openMobileSection === 'services' && (
               <div className="pl-4 py-2 space-y-1">
                 {serviceLinks.map((l) => (
-                  <Link key={l.href} href={l.href} className="block py-2 text-sm text-[#1B365D] hover:text-[#E8A84C]" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Link key={l.href} href={l.href} className="block py-2 text-sm text-[#1B365D] hover:text-[#0096d3]" onClick={() => setIsMobileMenuOpen(false)}>
                     {l.label}
                   </Link>
                 ))}
@@ -195,7 +195,7 @@ export default function Header() {
             {openMobileSection === 'funding' && (
               <div className="pl-4 py-2 space-y-1">
                 {fundingLinks.map((l) => (
-                  <Link key={l.href} href={l.href} className="block py-2 text-sm text-[#1B365D] hover:text-[#E8A84C]" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Link key={l.href} href={l.href} className="block py-2 text-sm text-[#1B365D] hover:text-[#0096d3]" onClick={() => setIsMobileMenuOpen(false)}>
                     {l.label}
                   </Link>
                 ))}
@@ -216,7 +216,7 @@ export default function Header() {
             {openMobileSection === 'areas' && (
               <div className="pl-4 py-2 space-y-1">
                 {areaLinks.map((l) => (
-                  <Link key={l.href} href={l.href} className="block py-2 text-sm text-[#1B365D] hover:text-[#E8A84C]" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Link key={l.href} href={l.href} className="block py-2 text-sm text-[#1B365D] hover:text-[#0096d3]" onClick={() => setIsMobileMenuOpen(false)}>
                     {l.label}
                   </Link>
                 ))}
@@ -241,7 +241,7 @@ export default function Header() {
                 href="https://calendly.com/shineandspeak"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-center font-bold bg-[#E8A84C] text-[#1B365D] px-4 py-3 rounded-md"
+                className="text-center font-bold bg-[#0096d3] text-[#1B365D] px-4 py-3 rounded-md"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Book a Free Discovery Call

@@ -121,7 +121,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/hero-stock-placeholder-unsplash.jpg"
-            alt="Professional photo of Shine Teoh working with a child"
+            alt="Professional photo of Shine Yin Teoh working with a child"
             fill
             className="object-cover"
             priority
@@ -137,10 +137,10 @@ export default function Home() {
               Premium Mobile Speech Pathology
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[1.15] text-balance">
-              Helping your child communicate with confidence
+              Sydney Speech Pathologist | NDIS Mobile &amp; Telehealth Services
             </h1>
             <p className="text-lg md:text-xl text-blue-50 mb-10 leading-relaxed font-light">
-              Personalised speech therapy — delivered to your home, school, or online. Serving Inner West Sydney and surrounds.
+              Personalised speech therapy delivered to your home, school, or online. Helping your child communicate with confidence. Available in English and Mandarin (普通话). Serving Inner West Sydney and surrounds.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               {/* REPLACE: Swap /contact for your Calendly/TidyCal booking URL */}
@@ -395,9 +395,9 @@ export default function Home() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center max-w-7xl">
           <div className="order-2 lg:order-1">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy-blue mb-8">Meet Shine Teoh</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy-blue mb-8">Meet Shine Yin Teoh</h2>
             <p className="text-lg text-stone mb-6 leading-relaxed">
-              Hi, I'm Shine Teoh — a Certified Practising Speech Pathologist. I'm passionate about providing high-quality, personalised speech therapy that makes a genuine difference in everyday life.
+              Hi, I'm Shine Yin Teoh — a Certified Practising Speech Pathologist. I'm passionate about providing high-quality, personalised speech therapy that makes a genuine difference in everyday life.
             </p>
             <p className="text-lg text-stone mb-8 leading-relaxed">
               I specialise in working with children and adults with a wide range of communication needs. I speak English and Mandarin, and I'm committed to providing culturally responsive services for diverse families.
@@ -433,10 +433,10 @@ export default function Home() {
           <div className="order-1 lg:order-2">
             <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden premium-shadow group">
               <div className="absolute inset-0 bg-navy-blue/5 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
-              {/* REPLACE: Professional headshot of Shine Teoh, warm and approachable */}
+              {/* REPLACE: Professional headshot of Shine Yin Teoh, warm and approachable */}
               <Image
                 src="/shine-headshot-1200x1200.webp"
-                alt="Professional headshot of Shine Teoh"
+                alt="Professional headshot of Shine Yin Teoh"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />

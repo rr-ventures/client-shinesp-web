@@ -125,7 +125,7 @@ export default function BurwoodPage() {
         <p className="text-xs text-gray-500">
           Written by{' '}
           <Link href="/about" className="text-[#1B365D] hover:text-[#E8A84C] underline underline-offset-2">
-            Shine Teoh, Certified Practising Speech Pathologist
+            Shine Yin Teoh, Certified Practising Speech Pathologist
           </Link>
         </p>
       </div>

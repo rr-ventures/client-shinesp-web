@@ -77,10 +77,10 @@ export default function HomePage() {
         <div className="container mx-auto px-4 lg:px-8 grid md:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10">
           <div className="max-w-2xl">
             <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-medium text-[#112A46] mb-8 leading-[1.1] tracking-tight text-balance">
-              Helping your child communicate with confidence
+              Mobile Speech Pathologist Sydney NSW | Home &amp; School Visits
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 mb-12 leading-relaxed font-light">
-              Personalised speech therapy — delivered to your home, school, or online. Serving Inner West Sydney and surrounds.
+              Personalised speech therapy delivered to your home, school, or online. Helping your child communicate with confidence. Available in English and Mandarin (普通话). Serving Inner West Sydney and surrounds.
             </p>
             <div className="flex flex-col sm:flex-row gap-5">
               {/* REPLACE: swap /book href with real Calendly URL if needed */}
@@ -287,7 +287,7 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-[#E3E7E4] rounded-[40px] -rotate-3 scale-105 opacity-50"></div>
             <Image
               src="/shine-headshot-1200x1200.webp"
-              alt="Shine Teoh, Certified Practising Speech Pathologist"
+              alt="Shine Yin Teoh, Certified Practising Speech Pathologist"
               width={500}
               height={500}
               className="w-full max-w-sm object-cover bg-white rounded-[32px] shadow-xl relative z-10"
@@ -452,7 +452,7 @@ export default function HomePage() {
       <div className="bg-[#FAFAF8] py-6 border-t border-slate-200">
         <div className="container mx-auto px-4 text-center">
           <p className="text-sm text-slate-500 font-light">
-            <Link href="/about" className="underline decoration-slate-300 hover:decoration-[#112A46] hover:text-[#112A46] transition-all">Written by Shine Teoh, Certified Practising Speech Pathologist</Link>
+            <Link href="/about" className="underline decoration-slate-300 hover:decoration-[#112A46] hover:text-[#112A46] transition-all">Written by Shine Yin Teoh, Certified Practising Speech Pathologist</Link>
           </p>
         </div>
       </div>

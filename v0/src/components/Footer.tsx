@@ -19,7 +19,7 @@ const allSuburbs = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#112A46] text-white">
+    <footer className="bg-[#3f3a7d] text-white">
       <div className="container mx-auto px-4 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
 
@@ -38,9 +38,9 @@ export default function Footer() {
 
             {/* Trust badges */}
             <div className="space-y-2 text-xs font-medium text-white/90 mb-8">
-              <div className="flex items-center gap-2"><span className="text-[#C89B66]">✓</span> Certified Practising Speech Pathologist (CPSP)</div>
-              <div className="flex items-center gap-2"><span className="text-[#C89B66]">✓</span> NDIS Registered Provider</div>
-              <div className="flex items-center gap-2"><span className="text-[#C89B66]">✓</span> Medicare Provider</div>
+              <div className="flex items-center gap-2"><span className="text-[#5c54d1]">✓</span> Certified Practising Speech Pathologist (CPSP)</div>
+              <div className="flex items-center gap-2"><span className="text-[#5c54d1]">✓</span> NDIS Registered Provider</div>
+              <div className="flex items-center gap-2"><span className="text-[#5c54d1]">✓</span> Medicare Provider</div>
             </div>
 
             {/* Social media links */}
@@ -49,7 +49,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/company/shineandspeak" /* REPLACE: real LinkedIn URL */
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/60 hover:text-[#C89B66] transition-colors text-sm font-medium"
+                className="text-white/60 hover:text-[#5c54d1] transition-colors text-sm font-medium"
                 aria-label="Shine and Speak on LinkedIn"
               >
                 LinkedIn
@@ -59,7 +59,7 @@ export default function Footer() {
                 href="https://www.facebook.com/shineandspeak" /* REPLACE: real Facebook URL */
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/60 hover:text-[#C89B66] transition-colors text-sm font-medium"
+                className="text-white/60 hover:text-[#5c54d1] transition-colors text-sm font-medium"
                 aria-label="Shine and Speak on Facebook"
               >
                 Facebook
@@ -69,7 +69,7 @@ export default function Footer() {
                 href="https://www.instagram.com/shineandspeak" /* REPLACE: real Instagram URL */
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/60 hover:text-[#C89B66] transition-colors text-sm font-medium"
+                className="text-white/60 hover:text-[#5c54d1] transition-colors text-sm font-medium"
                 aria-label="Shine and Speak on Instagram"
               >
                 Instagram
@@ -79,7 +79,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-serif text-xl font-medium text-[#C89B66] mb-6">Quick Links</h3>
+            <h3 className="font-serif text-xl font-medium text-[#5c54d1] mb-6">Quick Links</h3>
             <ul className="space-y-3 text-sm text-white/80 font-light">
               <li><Link href="/paediatric-speech-therapy-sydney-nsw" className="hover:text-white hover:translate-x-1 inline-block transition-all">Paediatric Speech Therapy</Link></li>
               <li><Link href="/adult-speech-therapy-sydney-nsw" className="hover:text-white hover:translate-x-1 inline-block transition-all">Adult Speech Therapy</Link></li>
@@ -98,7 +98,7 @@ export default function Footer() {
 
           {/* Areas Served — full list, visible for SEO */}
           <div>
-            <h3 className="font-serif text-xl font-medium text-[#C89B66] mb-6">Areas Served</h3>
+            <h3 className="font-serif text-xl font-medium text-[#5c54d1] mb-6">Areas Served</h3>
             <ul className="space-y-3 text-sm text-white/80 font-light">
               {allSuburbs.map((suburb) => (
                 <li key={suburb.href}>
@@ -112,7 +112,7 @@ export default function Footer() {
 
           {/* Contact & Info */}
           <div>
-            <h3 className="font-serif text-xl font-medium text-[#C89B66] mb-6">Contact</h3>
+            <h3 className="font-serif text-xl font-medium text-[#5c54d1] mb-6">Contact</h3>
             <ul className="space-y-4 text-sm text-white/80 font-light mb-8">
               <li>
                 <a href="tel:0421608819" className="hover:text-white transition-colors flex items-center gap-3">
@@ -163,7 +163,7 @@ export default function Footer() {
           <p>© 2026 Shine and Speak. All rights reserved.</p>
           <p>
             <Link href="/about" className="hover:text-white transition-colors underline decoration-white/20 hover:decoration-white">
-              Written by Shine Teoh, Certified Practising Speech Pathologist
+              Written by Shine Yin Teoh, Certified Practising Speech Pathologist
             </Link>
           </p>
           <p>Inner West Sydney &amp; Telehealth Australia-wide</p>

@@ -53,7 +53,7 @@ export default function ChineseHomepage() {
             </div>
           </div>
           <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl bg-gray-200 flex items-center justify-center text-gray-500 text-center p-8">
-            {/* REPLACE: Professional photo of Shine Teoh working with a child */}
+            {/* REPLACE: Professional photo of Shine Yin Teoh working with a child */}
             <span className="text-sm text-gray-400">[图片：治疗师与儿童工作的专业照片]</span>
           </div>
         </div>

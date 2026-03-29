@@ -272,10 +272,10 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-20 lg:py-28 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-tight mb-6">
-              Helping your child communicate with confidence
+              Speech Pathologist Sydney NSW | Mobile &amp; Telehealth Therapy
             </h1>
             <p className="text-lg md:text-xl text-blue-50 mb-8 leading-relaxed font-light">
-              Personalised speech therapy — delivered to your home, school, or online. Serving Inner West Sydney and surrounds.
+              Personalised speech therapy delivered to your home, school, or online. Helping your child communicate with confidence. Available in English and Mandarin (普通话). Serving Inner West Sydney and surrounds.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               {/* REPLACE: update href to your real Calendly URL */}
@@ -302,10 +302,10 @@ export default function HomePage() {
             </div>
           </div>
           <div className="relative h-80 lg:h-[480px] rounded-2xl overflow-hidden shadow-2xl bg-[#1e3a63] flex items-center justify-center">
-            {/* REPLACE: Professional photo of Shine Teoh working with a child. Must be a real photo — not stock. Warm, mobile-therapy context (home visit). */}
+            {/* REPLACE: Professional photo of Shine Yin Teoh working with a child. Must be a real photo — not stock. Warm, mobile-therapy context (home visit). */}
             <div className="text-center px-8">
-              <img src="/shine-headshot-1200x1200.webp" alt="Shine Teoh, Certified Practising Speech Pathologist" className="absolute inset-0 w-full h-full object-cover" />
-              {/* REPLACE: Professional photo of Shine Teoh working with a child in a home-visit context */}
+              <img src="/v2/shine-headshot-1200x1200.webp" alt="Shine Yin Teoh, Certified Practising Speech Pathologist" className="absolute inset-0 w-full h-full object-cover" />
+              {/* REPLACE: Professional photo of Shine Yin Teoh working with a child in a home-visit context */}
             </div>
           </div>
         </div>
@@ -502,13 +502,13 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative h-[400px] lg:h-[520px] rounded-2xl overflow-hidden bg-slate-100 shadow-lg flex items-center justify-center">
-              {/* REPLACE: Professional headshot of Shine Teoh, warm and approachable — different photo from hero */}
-              <img src="/shine-headshot-1200x1200.webp" alt="Shine Teoh, Certified Practising Speech Pathologist" className="absolute inset-0 w-full h-full object-cover" />
+              {/* REPLACE: Professional headshot of Shine Yin Teoh, warm and approachable — different photo from hero */}
+              <img src="/v2/shine-headshot-1200x1200.webp" alt="Shine Yin Teoh, Certified Practising Speech Pathologist" className="absolute inset-0 w-full h-full object-cover" />
             </div>
             <div>
-              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-[#2B4C7E] mb-4">Meet Shine Teoh</h2>
+              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-[#2B4C7E] mb-4">Meet Shine Yin Teoh</h2>
               <p className="text-slate-600 text-lg leading-relaxed mb-4">
-                Hi, I'm Shine Teoh — a Certified Practising Speech Pathologist. I&apos;m passionate about providing
+                Hi, I'm Shine Yin Teoh — a Certified Practising Speech Pathologist. I&apos;m passionate about providing
                 high-quality, personalised speech therapy that makes a genuine difference in everyday life.
               </p>
               <p className="text-slate-600 leading-relaxed mb-6">
@@ -739,7 +739,7 @@ export default function HomePage() {
         <p className="text-xs text-slate-500">
           Written by{' '}
           <Link href="/about" className="text-[#2B4C7E] hover:text-[#E8A84C] underline underline-offset-2">
-            Shine Teoh, Certified Practising Speech Pathologist
+            Shine Yin Teoh, Certified Practising Speech Pathologist
           </Link>
         </p>
       </div>

@@ -34,7 +34,14 @@ http {
       try_files $uri $uri/ /index.html;
     }
 
-    # v0 app — proxy all /v0/* to Next.js on port 3001
+    # v0 — serve public/ static files directly (standalone doesn't serve them)
+    location ~ ^/v0/(.+\.(?:png|jpe?g|gif|webp|svg|ico|pdf|mp4|woff2?|ttf|eot|css|js))$ {
+      alias /app/v0/public/$1;
+      expires 30d;
+      add_header Cache-Control "public";
+    }
+
+    # v0 app — proxy all other /v0/* to Next.js on port 3001
     location /v0 {
       proxy_pass http://127.0.0.1:3001;
       proxy_http_version 1.1;
@@ -48,7 +55,14 @@ http {
       proxy_read_timeout 300s;
     }
 
-    # v1 app — proxy all /v1/* to Next.js on port 3002
+    # v1 — serve public/ static files directly
+    location ~ ^/v1/(.+\.(?:png|jpe?g|gif|webp|svg|ico|pdf|mp4|woff2?|ttf|eot|css|js))$ {
+      alias /app/v1/public/$1;
+      expires 30d;
+      add_header Cache-Control "public";
+    }
+
+    # v1 app — proxy all other /v1/* to Next.js on port 3002
     location /v1 {
       proxy_pass http://127.0.0.1:3002;
       proxy_http_version 1.1;
@@ -62,7 +76,14 @@ http {
       proxy_read_timeout 300s;
     }
 
-    # v2 app — proxy all /v2/* to Next.js on port 3003
+    # v2 — serve public/ static files directly
+    location ~ ^/v2/(.+\.(?:png|jpe?g|gif|webp|svg|ico|pdf|mp4|woff2?|ttf|eot|css|js))$ {
+      alias /app/v2/public/$1;
+      expires 30d;
+      add_header Cache-Control "public";
+    }
+
+    # v2 app — proxy all other /v2/* to Next.js on port 3003
     location /v2 {
       proxy_pass http://127.0.0.1:3003;
       proxy_http_version 1.1;
@@ -76,7 +97,14 @@ http {
       proxy_read_timeout 300s;
     }
 
-    # v3 app — proxy all /v3/* to Next.js on port 3004
+    # v3 — serve public/ static files directly
+    location ~ ^/v3/(.+\.(?:png|jpe?g|gif|webp|svg|ico|pdf|mp4|woff2?|ttf|eot|css|js))$ {
+      alias /app/v3/public/$1;
+      expires 30d;
+      add_header Cache-Control "public";
+    }
+
+    # v3 app — proxy all other /v3/* to Next.js on port 3004
     location /v3 {
       proxy_pass http://127.0.0.1:3004;
       proxy_http_version 1.1;

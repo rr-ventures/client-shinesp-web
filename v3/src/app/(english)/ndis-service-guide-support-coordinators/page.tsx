@@ -62,7 +62,7 @@ export default function NdisServiceGuidePage() {
         </div>
 
         <p className="text-sm text-gray-500 italic mt-8">
-          Written by Shine Teoh, Certified Practising Speech Pathologist.{" "}
+          Written by Shine Yin Teoh, Certified Practising Speech Pathologist.{" "}
           <Link href="/about" className="underline hover:text-golden-amber">Learn about Shine&apos;s qualifications</Link>.
         </p>
       </div>

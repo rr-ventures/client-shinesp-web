@@ -2,13 +2,13 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #1B365D; /* Navy blue */
-  --primary: #1B365D; /* Navy blue */
+  --foreground: #2c3e38; /* Navy blue */
+  --primary: #a1b8b2; /* Navy blue */
   --primary-foreground: #ffffff;
-  --secondary: #D4AF37; /* Premium Gold */
-  --secondary-foreground: #ffffff;
-  --accent: #FDFBF7; /* Warm soft off-white for premium feel */
-  --accent-blue: #F0F4F8; /* Soft blue-gray for alternate sections */
+  --secondary: #e1bbff; /* Premium Gold */
+  --secondary-foreground: #2c3e38;
+  --accent: #f4f7f6; /* Warm soft off-white for premium feel */
+  --accent-blue: #eef2f1; /* Soft blue-gray for alternate sections */
 }
 
 @theme inline {

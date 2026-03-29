@@ -142,10 +142,10 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="max-w-xl">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 leading-tight">
-                Helping your child communicate with confidence
+                Speech Pathologist in Sydney, NSW | Bilingual English &amp; Mandarin
               </h1>
               <p className="text-lg md:text-xl text-gray-600 mb-10 font-light">
-                Personalised speech therapy — delivered to your home, school, or online. Serving Inner West Sydney and surrounds.
+                Personalised speech therapy delivered to your home, school, or online. Helping your child communicate with confidence. Available in English and Mandarin (普通话). Serving Inner West Sydney and surrounds.
               </p>
               <div className="flex flex-col sm:flex-row gap-5 mb-10">
                 <Link href="/book" className="btn-secondary text-lg px-8 py-4">
@@ -164,8 +164,8 @@ export default function HomePage() {
               </div>
             </div>
             <div className="relative h-[550px] rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white transform hover:-translate-y-2 transition-transform duration-500">
-              {/* <!-- REPLACE: Professional photo of Shine Teoh working with a child --> */}
-              <img src="/hero-stock-placeholder-unsplash.jpg" alt="Shine Teoh working with a child" className="absolute inset-0 w-full h-full object-cover" />
+              {/* <!-- REPLACE: Professional photo of Shine Yin Teoh working with a child --> */}
+              <img src="/v1/hero-stock-placeholder-unsplash.jpg" alt="Shine Yin Teoh working with a child" className="absolute inset-0 w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-60"></div>
             </div>
           </div>
@@ -386,9 +386,9 @@ export default function HomePage() {
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="order-2 md:order-1">
-              <h2 className="text-3xl md:text-5xl font-bold text-primary mb-8">Meet Shine Teoh</h2>
+              <h2 className="text-3xl md:text-5xl font-bold text-primary mb-8">Meet Shine Yin Teoh</h2>
               <p className="text-gray-600 text-lg mb-6 font-light leading-relaxed">
-                Hi, I'm Shine Teoh — a Certified Practising Speech Pathologist. I'm passionate about providing high-quality, personalised speech therapy that makes a genuine difference in everyday life.
+                Hi, I'm Shine Yin Teoh — a Certified Practising Speech Pathologist. I'm passionate about providing high-quality, personalised speech therapy that makes a genuine difference in everyday life.
               </p>
               <p className="text-gray-600 text-lg mb-6 font-light leading-relaxed">
                 I specialise in working with children and adults with a wide range of communication needs, including children on the autism spectrum, children with ADHD, developmental delay, language disorders, and literacy difficulties. I also support adults recovering from stroke, brain injury, and other neurological conditions.
@@ -419,7 +419,7 @@ export default function HomePage() {
             </div>
             <div className="order-1 md:order-2">
               <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
-                <img src="/shine-headshot-1200x1200.webp" alt="Shine Teoh Headshot" className="absolute inset-0 w-full h-full object-cover" />
+                <img src="/v1/shine-headshot-1200x1200.webp" alt="Shine Yin Teoh Headshot" className="absolute inset-0 w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-40"></div>
               </div>
             </div>

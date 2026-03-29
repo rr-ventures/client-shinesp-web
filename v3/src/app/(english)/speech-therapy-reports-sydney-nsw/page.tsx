@@ -5,13 +5,13 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 export const metadata: Metadata = {
   title: "Speech Therapy Reports Sydney NSW | Shine and Speak",
   description:
-    "Detailed speech pathology reports for NDIS plan reviews, schools, and support teams in Sydney. Written by Shine Teoh, Certified Practising Speech Pathologist.",
+    "Detailed speech pathology reports for NDIS plan reviews, schools, and support teams in Sydney. Written by Shine Yin Teoh, Certified Practising Speech Pathologist.",
   alternates: {
     canonical: "https://shineandspeak.com.au/speech-therapy-reports-sydney-nsw",
   },
   openGraph: {
     title: "Speech Therapy Reports Sydney NSW | Shine and Speak",
-    description: "Detailed speech pathology reports for NDIS plan reviews, schools, and support teams in Sydney. Written by Shine Teoh, Certified Practising Speech Pathologist.",
+    description: "Detailed speech pathology reports for NDIS plan reviews, schools, and support teams in Sydney. Written by Shine Yin Teoh, Certified Practising Speech Pathologist.",
     url: "https://shineandspeak.com.au/speech-therapy-reports-sydney-nsw",
   },
 };
@@ -53,7 +53,7 @@ export default function Page() {
         <h1 className="text-4xl font-bold text-navy-blue mb-6">Speech Therapy Reports Sydney NSW</h1>
         <p className="text-lg text-gray-700 mb-8">Content coming soon — we are building out this page. In the meantime, please <Link href="/contact" className="text-golden-amber font-semibold hover:underline">book a free discovery call</Link> or call <a href="tel:+61421608819" className="text-navy-blue font-semibold hover:underline">0421 608 819</a>.</p>
 
-        <p className="text-sm text-gray-500 italic">Written by Shine Teoh, Certified Practising Speech Pathologist. <Link href="/about" className="underline hover:text-golden-amber">Learn about Shine&apos;s qualifications</Link>.</p>
+        <p className="text-sm text-gray-500 italic">Written by Shine Yin Teoh, Certified Practising Speech Pathologist. <Link href="/about" className="underline hover:text-golden-amber">Learn about Shine&apos;s qualifications</Link>.</p>
       </div>
 
       <section className="py-16 bg-golden-amber text-white text-center">

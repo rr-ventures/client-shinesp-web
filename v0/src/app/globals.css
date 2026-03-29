@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-navy: #112A46;
-  --color-brand-gold: #C89B66;
-  --color-brand-white: #FAFAF8;
-  --color-brand-light-blue: #FAFAF8;
-  --color-brand-sand: #F4EBE1;
-  --color-brand-sage: #E3E7E4;
+  --color-brand-navy: #3f3a7d;
+  --color-brand-gold: #d5f2db;
+  --color-brand-white: #ffffff;
+  --color-brand-light-blue: #f2f5ff;
+  --color-brand-sand: #f2f5ff;
+  --color-brand-sage: #eaebef;
   
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-serif: var(--font-playfair), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;

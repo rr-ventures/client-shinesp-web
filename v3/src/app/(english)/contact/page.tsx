@@ -5,14 +5,14 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 export const metadata: Metadata = {
   title: "Book a Free Discovery Call | Shine and Speak",
   description:
-    "Book a free discovery call with Shine Teoh, speech pathologist in Sydney. No obligation — chat about your child's needs and we'll work out the best next step.",
+    "Book a free discovery call with Shine Yin Teoh, speech pathologist in Sydney. No obligation — chat about your child's needs and we'll work out the best next step.",
   alternates: {
     canonical: "https://shineandspeak.com.au/contact",
   },
   openGraph: {
     title: "Book a Free Discovery Call | Shine and Speak",
     description:
-      "Book a free discovery call with Shine Teoh, speech pathologist in Sydney. No obligation — chat about your child's needs and we'll work out the best next step.",
+      "Book a free discovery call with Shine Yin Teoh, speech pathologist in Sydney. No obligation — chat about your child's needs and we'll work out the best next step.",
     url: "https://shineandspeak.com.au/contact",
   },
 };

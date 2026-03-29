@@ -4,14 +4,14 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 export const metadata: Metadata = {
   title: 'Book a Free Discovery Call | Speech Therapy Sydney',
   description:
-    'Book a free discovery call with Shine Teoh, Certified Practising Speech Pathologist in Sydney. NDIS, Medicare & private. Mobile & telehealth. No obligation.',
+    'Book a free discovery call with Shine Yin Teoh, Certified Practising Speech Pathologist in Sydney. NDIS, Medicare & private. Mobile & telehealth. No obligation.',
   alternates: {
     canonical: 'https://www.shineandspeak.com.au/contact',
   },
   openGraph: {
     title: 'Book a Free Discovery Call | Shine and Speak',
     description:
-      'Book a free discovery call with Shine Teoh, Certified Practising Speech Pathologist in Sydney. NDIS, Medicare & private. Mobile & telehealth.',
+      'Book a free discovery call with Shine Yin Teoh, Certified Practising Speech Pathologist in Sydney. NDIS, Medicare & private. Mobile & telehealth.',
     url: 'https://www.shineandspeak.com.au/contact',
     images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
@@ -224,7 +224,7 @@ export default function ContactPage() {
           <p className="text-xs text-gray-500">
             Written by{' '}
             <a href="/about" className="text-[#1B365D] hover:text-[#E8A84C] underline underline-offset-2">
-              Shine Teoh, Certified Practising Speech Pathologist
+              Shine Yin Teoh, Certified Practising Speech Pathologist
             </a>
           </p>
         </div>

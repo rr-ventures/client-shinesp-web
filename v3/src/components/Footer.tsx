@@ -20,7 +20,7 @@ export default function Footer() {
           </p>
           <div className="pt-4 border-t border-white/10">
             <p className="text-xs text-blue-200/60 leading-relaxed">
-              Written by Shine Teoh, Certified Practising Speech Pathologist.{" "}
+              Written by Shine Yin Teoh, Certified Practising Speech Pathologist.{" "}
               <Link href="/about" className="text-golden-amber hover:text-white transition-colors underline-offset-4 hover:underline">
                 About Shine
               </Link>

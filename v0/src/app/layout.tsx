@@ -49,7 +49,7 @@ export default async function RootLayout({
 
   return (
     <html lang={lang}>
-      <body className={`${inter.variable} ${playfair.variable} font-sans min-h-screen flex flex-col antialiased bg-[#FAFAF8] text-slate-800`}>
+      <body className={`${inter.variable} ${playfair.variable} font-sans min-h-screen flex flex-col antialiased bg-[#ffffff] text-slate-800`}>
         <JsonLd data={organizationSchema} />
         <ScrollToTop />
         <Header />

@@ -3,16 +3,16 @@ import Link from "next/link";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
-  title: "About Shine Teoh — Speech Pathologist Sydney",
+  title: "About Shine Yin Teoh — Speech Pathologist Sydney",
   description:
-    "Meet Shine Teoh, Certified Practising Speech Pathologist. Mobile & telehealth in Inner West Sydney. Bilingual English & Mandarin. NDIS & Medicare registered.",
+    "Meet Shine Yin Teoh, Certified Practising Speech Pathologist. Mobile & telehealth in Inner West Sydney. Bilingual English & Mandarin. NDIS & Medicare registered.",
   alternates: {
     canonical: "https://shineandspeak.com.au/about",
   },
   openGraph: {
-    title: "About Shine Teoh — Speech Pathologist Sydney | Shine and Speak",
+    title: "About Shine Yin Teoh — Speech Pathologist Sydney | Shine and Speak",
     description:
-      "Meet Shine Teoh, Certified Practising Speech Pathologist. Mobile & telehealth in Inner West Sydney. Bilingual English & Mandarin. NDIS & Medicare registered.",
+      "Meet Shine Yin Teoh, Certified Practising Speech Pathologist. Mobile & telehealth in Inner West Sydney. Bilingual English & Mandarin. NDIS & Medicare registered.",
     url: "https://shineandspeak.com.au/about",
   },
 };
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: "Shine Teoh",
+  name: "Shine Yin Teoh",
   jobTitle: "Certified Practising Speech Pathologist",
   email: "admin@shineandspeak.com.au",
   telephone: "+61421608819",
@@ -57,17 +57,17 @@ export default function AboutPage() {
 
         <div className="grid md:grid-cols-2 gap-12 items-start mb-12">
           <div>
-            <h1 className="text-4xl font-bold text-navy-blue mb-6">Meet Shine Teoh</h1>
+            <h1 className="text-4xl font-bold text-navy-blue mb-6">Meet Shine Yin Teoh</h1>
 
             {/* Mobile headshot */}
             <div className="bg-gray-200 aspect-square rounded-2xl flex items-center justify-center text-gray-500 text-center p-8 shadow-xl mb-8 md:hidden">
-              {/* REPLACE: Professional headshot of Shine Teoh, warm and approachable */}
-              <img src="/shine-headshot-1200x1200.webp" alt="Shine Teoh, Certified Practising Speech Pathologist" className="absolute inset-0 w-full h-full object-cover" />
+              {/* REPLACE: Professional headshot of Shine Yin Teoh, warm and approachable */}
+              <img src="/v3/shine-headshot-1200x1200.webp" alt="Shine Yin Teoh, Certified Practising Speech Pathologist" className="absolute inset-0 w-full h-full object-cover" />
             </div>
 
             <h2 className="text-3xl font-bold text-navy-blue mb-4">About me</h2>
             <p className="text-gray-700 mb-6">
-              I'm Shine Teoh, a Certified Practising Speech Pathologist. I started Shine and Speak because I believe every person deserves access to high-quality, personalised speech therapy that makes a genuine difference in their everyday life — not just therapy for the sake of therapy.
+              I'm Shine Yin Teoh, a Certified Practising Speech Pathologist. I started Shine and Speak because I believe every person deserves access to high-quality, personalised speech therapy that makes a genuine difference in their everyday life — not just therapy for the sake of therapy.
             </p>
 
             <h2 className="text-3xl font-bold text-navy-blue mb-4">My approach</h2>
@@ -96,8 +96,8 @@ export default function AboutPage() {
           {/* Desktop sticky headshot */}
           <div className="hidden md:block">
             <div className="bg-gray-200 aspect-square rounded-2xl flex items-center justify-center text-gray-500 text-center p-8 shadow-xl sticky top-24">
-              {/* REPLACE: Professional headshot of Shine Teoh, warm and approachable */}
-              <img src="/shine-headshot-1200x1200.webp" alt="Shine Teoh, Certified Practising Speech Pathologist" className="absolute inset-0 w-full h-full object-cover" />
+              {/* REPLACE: Professional headshot of Shine Yin Teoh, warm and approachable */}
+              <img src="/v3/shine-headshot-1200x1200.webp" alt="Shine Yin Teoh, Certified Practising Speech Pathologist" className="absolute inset-0 w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -150,7 +150,7 @@ export default function AboutPage() {
         </div>
 
         <p className="text-sm text-gray-500 italic">
-          Written by Shine Teoh, Certified Practising Speech Pathologist.
+          Written by Shine Yin Teoh, Certified Practising Speech Pathologist.
         </p>
       </div>
 

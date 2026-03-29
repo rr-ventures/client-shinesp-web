@@ -2,17 +2,17 @@ import Link from 'next/link';
 import { CheckCircle2 } from 'lucide-react';
 
 export const metadata = {
-  title: 'About Shine Teoh | Speech Pathologist Sydney',
-  description: 'Meet Shine Teoh, Certified Practising Speech Pathologist based in Sydney. Mobile & telehealth. Bilingual English & Mandarin. NDIS & Medicare registered provider.',
+  title: 'About Shine Yin Teoh | Speech Pathologist Sydney',
+  description: 'Meet Shine Yin Teoh, Certified Practising Speech Pathologist based in Sydney. Mobile & telehealth. Bilingual English & Mandarin. NDIS & Medicare registered provider.',
   alternates: {
     canonical: 'https://shineandspeak.com.au/about',
   },
   openGraph: {
-    title: 'About Shine Teoh | Speech Pathologist Sydney',
-    description: 'Meet Shine Teoh, Certified Practising Speech Pathologist based in Sydney. Mobile & telehealth. Bilingual English & Mandarin. NDIS & Medicare registered.',
+    title: 'About Shine Yin Teoh | Speech Pathologist Sydney',
+    description: 'Meet Shine Yin Teoh, Certified Practising Speech Pathologist based in Sydney. Mobile & telehealth. Bilingual English & Mandarin. NDIS & Medicare registered.',
     url: 'https://shineandspeak.com.au/about',
     type: 'profile',
-    images: [{ url: 'https://shineandspeak.com.au/og-image.png', width: 1200, height: 630, alt: 'Shine Teoh — Speech Pathologist Sydney' }],
+    images: [{ url: 'https://shineandspeak.com.au/og-image.png', width: 1200, height: 630, alt: 'Shine Yin Teoh — Speech Pathologist Sydney' }],
   },
 };
 
@@ -57,7 +57,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-                Meet Shine Teoh
+                Meet Shine Yin Teoh
               </h1>
               <p className="text-xl text-gray-700 leading-relaxed font-medium">
                 Certified Practising Speech Pathologist (CPSP)
@@ -70,7 +70,7 @@ export default function AboutPage() {
             </div>
             <div className="relative aspect-square md:aspect-[4/3] rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white transform hover:scale-[1.02] transition-transform duration-500">
               {/* <!-- REPLACE: Professional headshot, warm and approachable --> */}
-              <img src="/shine-headshot-1200x1200.webp" alt="Shine Teoh Headshot" className="absolute inset-0 w-full h-full object-cover" />
+              <img src="/v1/shine-headshot-1200x1200.webp" alt="Shine Yin Teoh Headshot" className="absolute inset-0 w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-40"></div>
             </div>
           </div>
@@ -86,7 +86,7 @@ export default function AboutPage() {
             <div>
               <h2 className="text-3xl font-bold text-primary mb-6">About me</h2>
               <p className="text-lg text-gray-700 mb-4">
-                I'm Shine Teoh, a Certified Practising Speech Pathologist. I started Shine and Speak because I believe every person deserves access to high-quality, personalised speech therapy that makes a genuine difference in their everyday life — not just therapy for the sake of therapy.
+                I'm Shine Yin Teoh, a Certified Practising Speech Pathologist. I started Shine and Speak because I believe every person deserves access to high-quality, personalised speech therapy that makes a genuine difference in their everyday life — not just therapy for the sake of therapy.
               </p>
             </div>
 
