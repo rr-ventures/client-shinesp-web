@@ -3,9 +3,16 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'DVA Speech Therapy Sydney NSW | Shine and Speak',
-  description: 'Content coming soon for DVA Speech Therapy Sydney NSW | Shine and Speak. Mobile and telehealth speech therapy in Sydney.',
+  description:
+    'Speech therapy for DVA card holders in Sydney. Supporting veterans and their communication needs. Mobile & telehealth sessions. Book a free discovery call.',
   alternates: {
-    canonical: '/dva-speech-therapy-sydney-nsw',
+    canonical: 'https://www.shineandspeak.com.au/dva-speech-therapy-sydney-nsw',
+  },
+  openGraph: {
+    title: 'DVA Speech Therapy Sydney NSW | Shine and Speak',
+    description: 'Speech therapy for DVA card holders in Sydney. Supporting veterans and their communication needs. Mobile & telehealth sessions. Book a free discovery call.',
+    url: 'https://www.shineandspeak.com.au/dva-speech-therapy-sydney-nsw',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
 };
 

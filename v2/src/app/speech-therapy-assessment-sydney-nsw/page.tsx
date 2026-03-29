@@ -2,10 +2,17 @@ import { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Speech Therapy Assessment Sydney NSW | Shine and Speak',
-  description: 'Content coming soon for Speech Therapy Assessment Sydney NSW | Shine and Speak. Mobile and telehealth speech therapy in Sydney.',
+  title: 'Speech Therapy Assessments Sydney NSW | Shine and Speak',
+  description:
+    'Comprehensive speech pathology assessments in Sydney. Home, school, or telehealth. Detailed reports with clear recommendations. NDIS, Medicare & private pay.',
   alternates: {
-    canonical: '/speech-therapy-assessment-sydney-nsw',
+    canonical: 'https://www.shineandspeak.com.au/speech-therapy-assessment-sydney-nsw',
+  },
+  openGraph: {
+    title: 'Speech Therapy Assessments Sydney NSW | Shine and Speak',
+    description: 'Comprehensive speech pathology assessments in Sydney. Home, school, or telehealth. Detailed reports with clear recommendations. NDIS, Medicare & private pay.',
+    url: 'https://www.shineandspeak.com.au/speech-therapy-assessment-sydney-nsw',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
 };
 

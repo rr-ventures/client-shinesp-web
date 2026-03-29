@@ -3,9 +3,16 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'NDIS Speech Therapy Sydney NSW | Shine and Speak',
-  description: 'Content coming soon for NDIS Speech Therapy Sydney NSW | Shine and Speak. Mobile and telehealth speech therapy in Sydney.',
+  description:
+    'NDIS registered speech therapy in Sydney. All management types accepted — self, plan, and NDIA-managed. Mobile, telehealth & school-based. Inner West Sydney.',
   alternates: {
-    canonical: '/ndis-speech-therapy-sydney-nsw',
+    canonical: 'https://www.shineandspeak.com.au/ndis-speech-therapy-sydney-nsw',
+  },
+  openGraph: {
+    title: 'NDIS Speech Therapy Sydney NSW | Shine and Speak',
+    description: 'NDIS registered speech therapy in Sydney. All management types accepted — self, plan, and NDIA-managed. Mobile, telehealth & school-based. Inner West Sydney.',
+    url: 'https://www.shineandspeak.com.au/ndis-speech-therapy-sydney-nsw',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
 };
 

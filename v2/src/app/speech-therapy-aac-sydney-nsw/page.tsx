@@ -3,9 +3,16 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'AAC Speech Therapy Sydney NSW | Shine and Speak',
-  description: 'Content coming soon for AAC Speech Therapy Sydney NSW | Shine and Speak. Mobile and telehealth speech therapy in Sydney.',
+  description:
+    'AAC and augmentative communication support in Sydney. Alternative communication systems tailored to your child. Mobile & telehealth. NDIS registered provider.',
   alternates: {
-    canonical: '/speech-therapy-aac-sydney-nsw',
+    canonical: 'https://www.shineandspeak.com.au/speech-therapy-aac-sydney-nsw',
+  },
+  openGraph: {
+    title: 'AAC Speech Therapy Sydney NSW | Shine and Speak',
+    description: 'AAC and augmentative communication support in Sydney. Alternative communication systems tailored to your child. Mobile & telehealth. NDIS registered provider.',
+    url: 'https://www.shineandspeak.com.au/speech-therapy-aac-sydney-nsw',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
 };
 

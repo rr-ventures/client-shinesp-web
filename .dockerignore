@@ -3,17 +3,20 @@
 **/.next
 **/.turbo
 
+# Git
+.git
+
 # Non-version directories not needed in the build
 v1-app
 v2-app
 _temp
 docs
+deployment_logs
+.cursor
 
 # Misc dev files
 *.md
-SEO_AUDIT_PROMPT.md
-shine-v2-build-brief.md
-temp_gemini_4_build_prompts.md
+*.log
 generate-components.js
 generate-pages.js
 generate-placeholders.js

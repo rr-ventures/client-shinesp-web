@@ -2,10 +2,17 @@ import { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Parent Coaching Speech Therapy Sydney NSW | Shine and Speak',
-  description: 'Content coming soon for Parent Coaching Speech Therapy Sydney NSW | Shine and Speak. Mobile and telehealth speech therapy in Sydney.',
+  title: 'Parent Coaching Speech Therapy Sydney | Shine and Speak',
+  description:
+    'Parent and carer coaching in Sydney to support your child\'s communication between therapy sessions. Practical strategies for home, school, and everyday life.',
   alternates: {
-    canonical: '/parent-coaching-speech-therapy-sydney-nsw',
+    canonical: 'https://www.shineandspeak.com.au/parent-coaching-speech-therapy-sydney-nsw',
+  },
+  openGraph: {
+    title: 'Parent Coaching Speech Therapy Sydney | Shine and Speak',
+    description: 'Parent and carer coaching in Sydney to support your child\'s communication between therapy sessions. Practical strategies for home, school, and everyday life.',
+    url: 'https://www.shineandspeak.com.au/parent-coaching-speech-therapy-sydney-nsw',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
 };
 

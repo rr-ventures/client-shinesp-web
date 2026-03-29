@@ -2,10 +2,17 @@ import { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Speech Therapy for Literacy Sydney NSW | Shine and Speak',
-  description: 'Content coming soon for Speech Therapy for Literacy Sydney NSW | Shine and Speak. Mobile and telehealth speech therapy in Sydney.',
+  title: 'Literacy Speech Therapy Sydney NSW | Shine and Speak',
+  description:
+    'Speech therapy for literacy difficulties in Sydney. Supporting reading, writing, and spelling. Mobile, telehealth & school-based. NDIS & Medicare. Inner West.',
   alternates: {
-    canonical: '/speech-therapy-literacy-sydney-nsw',
+    canonical: 'https://www.shineandspeak.com.au/speech-therapy-literacy-sydney-nsw',
+  },
+  openGraph: {
+    title: 'Literacy Speech Therapy Sydney NSW | Shine and Speak',
+    description: 'Speech therapy for literacy difficulties in Sydney. Supporting reading, writing, and spelling. Mobile, telehealth & school-based. NDIS & Medicare. Inner West.',
+    url: 'https://www.shineandspeak.com.au/speech-therapy-literacy-sydney-nsw',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
 };
 

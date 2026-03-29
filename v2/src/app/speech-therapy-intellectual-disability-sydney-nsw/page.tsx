@@ -2,10 +2,17 @@ import { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Speech Therapy for Intellectual Disability Sydney NSW | Shine and Speak',
-  description: 'Content coming soon for Speech Therapy for Intellectual Disability Sydney NSW | Shine and Speak. Mobile and telehealth speech therapy in Sydney.',
+  title: 'Intellectual Disability Speech Therapy Sydney | Shine and Speak',
+  description:
+    'Speech therapy for children and adults with intellectual disability in Sydney. Functional, goal-focused therapy. Mobile & telehealth. NDIS registered provider.',
   alternates: {
-    canonical: '/speech-therapy-intellectual-disability-sydney-nsw',
+    canonical: 'https://www.shineandspeak.com.au/speech-therapy-intellectual-disability-sydney-nsw',
+  },
+  openGraph: {
+    title: 'Intellectual Disability Speech Therapy Sydney | Shine and Speak',
+    description: 'Speech therapy for children and adults with intellectual disability in Sydney. Functional, goal-focused therapy. Mobile & telehealth. NDIS registered provider.',
+    url: 'https://www.shineandspeak.com.au/speech-therapy-intellectual-disability-sydney-nsw',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
 };
 

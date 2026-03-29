@@ -3,9 +3,16 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Speech Therapy Reports Sydney NSW | Shine and Speak',
-  description: 'Content coming soon for Speech Therapy Reports Sydney NSW | Shine and Speak. Mobile and telehealth speech therapy in Sydney.',
+  description:
+    'Detailed speech pathology reports for NDIS plans, school applications, and clinical handovers. Sydney — mobile & telehealth sessions. Medicare and NDIS eligible.',
   alternates: {
-    canonical: '/speech-therapy-reports-sydney-nsw',
+    canonical: 'https://www.shineandspeak.com.au/speech-therapy-reports-sydney-nsw',
+  },
+  openGraph: {
+    title: 'Speech Therapy Reports Sydney NSW | Shine and Speak',
+    description: 'Detailed speech pathology reports and recommendations for NDIS plans, school applications, and clinical handovers. Sydney — mobile & telehealth. Medicare eligible.',
+    url: 'https://www.shineandspeak.com.au/speech-therapy-reports-sydney-nsw',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
 };
 

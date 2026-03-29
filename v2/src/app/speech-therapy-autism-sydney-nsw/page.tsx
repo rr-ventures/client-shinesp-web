@@ -7,7 +7,13 @@ export const metadata: Metadata = {
   title: 'Speech Therapy for Autism Sydney NSW | Shine and Speak',
   description: 'Personalised speech therapy for children with autism and ASD in Sydney. Mobile, telehealth & school-based. NDIS & Medicare. Bilingual English & Mandarin.',
   alternates: {
-    canonical: '/speech-therapy-autism-sydney-nsw',
+    canonical: 'https://www.shineandspeak.com.au/speech-therapy-autism-sydney-nsw',
+  },
+  openGraph: {
+    title: 'Speech Therapy for Autism Sydney NSW | Shine and Speak',
+    description: 'Personalised speech therapy for children with autism and ASD in Sydney. Mobile, telehealth & school-based. NDIS & Medicare. Bilingual English & Mandarin.',
+    url: 'https://www.shineandspeak.com.au/speech-therapy-autism-sydney-nsw',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
 };
 
@@ -107,17 +113,33 @@ export default function AutismPage() {
       </section>
 
       {/* CTA Band */}
-      <section className="py-20 bg-gold-500 text-navy-900 text-center">
+      <section className="py-20 bg-[#E8A84C] text-[#1B365D] text-center">
         <div className="max-w-4xl mx-auto px-4 md:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to help your child thrive?</h2>
           <p className="text-xl mb-8 opacity-90">
-            Book a free discovery call to talk about your child's needs — no obligation, no pressure.
+            Book a free discovery call to talk about your child&apos;s needs — no obligation, no pressure.
           </p>
-          <Link href="/contact" className="inline-flex items-center justify-center bg-navy-900 text-white font-bold px-8 py-4 rounded-md hover:bg-navy-800 transition-colors text-lg">
+          {/* REPLACE: update href to your real Calendly URL */}
+          <a
+            href="https://calendly.com/shineandspeak"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center bg-[#1B365D] text-white font-bold px-8 py-4 rounded-md hover:bg-[#0d2240] transition-colors text-lg"
+          >
             Book a Free Discovery Call <ArrowRight className="ml-2 w-5 h-5" />
-          </Link>
+          </a>
         </div>
       </section>
+
+      {/* Author attribution */}
+      <div className="py-4 text-center bg-white">
+        <p className="text-xs text-gray-500">
+          Written by{' '}
+          <Link href="/about" className="text-[#1B365D] hover:text-[#E8A84C] underline underline-offset-2">
+            Shine Teoh, Certified Practising Speech Pathologist
+          </Link>
+        </p>
+      </div>
     </main>
   );
 }

@@ -1,108 +1,169 @@
-import Link from "next/link";
-import Image from "next/image";
-import { Metadata } from "next";
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import JsonLd from '@/components/JsonLd';
+import { breadcrumbSchema, SITE_URL } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: "About Shine and Speak — Speech Pathologist Sydney | Shine and Speak",
-  description: "Meet Shine and Speak, providing mobile & telehealth speech pathology in Sydney. Bilingual English & Mandarin. NDIS & Medicare registered.",
+  title: {
+    absolute: 'About Shine and Speak | Speech Pathologist Sydney',
+  },
+  description:
+    'Shine and Speak provides high-quality mobile and telehealth speech pathology across Sydney. Bilingual English & Mandarin. NDIS registered, Medicare provider. Book a free call.',
+  alternates: {
+    canonical: '/about',
+  },
+  openGraph: {
+    title: 'About Shine and Speak | Speech Pathologist Sydney',
+    description:
+      'Shine and Speak provides high-quality mobile and telehealth speech pathology across Sydney. Bilingual English & Mandarin. NDIS registered, Medicare provider. Book a free call.',
+    url: '/about',
+  },
 };
 
 export default function AboutPage() {
   return (
     <article>
-      {/* Breadcrumb */}
-      <div className="bg-gray-50 py-3 border-b border-gray-200 text-sm">
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: 'Home', url: SITE_URL },
+          { name: 'About', url: `${SITE_URL}/about` },
+        ])}
+      />
+
+      <nav className="bg-gray-50 py-3 border-b border-gray-200 text-sm" aria-label="Breadcrumb">
         <div className="container mx-auto px-4 text-gray-500">
-          <Link href="/" className="hover:text-brand-navy">Home</Link> &gt; 
-          <span className="text-brand-navy ml-1">About</span>
+          <Link href="/" className="hover:text-[#1B365D]">Home</Link>
+          <span className="mx-2">›</span>
+          <span className="text-[#1B365D]">About</span>
         </div>
-      </div>
+      </nav>
 
       <div className="container mx-auto px-4 py-12 md:py-20 max-w-4xl">
-        {/* H1 + Photo */}
-        <div className="flex flex-col md:flex-row gap-12 items-center mb-16">
-          <div className="w-full md:w-1/3">
-            <Image 
-              src="/shine-and-speak-logo-mark-transparent.png" 
-              alt="Shine and Speak" 
-              width={300} 
-              height={300} 
-              className="w-full h-auto bg-gray-50 rounded-2xl p-8 object-contain"
-            />
-          </div>
-          <div className="w-full md:w-2/3">
-            <h1 className="text-4xl md:text-5xl font-bold text-brand-navy mb-6">About Shine and Speak</h1>
-            <h2 className="text-2xl font-bold text-brand-navy mb-4">Our Mission</h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              We started Shine and Speak because we believe every person deserves access to high-quality, personalised speech therapy that makes a genuine difference in their everyday life — not just therapy for the sake of therapy.
-            </p>
-          </div>
+
+        {/* H1 — Privacy variant: practice-focused, no personal name */}
+        <h1 className="text-4xl md:text-5xl font-bold text-[#1B365D] mb-6">About Shine and Speak</h1>
+
+        {/* Photo placeholder */}
+        <div className="mb-12 bg-gray-100 rounded-2xl aspect-video flex items-center justify-center border-2 border-dashed border-gray-300 max-w-lg">
+          {/* REPLACE: Professional photo of therapist — warm and approachable, NOT a stock photo */}
+          <p className="text-gray-400 text-center px-8">Therapist photo coming soon</p>
         </div>
 
-        {/* Content Sections */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold text-brand-navy mb-4">Our approach</h2>
+          <h2 className="text-3xl font-bold text-[#1B365D] mb-4">Our mission</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            We started Shine and Speak because we believe every person deserves access to high-quality, personalised speech therapy that makes a genuine difference in their everyday life — not just therapy for the sake of therapy.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            Our team is dedicated to providing warm, professional, and evidence-based speech pathology services to the Inner West Sydney community and beyond via telehealth. Learn more about{' '}
+            <Link href="/mobile-speech-therapy-sydney-nsw" className="text-[#1B365D] underline">how our mobile therapy model works</Link>.
+          </p>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-[#1B365D] mb-4">Our approach</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
             We take a client-centred, strengths-based approach. We start with what you or your child can already do, what matters to you, and what goals will make the biggest difference in daily life. We tailor every session to the individual — their interests, their strengths, and their real-world needs.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            We're big believers in collaboration. We work closely with families, teachers, support coordinators, and other professionals to make sure therapy is consistent and coordinated across all environments.
+            We&apos;re big believers in collaboration. We work closely with families, teachers, support coordinators, and other professionals to make sure therapy is consistent and coordinated across all environments.
           </p>
         </section>
 
         <section className="mb-12">
-          <h2 className="text-3xl font-bold text-brand-navy mb-4">Qualifications</h2>
+          <h2 className="text-3xl font-bold text-[#1B365D] mb-4">Qualifications and credentials</h2>
           <ul className="list-disc pl-6 space-y-3 text-gray-700">
-            <li>Bachelor of Speech Pathology</li>
+            {/* PLACEHOLDER: University degree and institution — e.g. "Bachelor of Speech Pathology, University of Sydney" */}
+            <li>Bachelor of Speech Pathology — <em>details coming soon</em></li>
             <li>Certified Practising Member, Speech Pathology Australia (CPSP)</li>
-            <li>NDIS Registered Provider</li>
+            {/* PLACEHOLDER: NDIS Provider number */}
+            <li>NDIS Registered Provider — provider number coming soon</li>
             <li>Medicare Registered Provider</li>
-            <li>Evidence-based training certifications (e.g., Hanen, Sounds Write, Lidcombe Program)</li>
+            {/* PLACEHOLDER: Training certifications — e.g. Hanen, Sounds Write, Lidcombe Program, PECS */}
+            <li>Evidence-based training certifications — details coming soon</li>
+            {/* PLACEHOLDER: ABN */}
+            <li>ABN: <em>coming soon</em></li>
           </ul>
         </section>
 
         <section className="mb-12">
-          <h2 className="text-3xl font-bold text-brand-navy mb-4">Bilingual practice</h2>
+          <h2 className="text-3xl font-bold text-[#1B365D] mb-4">Bilingual practice</h2>
           <p className="text-gray-700 leading-relaxed">
-            We provide speech therapy and assessments in English and Mandarin (普通话). Assessing a child in only one language can underestimate their true abilities. We ensure assessments are accurate, therapy is accessible, and communication with your family is clear. This is especially important for families who speak Mandarin at home but need therapy delivered in an English-speaking school environment.
+            We provide speech therapy and assessments in English and Mandarin (普通话). Assessing a child in only one language can underestimate their true abilities. We ensure assessments are accurate, therapy is accessible, and communication with your family is clear — especially for families who speak Mandarin at home but need therapy delivered in an English-speaking school environment.
           </p>
         </section>
 
         <section className="mb-12">
-          <h2 className="text-3xl font-bold text-brand-navy mb-4">What we work with</h2>
+          <h2 className="text-3xl font-bold text-[#1B365D] mb-4">What we work with</h2>
           <p className="text-gray-700 leading-relaxed">
-            Our team supports children and adults with a wide range of communication needs, including <Link href="/speech-therapy-autism-sydney-nsw" className="text-brand-navy underline">autism</Link>, <Link href="/speech-therapy-adhd-sydney-nsw" className="text-brand-navy underline">ADHD</Link>, <Link href="/speech-therapy-language-delay-sydney-nsw" className="text-brand-navy underline">language delay</Link>, <Link href="/speech-therapy-speech-sounds-sydney-nsw" className="text-brand-navy underline">speech sounds</Link>, <Link href="/speech-therapy-stuttering-sydney-nsw" className="text-brand-navy underline">stuttering</Link>, and <Link href="/speech-therapy-literacy-sydney-nsw" className="text-brand-navy underline">literacy</Link>.
+            Our team supports children and adults with a wide range of communication needs, including{' '}
+            <Link href="/speech-therapy-autism-sydney-nsw" className="text-[#1B365D] underline">autism spectrum disorder</Link>,{' '}
+            <Link href="/speech-therapy-adhd-sydney-nsw" className="text-[#1B365D] underline">ADHD</Link>,{' '}
+            <Link href="/speech-therapy-language-delay-sydney-nsw" className="text-[#1B365D] underline">language delay</Link>,{' '}
+            <Link href="/speech-therapy-speech-sounds-sydney-nsw" className="text-[#1B365D] underline">speech sounds</Link>,{' '}
+            <Link href="/speech-therapy-stuttering-sydney-nsw" className="text-[#1B365D] underline">stuttering and fluency</Link>, and{' '}
+            <Link href="/speech-therapy-literacy-sydney-nsw" className="text-[#1B365D] underline">literacy and reading difficulties</Link>.
           </p>
         </section>
 
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-brand-navy mb-4">Our Story</h2>
-          <p className="text-gray-700 leading-relaxed">
-            Shine and Speak was founded on the principle that communication is a fundamental human right. Our team is dedicated to providing warm, professional, and effective speech pathology services to the Inner West Sydney community and beyond via telehealth.
-          </p>
+        {/* Video embed placeholder */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-[#1B365D] mb-4">Meet our team</h2>
+          <div className="bg-gray-100 rounded-2xl aspect-video flex items-center justify-center border-2 border-dashed border-gray-300 mb-4">
+            {/* PLACEHOLDER: Embed therapist intro video here. 1–2 minutes, filmed professionally or at high quality. Should show the therapist speaking naturally about their approach. This is a critical E-E-A-T signal — video of a real person proves authenticity to Google. */}
+            <p className="text-gray-400 text-center px-8">Video introduction coming soon</p>
+          </div>
+          <p className="text-sm text-gray-400 italic text-center">Video introduction — coming soon</p>
         </section>
 
-        {/* Social Media Links */}
-        <div className="mb-12">
-          <a href="#" className="text-brand-navy font-bold hover:text-brand-gold transition">Connect with us on LinkedIn →</a>
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-[#1B365D] mb-4">Our story</h2>
+          {/* PLACEHOLDER: Personal background and motivation — where the therapist grew up, what drew them to speech pathology, something personal/human that builds connection. 2–3 sentences. */}
+          <p className="text-gray-400 italic">Personal background coming soon.</p>
+        </section>
+
+        {/* Social media links */}
+        <div className="flex gap-6 mb-12">
+          <a
+            href="https://www.linkedin.com/company/shineandspeak" /* REPLACE: real LinkedIn URL */
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#1B365D] font-bold hover:text-[#E8A84C] transition underline"
+          >
+            LinkedIn →
+          </a>
+          <a
+            href="https://www.facebook.com/shineandspeak" /* REPLACE: real Facebook URL */
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#1B365D] font-bold hover:text-[#E8A84C] transition underline"
+          >
+            Facebook →
+          </a>
+          <a
+            href="https://www.instagram.com/shineandspeak" /* REPLACE: real Instagram URL */
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#1B365D] font-bold hover:text-[#E8A84C] transition underline"
+          >
+            Instagram →
+          </a>
         </div>
 
-        {/* Author attribution */}
-        <div className="border-t border-gray-200 pt-8 mt-12">
-          <p className="text-gray-600 italic">
-            Written by a Certified Practising Speech Pathologist.
+        <div className="border-t border-gray-200 pt-8">
+          <p className="text-gray-500 text-sm italic">
+            Written by a Certified Practising Speech Pathologist. Last reviewed March 2026.
           </p>
         </div>
       </div>
 
-      {/* CTA Band */}
-      <section className="py-16 bg-brand-gold text-white text-center">
+      <section className="py-16 bg-[#E8A84C] text-white text-center">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to help your child thrive?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Book a free discovery call to talk about your child's needs — no obligation, no pressure.
+            Book a free discovery call — no obligation, no pressure.
           </p>
-          <Link href="/book" className="inline-block bg-brand-navy text-white px-10 py-4 rounded-md font-bold text-lg hover:bg-opacity-90 transition shadow-lg">
+          <Link href="/book" className="inline-block bg-[#1B365D] text-white px-10 py-4 rounded-md font-bold text-lg hover:bg-blue-900 transition shadow-lg">
             Book a Free Discovery Call →
           </Link>
         </div>

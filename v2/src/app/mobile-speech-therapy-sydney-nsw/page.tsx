@@ -3,9 +3,16 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Mobile Speech Therapy Sydney NSW | Shine and Speak',
-  description: 'Content coming soon for Mobile Speech Therapy Sydney NSW | Shine and Speak. Mobile and telehealth speech therapy in Sydney.',
+  description:
+    'Mobile speech therapy delivered to your home, school, or community in Sydney. No clinic needed. NDIS, Medicare & private. Inner West Sydney and surrounds.',
   alternates: {
-    canonical: '/mobile-speech-therapy-sydney-nsw',
+    canonical: 'https://www.shineandspeak.com.au/mobile-speech-therapy-sydney-nsw',
+  },
+  openGraph: {
+    title: 'Mobile Speech Therapy Sydney NSW | Shine and Speak',
+    description: 'Mobile speech therapy delivered to your home, school, or community in Sydney. No clinic needed. NDIS, Medicare & private. Inner West Sydney and surrounds.',
+    url: 'https://www.shineandspeak.com.au/mobile-speech-therapy-sydney-nsw',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
 };
 

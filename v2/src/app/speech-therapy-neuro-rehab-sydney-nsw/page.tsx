@@ -2,10 +2,17 @@ import { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Neurological Rehab Speech Therapy Sydney NSW | Shine and Speak',
-  description: 'Content coming soon for Neurological Rehab Speech Therapy Sydney NSW | Shine and Speak. Mobile and telehealth speech therapy in Sydney.',
+  title: 'Neuro Rehab Speech Therapy Sydney | Shine and Speak',
+  description:
+    'Speech therapy for neurological rehabilitation in Sydney. Supporting recovery of communication after stroke or injury. Mobile & telehealth. NDIS & Medicare.',
   alternates: {
-    canonical: '/speech-therapy-neuro-rehab-sydney-nsw',
+    canonical: 'https://www.shineandspeak.com.au/speech-therapy-neuro-rehab-sydney-nsw',
+  },
+  openGraph: {
+    title: 'Neuro Rehab Speech Therapy Sydney | Shine and Speak',
+    description: 'Speech therapy for neurological rehabilitation in Sydney. Supporting recovery of communication after stroke or injury. Mobile & telehealth. NDIS & Medicare.',
+    url: 'https://www.shineandspeak.com.au/speech-therapy-neuro-rehab-sydney-nsw',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
 };
 

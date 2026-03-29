@@ -3,9 +3,16 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Speech Pathologist Hurstville NSW | Shine and Speak',
-  description: 'Content coming soon for Speech Pathologist Hurstville NSW | Shine and Speak. Mobile and telehealth speech therapy in Sydney.',
+  description:
+    'Mobile speech therapy in Hurstville, Sydney. Home visits, school-based, and telehealth. NDIS, Medicare & private. Bilingual English & Mandarin. Free call.',
   alternates: {
-    canonical: '/speech-pathologist-hurstville-nsw',
+    canonical: 'https://www.shineandspeak.com.au/speech-pathologist-hurstville-nsw',
+  },
+  openGraph: {
+    title: 'Speech Pathologist Hurstville NSW | Shine and Speak',
+    description: 'Mobile speech therapy in Hurstville, Sydney. Home visits, school-based, and telehealth. NDIS, Medicare & private. Bilingual English & Mandarin. Free call.',
+    url: 'https://www.shineandspeak.com.au/speech-pathologist-hurstville-nsw',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
 };
 

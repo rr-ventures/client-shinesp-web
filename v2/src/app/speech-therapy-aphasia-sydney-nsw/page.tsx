@@ -2,10 +2,17 @@ import { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Speech Therapy for Aphasia Sydney NSW | Shine and Speak',
-  description: 'Content coming soon for Speech Therapy for Aphasia Sydney NSW | Shine and Speak. Mobile and telehealth speech therapy in Sydney.',
+  title: 'Aphasia Speech Therapy Sydney NSW | Shine and Speak',
+  description:
+    'Speech therapy for aphasia in Sydney following stroke or brain injury. Helping adults communicate and recover. Mobile & telehealth. NDIS, Medicare & private.',
   alternates: {
-    canonical: '/speech-therapy-aphasia-sydney-nsw',
+    canonical: 'https://www.shineandspeak.com.au/speech-therapy-aphasia-sydney-nsw',
+  },
+  openGraph: {
+    title: 'Aphasia Speech Therapy Sydney NSW | Shine and Speak',
+    description: 'Speech therapy for aphasia in Sydney following stroke or brain injury. Helping adults communicate and recover. Mobile & telehealth. NDIS, Medicare & private.',
+    url: 'https://www.shineandspeak.com.au/speech-therapy-aphasia-sydney-nsw',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
 };
 

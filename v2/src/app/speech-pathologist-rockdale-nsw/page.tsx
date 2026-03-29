@@ -3,9 +3,16 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Speech Pathologist Rockdale NSW | Shine and Speak',
-  description: 'Content coming soon for Speech Pathologist Rockdale NSW | Shine and Speak. Mobile and telehealth speech therapy in Sydney.',
+  description:
+    'Mobile speech therapy in Rockdale, Sydney. Home visits, school-based, and telehealth. NDIS, Medicare & private. Bilingual English & Mandarin. Book a free call.',
   alternates: {
-    canonical: '/speech-pathologist-rockdale-nsw',
+    canonical: 'https://www.shineandspeak.com.au/speech-pathologist-rockdale-nsw',
+  },
+  openGraph: {
+    title: 'Speech Pathologist Rockdale NSW | Shine and Speak',
+    description: 'Mobile speech therapy in Rockdale, Sydney. Home visits, school-based, and telehealth. NDIS, Medicare & private. Bilingual English & Mandarin. Book a free call.',
+    url: 'https://www.shineandspeak.com.au/speech-pathologist-rockdale-nsw',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
 };
 

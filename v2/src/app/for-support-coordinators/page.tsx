@@ -2,10 +2,17 @@ import { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'For Support Coordinators | Shine and Speak',
-  description: 'Content coming soon for For Support Coordinators | Shine and Speak. Mobile and telehealth speech therapy in Sydney.',
+  title: 'For Support Coordinators | Shine and Speak Sydney',
+  description:
+    'NDIS support coordinators — refer clients to Shine and Speak for speech therapy in Sydney. Fast response, clear reporting, all NDIS management types accepted.',
   alternates: {
-    canonical: '/for-support-coordinators',
+    canonical: 'https://www.shineandspeak.com.au/for-support-coordinators',
+  },
+  openGraph: {
+    title: 'For Support Coordinators | Shine and Speak Sydney',
+    description: 'NDIS support coordinators — refer clients to Shine and Speak for speech therapy in Sydney. Fast response, clear reporting, all NDIS management types accepted.',
+    url: 'https://www.shineandspeak.com.au/for-support-coordinators',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
 };
 

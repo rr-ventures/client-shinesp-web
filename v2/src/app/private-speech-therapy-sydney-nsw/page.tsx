@@ -3,9 +3,16 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Private Speech Therapy Sydney NSW | Shine and Speak',
-  description: 'Content coming soon for Private Speech Therapy Sydney NSW | Shine and Speak. Mobile and telehealth speech therapy in Sydney.',
+  description:
+    'Private speech therapy in Sydney for children and adults. Flexible scheduling, mobile & telehealth. No referral needed for private clients. Book a free call.',
   alternates: {
-    canonical: '/private-speech-therapy-sydney-nsw',
+    canonical: 'https://www.shineandspeak.com.au/private-speech-therapy-sydney-nsw',
+  },
+  openGraph: {
+    title: 'Private Speech Therapy Sydney NSW | Shine and Speak',
+    description: 'Private speech therapy in Sydney for children and adults. Flexible scheduling, mobile & telehealth. No referral needed for private clients. Book a free call.',
+    url: 'https://www.shineandspeak.com.au/private-speech-therapy-sydney-nsw',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
 };
 

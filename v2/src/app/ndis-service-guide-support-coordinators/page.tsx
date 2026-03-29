@@ -1,58 +1,87 @@
+import { Metadata } from 'next';
 import Link from 'next/link';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'NDIS Service Guide for Support Coordinators | Shine and Speak',
-  description: 'Information for NDIS Support Coordinators. Fast response times, detailed reporting, and flexible mobile/telehealth speech therapy.',
+  description:
+    'Download the Shine and Speak NDIS service guide for support coordinators. Learn how to refer clients, what services are available, and how NDIS billing works.',
+  alternates: {
+    canonical: 'https://www.shineandspeak.com.au/ndis-service-guide-support-coordinators',
+  },
+  openGraph: {
+    title: 'NDIS Service Guide for Support Coordinators | Shine and Speak',
+    description:
+      'Download the Shine and Speak NDIS service guide for support coordinators. Learn how to refer clients, what services are available, and how NDIS billing works.',
+    url: 'https://www.shineandspeak.com.au/ndis-service-guide-support-coordinators',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+  },
 };
 
-export default function PlaceholderPage() {
+export default function NdisServiceGuidePage() {
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": "For Support Coordinators",
-            "url": "https://shineandspeak.com.au/ndis-service-guide-support-coordinators"
-          })
-        }}
-      />
+    <main className="min-h-screen py-16 bg-gray-50">
+      <div className="max-w-4xl mx-auto px-4 md:px-8">
+        <Breadcrumbs
+          items={[
+            { label: 'Home', href: '/' },
+            { label: 'For Support Coordinators', href: '/for-support-coordinators' },
+            { label: 'NDIS Service Guide', href: '/ndis-service-guide-support-coordinators' },
+          ]}
+        />
 
-      <div className="bg-accent py-4 border-b border-gray-200">
-        <div className="container-custom">
-          <nav className="text-sm text-gray-600 flex items-center gap-2">
-            <Link href="/" className="hover:text-primary">Home</Link>
-            <span>&gt;</span>
-            <span className="hover:text-primary cursor-pointer">Home</span>
-            <span>&gt;</span>
-            <span className="text-primary font-medium">For Support Coordinators</span>
-          </nav>
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-10 mt-6 text-center">
+          <h1 className="text-3xl md:text-4xl font-bold text-[#1B365D] mb-4">
+            NDIS Service Guide for Support Coordinators
+          </h1>
+          <p className="text-lg text-gray-700 mb-8 max-w-xl mx-auto leading-relaxed">
+            The Shine and Speak NDIS service guide for support coordinators is coming soon. It will include
+            referral processes, service descriptions, NDIS billing categories, and reporting standards.
+          </p>
+
+          {/* PLACEHOLDER: Add downloadable PDF service guide here */}
+          <div className="bg-gray-50 border-2 border-dashed border-[#E8A84C] rounded-xl p-8 mb-8">
+            <p className="text-gray-500 font-medium mb-2">Service guide PDF — coming soon</p>
+            {/* PLACEHOLDER: Upload service guide PDF and add download link here */}
+          </div>
+
+          <p className="text-gray-600 mb-6">
+            In the meantime, you can{' '}
+            <Link
+              href="/refer-a-client"
+              className="text-[#1B365D] underline underline-offset-2 hover:text-[#E8A84C]"
+            >
+              submit a referral directly
+            </Link>{' '}
+            or contact Shine to discuss your client&apos;s needs.
+          </p>
+
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Link
+              href="/refer-a-client"
+              className="inline-flex items-center justify-center bg-[#E8A84C] text-[#1B365D] font-bold px-7 py-3 rounded-lg hover:bg-amber-400 transition-colors"
+            >
+              Refer a Client
+            </Link>
+            <a
+              href="tel:0421608819"
+              className="inline-flex items-center justify-center border-2 border-[#1B365D] text-[#1B365D] font-semibold px-7 py-3 rounded-lg hover:bg-gray-50 transition-colors"
+            >
+              Call 0421 608 819
+            </a>
+          </div>
+        </div>
+
+        {/* Author attribution */}
+        <div className="mt-8 text-center">
+          <p className="text-xs text-gray-500">
+            Written by{' '}
+            <Link href="/about" className="text-[#1B365D] hover:text-[#E8A84C] underline underline-offset-2">
+              Shine Teoh, Certified Practising Speech Pathologist
+            </Link>
+          </p>
         </div>
       </div>
-
-      <section className="bg-accent pt-12 pb-16">
-        <div className="container-custom">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-              For Support Coordinators
-            </h1>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-padding bg-white min-h-[40vh]">
-        <div className="container-custom">
-          <div className="bg-gray-50 border border-gray-200 rounded-2xl p-12 text-center max-w-3xl mx-auto">
-            <h2 className="text-2xl font-bold text-gray-400 mb-4">Content coming soon</h2>
-            <p className="text-gray-500 mb-8">This page is currently under development.</p>
-            <Link href="/" className="inline-block bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-opacity-90 transition-all">
-              Return to Homepage
-            </Link>
-          </div>
-        </div>
-      </section>
-    </>
+    </main>
   );
 }

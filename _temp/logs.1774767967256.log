@@ -1,0 +1,185 @@
+2026-03-29T07:05:44.023028105Z [inf]  [35m[Region: asia-southeast1][0m
+2026-03-29T07:05:44.028061268Z [inf]  [35m=========================
+2026-03-29T07:05:44.028094112Z [inf]  Using Detected Dockerfile
+2026-03-29T07:05:44.028098996Z [inf]  =========================
+2026-03-29T07:05:44.028102640Z [inf]  [0m
+2026-03-29T07:05:44.028113241Z [inf]  context: qrhk-wCoF
+2026-03-29T07:05:44.220986441Z [inf]  [internal] load build definition from Dockerfile
+2026-03-29T07:05:44.221065866Z [inf]  [internal] load build definition from Dockerfile
+2026-03-29T07:05:44.221090780Z [inf]  [internal] load build definition from Dockerfile
+2026-03-29T07:05:44.232019790Z [inf]  [internal] load build definition from Dockerfile
+2026-03-29T07:05:44.233943746Z [inf]  resolve image config for docker-image://docker.io/docker/dockerfile:1
+2026-03-29T07:05:44.237806359Z [inf]  [auth] docker/dockerfile:pull token for registry-1.docker.io
+2026-03-29T07:05:44.237843167Z [inf]  [auth] docker/dockerfile:pull token for registry-1.docker.io
+2026-03-29T07:05:44.813214690Z [inf]  resolve image config for docker-image://docker.io/docker/dockerfile:1
+2026-03-29T07:05:44.813476935Z [inf]  docker-image://docker.io/docker/dockerfile:1@sha256:4a43a54dd1fedceb30ba47e76cfcf2b47304f4161c0caeac2db1c61804ea3c91
+2026-03-29T07:05:44.813512090Z [inf]  docker-image://docker.io/docker/dockerfile:1@sha256:4a43a54dd1fedceb30ba47e76cfcf2b47304f4161c0caeac2db1c61804ea3c91
+2026-03-29T07:05:44.820338450Z [inf]  docker-image://docker.io/docker/dockerfile:1@sha256:4a43a54dd1fedceb30ba47e76cfcf2b47304f4161c0caeac2db1c61804ea3c91
+2026-03-29T07:05:44.820839471Z [inf]  docker-image://docker.io/docker/dockerfile:1@sha256:4a43a54dd1fedceb30ba47e76cfcf2b47304f4161c0caeac2db1c61804ea3c91
+2026-03-29T07:05:44.937061963Z [inf]  [internal] load metadata for docker.io/library/node:20-alpine
+2026-03-29T07:05:45.245112799Z [inf]  [internal] load metadata for docker.io/library/node:20-alpine
+2026-03-29T07:05:45.246981745Z [inf]  [internal] load .dockerignore
+2026-03-29T07:05:45.247001405Z [inf]  [internal] load .dockerignore
+2026-03-29T07:05:45.247296587Z [inf]  [internal] load .dockerignore
+2026-03-29T07:05:45.259494551Z [inf]  [internal] load .dockerignore
+2026-03-29T07:05:45.440357190Z [inf]  [runner  5/19] COPY --from=builder-v0 /build/.next/static      ./v0/.next/static
+2026-03-29T07:05:45.440415197Z [inf]  [runner  4/19] COPY --from=builder-v0 /build/.next/standalone ./v0/
+2026-03-29T07:05:45.440428278Z [inf]  [builder-v0 5/5] RUN npm run build
+2026-03-29T07:05:45.440439291Z [inf]  [builder-v0 2/5] COPY v0/package*.json ./
+2026-03-29T07:05:45.440457585Z [inf]  [builder-v0 3/5] RUN npm ci
+2026-03-29T07:05:45.440469395Z [inf]  [builder-v1 2/5] COPY v1/package*.json ./
+2026-03-29T07:05:45.440486328Z [inf]  [builder-v1 4/5] COPY v1/ .
+2026-03-29T07:05:45.440494777Z [inf]  [builder-v3 1/5] WORKDIR /build
+2026-03-29T07:05:45.440503349Z [inf]  [base 2/2] RUN apk add --no-cache libc6-compat
+2026-03-29T07:05:45.440512131Z [inf]  [runner  3/19] WORKDIR /app
+2026-03-29T07:05:45.440523051Z [inf]  [runner  2/19] RUN apk add --no-cache nginx
+2026-03-29T07:05:45.440535137Z [inf]  [runner  6/19] COPY --from=builder-v0 /build/public            ./v0/public
+2026-03-29T07:05:45.440547287Z [inf]  [builder-v1 3/5] RUN npm ci
+2026-03-29T07:05:45.440558100Z [inf]  [internal] load build context
+2026-03-29T07:05:45.440566532Z [inf]  [base 1/2] FROM docker.io/library/node:20-alpine@sha256:f598378b5240225e6beab68fa9f356db1fb8efe55173e6d4d8153113bb8f333c
+2026-03-29T07:05:45.440574891Z [inf]  [builder-v0 4/5] COPY v0/ .
+2026-03-29T07:05:45.440691796Z [inf]  [builder-v3 2/5] COPY v3/package*.json ./
+2026-03-29T07:05:45.440769905Z [inf]  [runner 14/19] COPY --from=builder-v3 /build/.next/static      ./v3/.next/static
+2026-03-29T07:05:45.440781107Z [inf]  [builder-v3 4/5] COPY v3/ .
+2026-03-29T07:05:45.440792920Z [inf]  [runner 13/19] COPY --from=builder-v3 /build/.next/standalone ./v3/
+2026-03-29T07:05:45.440805605Z [inf]  [builder-v2 2/5] COPY v2/package*.json ./
+2026-03-29T07:05:45.440833374Z [inf]  [runner  9/19] COPY --from=builder-v1 /build/public            ./v1/public
+2026-03-29T07:05:45.440843388Z [inf]  [builder-v1 5/5] RUN npm run build
+2026-03-29T07:05:45.440864215Z [inf]  [builder-v3 3/5] RUN npm ci
+2026-03-29T07:05:45.440872399Z [inf]  [builder-v3 5/5] RUN npm run build
+2026-03-29T07:05:45.440882759Z [inf]  [builder-v2 3/5] RUN npm ci
+2026-03-29T07:05:45.440892319Z [inf]  [builder-v2 5/5] RUN npm run build
+2026-03-29T07:05:45.440902727Z [inf]  [runner 16/19] COPY public/ /app/root-public/
+2026-03-29T07:05:45.440912049Z [inf]  [runner  8/19] COPY --from=builder-v1 /build/.next/static      ./v1/.next/static
+2026-03-29T07:05:45.440921894Z [inf]  [runner 11/19] COPY --from=builder-v2 /build/.next/static      ./v2/.next/static
+2026-03-29T07:05:45.440986709Z [inf]  [runner 19/19] RUN chmod +x /app/start.sh
+2026-03-29T07:05:45.441012327Z [inf]  [runner 18/19] COPY start.sh /app/start.sh
+2026-03-29T07:05:45.441052967Z [inf]  [internal] load build context
+2026-03-29T07:05:45.441075720Z [inf]  [base 1/2] FROM docker.io/library/node:20-alpine@sha256:f598378b5240225e6beab68fa9f356db1fb8efe55173e6d4d8153113bb8f333c
+2026-03-29T07:05:45.459753278Z [inf]  [base 1/2] FROM docker.io/library/node:20-alpine@sha256:f598378b5240225e6beab68fa9f356db1fb8efe55173e6d4d8153113bb8f333c
+2026-03-29T07:05:45.460444446Z [inf]  [base 1/2] FROM docker.io/library/node:20-alpine@sha256:f598378b5240225e6beab68fa9f356db1fb8efe55173e6d4d8153113bb8f333c
+2026-03-29T07:05:45.460481158Z [inf]  [internal] load build context
+2026-03-29T07:05:45.460707374Z [inf]  [runner  2/19] RUN apk add --no-cache nginx
+2026-03-29T07:05:45.644695413Z [inf]  [internal] load build context
+2026-03-29T07:05:46.025396205Z [inf]  (1/3) Installing musl-obstack (1.2.3-r2)
+
+2026-03-29T07:05:46.029460388Z [inf]  (2/3) Installing libucontext (1.3.3-r0)
+
+2026-03-29T07:05:46.033548298Z [inf]  (3/3) Installing gcompat (1.1.0-r4)
+
+2026-03-29T07:05:46.03891759Z [inf]  OK: 11.0 MiB in 21 packages
+
+2026-03-29T07:05:46.086917030Z [inf]  [base 2/2] RUN apk add --no-cache libc6-compat
+2026-03-29T07:05:46.088339054Z [inf]  [builder-v3 1/5] WORKDIR /build
+2026-03-29T07:05:46.158755703Z [inf]  (1/2) Installing pcre2 (10.47-r0)
+
+2026-03-29T07:05:46.169728056Z [inf]  (2/2) Installing nginx (1.28.3-r0)
+
+2026-03-29T07:05:46.170961818Z [inf]  [builder-v3 1/5] WORKDIR /build
+2026-03-29T07:05:46.172536576Z [inf]  [builder-v1 2/5] COPY v1/package*.json ./
+2026-03-29T07:05:46.172696894Z [inf]  [builder-v2 2/5] COPY v2/package*.json ./
+2026-03-29T07:05:46.172749912Z [inf]  [builder-v0 2/5] COPY v0/package*.json ./
+2026-03-29T07:05:46.172774438Z [inf]  [builder-v3 2/5] COPY v3/package*.json ./
+2026-03-29T07:05:46.174770658Z [inf]    Executing nginx-1.28.3-r0.pre-install
+
+2026-03-29T07:05:46.203663820Z [inf]  [builder-v2 2/5] COPY v2/package*.json ./
+2026-03-29T07:05:46.205876765Z [inf]  [builder-v2 3/5] RUN npm ci
+2026-03-29T07:05:46.205929308Z [inf]  [builder-v0 2/5] COPY v0/package*.json ./
+2026-03-29T07:05:46.207843038Z [inf]  [builder-v0 3/5] RUN npm ci
+2026-03-29T07:05:46.208799902Z [inf]    Executing nginx-1.28.3-r0.post-install
+
+2026-03-29T07:05:46.210094415Z [inf]  [builder-v1 2/5] COPY v1/package*.json ./
+2026-03-29T07:05:46.212242655Z [inf]  [builder-v1 3/5] RUN npm ci
+2026-03-29T07:05:46.212542222Z [inf]  [builder-v3 2/5] COPY v3/package*.json ./
+2026-03-29T07:05:46.213012826Z [inf]  Executing busybox-1.37.0-r30.trigger
+
+2026-03-29T07:05:46.214099003Z [inf]  [builder-v3 3/5] RUN npm ci
+2026-03-29T07:05:46.219748757Z [inf]  OK: 12.8 MiB in 20 packages
+
+2026-03-29T07:05:46.296036575Z [inf]  [runner  2/19] RUN apk add --no-cache nginx
+2026-03-29T07:05:46.297463665Z [inf]  [runner  3/19] WORKDIR /app
+2026-03-29T07:05:46.339997541Z [inf]  [runner  3/19] WORKDIR /app
+2026-03-29T07:05:47.536608286Z [inf]  npm error code EUSAGE
+
+2026-03-29T07:05:47.536745889Z [inf]  npm error
+npm error `npm ci` can only install packages when your package.json and package-lock.json or npm-shrinkwrap.json are in sync. Please update your lock file with `npm install` before continuing.
+npm error
+npm error Missing: es-abstract@1.24.1 from lock file
+npm error Missing: es-abstract@1.24.1 from lock file
+npm error Missing: es-abstract@1.24.1 from lock file
+npm error
+npm error Clean install a project
+npm error
+npm error Usage:
+npm error npm ci
+npm error
+npm error Options:
+npm error [--install-strategy <hoisted|nested|shallow|linked>] [--legacy-bundling]
+npm error [--global-style] [--omit <dev|optional|peer> [--omit <dev|optional|peer> ...]]
+npm error [--include <prod|dev|optional|peer> [--include <prod|dev|optional|peer> ...]]
+npm error [--strict-peer-deps] [--foreground-scripts] [--ignore-scripts] [--no-audit]
+npm error [--no-bin-links] [--no-fund] [--dry-run]
+npm error [-w|--workspace <workspace-name> [-w|--workspace <workspace-name> ...]]
+npm error [-ws|--workspaces] [--include-workspace-root] [--install-links]
+npm error
+npm error aliases: clean-install, ic, install-clean, isntall-clean
+npm error
+npm error Run "npm help ci" for more info
+
+2026-03-29T07:05:47.540233731Z [inf]  npm notice
+npm notice New major version of npm available! 10.8.2 -> 11.12.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.1
+npm notice To update run: npm install -g npm@11.12.1
+npm notice
+
+2026-03-29T07:05:47.540560046Z [inf]  npm error A complete log of this run can be found in: /root/.npm/_logs/2026-03-29T07_05_46_479Z-debug-0.log
+
+2026-03-29T07:05:47.673299969Z [inf]  npm error code EUSAGE
+
+2026-03-29T07:05:47.673351619Z [inf]  npm error
+npm error `npm ci` can only install packages when your package.json and package-lock.json or npm-shrinkwrap.json are in sync. Please update your lock file with `npm install` before continuing.
+npm error
+npm error Missing: electron-to-chromium@1.5.328 from lock file
+npm error Missing: node-releases@2.0.36 from lock file
+npm error Missing: argparse@2.0.1 from lock file
+npm error Missing: escalade@3.2.0 from lock file
+npm error Missing: isexe@2.0.0 from lock file
+npm error
+npm error Clean install a project
+npm error
+npm error Usage:
+npm error npm ci
+npm error
+npm error Options:
+npm error [--install-strategy <hoisted|nested|shallow|linked>] [--legacy-bundling]
+npm error [--global-style] [--omit <dev|optional|peer> [--omit <dev|optional|peer> ...]]
+npm error [--include <prod|dev|optional|peer> [--include <prod|dev|optional|peer> ...]]
+npm error [--strict-peer-deps] [--foreground-scripts] [--ignore-scripts] [--no-audit]
+npm error [--no-bin-links] [--no-fund] [--dry-run]
+npm error [-w|--workspace <workspace-name> [-w|--workspace <workspace-name> ...]]
+npm error [-ws|--workspaces] [--include-workspace-root] [--install-links]
+npm error
+npm error aliases: clean-install, ic, install-clean, isntall-clean
+npm error
+npm error Run "npm help ci" for more info
+
+2026-03-29T07:05:47.675694586Z [inf]  npm notice
+npm notice New major version of npm available! 10.8.2 -> 11.12.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.1
+npm notice To update run: npm install -g npm@11.12.1
+npm notice
+
+2026-03-29T07:05:47.675891961Z [inf]  npm error A complete log of this run can be found in: /root/.npm/_logs/2026-03-29T07_05_46_479Z-debug-0.log
+
+2026-03-29T07:05:47.891246810Z [err]  [builder-v3 3/5] RUN npm ci
+2026-03-29T07:05:47.892246927Z [err]  [builder-v0 3/5] RUN npm ci
+2026-03-29T07:05:47.946477030Z [err]  [builder-v2 3/5] RUN npm ci
+2026-03-29T07:05:47.949896952Z [err]  [builder-v1 3/5] RUN npm ci
+2026-03-29T07:05:47.979211200Z [err]  Dockerfile:43
+2026-03-29T07:05:47.979263193Z [err]  -------------------
+2026-03-29T07:05:47.979273016Z [err]  41 |     WORKDIR /build
+2026-03-29T07:05:47.979279127Z [err]  42 |     COPY v3/package*.json ./
+2026-03-29T07:05:47.979294338Z [err]  44 |     COPY v3/ .
+2026-03-29T07:05:47.979304607Z [err]  45 |     RUN npm run build
+2026-03-29T07:05:47.979313634Z [err]  -------------------
+2026-03-29T07:05:47.979320511Z [err]  ERROR: failed to build: failed to solve: process "/bin/sh -c npm ci" did not complete successfully: exit code: 1

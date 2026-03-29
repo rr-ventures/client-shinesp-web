@@ -2,10 +2,17 @@ import { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'How It Works | Shine and Speak',
-  description: 'Content coming soon for How It Works | Shine and Speak. Mobile and telehealth speech therapy in Sydney.',
+  title: 'How Speech Therapy Works | Shine and Speak Sydney',
+  description:
+    'Learn how speech therapy works at Shine and Speak. From free discovery call through assessment to therapy plan. Mobile & telehealth in Inner West Sydney.',
   alternates: {
-    canonical: '/how-it-works',
+    canonical: 'https://www.shineandspeak.com.au/how-it-works',
+  },
+  openGraph: {
+    title: 'How Speech Therapy Works | Shine and Speak Sydney',
+    description: 'Learn how speech therapy works at Shine and Speak. From your free discovery call through assessment to your personalised therapy plan. Mobile & telehealth Sydney.',
+    url: 'https://www.shineandspeak.com.au/how-it-works',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
 };
 

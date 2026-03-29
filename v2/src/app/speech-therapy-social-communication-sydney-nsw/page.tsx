@@ -2,10 +2,17 @@ import { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Social Communication Speech Therapy Sydney NSW | Shine and Speak',
-  description: 'Content coming soon for Social Communication Speech Therapy Sydney NSW | Shine and Speak. Mobile and telehealth speech therapy in Sydney.',
+  title: 'Social Communication Speech Therapy Sydney | Shine and Speak',
+  description:
+    'Speech therapy for social communication difficulties in Sydney. Supporting connection and everyday interaction. Mobile, telehealth. NDIS, Medicare & private.',
   alternates: {
-    canonical: '/speech-therapy-social-communication-sydney-nsw',
+    canonical: 'https://www.shineandspeak.com.au/speech-therapy-social-communication-sydney-nsw',
+  },
+  openGraph: {
+    title: 'Social Communication Speech Therapy Sydney | Shine and Speak',
+    description: 'Speech therapy for social communication difficulties in Sydney. Supporting connection and everyday interaction. Mobile, telehealth. NDIS, Medicare & private.',
+    url: 'https://www.shineandspeak.com.au/speech-therapy-social-communication-sydney-nsw',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
 };
 

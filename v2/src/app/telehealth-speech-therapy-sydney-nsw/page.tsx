@@ -3,9 +3,16 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Telehealth Speech Therapy Australia | Shine and Speak',
-  description: 'Content coming soon for Telehealth Speech Therapy Australia | Shine and Speak. Mobile and telehealth speech therapy in Sydney.',
+  description:
+    'Online speech therapy via telehealth for children and adults anywhere in Australia. Flexible, evidence-based sessions. NDIS, Medicare & private pay accepted.',
   alternates: {
-    canonical: '/telehealth-speech-therapy-sydney-nsw',
+    canonical: 'https://www.shineandspeak.com.au/telehealth-speech-therapy-sydney-nsw',
+  },
+  openGraph: {
+    title: 'Telehealth Speech Therapy Australia | Shine and Speak',
+    description: 'Online speech therapy via telehealth for children and adults anywhere in Australia. Flexible, evidence-based sessions. NDIS, Medicare & private pay accepted.',
+    url: 'https://www.shineandspeak.com.au/telehealth-speech-therapy-sydney-nsw',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
 };
 

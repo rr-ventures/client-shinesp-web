@@ -2,10 +2,17 @@ import { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Speech Therapy for Stuttering Sydney NSW | Shine and Speak',
-  description: 'Content coming soon for Speech Therapy for Stuttering Sydney NSW | Shine and Speak. Mobile and telehealth speech therapy in Sydney.',
+  title: 'Stuttering Speech Therapy Sydney NSW | Shine and Speak',
+  description:
+    'Evidence-based stuttering treatment in Sydney for children and adults. Lidcombe Program trained. Mobile & telehealth. NDIS, Medicare & private pay accepted.',
   alternates: {
-    canonical: '/speech-therapy-stuttering-sydney-nsw',
+    canonical: 'https://www.shineandspeak.com.au/speech-therapy-stuttering-sydney-nsw',
+  },
+  openGraph: {
+    title: 'Stuttering Speech Therapy Sydney NSW | Shine and Speak',
+    description: 'Evidence-based stuttering treatment in Sydney for children and adults. Lidcombe Program trained. Mobile & telehealth. NDIS, Medicare & private pay accepted.',
+    url: 'https://www.shineandspeak.com.au/speech-therapy-stuttering-sydney-nsw',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
 };
 

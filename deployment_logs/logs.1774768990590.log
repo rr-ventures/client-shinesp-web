@@ -1,0 +1,616 @@
+2026-03-29T07:20:44.327204297Z [inf]  
+2026-03-29T07:20:47.802800665Z [inf]  [35m[Region: asia-southeast1][0m
+2026-03-29T07:20:47.807982343Z [inf]  [35m=========================
+2026-03-29T07:20:47.808013563Z [inf]  Using Detected Dockerfile
+2026-03-29T07:20:47.808018560Z [inf]  =========================
+2026-03-29T07:20:47.808022466Z [inf]  [0m
+2026-03-29T07:20:47.808037834Z [inf]  context: gjg0-i09b
+2026-03-29T07:20:48.020863060Z [inf]  [internal] load build definition from Dockerfile
+2026-03-29T07:20:48.020945664Z [inf]  [internal] load build definition from Dockerfile
+2026-03-29T07:20:48.020966970Z [inf]  [internal] load build definition from Dockerfile
+2026-03-29T07:20:48.034222599Z [inf]  [internal] load build definition from Dockerfile
+2026-03-29T07:20:48.036061342Z [inf]  resolve image config for docker-image://docker.io/docker/dockerfile:1
+2026-03-29T07:20:48.276937985Z [inf]  [auth] docker/dockerfile:pull token for registry-1.docker.io
+2026-03-29T07:20:48.277038284Z [inf]  [auth] docker/dockerfile:pull token for registry-1.docker.io
+2026-03-29T07:20:48.915507827Z [inf]  resolve image config for docker-image://docker.io/docker/dockerfile:1
+2026-03-29T07:20:48.915609773Z [inf]  docker-image://docker.io/docker/dockerfile:1@sha256:4a43a54dd1fedceb30ba47e76cfcf2b47304f4161c0caeac2db1c61804ea3c91
+2026-03-29T07:20:48.915627709Z [inf]  docker-image://docker.io/docker/dockerfile:1@sha256:4a43a54dd1fedceb30ba47e76cfcf2b47304f4161c0caeac2db1c61804ea3c91
+2026-03-29T07:20:48.998045820Z [inf]  docker-image://docker.io/docker/dockerfile:1@sha256:4a43a54dd1fedceb30ba47e76cfcf2b47304f4161c0caeac2db1c61804ea3c91
+2026-03-29T07:20:48.998150196Z [inf]  docker-image://docker.io/docker/dockerfile:1@sha256:4a43a54dd1fedceb30ba47e76cfcf2b47304f4161c0caeac2db1c61804ea3c91
+2026-03-29T07:20:49.158499883Z [inf]  [internal] load metadata for docker.io/library/node:20-alpine
+2026-03-29T07:20:49.162520008Z [inf]  [auth] library/node:pull token for registry-1.docker.io
+2026-03-29T07:20:49.162593927Z [inf]  [auth] library/node:pull token for registry-1.docker.io
+2026-03-29T07:20:49.719785036Z [inf]  [internal] load metadata for docker.io/library/node:20-alpine
+2026-03-29T07:20:49.722509029Z [inf]  [internal] load .dockerignore
+2026-03-29T07:20:49.722574054Z [inf]  [internal] load .dockerignore
+2026-03-29T07:20:49.722594151Z [inf]  [internal] load .dockerignore
+2026-03-29T07:20:49.738108047Z [inf]  [internal] load .dockerignore
+2026-03-29T07:20:49.808152649Z [inf]  [runner  5/19] COPY --from=builder-v0 /build/.next/static      ./v0/.next/static
+2026-03-29T07:20:49.808215003Z [inf]  [runner  4/19] COPY --from=builder-v0 /build/.next/standalone ./v0/
+2026-03-29T07:20:49.808227642Z [inf]  [builder-v0 3/5] RUN npm install
+2026-03-29T07:20:49.808240045Z [inf]  [builder-v0 2/5] COPY v0/package.json ./
+2026-03-29T07:20:49.808248673Z [inf]  [builder-v1 5/5] RUN npm run build
+2026-03-29T07:20:49.808261143Z [inf]  [builder-v1 2/5] COPY v1/package.json ./
+2026-03-29T07:20:49.808279924Z [inf]  [builder-v1 4/5] COPY v1/ .
+2026-03-29T07:20:49.808296693Z [inf]  [builder-v3 1/5] WORKDIR /build
+2026-03-29T07:20:49.808312068Z [inf]  [base 2/2] RUN apk add --no-cache libc6-compat
+2026-03-29T07:20:49.808324433Z [inf]  [runner  3/19] WORKDIR /app
+2026-03-29T07:20:49.808334929Z [inf]  [runner  2/19] RUN apk add --no-cache nginx
+2026-03-29T07:20:49.808350854Z [inf]  [runner  6/19] COPY --from=builder-v0 /build/public            ./v0/public
+2026-03-29T07:20:49.808363571Z [inf]  [builder-v1 3/5] RUN npm install
+2026-03-29T07:20:49.808376332Z [inf]  [internal] load build context
+2026-03-29T07:20:49.808387880Z [inf]  [builder-v0 5/5] RUN npm run build
+2026-03-29T07:20:49.808402743Z [inf]  [base 1/2] FROM docker.io/library/node:20-alpine@sha256:f598378b5240225e6beab68fa9f356db1fb8efe55173e6d4d8153113bb8f333c
+2026-03-29T07:20:49.808417428Z [inf]  [builder-v0 4/5] COPY v0/ .
+2026-03-29T07:20:49.808506581Z [inf]  [runner 11/19] COPY --from=builder-v2 /build/.next/static      ./v2/.next/static
+2026-03-29T07:20:49.808515671Z [inf]  [builder-v3 3/5] RUN npm install
+2026-03-29T07:20:49.808522533Z [inf]  [builder-v2 3/5] RUN npm install
+2026-03-29T07:20:49.808529691Z [inf]  [runner 15/19] COPY --from=builder-v3 /build/public            ./v3/public
+2026-03-29T07:20:49.808537332Z [inf]  [builder-v3 4/5] COPY v3/ .
+2026-03-29T07:20:49.808546756Z [inf]  [builder-v2 2/5] COPY v2/package.json ./
+2026-03-29T07:20:49.808554075Z [inf]  [runner 16/19] COPY public/ /app/root-public/
+2026-03-29T07:20:49.808566810Z [inf]  [runner  8/19] COPY --from=builder-v1 /build/.next/static      ./v1/.next/static
+2026-03-29T07:20:49.808577502Z [inf]  [runner 19/19] RUN chmod +x /app/start.sh
+2026-03-29T07:20:49.808588300Z [inf]  [builder-v2 4/5] COPY v2/ .
+2026-03-29T07:20:49.808602319Z [inf]  [runner 14/19] COPY --from=builder-v3 /build/.next/static      ./v3/.next/static
+2026-03-29T07:20:49.808613563Z [inf]  [builder-v3 5/5] RUN npm run build
+2026-03-29T07:20:49.808625558Z [inf]  [runner 10/19] COPY --from=builder-v2 /build/.next/standalone ./v2/
+2026-03-29T07:20:49.808636504Z [inf]  [builder-v2 5/5] RUN npm run build
+2026-03-29T07:20:49.808645840Z [inf]  [runner 13/19] COPY --from=builder-v3 /build/.next/standalone ./v3/
+2026-03-29T07:20:49.808654395Z [inf]  [runner 17/19] COPY nginx.conf.template /etc/nginx/nginx.conf.template
+2026-03-29T07:20:49.808668042Z [inf]  [runner  9/19] COPY --from=builder-v1 /build/public            ./v1/public
+2026-03-29T07:20:49.808679839Z [inf]  [runner 12/19] COPY --from=builder-v2 /build/public            ./v2/public
+2026-03-29T07:20:49.808691452Z [inf]  [runner 18/19] COPY start.sh /app/start.sh
+2026-03-29T07:20:49.808709406Z [inf]  [runner  7/19] COPY --from=builder-v1 /build/.next/standalone ./v1/
+2026-03-29T07:20:49.808721712Z [inf]  [builder-v3 2/5] COPY v3/package.json ./
+2026-03-29T07:20:49.808743871Z [inf]  [internal] load build context
+2026-03-29T07:20:49.808755976Z [inf]  [base 1/2] FROM docker.io/library/node:20-alpine@sha256:f598378b5240225e6beab68fa9f356db1fb8efe55173e6d4d8153113bb8f333c
+2026-03-29T07:20:49.818500444Z [inf]  [base 1/2] FROM docker.io/library/node:20-alpine@sha256:f598378b5240225e6beab68fa9f356db1fb8efe55173e6d4d8153113bb8f333c
+2026-03-29T07:20:49.818574703Z [inf]  [internal] load build context
+2026-03-29T07:20:49.818610366Z [inf]  [runner  2/19] RUN apk add --no-cache nginx
+2026-03-29T07:20:49.818620799Z [inf]  [base 2/2] RUN apk add --no-cache libc6-compat
+2026-03-29T07:20:50.058679955Z [inf]  [internal] load build context
+2026-03-29T07:20:50.6171512Z [inf]  (1/2) Installing pcre2 (10.47-r0)
+
+2026-03-29T07:20:50.628863085Z [inf]  (2/2) Installing nginx (1.28.3-r0)
+
+2026-03-29T07:20:50.633209223Z [inf]    Executing nginx-1.28.3-r0.pre-install
+
+2026-03-29T07:20:50.64940746Z [inf]  (1/3) Installing musl-obstack (1.2.3-r2)
+
+2026-03-29T07:20:50.652768916Z [inf]  (2/3) Installing libucontext (1.3.3-r0)
+
+2026-03-29T07:20:50.656036672Z [inf]  (3/3) Installing gcompat (1.1.0-r4)
+
+2026-03-29T07:20:50.661250401Z [inf]  OK: 11.0 MiB in 21 packages
+
+2026-03-29T07:20:50.669619785Z [inf]    Executing nginx-1.28.3-r0.post-install
+
+2026-03-29T07:20:50.675881472Z [inf]  Executing busybox-1.37.0-r30.trigger
+
+2026-03-29T07:20:50.684438292Z [inf]  OK: 12.8 MiB in 20 packages
+
+2026-03-29T07:20:50.894030142Z [inf]  [runner  2/19] RUN apk add --no-cache nginx
+2026-03-29T07:20:50.897197359Z [inf]  [base 2/2] RUN apk add --no-cache libc6-compat
+2026-03-29T07:20:50.898313387Z [inf]  [runner  3/19] WORKDIR /app
+2026-03-29T07:20:50.899357950Z [inf]  [builder-v3 1/5] WORKDIR /build
+2026-03-29T07:20:50.974104946Z [inf]  [runner  3/19] WORKDIR /app
+2026-03-29T07:20:51.033730985Z [inf]  [builder-v3 1/5] WORKDIR /build
+2026-03-29T07:20:51.036350704Z [inf]  [builder-v2 2/5] COPY v2/package.json ./
+2026-03-29T07:20:51.036410522Z [inf]  [builder-v0 2/5] COPY v0/package.json ./
+2026-03-29T07:20:51.036421817Z [inf]  [builder-v1 2/5] COPY v1/package.json ./
+2026-03-29T07:20:51.036437330Z [inf]  [builder-v3 2/5] COPY v3/package.json ./
+2026-03-29T07:20:51.085092854Z [inf]  [builder-v0 2/5] COPY v0/package.json ./
+2026-03-29T07:20:51.089547283Z [inf]  [builder-v2 2/5] COPY v2/package.json ./
+2026-03-29T07:20:51.090987524Z [inf]  [builder-v0 3/5] RUN npm install
+2026-03-29T07:20:51.091842692Z [inf]  [builder-v1 2/5] COPY v1/package.json ./
+2026-03-29T07:20:51.094966556Z [inf]  [builder-v2 3/5] RUN npm install
+2026-03-29T07:20:51.096901777Z [inf]  [builder-v3 2/5] COPY v3/package.json ./
+2026-03-29T07:20:51.098921427Z [inf]  [builder-v1 3/5] RUN npm install
+2026-03-29T07:20:51.100670897Z [inf]  [builder-v3 3/5] RUN npm install
+2026-03-29T07:21:47.107573197Z [inf]  [35m[Region: asia-southeast1][0m
+2026-03-29T07:21:47.112327690Z [inf]  [35m=========================
+2026-03-29T07:21:47.112355394Z [inf]  Using Detected Dockerfile
+2026-03-29T07:21:47.112360372Z [inf]  =========================
+2026-03-29T07:21:47.112364330Z [inf]  [0m
+2026-03-29T07:21:47.112379705Z [inf]  context: vkpg-wu_n
+2026-03-29T07:21:47.302398781Z [inf]  [internal] load build definition from Dockerfile
+2026-03-29T07:21:47.302473962Z [inf]  [internal] load build definition from Dockerfile
+2026-03-29T07:21:47.302502350Z [inf]  [internal] load build definition from Dockerfile
+2026-03-29T07:21:47.313691592Z [inf]  [internal] load build definition from Dockerfile
+2026-03-29T07:21:47.315512368Z [inf]  resolve image config for docker-image://docker.io/docker/dockerfile:1
+2026-03-29T07:21:47.559770257Z [inf]  [auth] docker/dockerfile:pull token for registry-1.docker.io
+2026-03-29T07:21:47.559828227Z [inf]  [auth] docker/dockerfile:pull token for registry-1.docker.io
+2026-03-29T07:21:49.285254149Z [inf]  resolve image config for docker-image://docker.io/docker/dockerfile:1
+2026-03-29T07:21:49.285320554Z [inf]  docker-image://docker.io/docker/dockerfile:1@sha256:4a43a54dd1fedceb30ba47e76cfcf2b47304f4161c0caeac2db1c61804ea3c91
+2026-03-29T07:21:49.285336874Z [inf]  docker-image://docker.io/docker/dockerfile:1@sha256:4a43a54dd1fedceb30ba47e76cfcf2b47304f4161c0caeac2db1c61804ea3c91
+2026-03-29T07:21:49.294128985Z [inf]  docker-image://docker.io/docker/dockerfile:1@sha256:4a43a54dd1fedceb30ba47e76cfcf2b47304f4161c0caeac2db1c61804ea3c91
+2026-03-29T07:21:49.294209973Z [inf]  docker-image://docker.io/docker/dockerfile:1@sha256:4a43a54dd1fedceb30ba47e76cfcf2b47304f4161c0caeac2db1c61804ea3c91
+2026-03-29T07:21:49.294236985Z [inf]  docker-image://docker.io/docker/dockerfile:1@sha256:4a43a54dd1fedceb30ba47e76cfcf2b47304f4161c0caeac2db1c61804ea3c91
+2026-03-29T07:21:49.303057005Z [inf]  docker-image://docker.io/docker/dockerfile:1@sha256:4a43a54dd1fedceb30ba47e76cfcf2b47304f4161c0caeac2db1c61804ea3c91
+2026-03-29T07:21:49.306704314Z [inf]  docker-image://docker.io/docker/dockerfile:1@sha256:4a43a54dd1fedceb30ba47e76cfcf2b47304f4161c0caeac2db1c61804ea3c91
+2026-03-29T07:21:49.680631667Z [inf]  docker-image://docker.io/docker/dockerfile:1@sha256:4a43a54dd1fedceb30ba47e76cfcf2b47304f4161c0caeac2db1c61804ea3c91
+2026-03-29T07:21:49.927045872Z [inf]  [internal] load metadata for docker.io/library/node:20-alpine
+2026-03-29T07:21:50.169744386Z [inf]  [auth] library/node:pull token for registry-1.docker.io
+2026-03-29T07:21:50.169804228Z [inf]  [auth] library/node:pull token for registry-1.docker.io
+2026-03-29T07:21:51.652557802Z [inf]  [internal] load metadata for docker.io/library/node:20-alpine
+2026-03-29T07:21:51.654811175Z [inf]  [internal] load .dockerignore
+2026-03-29T07:21:51.654882664Z [inf]  [internal] load .dockerignore
+2026-03-29T07:21:51.655056239Z [inf]  [internal] load .dockerignore
+2026-03-29T07:21:51.675987521Z [inf]  [internal] load .dockerignore
+2026-03-29T07:21:52.677993872Z [inf]  [builder-v0 2/5] COPY v0/package.json ./
+2026-03-29T07:21:52.678077457Z [inf]  [base 1/2] FROM docker.io/library/node:20-alpine@sha256:f598378b5240225e6beab68fa9f356db1fb8efe55173e6d4d8153113bb8f333c
+2026-03-29T07:21:52.678096539Z [inf]  [builder-v3 1/5] WORKDIR /build
+2026-03-29T07:21:52.678110383Z [inf]  [builder-v1 5/5] RUN npm run build
+2026-03-29T07:21:52.678121957Z [inf]  [runner  6/19] COPY --from=builder-v0 /build/public            ./v0/public
+2026-03-29T07:21:52.678134192Z [inf]  [base 2/2] RUN apk add --no-cache libc6-compat
+2026-03-29T07:21:52.678146000Z [inf]  [runner  7/19] COPY --from=builder-v1 /build/.next/standalone ./v1/
+2026-03-29T07:21:52.678157244Z [inf]  [runner  2/19] RUN apk add --no-cache nginx
+2026-03-29T07:21:52.678168130Z [inf]  [builder-v0 5/5] RUN npm run build
+2026-03-29T07:21:52.678182074Z [inf]  [builder-v1 4/5] COPY v1/ .
+2026-03-29T07:21:52.678203157Z [inf]  [builder-v1 3/5] RUN npm install
+2026-03-29T07:21:52.678215505Z [inf]  [builder-v0 3/5] RUN npm install
+2026-03-29T07:21:52.678225923Z [inf]  [internal] load build context
+2026-03-29T07:21:52.678240640Z [inf]  [builder-v1 2/5] COPY v1/package.json ./
+2026-03-29T07:21:52.678253803Z [inf]  [builder-v0 4/5] COPY v0/ .
+2026-03-29T07:21:52.678269706Z [inf]  [runner  8/19] COPY --from=builder-v1 /build/.next/static      ./v1/.next/static
+2026-03-29T07:21:52.678281155Z [inf]  [runner  3/19] WORKDIR /app
+2026-03-29T07:21:52.678292693Z [inf]  [runner  5/19] COPY --from=builder-v0 /build/.next/static      ./v0/.next/static
+2026-03-29T07:21:52.678304041Z [inf]  [runner  9/19] COPY --from=builder-v1 /build/public            ./v1/public
+2026-03-29T07:21:52.678320649Z [inf]  [runner  4/19] COPY --from=builder-v0 /build/.next/standalone ./v0/
+2026-03-29T07:21:52.678411881Z [inf]  [runner 13/19] COPY --from=builder-v3 /build/.next/standalone ./v3/
+2026-03-29T07:21:52.678449476Z [inf]  [builder-v3 5/5] RUN npm run build
+2026-03-29T07:21:52.678465413Z [inf]  [builder-v3 4/5] COPY v3/ .
+2026-03-29T07:21:52.678482628Z [inf]  [builder-v3 3/5] RUN npm install
+2026-03-29T07:21:52.678495874Z [inf]  [builder-v3 2/5] COPY v3/package.json ./
+2026-03-29T07:21:52.678508555Z [inf]  [runner 15/19] COPY --from=builder-v3 /build/public            ./v3/public
+2026-03-29T07:21:52.678519582Z [inf]  [runner 11/19] COPY --from=builder-v2 /build/.next/static      ./v2/.next/static
+2026-03-29T07:21:52.678530809Z [inf]  [runner 10/19] COPY --from=builder-v2 /build/.next/standalone ./v2/
+2026-03-29T07:21:52.678541575Z [inf]  [builder-v2 5/5] RUN npm run build
+2026-03-29T07:21:52.678552666Z [inf]  [builder-v2 4/5] COPY v2/ .
+2026-03-29T07:21:52.678562554Z [inf]  [builder-v2 3/5] RUN npm install
+2026-03-29T07:21:52.678573264Z [inf]  [runner 14/19] COPY --from=builder-v3 /build/.next/static      ./v3/.next/static
+2026-03-29T07:21:52.678595144Z [inf]  [builder-v2 2/5] COPY v2/package.json ./
+2026-03-29T07:21:52.678709245Z [inf]  [runner 12/19] COPY --from=builder-v2 /build/public            ./v2/public
+2026-03-29T07:21:52.678779940Z [inf]  [runner 19/19] RUN chmod +x /app/start.sh
+2026-03-29T07:21:52.678806374Z [inf]  [runner 18/19] COPY start.sh /app/start.sh
+2026-03-29T07:21:52.678819970Z [inf]  [runner 17/19] COPY nginx.conf.template /etc/nginx/nginx.conf.template
+2026-03-29T07:21:52.678831829Z [inf]  [runner 16/19] COPY public/ /app/root-public/
+2026-03-29T07:21:52.678860688Z [inf]  [internal] load build context
+2026-03-29T07:21:52.678907630Z [inf]  [base 1/2] FROM docker.io/library/node:20-alpine@sha256:f598378b5240225e6beab68fa9f356db1fb8efe55173e6d4d8153113bb8f333c
+2026-03-29T07:21:52.687046840Z [inf]  [base 1/2] FROM docker.io/library/node:20-alpine@sha256:f598378b5240225e6beab68fa9f356db1fb8efe55173e6d4d8153113bb8f333c
+2026-03-29T07:21:52.687245466Z [inf]  [base 1/2] FROM docker.io/library/node:20-alpine@sha256:f598378b5240225e6beab68fa9f356db1fb8efe55173e6d4d8153113bb8f333c
+2026-03-29T07:21:52.687292757Z [inf]  [base 1/2] FROM docker.io/library/node:20-alpine@sha256:f598378b5240225e6beab68fa9f356db1fb8efe55173e6d4d8153113bb8f333c
+2026-03-29T07:21:52.687643786Z [inf]  [base 1/2] FROM docker.io/library/node:20-alpine@sha256:f598378b5240225e6beab68fa9f356db1fb8efe55173e6d4d8153113bb8f333c
+2026-03-29T07:21:52.687789150Z [inf]  [internal] load build context
+2026-03-29T07:21:52.737026717Z [inf]  [base 1/2] FROM docker.io/library/node:20-alpine@sha256:f598378b5240225e6beab68fa9f356db1fb8efe55173e6d4d8153113bb8f333c
+2026-03-29T07:21:52.739150561Z [inf]  [base 1/2] FROM docker.io/library/node:20-alpine@sha256:f598378b5240225e6beab68fa9f356db1fb8efe55173e6d4d8153113bb8f333c
+2026-03-29T07:21:52.920718310Z [inf]  [internal] load build context
+2026-03-29T07:21:53.933357568Z [inf]  [base 1/2] FROM docker.io/library/node:20-alpine@sha256:f598378b5240225e6beab68fa9f356db1fb8efe55173e6d4d8153113bb8f333c
+2026-03-29T07:21:56.129662035Z [inf]  [runner  2/19] RUN apk add --no-cache nginx
+2026-03-29T07:21:56.130183903Z [inf]  [base 2/2] RUN apk add --no-cache libc6-compat
+2026-03-29T07:21:57.118506447Z [inf]  (1/2) Installing pcre2 (10.47-r0)
+
+2026-03-29T07:21:57.134120966Z [inf]  (2/2) Installing nginx (1.28.3-r0)
+
+2026-03-29T07:21:57.13886389Z [inf]    Executing nginx-1.28.3-r0.pre-install
+
+2026-03-29T07:21:57.292174895Z [inf]  (1/3) Installing musl-obstack (1.2.3-r2)
+
+2026-03-29T07:21:57.296099375Z [inf]  (2/3) Installing libucontext (1.3.3-r0)
+
+2026-03-29T07:21:57.299140893Z [inf]  (3/3) Installing gcompat (1.1.0-r4)
+
+2026-03-29T07:21:57.304394936Z [inf]  OK: 11.0 MiB in 21 packages
+
+2026-03-29T07:21:57.307444692Z [inf]    Executing nginx-1.28.3-r0.post-install
+
+2026-03-29T07:21:57.315230282Z [inf]  Executing busybox-1.37.0-r30.trigger
+
+2026-03-29T07:21:57.32709984Z [inf]  OK: 12.8 MiB in 20 packages
+
+2026-03-29T07:21:57.576638798Z [inf]  [base 2/2] RUN apk add --no-cache libc6-compat
+2026-03-29T07:21:57.578578641Z [inf]  [builder-v3 1/5] WORKDIR /build
+2026-03-29T07:21:57.582633144Z [inf]  [runner  2/19] RUN apk add --no-cache nginx
+2026-03-29T07:21:57.584494870Z [inf]  [runner  3/19] WORKDIR /app
+2026-03-29T07:21:57.623741797Z [inf]  [builder-v3 1/5] WORKDIR /build
+2026-03-29T07:21:57.626030779Z [inf]  [runner  3/19] WORKDIR /app
+2026-03-29T07:21:57.628253808Z [inf]  [builder-v0 2/5] COPY v0/package.json ./
+2026-03-29T07:21:57.628309832Z [inf]  [builder-v2 2/5] COPY v2/package.json ./
+2026-03-29T07:21:57.628352623Z [inf]  [builder-v3 2/5] COPY v3/package.json ./
+2026-03-29T07:21:57.628406978Z [inf]  [builder-v1 2/5] COPY v1/package.json ./
+2026-03-29T07:21:57.691030622Z [inf]  [builder-v0 2/5] COPY v0/package.json ./
+2026-03-29T07:21:57.693233466Z [inf]  [builder-v2 2/5] COPY v2/package.json ./
+2026-03-29T07:21:57.696328675Z [inf]  [builder-v0 3/5] RUN npm install
+2026-03-29T07:21:57.697245437Z [inf]  [builder-v1 2/5] COPY v1/package.json ./
+2026-03-29T07:21:57.699392859Z [inf]  [builder-v2 3/5] RUN npm install
+2026-03-29T07:21:57.702119768Z [inf]  [builder-v3 2/5] COPY v3/package.json ./
+2026-03-29T07:21:57.703747194Z [inf]  [builder-v1 3/5] RUN npm install
+2026-03-29T07:21:57.706764385Z [inf]  [builder-v3 3/5] RUN npm install
+2026-03-29T07:22:24.364763662Z [inf]  
+added 360 packages, and audited 361 packages in 26s
+
+2026-03-29T07:22:24.364787424Z [inf]  
+
+2026-03-29T07:22:24.364798948Z [inf]  144 packages are looking for funding
+
+2026-03-29T07:22:24.364829585Z [inf]    run `npm fund` for details
+
+2026-03-29T07:22:24.366507336Z [inf]  
+found 0 vulnerabilities
+
+2026-03-29T07:22:24.36806896Z [inf]  npm notice
+npm notice New major version of npm available! 10.8.2 -> 11.12.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.1
+npm notice To update run: npm install -g npm@11.12.1
+npm notice
+
+2026-03-29T07:22:24.534023852Z [inf]  
+added 360 packages, and audited 361 packages in 27s
+
+144 packages are looking for funding
+
+2026-03-29T07:22:24.53404445Z [inf]    run `npm fund` for details
+
+2026-03-29T07:22:24.535843435Z [inf]  
+found 0 vulnerabilities
+
+2026-03-29T07:22:24.537286067Z [inf]  npm notice
+npm notice New major version of npm available! 10.8.2 -> 11.12.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.1
+npm notice To update run: npm install -g npm@11.12.1
+npm notice
+
+2026-03-29T07:22:24.708714373Z [inf]  
+added 360 packages, and audited 361 packages in 27s
+
+
+2026-03-29T07:22:24.708741944Z [inf]  144 packages are looking for funding
+  run `npm fund` for details
+
+2026-03-29T07:22:24.710314003Z [inf]  
+found 0 vulnerabilities
+
+2026-03-29T07:22:24.711928279Z [inf]  npm notice
+npm notice New major version of npm available! 10.8.2 -> 11.12.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.1
+npm notice To update run: npm install -g npm@11.12.1
+npm notice
+
+2026-03-29T07:22:24.993716653Z [inf]  
+added 361 packages, and audited 362 packages in 27s
+
+2026-03-29T07:22:24.993795973Z [inf]  
+
+2026-03-29T07:22:24.993843621Z [inf]  144 packages are looking for funding
+  run `npm fund` for details
+
+2026-03-29T07:22:24.995313838Z [inf]  
+found 0 vulnerabilities
+
+2026-03-29T07:22:24.996756338Z [inf]  npm notice
+npm notice New major version of npm available! 10.8.2 -> 11.12.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.1
+npm notice To update run: npm install -g npm@11.12.1
+npm notice
+
+2026-03-29T07:22:25.428502038Z [inf]  [builder-v1 3/5] RUN npm install
+2026-03-29T07:22:25.429841916Z [inf]  [builder-v3 3/5] RUN npm install
+2026-03-29T07:22:25.431304211Z [inf]  [builder-v1 4/5] COPY v1/ .
+2026-03-29T07:22:25.432616117Z [inf]  [builder-v0 3/5] RUN npm install
+2026-03-29T07:22:25.434249311Z [inf]  [builder-v3 4/5] COPY v3/ .
+2026-03-29T07:22:25.435493002Z [inf]  [builder-v2 3/5] RUN npm install
+2026-03-29T07:22:25.436815760Z [inf]  [builder-v0 4/5] COPY v0/ .
+2026-03-29T07:22:25.437885712Z [inf]  [builder-v2 4/5] COPY v2/ .
+2026-03-29T07:22:26.122954529Z [inf]  [builder-v2 4/5] COPY v2/ .
+2026-03-29T07:22:26.124379255Z [inf]  [builder-v3 4/5] COPY v3/ .
+2026-03-29T07:22:26.125383975Z [inf]  [builder-v2 5/5] RUN npm run build
+2026-03-29T07:22:26.126701748Z [inf]  [builder-v0 4/5] COPY v0/ .
+2026-03-29T07:22:26.128001249Z [inf]  [builder-v3 5/5] RUN npm run build
+2026-03-29T07:22:26.129578677Z [inf]  [builder-v1 4/5] COPY v1/ .
+2026-03-29T07:22:26.130713233Z [inf]  [builder-v0 5/5] RUN npm run build
+2026-03-29T07:22:26.132713667Z [inf]  [builder-v1 5/5] RUN npm run build
+2026-03-29T07:22:26.831764335Z [inf]  
+> v2-app@0.1.0 build
+> next build
+
+
+2026-03-29T07:22:26.842197948Z [inf]  
+> v3@0.1.0 build
+> next build
+
+
+2026-03-29T07:22:26.854862622Z [inf]  
+> v0@0.1.0 build
+> next build
+
+
+2026-03-29T07:22:26.863556898Z [inf]  
+> v1-app@0.1.0 build
+> next build
+
+
+2026-03-29T07:22:27.452503553Z [inf]  Attention: Next.js now collects completely anonymous telemetry regarding usage.
+
+2026-03-29T07:22:27.453090043Z [inf]  This information is used to shape Next.js' roadmap and prioritize features.
+
+2026-03-29T07:22:27.45309915Z [inf]  You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+
+2026-03-29T07:22:27.453180082Z [inf]  Attention: Next.js now collects completely anonymous telemetry regarding usage.
+
+2026-03-29T07:22:27.453211777Z [inf]  https://nextjs.org/telemetry
+
+
+2026-03-29T07:22:27.453795901Z [inf]  This information is used to shape Next.js' roadmap and prioritize features.
+
+2026-03-29T07:22:27.453844117Z [inf]  You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+2026-03-29T07:22:27.453856998Z [inf]  
+
+2026-03-29T07:22:27.456527651Z [inf]  Attention: Next.js now collects completely anonymous telemetry regarding usage.
+
+2026-03-29T07:22:27.458067268Z [inf]  This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+
+2026-03-29T07:22:27.475293387Z [inf]  ▲ Next.js 16.2.1 (Turbopack)
+
+2026-03-29T07:22:27.475397077Z [inf]  ▲ Next.js 16.2.1 (Turbopack)
+
+2026-03-29T07:22:27.475622829Z [inf]  
+
+2026-03-29T07:22:27.475725211Z [inf]  
+
+2026-03-29T07:22:27.478596926Z [inf]  ▲ Next.js 16.2.1 (Turbopack)
+
+2026-03-29T07:22:27.478940852Z [inf]  
+
+2026-03-29T07:22:27.480800668Z [inf]  Attention: Next.js now collects completely anonymous telemetry regarding usage.
+
+2026-03-29T07:22:27.481330106Z [inf]  This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+
+2026-03-29T07:22:27.481391649Z [inf]  https://nextjs.org/telemetry
+
+
+2026-03-29T07:22:27.500587393Z [inf]  ▲ Next.js 16.2.1 (Turbopack)
+
+2026-03-29T07:22:27.500821843Z [inf]  
+
+2026-03-29T07:22:27.620764024Z [inf]    Creating an optimized production build ...
+
+2026-03-29T07:22:27.639874458Z [inf]    Creating an optimized production build ...
+
+2026-03-29T07:22:27.639881825Z [inf]    Creating an optimized production build ...
+
+2026-03-29T07:22:27.64006862Z [inf]    Creating an optimized production build ...
+
+2026-03-29T07:22:32.496975081Z [inf]  ✓ Compiled successfully in 4.6s
+
+2026-03-29T07:22:32.503168678Z [inf]    Running TypeScript ...
+
+2026-03-29T07:22:32.712618365Z [inf]  ✓ Compiled successfully in 4.7s
+
+2026-03-29T07:22:32.727484521Z [inf]    Running TypeScript ...
+
+2026-03-29T07:22:32.966095348Z [inf]  
+
+2026-03-29T07:22:32.966293426Z [inf]  > Build error occurred
+
+2026-03-29T07:22:32.975256245Z [inf]  Error: Turbopack build failed with 9 errors:
+./src/app/layout.tsx:8:1
+Module not found: Can't resolve '@/components/FloatingCallButton'
+  [90m 6 |[0m [36mimport[0m [33mScrollToTop[0m [36mfrom[0m [32m"@/components/ScrollToTop"[0m;
+  [90m 7 |[0m [36mimport[0m [33mFloatingWhatsApp[0m [36mfrom[0m [32m"@/components/FloatingWhatsApp"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m [33mFloatingCallButton[0m [36mfrom[0m [32m"@/components/FloatingCallButton"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m
+  [90m10 |[0m [36mconst[0m inter = [33mInter[0m({
+  [90m11 |[0m   subsets: [[32m"latin"[0m],
+
+Import map: aliased to relative './src/components/FloatingCallButton' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/about/page.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  [90m1 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m'next/link'[0m;
+[31m[1m>[0m [90m2 |[0m [36mimport[0m { [33mCheckCircle2[0m, [33mLinkedin[0m } [36mfrom[0m [32m'lucide-react'[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m3 |[0m
+  [90m4 |[0m [36mexport[0m [36mconst[0m metadata = {
+  [90m5 |[0m   title: [32m'About Shine Teoh — Speech Pathologist Sydney | Shine and Speak'[0m,
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/page.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  [90m 1 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m'next/link'[0m;
+[31m[1m>[0m [90m 2 |[0m [36mimport[0m { 
+  [90m   |[0m [31m[1m^^^^^^^^[0m
+[31m[1m>[0m [90m 3 |[0m   [33mHome[0m, 
+  [90m   |[0m [31m[1m^^^^^^^^[0m
+[31m[1m>[0m [90m 4 |[0m   [33mGlobe[0m, 
+  [90m   |[0m [31m[1m^^^^^^^^^[0m
+[31m[1m>[0m [90m 5 |[0m   [33mMapPin[0m, 
+  [90m   |[0m [31m[1m^^^^^^^^^^[0m
+[31m[1m>[0m [90m 6 |[0m   [33mSchool[0m, 
+  [90m   |[0m [31m[1m^^^^^^^^^^[0m
+[31m[1m>[0m [90m 7 |[0m   [33mCar[0m, 
+  [90m   |[0m [31m[1m^^^^^^^[0m
+[31m[1m>[0m [90m 8 |[0m   [33mLanguages[0m, 
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 9 |[0m   [33mShieldCheck[0m, 
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m10 |[0m   [33mHeartHandshake[0m,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m11 |[0m   [33mBrain[0m,
+  [90m   |[0m [31m[1m^^^^^^^^[0m
+[31m[1m>[0m [90m12 |[0m   [33mMessageCircle[0m,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m13 |[0m   [33mEar[0m,
+  [90m   |[0m [31m[1m^^^^^^[0m
+[31m[1m>[0m [90m14 |[0m   [33mSmile[0m,
+  [90m   |[0m [31m[1m^^^^^^^^[0m
+[31m[1m>[0m [90m15 |[0m   [33mBookOpen[0m,
+  [90m   |[0m [31m[1m^^^^^^^^^^^[0m
+[31m[1m>[0m [90m16 |[0m   [33mArrowRight[0m,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m17 |[0m   [33mCheckCircle2[0m
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m18 |[0m } [36mfrom[0m [32m'lucide-react'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m19 |[0m
+  [90m20 |[0m [36mexport[0m [36mdefault[0m [36mfunction[0m [33mHomePage[0m() {
+  [90m21 |[0m   [36mreturn[0m (
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/refer-a-client/ReferForm.tsx:5:1
+Module not found: Can't resolve 'lucide-react'
+  [90m3 |[0m [36mimport[0m { useState } [36mfrom[0m [32m'react'[0m;
+  [90m4 |[0m [36mimport[0m { useRouter } [36mfrom[0m [32m'next/navigation'[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mCheckCircle2[0m } [36mfrom[0m [32m'lucide-react'[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m
+  [90m7 |[0m [36mexport[0m [36mdefault[0m [36mfunction[0m [33mReferForm[0m() {
+  [90m8 |[0m   [36mconst[0m router = useRouter();
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/refer-a-client/ReferForm.tsx
+    ./src/app/refer-a-client/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/speech-pathologist-burwood-nsw/page.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  [90m1 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m'next/link'[0m;
+[31m[1m>[0m [90m2 |[0m [36mimport[0m { [33mMapPin[0m, [33mCheckCircle2[0m } [36mfrom[0m [32m'lucide-react'[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m3 |[0m
+  [90m4 |[0m [36mexport[0m [36mconst[0m metadata = {
+  [90m5 |[0m   title: [32m'Speech Pathologist Burwood NSW | Shine and Speak'[0m,
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/speech-therapy-autism-sydney-nsw/page.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  [90m1 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m'next/link'[0m;
+[31m[1m>[0m [90m2 |[0m [36mimport[0m { [33mCheckCircle2[0m, [33mArrowRight[0m } [36mfrom[0m [32m'lucide-react'[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m3 |[0m
+  [90m4 |[0m [36mexport[0m [36mconst[0m metadata = {
+  [90m5 |[0m   title: [32m'Speech Therapy for Autism Sydney NSW | Shine and Speak'[0m,
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/thank-you/page.tsx:2:1
+Module not found: Can't resolve 'lucide-react'
+  [90m1 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m'next/link'[0m;
+[31m[1m>[0m [90m2 |[0m [36mimport[0m { [33mCheckCircle2[0m, [33mArrowRight[0m, [33mFileText[0m } [36mfrom[0m [32m'lucide-react'[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m3 |[0m
+  [90m4 |[0m [36mexport[0m [36mconst[0m metadata = {
+  [90m5 |[0m   title: [32m'Thank You | Shine and Speak'[0m,
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/FloatingWhatsApp.tsx:3:1
+Module not found: Can't resolve 'lucide-react'
+  [90m1 |[0m [32m'use client'[0m;
+  [90m2 |[0m
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { [33mMessageCircle[0m } [36mfrom[0m [32m'lucide-react'[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m
+  [90m5 |[0m [36mexport[0m [36mdefault[0m [36mfunction[0m [33mFloatingWhatsApp[0m() {
+  [90m6 |[0m   [36mreturn[0m (
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/FloatingWhatsApp.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/Header.tsx:5:1
+Module not found: Can't resolve 'lucide-react'
+  [90m3 |[0m [36mimport[0m { useState } [36mfrom[0m [32m'react'[0m;
+  [90m4 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m'next/link'[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mMenu[0m, [33mX[0m } [36mfrom[0m [32m'lucide-react'[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m
+  [90m7 |[0m [36mexport[0m [36mdefault[0m [36mfunction[0m [33mHeader[0m() {
+  [90m8 |[0m   [36mconst[0m [isMobileMenuOpen, setIsMobileMenuOpen] = useState([36mfalse[0m);
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Header.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (./src/app/layout.tsx:8:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/about/page.tsx:2:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/page.tsx:2:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/refer-a-client/ReferForm.tsx:5:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/speech-pathologist-burwood-nsw/page.tsx:2:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/speech-therapy-autism-sydney-nsw/page.tsx:2:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/thank-you/page.tsx:2:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/FloatingWhatsApp.tsx:3:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/Header.tsx:5:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+
+2026-03-29T07:22:32.996743083Z [inf]  ✓ Compiled successfully in 5.0s
+
+2026-03-29T07:22:33.010196817Z [inf]    Running TypeScript ...
+
+2026-03-29T07:22:33.176342951Z [err]  [builder-v1 5/5] RUN npm run build
+2026-03-29T07:22:33.296957397Z [err]  [builder-v0 5/5] RUN npm run build
+2026-03-29T07:22:33.497705908Z [err]  [builder-v2 5/5] RUN npm run build
+2026-03-29T07:22:33.664020682Z [err]  [builder-v3 5/5] RUN npm run build
+2026-03-29T07:22:33.690757144Z [err]  Dockerfile:25
+2026-03-29T07:22:33.690805864Z [err]  -------------------
+2026-03-29T07:22:33.690812136Z [err]  23 |     RUN npm install
+2026-03-29T07:22:33.690817799Z [err]  24 |     COPY v1/ .
+2026-03-29T07:22:33.690825339Z [err]  25 | >>> RUN npm run build
+2026-03-29T07:22:33.690832117Z [err]  26 |
+2026-03-29T07:22:33.690839129Z [err]  27 |     # ─────────────────────────────────────────
+2026-03-29T07:22:33.690845409Z [err]  -------------------
+2026-03-29T07:22:33.690852362Z [err]  ERROR: failed to build: failed to solve: process "/bin/sh -c npm run build" did not complete successfully: exit code: 1

@@ -2,10 +2,17 @@ import { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Cognitive-Communication Speech Therapy Sydney NSW | Shine and Speak',
-  description: 'Content coming soon for Cognitive-Communication Speech Therapy Sydney NSW | Shine and Speak. Mobile and telehealth speech therapy in Sydney.',
+  title: 'Cognitive Communication Therapy Sydney | Shine and Speak',
+  description:
+    'Speech therapy for cognitive-communication difficulties after brain injury or neurological change. Mobile & telehealth in Sydney. NDIS, Medicare & private pay.',
   alternates: {
-    canonical: '/speech-therapy-cognitive-communication-sydney-nsw',
+    canonical: 'https://www.shineandspeak.com.au/speech-therapy-cognitive-communication-sydney-nsw',
+  },
+  openGraph: {
+    title: 'Cognitive Communication Therapy Sydney | Shine and Speak',
+    description: 'Speech therapy for cognitive-communication difficulties after brain injury or neurological change. Mobile & telehealth in Sydney. NDIS, Medicare & private pay.',
+    url: 'https://www.shineandspeak.com.au/speech-therapy-cognitive-communication-sydney-nsw',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
 };
 

@@ -3,9 +3,16 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Medicare Speech Therapy Sydney NSW | Shine and Speak',
-  description: 'Content coming soon for Medicare Speech Therapy Sydney NSW | Shine and Speak. Mobile and telehealth speech therapy in Sydney.',
+  description:
+    'Medicare rebates for speech therapy in Sydney with a GP referral (Chronic Disease Management Plan). Mobile & telehealth. Book a free discovery call today.',
   alternates: {
-    canonical: '/medicare-speech-therapy-sydney-nsw',
+    canonical: 'https://www.shineandspeak.com.au/medicare-speech-therapy-sydney-nsw',
+  },
+  openGraph: {
+    title: 'Medicare Speech Therapy Sydney NSW | Shine and Speak',
+    description: 'Medicare rebates for speech therapy in Sydney with a GP referral (Chronic Disease Management Plan). Mobile & telehealth. Book a free discovery call today.',
+    url: 'https://www.shineandspeak.com.au/medicare-speech-therapy-sydney-nsw',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
 };
 

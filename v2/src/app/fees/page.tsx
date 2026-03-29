@@ -2,10 +2,17 @@ import { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Fees & Pricing | Shine and Speak',
-  description: 'Content coming soon for Fees & Pricing | Shine and Speak. Mobile and telehealth speech therapy in Sydney.',
+  title: 'Speech Therapy Fees & Pricing Sydney | Shine and Speak',
+  description:
+    'Speech therapy fees and pricing for NDIS, Medicare, and private clients in Sydney. Transparent rates for home, school, and telehealth. Book a free discovery call.',
   alternates: {
-    canonical: '/fees',
+    canonical: 'https://www.shineandspeak.com.au/fees',
+  },
+  openGraph: {
+    title: 'Speech Therapy Fees & Pricing Sydney | Shine and Speak',
+    description: 'Speech therapy fees and pricing for NDIS, Medicare, and private clients in Sydney. Transparent rates for home, school, and telehealth sessions. Book a free call.',
+    url: 'https://www.shineandspeak.com.au/fees',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
 };
 

@@ -3,9 +3,16 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Adult Speech Therapy Sydney NSW | Shine and Speak',
-  description: 'Content coming soon for Adult Speech Therapy Sydney NSW | Shine and Speak. Mobile and telehealth speech therapy in Sydney.',
+  description:
+    'Adult speech therapy in Sydney for aphasia, fluency, cognitive-communication, and neurological rehabilitation. Mobile & telehealth. NDIS, Medicare & private.',
   alternates: {
-    canonical: '/adult-speech-therapy-sydney-nsw',
+    canonical: 'https://www.shineandspeak.com.au/adult-speech-therapy-sydney-nsw',
+  },
+  openGraph: {
+    title: 'Adult Speech Therapy Sydney NSW | Shine and Speak',
+    description: 'Adult speech therapy in Sydney for aphasia, fluency, cognitive-communication, and neurological rehabilitation. Mobile & telehealth. NDIS, Medicare & private.',
+    url: 'https://www.shineandspeak.com.au/adult-speech-therapy-sydney-nsw',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
 };
 

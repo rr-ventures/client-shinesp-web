@@ -3,9 +3,16 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Paediatric Speech Therapy Sydney NSW | Shine and Speak',
-  description: 'Content coming soon for Paediatric Speech Therapy Sydney NSW | Shine and Speak. Mobile and telehealth speech therapy in Sydney.',
+  description:
+    'Paediatric speech therapy in Sydney for children with autism, ADHD, language delay, speech sounds, literacy, and more. Mobile, telehealth. NDIS & Medicare.',
   alternates: {
-    canonical: '/paediatric-speech-therapy-sydney-nsw',
+    canonical: 'https://www.shineandspeak.com.au/paediatric-speech-therapy-sydney-nsw',
+  },
+  openGraph: {
+    title: 'Paediatric Speech Therapy Sydney NSW | Shine and Speak',
+    description: 'Paediatric speech therapy in Sydney for children with autism, ADHD, language delay, speech sounds, literacy, and more. Mobile, telehealth. NDIS & Medicare.',
+    url: 'https://www.shineandspeak.com.au/paediatric-speech-therapy-sydney-nsw',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
 };
 

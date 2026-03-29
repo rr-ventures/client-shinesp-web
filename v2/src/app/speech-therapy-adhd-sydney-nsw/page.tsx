@@ -3,9 +3,16 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Speech Therapy for ADHD Sydney NSW | Shine and Speak',
-  description: 'Content coming soon for Speech Therapy for ADHD Sydney NSW | Shine and Speak. Mobile and telehealth speech therapy in Sydney.',
+  description:
+    'Speech therapy for children with ADHD in Sydney. I help develop listening, focus, and social communication skills. Mobile, telehealth & NDIS. Inner West Sydney.',
   alternates: {
-    canonical: '/speech-therapy-adhd-sydney-nsw',
+    canonical: 'https://www.shineandspeak.com.au/speech-therapy-adhd-sydney-nsw',
+  },
+  openGraph: {
+    title: 'Speech Therapy for ADHD Sydney NSW | Shine and Speak',
+    description: 'Speech therapy for children with ADHD in Sydney. I help develop listening, focus, and social communication skills. Mobile, telehealth & NDIS. Inner West Sydney.',
+    url: 'https://www.shineandspeak.com.au/speech-therapy-adhd-sydney-nsw',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
 };
 

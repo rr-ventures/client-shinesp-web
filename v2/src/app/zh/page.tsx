@@ -4,9 +4,19 @@ import { ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: '悉尼語言治療師 | Shine and Speak — 上門與視像治療',
-  description: '為您的孩子提供個人化的語言治療。我們提供上門、到校或視像服務。雙語服務（英文與中文）。接受 NDIS、Medicare 及私人付費。服務悉尼內西區。',
+  description: '為您的孩子提供個人化的語言治療。上門、到校或視像服務。英文及中文（普通話）雙語。接受 NDIS、Medicare 及私人付費。服務悉尼內西區及周邊。',
   alternates: {
-    canonical: '/zh',
+    canonical: 'https://www.shineandspeak.com.au/zh',
+    languages: {
+      en: 'https://www.shineandspeak.com.au/',
+      zh: 'https://www.shineandspeak.com.au/zh',
+    },
+  },
+  openGraph: {
+    title: '悉尼語言治療師 | Shine and Speak — 上門與視像治療',
+    description: '為您的孩子提供個人化的語言治療。上門、到校或視像服務。英文及中文（普通話）雙語。接受 NDIS、Medicare 及私人付費。服務悉尼內西區及周邊。',
+    url: 'https://www.shineandspeak.com.au/zh',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
 };
 
