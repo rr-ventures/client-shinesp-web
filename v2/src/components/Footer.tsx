@@ -25,19 +25,19 @@ export default function Footer() {
 
           {/* Brand column */}
           <div className="lg:col-span-1">
-            <p className="text-xl font-bold text-[#0096d3] mb-3">Shine and Speak</p>
+            <p className="text-xl font-bold text-[#E8A84C] mb-3">Shine and Speak</p>
             <p className="text-gray-300 text-sm leading-relaxed mb-4">
               Personalised speech therapy delivered to your home, school, or online.
               Bilingual English &amp; Mandarin (普通话).
             </p>
             <address className="not-italic text-sm text-gray-300 space-y-1 mb-6">
               <p>
-                <a href="tel:0421608819" className="hover:text-[#0096d3] transition-colors">
+                <a href="tel:0421608819" className="hover:text-[#E8A84C] transition-colors">
                   0421 608 819
                 </a>
               </p>
               <p>
-                <a href="mailto:admin@shineandspeak.com.au" className="hover:text-[#0096d3] transition-colors">
+                <a href="mailto:admin@shineandspeak.com.au" className="hover:text-[#E8A84C] transition-colors">
                   admin@shineandspeak.com.au
                 </a>
               </p>
@@ -109,31 +109,31 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-[#0096d3] font-bold mb-4 text-sm uppercase tracking-wider">Services</h3>
+            <h3 className="text-[#E8A84C] font-bold mb-4 text-sm uppercase tracking-wider">Services</h3>
             <ul className="space-y-2.5 text-sm text-gray-300">
-              <li><Link href="/paediatric-speech-therapy-sydney-nsw" className="hover:text-[#0096d3] transition-colors">Paediatric Speech Therapy</Link></li>
-              <li><Link href="/adult-speech-therapy-sydney-nsw" className="hover:text-[#0096d3] transition-colors">Adult Speech Therapy</Link></li>
-              <li><Link href="/mobile-speech-therapy-sydney-nsw" className="hover:text-[#0096d3] transition-colors">Mobile Therapy</Link></li>
-              <li><Link href="/telehealth-speech-therapy-sydney-nsw" className="hover:text-[#0096d3] transition-colors">Telehealth</Link></li>
-              <li><Link href="/school-based-speech-therapy-sydney-nsw" className="hover:text-[#0096d3] transition-colors">School-Based Therapy</Link></li>
-              <li><Link href="/speech-therapy-assessment-sydney-nsw" className="hover:text-[#0096d3] transition-colors">Assessments</Link></li>
-              <li><Link href="/ndis-speech-therapy-sydney-nsw" className="hover:text-[#0096d3] transition-colors">NDIS Funding</Link></li>
-              <li><Link href="/medicare-speech-therapy-sydney-nsw" className="hover:text-[#0096d3] transition-colors">Medicare Rebates</Link></li>
-              <li><Link href="/fees" className="hover:text-[#0096d3] transition-colors">Fees &amp; Pricing</Link></li>
-              <li><Link href="/how-it-works" className="hover:text-[#0096d3] transition-colors">How It Works</Link></li>
-              <li><Link href="/about" className="hover:text-[#0096d3] transition-colors">About Shine</Link></li>
-              <li><Link href="/contact" className="hover:text-[#0096d3] transition-colors">Contact Us</Link></li>
-              <li><Link href="/refer-a-client" className="hover:text-[#0096d3] transition-colors">Refer a Client</Link></li>
+              <li><Link href="/paediatric-speech-therapy-sydney-nsw" className="hover:text-[#E8A84C] transition-colors">Paediatric Speech Therapy</Link></li>
+              <li><Link href="/adult-speech-therapy-sydney-nsw" className="hover:text-[#E8A84C] transition-colors">Adult Speech Therapy</Link></li>
+              <li><Link href="/mobile-speech-therapy-sydney-nsw" className="hover:text-[#E8A84C] transition-colors">Mobile Therapy</Link></li>
+              <li><Link href="/telehealth-speech-therapy-sydney-nsw" className="hover:text-[#E8A84C] transition-colors">Telehealth</Link></li>
+              <li><Link href="/school-based-speech-therapy-sydney-nsw" className="hover:text-[#E8A84C] transition-colors">School-Based Therapy</Link></li>
+              <li><Link href="/speech-therapy-assessment-sydney-nsw" className="hover:text-[#E8A84C] transition-colors">Assessments</Link></li>
+              <li><Link href="/ndis-speech-therapy-sydney-nsw" className="hover:text-[#E8A84C] transition-colors">NDIS Funding</Link></li>
+              <li><Link href="/medicare-speech-therapy-sydney-nsw" className="hover:text-[#E8A84C] transition-colors">Medicare Rebates</Link></li>
+              <li><Link href="/fees" className="hover:text-[#E8A84C] transition-colors">Fees &amp; Pricing</Link></li>
+              <li><Link href="/how-it-works" className="hover:text-[#E8A84C] transition-colors">How It Works</Link></li>
+              <li><Link href="/about" className="hover:text-[#E8A84C] transition-colors">About Shine</Link></li>
+              <li><Link href="/contact" className="hover:text-[#E8A84C] transition-colors">Contact Us</Link></li>
+              <li><Link href="/refer-a-client" className="hover:text-[#E8A84C] transition-colors">Refer a Client</Link></li>
             </ul>
           </div>
 
           {/* Service Areas */}
           <div>
-            <h3 className="text-[#0096d3] font-bold mb-4 text-sm uppercase tracking-wider">Service Areas</h3>
+            <h3 className="text-[#E8A84C] font-bold mb-4 text-sm uppercase tracking-wider">Service Areas</h3>
             <ul className="space-y-2.5 text-sm text-gray-300">
               {allSuburbs.map((suburb) => (
                 <li key={suburb.href}>
-                  <Link href={suburb.href} className="hover:text-[#0096d3] transition-colors">
+                  <Link href={suburb.href} className="hover:text-[#E8A84C] transition-colors">
                     {suburb.label}
                   </Link>
                 </li>
@@ -143,10 +143,11 @@ export default function Footer() {
 
           {/* WeChat QR */}
           <div>
-            <h3 className="text-[#0096d3] font-bold mb-4 text-sm uppercase tracking-wider">Connect on WeChat</h3>
+            <h3 className="text-[#E8A84C] font-bold mb-4 text-sm uppercase tracking-wider">Connect on WeChat</h3>
             {/* REPLACE: Insert WeChat QR code image */}
             <div className="w-36 h-36 bg-white rounded-lg flex flex-col items-center justify-center p-2 mb-4 overflow-hidden">
-              <img src="/v2/wechat-qr-placeholder.webp" 
+              <img 
+                src="/v2/wechat-qr-placeholder.webp" 
                 alt="WeChat QR Code" 
                 className="w-full h-full object-cover"
               />
@@ -156,9 +157,9 @@ export default function Footer() {
             </p>
             <div className="mt-6">
               <p className="text-xs text-gray-300 italic">
-                Written by Shine Yin Teoh, Certified Practising Speech Pathologist
+                Written by Shine Teoh, Certified Practising Speech Pathologist
               </p>
-              <Link href="/about" className="text-xs text-[#0096d3] hover:underline mt-1 inline-block">
+              <Link href="/about" className="text-xs text-[#E8A84C] hover:underline mt-1 inline-block">
                 Learn about Shine&apos;s qualifications
               </Link>
             </div>
@@ -169,9 +170,9 @@ export default function Footer() {
         <div className="border-t border-[#2a4a7a] pt-6 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-gray-400">
           <p>&copy; 2026 Shine and Speak. All rights reserved.</p>
           <div className="flex gap-4">
-            <Link href="/fees" className="hover:text-[#0096d3] transition-colors">Fees</Link>
-            <Link href="/how-it-works" className="hover:text-[#0096d3] transition-colors">How It Works</Link>
-            <Link href="/zh" className="hover:text-[#0096d3] transition-colors">中文</Link>
+            <Link href="/fees" className="hover:text-[#E8A84C] transition-colors">Fees</Link>
+            <Link href="/how-it-works" className="hover:text-[#E8A84C] transition-colors">How It Works</Link>
+            <Link href="/zh" className="hover:text-[#E8A84C] transition-colors">中文</Link>
           </div>
         </div>
       </div>

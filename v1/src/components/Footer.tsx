@@ -26,7 +26,7 @@ export default function Footer() {
           {/* Brand + Contact */}
           <div>
             <Image
-              src="/shine-and-speak-logo-stacked-transparent.png"
+              src="/v1/shine-and-speak-logo-stacked-transparent.png"
               alt="Shine and Speak"
               width={160}
               height={90}
@@ -47,7 +47,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/in/shine-teoh/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Shine Yin Teoh on LinkedIn"
+                aria-label="Shine Teoh on LinkedIn"
                 className="bg-white/10 hover:bg-secondary transition-colors p-2 rounded-lg"
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -108,7 +108,7 @@ export default function Footer() {
             </ul>
             <h4 className="text-lg font-serif font-bold mt-8 mb-6 text-white tracking-wide">Quick Links</h4>
             <ul className="space-y-3.5 text-white/80 text-sm font-light">
-              <li><Link href="/about" className="hover:text-secondary hover:translate-x-1 inline-block transition-all">About Shine Yin Teoh</Link></li>
+              <li><Link href="/about" className="hover:text-secondary hover:translate-x-1 inline-block transition-all">About Shine Teoh</Link></li>
               <li><Link href="/how-it-works" className="hover:text-secondary hover:translate-x-1 inline-block transition-all">How It Works</Link></li>
               <li><Link href="/ndis-speech-therapy-sydney-nsw" className="hover:text-secondary hover:translate-x-1 inline-block transition-all">NDIS Speech Therapy</Link></li>
               <li><Link href="/medicare-speech-therapy-sydney-nsw" className="hover:text-secondary hover:translate-x-1 inline-block transition-all">Medicare Rebates</Link></li>
@@ -174,7 +174,7 @@ export default function Footer() {
             <p>
               Written by{' '}
               <Link href="/about" className="text-white hover:text-secondary underline decoration-white/30 underline-offset-4 transition-colors font-medium">
-                Shine Yin Teoh
+                Shine Teoh
               </Link>
               , Certified Practising Speech Pathologist
             </p>

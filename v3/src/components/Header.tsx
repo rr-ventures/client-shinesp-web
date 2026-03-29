@@ -91,7 +91,7 @@ export default function Header() {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link href="/" aria-label="Shine and Speak — home" className="flex-shrink-0">
           <Image
-            src="/shine-and-speak-logo-horizontal-transparent.png"
+            src="/v3/shine-and-speak-logo-horizontal-transparent.png"
             alt="Shine and Speak — Mobile Speech Pathology Sydney"
             width={220}
             height={62}

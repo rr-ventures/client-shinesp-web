@@ -1,0 +1,414 @@
+2026-03-29T11:31:37.058960096Z [inf]  
+2026-03-29T11:31:41.339014549Z [inf]  [35m[Region: asia-southeast1][0m
+2026-03-29T11:31:41.342856924Z [inf]  [35m=========================
+2026-03-29T11:31:41.342882689Z [inf]  Using Detected Dockerfile
+2026-03-29T11:31:41.342886237Z [inf]  =========================
+2026-03-29T11:31:41.342889367Z [inf]  [0m
+2026-03-29T11:31:41.342900868Z [inf]  context: 4520-_ks0
+2026-03-29T11:31:41.467366838Z [inf]  [internal] load build definition from Dockerfile
+2026-03-29T11:31:41.467402950Z [inf]  [internal] load build definition from Dockerfile
+2026-03-29T11:31:41.467418314Z [inf]  [internal] load build definition from Dockerfile
+2026-03-29T11:31:41.467433145Z [inf]  [internal] load build definition from Dockerfile
+2026-03-29T11:31:41.476433387Z [inf]  [internal] load build definition from Dockerfile
+2026-03-29T11:31:41.477808444Z [inf]  resolve image config for docker-image://docker.io/docker/dockerfile:1
+2026-03-29T11:31:41.716953802Z [inf]  [auth] docker/dockerfile:pull token for registry-1.docker.io
+2026-03-29T11:31:41.716997214Z [inf]  [auth] docker/dockerfile:pull token for registry-1.docker.io
+2026-03-29T11:31:42.296406923Z [inf]  resolve image config for docker-image://docker.io/docker/dockerfile:1
+2026-03-29T11:31:42.296596870Z [inf]  docker-image://docker.io/docker/dockerfile:1@sha256:4a43a54dd1fedceb30ba47e76cfcf2b47304f4161c0caeac2db1c61804ea3c91
+2026-03-29T11:31:42.296627280Z [inf]  docker-image://docker.io/docker/dockerfile:1@sha256:4a43a54dd1fedceb30ba47e76cfcf2b47304f4161c0caeac2db1c61804ea3c91
+2026-03-29T11:31:42.301884651Z [inf]  docker-image://docker.io/docker/dockerfile:1@sha256:4a43a54dd1fedceb30ba47e76cfcf2b47304f4161c0caeac2db1c61804ea3c91
+2026-03-29T11:31:42.301911663Z [inf]  docker-image://docker.io/docker/dockerfile:1@sha256:4a43a54dd1fedceb30ba47e76cfcf2b47304f4161c0caeac2db1c61804ea3c91
+2026-03-29T11:31:42.392643876Z [inf]  [internal] load metadata for docker.io/library/node:20-alpine
+2026-03-29T11:31:42.680070179Z [inf]  [internal] load metadata for docker.io/library/node:20-alpine
+2026-03-29T11:31:42.681367527Z [inf]  [internal] load .dockerignore
+2026-03-29T11:31:42.681411801Z [inf]  [internal] load .dockerignore
+2026-03-29T11:31:42.681432059Z [inf]  [internal] load .dockerignore
+2026-03-29T11:31:42.690063283Z [inf]  [internal] load .dockerignore
+2026-03-29T11:31:42.740277396Z [inf]  [builder-v0 4/5] COPY v0/ .
+2026-03-29T11:31:42.740310131Z [inf]  [runner  5/19] COPY --from=builder-v0 /build/.next/static      ./v0/.next/static
+2026-03-29T11:31:42.740318339Z [inf]  [builder-v3 1/5] WORKDIR /build
+2026-03-29T11:31:42.740327416Z [inf]  [builder-v1 5/5] RUN npm run build
+2026-03-29T11:31:42.740334634Z [inf]  [runner  6/19] COPY --from=builder-v0 /build/public            ./v0/public
+2026-03-29T11:31:42.740341952Z [inf]  [base 2/2] RUN apk add --no-cache libc6-compat
+2026-03-29T11:31:42.740352339Z [inf]  [runner  7/19] COPY --from=builder-v1 /build/.next/standalone ./v1/
+2026-03-29T11:31:42.740357806Z [inf]  [runner  2/19] RUN apk add --no-cache nginx
+2026-03-29T11:31:42.740364196Z [inf]  [builder-v2 2/5] COPY v2/package*.json ./
+2026-03-29T11:31:42.740370154Z [inf]  [internal] load build context
+2026-03-29T11:31:42.740376447Z [inf]  [builder-v1 4/5] COPY v1/ .
+2026-03-29T11:31:42.740382063Z [inf]  [builder-v1 2/5] COPY v1/package*.json ./
+2026-03-29T11:31:42.740387574Z [inf]  [builder-v0 3/5] RUN npm ci
+2026-03-29T11:31:42.740393046Z [inf]  [builder-v0 2/5] COPY v0/package*.json ./
+2026-03-29T11:31:42.740398408Z [inf]  [builder-v1 3/5] RUN npm ci
+2026-03-29T11:31:42.740407137Z [inf]  [runner  8/19] COPY --from=builder-v1 /build/.next/static      ./v1/.next/static
+2026-03-29T11:31:42.740412597Z [inf]  [runner  3/19] WORKDIR /app
+2026-03-29T11:31:42.740417816Z [inf]  [builder-v0 5/5] RUN npm run build
+2026-03-29T11:31:42.740423507Z [inf]  [runner  9/19] COPY --from=builder-v1 /build/public            ./v1/public
+2026-03-29T11:31:42.740428739Z [inf]  [base 1/2] FROM docker.io/library/node:20-alpine@sha256:f598378b5240225e6beab68fa9f356db1fb8efe55173e6d4d8153113bb8f333c
+2026-03-29T11:31:42.740435194Z [inf]  [runner  4/19] COPY --from=builder-v0 /build/.next/standalone ./v0/
+2026-03-29T11:31:42.740489985Z [inf]  [runner 14/19] COPY --from=builder-v3 /build/.next/static      ./v3/.next/static
+2026-03-29T11:31:42.740496177Z [inf]  [runner 13/19] COPY --from=builder-v3 /build/.next/standalone ./v3/
+2026-03-29T11:31:42.740501483Z [inf]  [builder-v3 3/5] RUN npm ci
+2026-03-29T11:31:42.740509260Z [inf]  [builder-v3 2/5] COPY v3/package*.json ./
+2026-03-29T11:31:42.740514674Z [inf]  [runner 19/19] RUN chmod +x /app/start.sh
+2026-03-29T11:31:42.740520141Z [inf]  [runner 16/19] COPY public/ /app/root-public/
+2026-03-29T11:31:42.740526969Z [inf]  [runner 18/19] COPY start.sh /app/start.sh
+2026-03-29T11:31:42.740533604Z [inf]  [runner 11/19] COPY --from=builder-v2 /build/.next/static      ./v2/.next/static
+2026-03-29T11:31:42.740539347Z [inf]  [runner 10/19] COPY --from=builder-v2 /build/.next/standalone ./v2/
+2026-03-29T11:31:42.740544434Z [inf]  [builder-v2 5/5] RUN npm run build
+2026-03-29T11:31:42.740549987Z [inf]  [builder-v2 4/5] COPY v2/ .
+2026-03-29T11:31:42.740555371Z [inf]  [runner 15/19] COPY --from=builder-v3 /build/public            ./v3/public
+2026-03-29T11:31:42.740560769Z [inf]  [runner 17/19] COPY nginx.conf.template /etc/nginx/nginx.conf.template
+2026-03-29T11:31:42.740566116Z [inf]  [runner 12/19] COPY --from=builder-v2 /build/public            ./v2/public
+2026-03-29T11:31:42.740571178Z [inf]  [builder-v3 5/5] RUN npm run build
+2026-03-29T11:31:42.740576111Z [inf]  [builder-v2 3/5] RUN npm ci
+2026-03-29T11:31:42.740604541Z [inf]  [builder-v3 4/5] COPY v3/ .
+2026-03-29T11:31:42.740614914Z [inf]  [internal] load build context
+2026-03-29T11:31:42.740624496Z [inf]  [base 1/2] FROM docker.io/library/node:20-alpine@sha256:f598378b5240225e6beab68fa9f356db1fb8efe55173e6d4d8153113bb8f333c
+2026-03-29T11:31:42.746034188Z [inf]  [base 1/2] FROM docker.io/library/node:20-alpine@sha256:f598378b5240225e6beab68fa9f356db1fb8efe55173e6d4d8153113bb8f333c
+2026-03-29T11:31:42.747168688Z [inf]  [internal] load build context
+2026-03-29T11:31:43.256104724Z [inf]  [internal] load build context
+2026-03-29T11:31:43.261966139Z [inf]  [base 2/2] RUN apk add --no-cache libc6-compat
+2026-03-29T11:31:43.261996785Z [inf]  [builder-v3 1/5] WORKDIR /build
+2026-03-29T11:31:43.262008759Z [inf]  [builder-v1 2/5] COPY v1/package*.json ./
+2026-03-29T11:31:43.262016544Z [inf]  [builder-v1 3/5] RUN npm ci
+2026-03-29T11:31:43.262033572Z [inf]  [builder-v1 4/5] COPY v1/ .
+2026-03-29T11:31:43.267212340Z [inf]  [builder-v3 1/5] WORKDIR /build
+2026-03-29T11:31:43.267240438Z [inf]  [builder-v2 2/5] COPY v2/package*.json ./
+2026-03-29T11:31:43.267250380Z [inf]  [builder-v2 3/5] RUN npm ci
+2026-03-29T11:31:43.267287104Z [inf]  [builder-v0 2/5] COPY v0/package*.json ./
+2026-03-29T11:31:43.267298422Z [inf]  [builder-v3 2/5] COPY v3/package*.json ./
+2026-03-29T11:31:43.267319957Z [inf]  [builder-v2 4/5] COPY v2/ .
+2026-03-29T11:31:43.338323795Z [inf]  [builder-v2 4/5] COPY v2/ .
+2026-03-29T11:31:43.339313790Z [inf]  [builder-v2 5/5] RUN npm run build
+2026-03-29T11:31:43.340101221Z [inf]  [builder-v0 2/5] COPY v0/package*.json ./
+2026-03-29T11:31:43.341544282Z [inf]  [builder-v1 4/5] COPY v1/ .
+2026-03-29T11:31:43.342756159Z [inf]  [builder-v0 3/5] RUN npm ci
+2026-03-29T11:31:43.343297819Z [inf]  [builder-v3 2/5] COPY v3/package*.json ./
+2026-03-29T11:31:43.344646435Z [inf]  [builder-v1 5/5] RUN npm run build
+2026-03-29T11:31:43.346501531Z [inf]  [builder-v3 3/5] RUN npm ci
+2026-03-29T11:31:43.670525147Z [inf]  
+> v1-app@0.1.0 build
+> next build
+
+
+2026-03-29T11:31:43.670815845Z [inf]  
+> v2-app@0.1.0 build
+> next build
+
+
+2026-03-29T11:31:44.312786199Z [inf]  Attention: Next.js now collects completely anonymous telemetry regarding usage.
+
+2026-03-29T11:31:44.313186399Z [inf]  This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+
+2026-03-29T11:31:44.319516346Z [inf]  Attention: Next.js now collects completely anonymous telemetry regarding usage.
+
+2026-03-29T11:31:44.319894596Z [inf]  This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+
+2026-03-29T11:31:44.319907038Z [inf]  https://nextjs.org/telemetry
+
+
+2026-03-29T11:31:44.327724324Z [inf]  ▲ Next.js 16.2.1 (Turbopack)
+
+2026-03-29T11:31:44.3279262Z [inf]  
+
+2026-03-29T11:31:44.333798883Z [inf]  ▲ Next.js 16.2.1 (Turbopack)
+
+2026-03-29T11:31:44.333967212Z [inf]  
+
+2026-03-29T11:31:44.432667076Z [inf]    Creating an optimized production build ...
+
+2026-03-29T11:31:44.449478946Z [inf]    Creating an optimized production build ...
+
+2026-03-29T11:31:47.451876998Z [inf]  ✓ Compiled successfully in 2.8s
+
+2026-03-29T11:31:47.456228343Z [inf]    Running TypeScript ...
+
+2026-03-29T11:31:47.459190304Z [inf]  ✓ Compiled successfully in 2.8s
+
+2026-03-29T11:31:47.468484792Z [inf]    Running TypeScript ...
+
+2026-03-29T11:31:51.262963719Z [inf]    Finished TypeScript in 3.8s ...
+
+2026-03-29T11:31:51.267797003Z [inf]    Collecting page data using 47 workers ...
+
+2026-03-29T11:31:51.385407399Z [inf]    Finished TypeScript in 3.9s ...
+
+2026-03-29T11:31:51.389634902Z [inf]    Collecting page data using 47 workers ...
+
+2026-03-29T11:31:52.87521179Z [inf]  
+added 361 packages, and audited 362 packages in 9s
+
+2026-03-29T11:31:52.875368382Z [inf]  
+
+2026-03-29T11:31:52.875394782Z [inf]  144 packages are looking for funding
+
+2026-03-29T11:31:52.875462889Z [inf]    run `npm fund` for details
+
+2026-03-29T11:31:52.877085796Z [inf]  
+found 0 vulnerabilities
+
+2026-03-29T11:31:52.878958824Z [inf]  npm notice
+npm notice New major version of npm available! 10.8.2 -> 11.12.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.1
+npm notice To update run: npm install -g npm@11.12.1
+npm notice
+
+2026-03-29T11:31:53.089338631Z [inf]    Generating static pages using 47 workers (0/57) ...
+
+2026-03-29T11:31:53.388720648Z [inf]  [builder-v0 3/5] RUN npm ci
+2026-03-29T11:31:53.390814258Z [inf]  [builder-v0 4/5] COPY v0/ .
+2026-03-29T11:31:53.460089279Z [inf]    Generating static pages using 47 workers (0/49) ...
+
+2026-03-29T11:31:53.576248468Z [inf]    Generating static pages using 47 workers (14/57) 
+
+2026-03-29T11:31:53.608774425Z [inf]  [builder-v0 4/5] COPY v0/ .
+2026-03-29T11:31:53.610030321Z [inf]  [builder-v0 5/5] RUN npm run build
+2026-03-29T11:31:53.760112704Z [inf]    Generating static pages using 47 workers (28/57) 
+
+2026-03-29T11:31:53.781818961Z [inf]    Generating static pages using 47 workers (42/57) 
+
+2026-03-29T11:31:53.839432008Z [inf]  
+> v0@0.1.0 build
+> next build
+
+
+2026-03-29T11:31:53.85136368Z [inf]  ✓ Generating static pages using 47 workers (57/57) in 762ms
+
+2026-03-29T11:31:53.858907034Z [inf]    Finalizing page optimization ...
+
+2026-03-29T11:31:53.893641351Z [inf]    Generating static pages using 47 workers (12/49) 
+
+2026-03-29T11:31:54.101550822Z [inf]    Generating static pages using 47 workers (24/49) 
+
+2026-03-29T11:31:54.106119899Z [inf]  
+
+2026-03-29T11:31:54.109774164Z [inf]  Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /about
+├ ○ /adult-speech-therapy-sydney-nsw
+├ ○ /book
+├ ○ /contact
+├ ○ /dva-speech-therapy-sydney-nsw
+├ ○ /fees
+├ ○ /for-support-coordinators
+├ ○ /home-care-package-speech-therapy-sydney-nsw
+├ ○ /how-it-works
+├ ○ /medicare-speech-therapy-sydney-nsw
+├ ○ /mobile-speech-therapy-sydney-nsw
+├ ○ /ndis-service-guide-support-coordinators
+├ ○ /ndis-speech-therapy-sydney-nsw
+├ ○ /paediatric-speech-therapy-sydney-nsw
+├ ○ /parent-coaching-speech-therapy-sydney-nsw
+├ ○ /private-speech-therapy-sydney-nsw
+├ ○ /refer-a-client
+├ ○ /robots.txt
+├ ○ /school-based-speech-therapy-sydney-nsw
+├ ○ /sitemap.xml
+├ ○ /speech-pathologist-arncliffe-nsw
+├ ○ /speech-pathologist-burwood-nsw
+├ ○ /speech-pathologist-campsie-nsw
+├ ○ /speech-pathologist-canterbury-bankstown-nsw
+├ ○ /speech-pathologist-hurstville-nsw
+├ ○ /speech-pathologist-inner-west-sydney-nsw
+├ ○ /speech-pathologist-kogarah-nsw
+├ ○ /speech-pathologist-marrickville-nsw
+├ ○ /speech-pathologist-rockdale-nsw
+├ ○ /speech-pathologist-st-george-nsw
+├ ○ /speech-pathologist-strathfield-nsw
+├ ○ /speech-therapy-aac-sydney-nsw
+├ ○ /speech-therapy-adhd-sydney-nsw
+├ ○ /speech-therapy-aphasia-sydney-nsw
+├ ○ /speech-therapy-assessment-sydney-nsw
+├ ○ /speech-therapy-autism-sydney-nsw
+├ ○ /speech-therapy-cognitive-communication-sydney-nsw
+├ ○ /speech-therapy-developmental-delay-sydney-nsw
+├ ○ /speech-therapy-fluency-sydney-nsw
+├ ○ /speech-therapy-intellectual-disability-sydney-nsw
+├ ○ /speech-therapy-language-delay-sydney-nsw
+├ ○ /speech-therapy-literacy-sydney-nsw
+├ ○ /speech-therapy-neuro-rehab-sydney-nsw
+├ ○ /speech-therapy-reports-sydney-nsw
+├ ○ /speech-therapy-social-communication-sydney-nsw
+├ ○ /speech-therapy-speech-sounds-sydney-nsw
+├ ○ /speech-therapy-stuttering-sydney-nsw
+├ ○ /telehealth-speech-therapy-sydney-nsw
+├ ○ /thank-you
+├ ○ /zh
+├ ○ /zh/contact
+├ ○ /zh/ndis
+└ ○ /zh/services
+
+
+
+2026-03-29T11:31:54.109922091Z [inf]  ○  (Static)  prerendered as static content
+
+
+2026-03-29T11:31:54.245007295Z [inf]    Generating static pages using 47 workers (36/49) 
+
+2026-03-29T11:31:54.296961032Z [inf]  Attention: Next.js now collects completely anonymous telemetry regarding usage.
+
+2026-03-29T11:31:54.297332673Z [inf]  This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+
+2026-03-29T11:31:54.297383405Z [inf]  https://nextjs.org/telemetry
+
+
+2026-03-29T11:31:54.311113784Z [inf]  ▲ Next.js 16.2.1 (Turbopack)
+
+2026-03-29T11:31:54.311259094Z [inf]  
+
+2026-03-29T11:31:54.349299833Z [inf]  ✓ Generating static pages using 47 workers (49/49) in 889ms
+
+2026-03-29T11:31:54.356074185Z [inf]    Finalizing page optimization ...
+
+2026-03-29T11:31:54.377839889Z [inf]  ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+
+2026-03-29T11:31:54.423067322Z [inf]    Creating an optimized production build ...
+
+2026-03-29T11:31:54.441536021Z [inf]  [builder-v2 5/5] RUN npm run build
+2026-03-29T11:31:54.596468379Z [inf]  
+
+2026-03-29T11:31:54.601243106Z [inf]  Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /about
+├ ○ /adult-speech-therapy-sydney-nsw
+├ ○ /book
+├ ○ /contact
+├ ○ /dva-speech-therapy-sydney-nsw
+├ ○ /fees
+├ ○ /home-care-package-speech-therapy-sydney-nsw
+├ ○ /how-it-works
+├ ○ /medicare-speech-therapy-sydney-nsw
+├ ○ /mobile-speech-therapy-sydney-nsw
+├ ○ /ndis-service-guide-support-coordinators
+├ ○ /ndis-speech-therapy-sydney-nsw
+├ ○ /paediatric-speech-therapy-sydney-nsw
+├ ○ /parent-coaching-speech-therapy-sydney-nsw
+├ ○ /private-speech-therapy-sydney-nsw
+├ ○ /refer-a-client
+├ ○ /robots.txt
+├ ○ /school-based-speech-therapy-sydney-nsw
+├ ○ /sitemap.xml
+├ ○ /speech-pathologist-arncliffe-nsw
+├ ○ /speech-pathologist-burwood-nsw
+├ ○ /speech-pathologist-campsie-nsw
+├ ○ /speech-pathologist-canterbury-bankstown-nsw
+├ ○ /speech-pathologist-hurstville-nsw
+├ ○ /speech-pathologist-inner-west-sydney-nsw
+├ ○ /speech-pathologist-kogarah-nsw
+├ ○ /speech-pathologist-marrickville-nsw
+├ ○ /speech-pathologist-rockdale-nsw
+├ ○ /speech-pathologist-st-george-nsw
+├ ○ /speech-pathologist-strathfield-nsw
+├ ○ /speech-therapy-aac-sydney-nsw
+├ ○ /speech-therapy-adhd-sydney-nsw
+├ ○ /speech-therapy-aphasia-sydney-nsw
+├ ○ /speech-therapy-assessment-sydney-nsw
+├ ○ /speech-therapy-autism-sydney-nsw
+├ ○ /speech-therapy-intellectual-disability-sydney-nsw
+├ ○ /speech-therapy-language-delay-sydney-nsw
+├ ○ /speech-therapy-literacy-sydney-nsw
+├ ○ /speech-therapy-reports-sydney-nsw
+├ ○ /speech-therapy-social-communication-sydney-nsw
+├ ○ /speech-therapy-speech-sounds-sydney-nsw
+├ ○ /speech-therapy-stuttering-sydney-nsw
+├ ○ /telehealth-speech-therapy-sydney-nsw
+├ ○ /thank-you
+└ ○ /zh
+
+
+2026-03-29T11:31:54.601254181Z [inf]  
+
+2026-03-29T11:31:54.601424624Z [inf]  ○  (Static)  prerendered as static content
+
+2026-03-29T11:31:54.601472004Z [inf]  
+
+2026-03-29T11:31:54.783225188Z [inf]  [builder-v1 5/5] RUN npm run build
+2026-03-29T11:31:57.227715632Z [inf]  ✓ Compiled successfully in 2.6s
+
+2026-03-29T11:31:57.238226538Z [inf]    Running TypeScript ...
+
+2026-03-29T11:31:58.878464913Z [inf]  
+added 375 packages, and audited 376 packages in 15s
+
+2026-03-29T11:31:58.878481246Z [inf]  
+144 packages are looking for funding
+  run `npm fund` for details
+
+2026-03-29T11:31:58.87964576Z [inf]  
+found 0 vulnerabilities
+
+2026-03-29T11:31:58.880803884Z [inf]  npm notice
+npm notice New major version of npm available! 10.8.2 -> 11.12.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.1
+npm notice To update run: npm install -g npm@11.12.1
+npm notice
+
+2026-03-29T11:31:59.145008148Z [inf]  [builder-v3 3/5] RUN npm ci
+2026-03-29T11:31:59.146448536Z [inf]  [builder-v3 4/5] COPY v3/ .
+2026-03-29T11:31:59.424574847Z [inf]  [builder-v3 4/5] COPY v3/ .
+2026-03-29T11:31:59.425899854Z [inf]  [builder-v3 5/5] RUN npm run build
+2026-03-29T11:31:59.632980601Z [inf]  
+> v3@0.1.0 build
+> next build
+
+
+2026-03-29T11:32:00.069795426Z [inf]  Attention: Next.js now collects completely anonymous telemetry regarding usage.
+
+2026-03-29T11:32:00.070176525Z [inf]  This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+2026-03-29T11:32:00.070187083Z [inf]  
+
+2026-03-29T11:32:00.083658936Z [inf]  ▲ Next.js 16.2.1 (Turbopack)
+
+2026-03-29T11:32:00.083840538Z [inf]  
+
+2026-03-29T11:32:00.186839473Z [inf]    Creating an optimized production build ...
+
+2026-03-29T11:32:01.455786535Z [inf]    Finished TypeScript in 4.2s ...
+
+2026-03-29T11:32:01.46141202Z [inf]    Collecting page data using 47 workers ...
+
+2026-03-29T11:32:03.040234246Z [inf]    Generating static pages using 47 workers (0/47) ...
+
+2026-03-29T11:32:03.213451031Z [inf]  
+
+2026-03-29T11:32:03.213744881Z [inf]  > Build error occurred
+
+2026-03-29T11:32:03.21869806Z [inf]  Error: Turbopack build failed with 1 errors:
+./src/app/(english)/page.tsx:105:25
+the name `Home` is defined multiple times
+  [90m103 |[0m };
+  [90m104 |[0m
+[31m[1m>[0m [90m105 |[0m [36mexport[0m [36mdefault[0m [36mfunction[0m [33mHome[0m() {
+  [90m    |[0m                         [31m[1m^^^^[0m
+  [90m106 |[0m   [36mreturn[0m (
+  [90m107 |[0m     <main className=[32m"flex flex-col min-h-screen"[0m>
+  [90m108 |[0m       <script
+
+Ecmascript file had an error
+
+
+    at <unknown> (./src/app/(english)/page.tsx:105:25)
+
+2026-03-29T11:32:03.241195413Z [inf]    Generating static pages using 47 workers (11/47) 
+
+2026-03-29T11:32:03.318913043Z [err]  [builder-v3 5/5] RUN npm run build
+2026-03-29T11:32:03.806496893Z [err]  [builder-v0 5/5] RUN npm run build
+2026-03-29T11:32:03.820472423Z [err]  Dockerfile:45
+2026-03-29T11:32:03.820502863Z [err]  -------------------
+2026-03-29T11:32:03.820507253Z [err]  43 |     RUN npm ci
+2026-03-29T11:32:03.820510786Z [err]  44 |     COPY v3/ .
+2026-03-29T11:32:03.820515737Z [err]  45 | >>> RUN npm run build
+2026-03-29T11:32:03.820519217Z [err]  46 |
+2026-03-29T11:32:03.820523262Z [err]  47 |     # ─────────────────────────────────────────
+2026-03-29T11:32:03.820527203Z [err]  -------------------
+2026-03-29T11:32:03.820530857Z [err]  ERROR: failed to build: failed to solve: process "/bin/sh -c npm run build" did not complete successfully: exit code: 1

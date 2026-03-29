@@ -9,7 +9,7 @@ export default function Footer() {
         {/* Column 1: Brand + attribution */}
         <div className="space-y-6">
           <Image
-            src="/shine-and-speak-logo-stacked-transparent.png"
+            src="/v3/shine-and-speak-logo-stacked-transparent.png"
             alt="Shine and Speak Logo"
             width={160}
             height={128}
@@ -20,7 +20,7 @@ export default function Footer() {
           </p>
           <div className="pt-4 border-t border-white/10">
             <p className="text-xs text-blue-200/60 leading-relaxed">
-              Written by Shine Yin Teoh, Certified Practising Speech Pathologist.{" "}
+              Written by Shine Teoh, Certified Practising Speech Pathologist.{" "}
               <Link href="/about" className="text-golden-amber hover:text-white transition-colors underline-offset-4 hover:underline">
                 About Shine
               </Link>
@@ -105,7 +105,7 @@ export default function Footer() {
           <div className="bg-white/5 p-4 rounded-2xl inline-block border border-white/10 backdrop-blur-sm">
             <div className="relative w-28 h-28 bg-white rounded-xl overflow-hidden shadow-inner">
               <Image
-                src="/wechat-qr-placeholder.webp"
+                src="/v3/wechat-qr-placeholder.webp"
                 alt="Scan to add on WeChat"
                 fill
                 className="object-contain p-2"

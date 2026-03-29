@@ -58,7 +58,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 shrink-0 group">
             <Image
-              src="/shine-and-speak-logo-horizontal-transparent.png"
+              src="/v1/shine-and-speak-logo-horizontal-transparent.png"
               alt="Shine and Speak logo"
               width={200}
               height={54}
