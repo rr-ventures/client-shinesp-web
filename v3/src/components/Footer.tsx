@@ -19,8 +19,8 @@ export default function Footer() {
             Personalised speech therapy delivered to your home, school, or online. Bilingual English & Mandarin. Serving Inner West Sydney.
           </p>
           <div className="pt-4 border-t border-white/10">
-            <p className="text-xs text-blue-200/60 leading-relaxed">
-              Written by Shine Teoh, Certified Practising Speech Pathologist.{" "}
+            <p className="text-xs text-blue-100/90 leading-relaxed">
+              Written by Shine Yin Teoh, Certified Practising Speech Pathologist.{" "}
               <Link href="/about" className="text-golden-amber hover:text-white transition-colors underline-offset-4 hover:underline">
                 About Shine
               </Link>
@@ -114,7 +114,7 @@ export default function Footer() {
             <div className="text-center mt-2 text-xs text-blue-100/80 font-medium">Scan to add on WeChat</div>
           </div>
 
-          <div className="mt-8 text-xs text-blue-200/50 space-y-2 font-medium tracking-wide uppercase">
+          <div className="mt-8 text-xs text-blue-100/80 space-y-2 font-medium tracking-wide uppercase">
             <p>Certified Practising Speech Pathologist</p>
             <p>NDIS Registered Provider</p>
             <p>{/* PLACEHOLDER: NDIS Provider Number */}</p>
@@ -124,7 +124,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="container mx-auto px-4 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-blue-200/60">
+      <div className="container mx-auto px-4 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-blue-100/80">
         <p>© 2026 Shine and Speak. All rights reserved.</p>
         <p>ABN: {/* PLACEHOLDER: ABN */}</p>
         <div className="flex gap-6 font-medium">

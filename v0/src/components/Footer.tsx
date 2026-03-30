@@ -163,7 +163,7 @@ export default function Footer() {
           <p>© 2026 Shine and Speak. All rights reserved.</p>
           <p>
             <Link href="/about" className="hover:text-white transition-colors underline decoration-white/20 hover:decoration-white">
-              Written by Shine Teoh, Certified Practising Speech Pathologist
+              Written by Shine Yin Teoh, Certified Practising Speech Pathologist
             </Link>
           </p>
           <p>Inner West Sydney &amp; Telehealth Australia-wide</p>

@@ -157,7 +157,7 @@ export default function Footer() {
             </p>
             <div className="mt-6">
               <p className="text-xs text-gray-300 italic">
-                Written by Shine Teoh, Certified Practising Speech Pathologist
+                Written by Shine Yin Teoh, Certified Practising Speech Pathologist
               </p>
               <Link href="/about" className="text-xs text-[#E8A84C] hover:underline mt-1 inline-block">
                 Learn about Shine&apos;s qualifications
