@@ -140,7 +140,7 @@ export default function HomePage() {
 
       {/* 1. HERO */}
       <section className="bg-accent pt-20 pb-32 relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('/shine_with_schoolkids.png')] bg-cover bg-center opacity-5 mix-blend-multiply"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('/v1/shine_with_schoolkids.png')] bg-cover bg-center opacity-5 mix-blend-multiply"></div>
         <div className="container-custom relative z-10">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="max-w-xl">
@@ -167,7 +167,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="relative h-[550px] rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white transform hover:-translate-y-2 transition-transform duration-500">
-              <img src="/shine_with_schoolkids1.png" alt="Shine Yin Teoh working with children in a school setting" className="absolute inset-0 w-full h-full object-cover" />
+              <img src="/v1/shine_with_schoolkids1.png" alt="Shine Yin Teoh working with children in a school setting" className="absolute inset-0 w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-60"></div>
             </div>
           </div>
@@ -517,7 +517,7 @@ export default function HomePage() {
             </div>
             <div className="order-1 md:order-2">
               <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
-                <img src="/shine_with_schoolkids.png" alt="Shine Yin Teoh, Certified Practising Speech Pathologist" className="absolute inset-0 w-full h-full object-cover" />
+                <img src="/v1/shine_with_schoolkids.png" alt="Shine Yin Teoh, Certified Practising Speech Pathologist" className="absolute inset-0 w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-40"></div>
               </div>
             </div>
@@ -621,7 +621,7 @@ export default function HomePage() {
 
       {/* 13. FINAL CTA BAND */}
       <section className="bg-primary py-24 text-white text-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/hero-stock-placeholder-unsplash.jpg')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
+        <div className="absolute inset-0 bg-[url('/v1/hero-stock-placeholder-unsplash.jpg')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
         <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-r from-primary via-primary/90 to-primary/80"></div>
         <div className="container-custom relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">Ready to help your child thrive?</h2>

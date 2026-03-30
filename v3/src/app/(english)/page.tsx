@@ -120,7 +120,7 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/shine_with_schoolkids.png"
+            src="/v3/shine_with_schoolkids.png"
             alt="Shine Yin Teoh, speech pathologist, working with children in a school setting"
             fill
             className="object-cover"

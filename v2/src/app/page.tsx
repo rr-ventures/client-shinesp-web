@@ -298,7 +298,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="relative h-80 lg:h-[480px] rounded-2xl overflow-hidden shadow-2xl bg-[#1e3a63] flex items-center justify-center">
-            <img src="/shine_with_schoolkids1.png" alt="Shine Yin Teoh, Certified Practising Speech Pathologist, working with children" className="absolute inset-0 w-full h-full object-cover" />
+            <img src="/v2/shine_with_schoolkids1.png" alt="Shine Yin Teoh, Certified Practising Speech Pathologist, working with children" className="absolute inset-0 w-full h-full object-cover" />
           </div>
         </div>
       </section>
@@ -616,7 +616,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative h-[400px] lg:h-[520px] rounded-2xl overflow-hidden bg-slate-100 shadow-lg flex items-center justify-center">
-              <img src="/shine_with_schoolkids.png" alt="Shine Yin Teoh, Certified Practising Speech Pathologist" className="absolute inset-0 w-full h-full object-cover" />
+              <img src="/v2/shine_with_schoolkids.png" alt="Shine Yin Teoh, Certified Practising Speech Pathologist" className="absolute inset-0 w-full h-full object-cover" />
             </div>
             <div>
               <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-[#2B4C7E] mb-4">Meet Shine Teoh</h2>

@@ -100,7 +100,7 @@ export default function HomePage() {
           <div className="flex justify-center relative">
             <div className="absolute inset-0 bg-[#E3E7E4] rounded-[40px] rotate-3 scale-105 opacity-50"></div>
             <Image
-              src="/shine_with_schoolkids1.png"
+              src="/v0/shine_with_schoolkids1.png"
               alt="Shine Yin Teoh, speech pathologist, working with children in a school setting"
               width={600}
               height={400}

@@ -46,7 +46,7 @@ export default function AboutPage() {
             
             <div className="relative h-[500px] rounded-[2rem] overflow-hidden shadow-xl">
               <img 
-                src="/shine-headshot-1200x1200.webp" 
+                src="/v2/shine-headshot-1200x1200.webp" 
                 alt="Shine Yin Teoh, Certified Practising Speech Pathologist" 
                 className="absolute inset-0 w-full h-full object-cover"
               />
