@@ -13,7 +13,7 @@ export default function Footer() {
             alt="Shine and Speak Logo"
             width={160}
             height={128}
-            className="mb-6 opacity-90 hover:opacity-100 transition-opacity"
+            className="mb-6 opacity-90 hover:opacity-100 transition-opacity brightness-0 invert"
           />
           <p className="text-blue-100/80 text-sm leading-relaxed">
             Personalised speech therapy delivered to your home, school, or online. Bilingual English & Mandarin. Serving Inner West Sydney.

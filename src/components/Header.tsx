@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const servicesLinks = [
   { label: "Paediatric Speech Therapy", href: "/paediatric-speech-therapy-sydney-nsw" },
@@ -80,6 +81,8 @@ function NavDropdown({ label, links }: { label: string; links: { label: string; 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileSection, setMobileSection] = useState<string | null>(null);
+  const pathname = usePathname();
+  const isChinese = pathname?.startsWith("/zh");
 
   const toggleMobileSection = (section: string) => {
     setMobileSection(mobileSection === section ? null : section);
@@ -118,9 +121,15 @@ export default function Header() {
           >
             Refer a Client
           </Link>
-          <Link href="/zh" className="text-stone font-medium text-sm hover:text-navy-blue transition flex items-center gap-1 bg-gray-50 px-3 py-1.5 rounded-full border border-gray-200" lang="zh" hrefLang="zh">
-            <span>🌐</span> 中文
-          </Link>
+          {isChinese ? (
+            <Link href="/" className="text-stone font-medium text-sm hover:text-navy-blue transition flex items-center gap-1 bg-gray-50 px-3 py-1.5 rounded-full border border-gray-200" lang="en" hrefLang="en">
+              <span>🌐</span> English
+            </Link>
+          ) : (
+            <Link href="/zh" className="text-stone font-medium text-sm hover:text-navy-blue transition flex items-center gap-1 bg-gray-50 px-3 py-1.5 rounded-full border border-gray-200" lang="zh" hrefLang="zh">
+              <span>🌐</span> 中文
+            </Link>
+          )}
         </div>
 
         {/* Mobile hamburger */}
@@ -269,9 +278,15 @@ export default function Header() {
             <Link href="/contact" onClick={() => setMobileOpen(false)} className="flex px-4 py-3 text-navy-blue font-semibold border-b border-gray-100">
               Contact
             </Link>
-            <Link href="/zh" onClick={() => setMobileOpen(false)} className="flex px-4 py-3 text-navy-blue font-semibold" lang="zh" hrefLang="zh">
-              中文
-            </Link>
+            {isChinese ? (
+              <Link href="/" onClick={() => setMobileOpen(false)} className="flex px-4 py-3 text-navy-blue font-semibold" lang="en" hrefLang="en">
+                English
+              </Link>
+            ) : (
+              <Link href="/zh" onClick={() => setMobileOpen(false)} className="flex px-4 py-3 text-navy-blue font-semibold" lang="zh" hrefLang="zh">
+                中文
+              </Link>
+            )}
           </nav>
         </div>
       )}

@@ -84,7 +84,6 @@ export default function AboutPage() {
               <li>Meets <a href="https://www.speechpathologyaustralia.org.au" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-golden-amber transition-colors">Speech Pathology Australia&apos;s certification standards</a> — Certified Practising Member (CPSP)</li>
               <li>NDIS Registered Provider {/* PLACEHOLDER: NDIS provider number */}</li>
               <li>Medicare Registered Provider</li>
-              <li>{/* PLACEHOLDER: Training certifications e.g. Hanen, Sounds Write, Lidcombe Program */}</li>
             </ul>
 
             <h2 className="text-3xl font-bold text-navy-blue mb-4">Bilingual practice</h2>
@@ -156,13 +155,18 @@ export default function AboutPage() {
 
       <section className="py-20 bg-golden-amber text-white text-center">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-6">Ready to help your child thrive?</h2>
+          <h2 className="text-4xl font-bold mb-6">Ready to help you or your child thrive?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Book a free discovery call to talk about your child's needs.
+            Book a free discovery call to talk about your needs.
           </p>
-          <Link href="/contact" className="inline-block bg-navy-blue text-white px-10 py-4 rounded-md font-bold text-xl hover:bg-blue-900 transition shadow-xl">
-            Book a Free Discovery Call →
-          </Link>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Link href="/contact" className="inline-flex items-center justify-center bg-navy-blue text-white px-10 py-4 rounded-full font-bold text-xl hover:bg-blue-900 transition-all duration-300 shadow-xl hover:-translate-y-1">
+              Book a Free Discovery Call →
+            </Link>
+            <Link href="/refer-a-client" className="inline-flex items-center justify-center bg-white text-navy-blue px-10 py-4 rounded-full font-bold text-xl hover:bg-gray-100 transition-all duration-300 shadow-xl hover:-translate-y-1">
+              Refer a Client →
+            </Link>
+          </div>
         </div>
       </section>
     </main>

@@ -127,7 +127,7 @@ export default function Home() {
             priority
           />
           {/* Dark gradient overlay for readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-navy-blue/90 via-navy-blue/70 to-navy-blue/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-navy-blue/70 via-navy-blue/50 to-navy-blue/20"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
@@ -140,16 +140,16 @@ export default function Home() {
               Sydney Speech Pathologist | NDIS Mobile &amp; Telehealth Services
             </h1>
             <p className="text-lg md:text-xl text-blue-50 mb-10 leading-relaxed font-light">
-              Helping your child communicate with confidence. Personalised speech therapy delivered to your home, school, or online. Available in English and Mandarin (普通话). Serving Inner West Sydney and surrounds.
+              Helping you or your child communicate with confidence. Personalised speech therapy delivered to your home, school, or online. Available in English and Mandarin (普通话). Serving Inner West Sydney and surrounds.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               {/* REPLACE: Swap /contact for your Calendly/TidyCal booking URL */}
-              <Link href="/contact" className="btn-primary text-center text-lg py-4">
+              <Link href="/contact" className="btn-primary text-center text-lg py-4 shadow-lg hover:-translate-y-1 transition-all duration-300">
                 Book a Free Discovery Call
               </Link>
-              <a href="#trust" className="btn-secondary text-center text-lg py-4 border-white text-white hover:bg-white hover:text-navy-blue">
-                Learn More ↓
-              </a>
+              <Link href="/refer-a-client" className="btn-secondary text-center text-lg py-4 border-white text-white hover:bg-white hover:text-navy-blue shadow-lg hover:-translate-y-1 transition-all duration-300">
+                Refer a Client
+              </Link>
             </div>
             <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-medium text-white/90">
               <span className="flex items-center gap-2"><span className="w-5 h-5 rounded-full bg-sage-green flex items-center justify-center text-navy-blue text-xs">✓</span> CPSP Certified</span>
@@ -161,19 +161,19 @@ export default function Home() {
       </section>
 
       {/* Section 2: TRUST LOGO BAR */}
-      <section id="trust" className="py-12 border-y border-gray-100 bg-white relative z-20 -mt-8 mx-4 md:mx-8 lg:mx-auto max-w-5xl rounded-2xl shadow-sm">
+      <section id="trust" className="py-12 border-y border-gray-100 bg-white relative z-20 -mt-8 mx-4 md:mx-8 lg:mx-auto max-w-7xl rounded-2xl shadow-sm">
         <div className="container mx-auto px-6 flex flex-wrap justify-center gap-8 md:gap-16 items-center">
-          <div className="text-center group">
+          <div className="text-center group hover:-translate-y-1 transition-transform duration-300">
             <div className="font-serif font-bold text-xl text-navy-blue mb-1 group-hover:text-golden-amber transition-colors">Speech Pathology Australia</div>
             <div className="text-sm text-stone font-medium uppercase tracking-wider">Certified Practising Member</div>
           </div>
           <div className="w-px h-12 bg-gray-200 hidden md:block"></div>
-          <div className="text-center group">
+          <div className="text-center group hover:-translate-y-1 transition-transform duration-300">
             <div className="font-serif font-bold text-xl text-navy-blue mb-1 group-hover:text-golden-amber transition-colors">NDIS Registered</div>
             <div className="text-sm text-stone font-medium uppercase tracking-wider">All management types</div>
           </div>
           <div className="w-px h-12 bg-gray-200 hidden md:block"></div>
-          <div className="text-center group">
+          <div className="text-center group hover:-translate-y-1 transition-transform duration-300">
             <div className="font-serif font-bold text-xl text-navy-blue mb-1 group-hover:text-golden-amber transition-colors">Medicare Provider</div>
             <div className="text-sm text-stone font-medium uppercase tracking-wider">Registered provider</div>
           </div>
@@ -183,13 +183,13 @@ export default function Home() {
 
       {/* OUR SPEECH THERAPY SERVICES — GBP Category H2 alignment */}
       <section className="py-24 bg-warm-white">
-        <div className="container mx-auto px-4 max-w-5xl">
+        <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
             <p className="text-golden-amber font-bold text-sm tracking-widest uppercase mb-3">Our Services</p>
             <p className="text-3xl md:text-4xl font-bold text-navy-blue mb-4">Everything We Offer</p>
             <p className="text-stone text-lg max-w-2xl mx-auto">Comprehensive speech pathology for children and adults across Sydney&apos;s Inner West and beyond.</p>
           </div>
-          <div className="space-y-0 divide-y divide-gray-100">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { title: 'Paediatric Speech Therapy in Sydney', text: 'I provide personalised paediatric speech therapy for children with autism, ADHD, developmental delay, language disorders, and speech sound difficulties. Therapy is tailored to your child\'s individual strengths and goals, delivered in familiar environments — home, school, or kindergarten.', href: '/paediatric-speech-therapy-sydney-nsw', linkText: 'Explore paediatric speech therapy services' },
               { title: 'Adult Speech Therapy in Sydney', text: 'Adult speech therapy at Shine and Speak supports people living with aphasia, cognitive-communication difficulties, fluency disorders, and challenges following stroke, brain injury, or neurological events. Sessions available at home or via telehealth anywhere in Australia.', href: '/adult-speech-therapy-sydney-nsw', linkText: 'Learn about adult speech therapy in Sydney' },
@@ -198,19 +198,19 @@ export default function Home() {
               { title: 'School-Based Speech Therapy', text: 'I visit schools, kindergartens, and early childhood centres across Inner West Sydney to deliver therapy in your child\'s learning environment. Working on-site allows direct coordination with teachers and support staff, ensuring strategies are applied consistently all day.', href: '/school-based-speech-therapy-sydney-nsw', linkText: 'Learn about school-based speech therapy services' },
               { title: 'NDIS Speech Therapy', text: null, href: '/ndis-speech-therapy-sydney-nsw', linkText: 'Access NDIS-funded speech therapy', isNdis: true },
             ].map(({ title, text, href, linkText, isNdis }, i) => (
-              <div key={href} className={`flex gap-6 py-10 group ${i % 2 === 0 ? '' : 'flex-row-reverse'}`}>
-                <div className="flex-shrink-0 w-1 rounded-full bg-golden-amber self-stretch opacity-60 group-hover:opacity-100 transition-opacity"></div>
-                <div className="flex-1">
-                  <h2 className="text-xl font-bold text-navy-blue mb-3 group-hover:text-golden-amber transition-colors duration-200">{title}</h2>
-                  {isNdis ? (
-                    <p className="text-stone leading-relaxed mb-4 text-sm">
-                      As a registered NDIS provider, I accept all plan management types — self-managed, plan-managed, and NDIA-managed. Speech therapy for language delays, autism, AAC, and communication difficulties can be funded through <a href="https://www.ndis.gov.au" target="_blank" rel="noopener noreferrer" className="text-navy-blue font-semibold underline underline-offset-4 hover:text-golden-amber transition-colors">the National Disability Insurance Scheme</a>. I respond within 24 hours.
-                    </p>
-                  ) : (
-                    <p className="text-stone leading-relaxed mb-4 text-sm">{text}</p>
-                  )}
-                  <Link href={href} className="text-golden-amber font-semibold hover:underline underline-offset-4 inline-flex items-center gap-1 text-sm">{linkText} <span>→</span></Link>
-                </div>
+              <div key={href} className="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100/50 flex flex-col group hover:-translate-y-1">
+                <div className="w-12 h-1 bg-golden-amber rounded-full mb-6 opacity-60 group-hover:opacity-100 transition-opacity"></div>
+                <h2 className="text-xl font-bold text-navy-blue mb-4 group-hover:text-golden-amber transition-colors duration-200">{title}</h2>
+                {isNdis ? (
+                  <p className="text-stone leading-relaxed mb-6 text-sm flex-grow">
+                    As a registered NDIS provider, I accept all plan management types — self-managed, plan-managed, and NDIA-managed. Speech therapy for language delays, autism, AAC, and communication difficulties can be funded through <a href="https://www.ndis.gov.au" target="_blank" rel="noopener noreferrer" className="text-navy-blue font-semibold underline underline-offset-4 hover:text-golden-amber transition-colors">the National Disability Insurance Scheme</a>. I respond within 24 hours.
+                  </p>
+                ) : (
+                  <p className="text-stone leading-relaxed mb-6 text-sm flex-grow">{text}</p>
+                )}
+                <Link href={href} className="text-golden-amber font-semibold hover:underline underline-offset-4 inline-flex items-center gap-1 text-sm mt-auto group-hover:translate-x-1 transition-transform">
+                  {linkText} <span className="text-lg">→</span>
+                </Link>
               </div>
             ))}
           </div>
@@ -225,13 +225,13 @@ export default function Home() {
             <div className="w-24 h-1 bg-golden-amber mx-auto rounded-full"></div>
           </div>
           {/* PASTE GOOGLE REVIEWS EMBED CODE HERE */}
-          <div className="max-w-4xl mx-auto premium-card p-12">
+          <div className="max-w-4xl mx-auto premium-card p-12 shadow-xl hover:shadow-2xl transition-shadow duration-300">
             <p className="text-xl text-stone italic mb-10 leading-relaxed font-serif">&ldquo;Review coming soon — Shine and Speak is a new practice. In the meantime, here are the credentials and training that back our work.&rdquo;</p>
             <div className="flex flex-wrap justify-center gap-4 text-sm font-medium text-navy-blue">
-              <span className="bg-sage-green/50 border border-sage-green px-5 py-2.5 rounded-full flex items-center gap-2"><span className="text-golden-amber">✦</span> Certified Practising Speech Pathologist</span>
-              <span className="bg-sage-green/50 border border-sage-green px-5 py-2.5 rounded-full flex items-center gap-2"><span className="text-golden-amber">✦</span> NDIS Registered Provider</span>
-              <span className="bg-sage-green/50 border border-sage-green px-5 py-2.5 rounded-full flex items-center gap-2"><span className="text-golden-amber">✦</span> Medicare Provider</span>
-              <span className="bg-sage-green/50 border border-sage-green px-5 py-2.5 rounded-full flex items-center gap-2"><span className="text-golden-amber">✦</span> Bilingual English &amp; Mandarin</span>
+              <span className="bg-sage-green/50 border border-sage-green px-5 py-2.5 rounded-full flex items-center gap-2 hover:-translate-y-1 transition-transform duration-300"><span className="text-golden-amber">✦</span> Certified Practising Speech Pathologist</span>
+              <span className="bg-sage-green/50 border border-sage-green px-5 py-2.5 rounded-full flex items-center gap-2 hover:-translate-y-1 transition-transform duration-300"><span className="text-golden-amber">✦</span> NDIS Registered Provider</span>
+              <span className="bg-sage-green/50 border border-sage-green px-5 py-2.5 rounded-full flex items-center gap-2 hover:-translate-y-1 transition-transform duration-300"><span className="text-golden-amber">✦</span> Medicare Provider</span>
+              <span className="bg-sage-green/50 border border-sage-green px-5 py-2.5 rounded-full flex items-center gap-2 hover:-translate-y-1 transition-transform duration-300"><span className="text-golden-amber">✦</span> Bilingual English &amp; Mandarin</span>
             </div>
           </div>
         </div>
@@ -326,7 +326,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:24px_24px] opacity-40 pointer-events-none"></div>
         <div className="container mx-auto px-4 max-w-7xl relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy-blue mb-4">How I can help your child</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy-blue mb-4">How I can help</h2>
             <div className="w-24 h-1 bg-golden-amber mx-auto rounded-full"></div>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -400,7 +400,7 @@ export default function Home() {
       <section className="py-24 bg-navy-blue">
         <div className="container mx-auto px-4 max-w-2xl text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">Book Your Free Discovery Call</h2>
-          <p className="text-blue-100/80 text-lg mb-10 leading-relaxed">Tell us about your child and we&apos;ll be in touch within 24 hours.</p>
+          <p className="text-blue-100/80 text-lg mb-10 leading-relaxed">Tell us about the client and we&apos;ll be in touch within 24 hours.</p>
           <form action="/thank-you" method="GET" className="bg-white rounded-[2rem] p-10 shadow-2xl text-left space-y-6">
             <div>
               <label htmlFor="hp-name" className="block text-sm font-bold text-navy-blue mb-2">Your name</label>
@@ -415,8 +415,8 @@ export default function Home() {
               <input type="email" id="hp-email" name="email" required className="w-full border border-gray-200 rounded-xl px-4 py-3 text-charcoal focus:outline-none focus:ring-2 focus:ring-golden-amber focus:border-transparent" placeholder="you@example.com" />
             </div>
             <div>
-              <label htmlFor="hp-age" className="block text-sm font-bold text-navy-blue mb-2">Child&apos;s age</label>
-              <input type="text" id="hp-age" name="childAge" required className="w-full border border-gray-200 rounded-xl px-4 py-3 text-charcoal focus:outline-none focus:ring-2 focus:ring-golden-amber focus:border-transparent" placeholder="e.g. 4 years" />
+              <label htmlFor="hp-age" className="block text-sm font-bold text-navy-blue mb-2">Client&apos;s age</label>
+              <input type="text" id="hp-age" name="clientAge" required className="w-full border border-gray-200 rounded-xl px-4 py-3 text-charcoal focus:outline-none focus:ring-2 focus:ring-golden-amber focus:border-transparent" placeholder="e.g. 4 years, or Adult" />
             </div>
             <div>
               <label htmlFor="hp-help" className="block text-sm font-bold text-navy-blue mb-2">What are you looking for help with?</label>
@@ -437,7 +437,7 @@ export default function Home() {
                 <option value="Other">Other</option>
               </select>
             </div>
-            <button type="submit" className="w-full bg-golden-amber text-white font-bold py-4 rounded-xl text-lg hover:bg-[#6B5200] transition-colors shadow-lg">
+            <button type="submit" className="w-full bg-golden-amber text-white font-bold py-4 rounded-xl text-lg hover:bg-[#6B5200] transition-all duration-300 shadow-lg hover:-translate-y-1">
               Book My Free Discovery Call →
             </button>
           </form>
@@ -454,26 +454,31 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto mb-16 relative">
             <div className="hidden md:block absolute top-10 left-[20%] right-[20%] h-0.5 bg-gray-200 -z-10"></div>
-            <div className="relative z-10">
-              <div className="w-20 h-20 bg-white border-4 border-sage-green text-navy-blue rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-8 shadow-sm">1</div>
+            <div className="relative z-10 group hover:-translate-y-2 transition-transform duration-300">
+              <div className="w-20 h-20 bg-white border-4 border-sage-green text-navy-blue rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-8 shadow-md group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">1</div>
               <h3 className="text-xl font-bold text-navy-blue mb-4">Book a free call</h3>
-              <p className="text-stone text-sm leading-relaxed">We'll have a quick chat about your child's needs, answer your questions, and work out whether I'm the right fit. No obligation, no pressure.</p>
+              <p className="text-stone text-sm leading-relaxed">We'll have a quick chat about your needs, answer your questions, and work out whether I'm the right fit. No obligation, no pressure.</p>
             </div>
-            <div className="relative z-10">
-              <div className="w-20 h-20 bg-white border-4 border-sage-green text-navy-blue rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-8 shadow-sm">2</div>
+            <div className="relative z-10 group hover:-translate-y-2 transition-transform duration-300">
+              <div className="w-20 h-20 bg-white border-4 border-sage-green text-navy-blue rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-8 shadow-md group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">2</div>
               <h3 className="text-xl font-bold text-navy-blue mb-4">Assessment</h3>
-              <p className="text-stone text-sm leading-relaxed">I'll complete a thorough assessment — at your home, your child's school, or online — to understand their strengths, challenges, and goals.</p>
+              <p className="text-stone text-sm leading-relaxed">I'll complete a thorough assessment — at your home, school, or online — to understand strengths, challenges, and goals.</p>
             </div>
-            <div className="relative z-10">
-              <div className="w-20 h-20 bg-white border-4 border-sage-green text-navy-blue rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-8 shadow-sm">3</div>
-              <h3 className="text-xl font-bold text-navy-blue mb-4">Your child's therapy plan</h3>
-              <p className="text-stone text-sm leading-relaxed">You'll receive a personalised therapy plan focused on practical, real-life progress. I'll work closely with you, your child's teachers, and other professionals.</p>
+            <div className="relative z-10 group hover:-translate-y-2 transition-transform duration-300">
+              <div className="w-20 h-20 bg-white border-4 border-sage-green text-navy-blue rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-8 shadow-md group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">3</div>
+              <h3 className="text-xl font-bold text-navy-blue mb-4">Your therapy plan</h3>
+              <p className="text-stone text-sm leading-relaxed">You'll receive a personalised therapy plan focused on practical, real-life progress. I'll work closely with you, teachers, and other professionals.</p>
             </div>
           </div>
-          {/* REPLACE: Swap /contact for your Calendly/TidyCal booking URL */}
-          <Link href="/contact" className="btn-primary text-lg py-4 px-10 inline-flex items-center gap-2">
-            Book Your Free Discovery Call <span>→</span>
-          </Link>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            {/* REPLACE: Swap /contact for your Calendly/TidyCal booking URL */}
+            <Link href="/contact" className="btn-primary text-lg py-4 px-10 inline-flex items-center justify-center gap-2 shadow-lg hover:-translate-y-1 transition-all duration-300">
+              Book Your Free Discovery Call <span>→</span>
+            </Link>
+            <Link href="/refer-a-client" className="btn-secondary text-lg py-4 px-10 inline-flex items-center justify-center gap-2 border-navy-blue text-navy-blue hover:bg-navy-blue hover:text-white shadow-lg hover:-translate-y-1 transition-all duration-300">
+              Refer a Client <span>→</span>
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -490,9 +495,9 @@ export default function Home() {
           <p className="text-stone mb-10 leading-relaxed">
             Assessing a child in only one language can underestimate their true abilities. Working with a bilingual therapist ensures nothing is missed.
           </p>
-          <Link href="/zh" className="btn-secondary text-lg py-3 px-8 inline-flex items-center gap-2 bg-white">
-            了解更多 / Learn More in Chinese <span>→</span>
-          </Link>
+            <Link href="/zh" className="btn-secondary text-lg py-3 px-8 inline-flex items-center gap-2 bg-white shadow-lg hover:-translate-y-1 transition-all duration-300">
+              了解更多 / Learn More in Chinese <span>→</span>
+            </Link>
         </div>
       </section>
 
@@ -500,9 +505,9 @@ export default function Home() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center max-w-7xl">
           <div className="order-2 lg:order-1">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy-blue mb-8">Meet Shine Teoh</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy-blue mb-8">Meet Shine Yin Teoh</h2>
             <p className="text-lg text-stone mb-6 leading-relaxed">
-              Hi, I'm Shine Teoh — a Certified Practising Speech Pathologist. I'm passionate about providing high-quality, personalised speech therapy that makes a genuine difference in everyday life.
+              Hi, I'm Shine Yin Teoh — a Certified Practising Speech Pathologist. I'm passionate about providing high-quality, personalised speech therapy that makes a genuine difference in everyday life.
             </p>
             <p className="text-lg text-stone mb-8 leading-relaxed">
               I specialise in working with children and adults with a wide range of communication needs. I speak English and Mandarin, and I'm committed to providing culturally responsive services for diverse families.
@@ -524,10 +529,6 @@ export default function Home() {
                 <li className="flex items-start gap-3">
                   <span className="text-golden-amber mt-0.5">✦</span>
                   <span>Medicare Registered Provider</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-golden-amber mt-0.5">✦</span>
-                  <span>{/* PLACEHOLDER: Training certifications e.g. Hanen, Sounds Write, Lidcombe Program */}</span>
                 </li>
               </ul>
             </div>
@@ -582,19 +583,19 @@ export default function Home() {
               </li>
             </ul>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/refer-a-client" className="btn-primary text-center">
+              <Link href="/refer-a-client" className="btn-primary text-center shadow-lg hover:-translate-y-1 transition-all duration-300">
                 Refer a Client
               </Link>
-              <Link href="/ndis-service-guide-support-coordinators" className="btn-secondary border-white text-white hover:bg-white hover:text-navy-blue text-center">
+              <Link href="/ndis-service-guide-support-coordinators" className="btn-secondary text-center border-white text-white hover:bg-white hover:text-navy-blue shadow-lg hover:-translate-y-1 transition-all duration-300">
                 Download NDIS Service Guide
               </Link>
             </div>
           </div>
-          <div className="bg-white/5 border border-white/10 backdrop-blur-md p-10 rounded-[2rem] shadow-2xl relative">
+          <div className="bg-white/5 border border-white/10 backdrop-blur-md p-10 rounded-[2rem] shadow-2xl relative hover:-translate-y-1 transition-transform duration-300">
             <div className="absolute -top-6 -right-6 w-24 h-24 bg-golden-amber rounded-full blur-2xl opacity-20"></div>
             <h3 className="text-2xl font-bold mb-4 text-golden-amber font-serif">Quick Referral</h3>
             <p className="mb-8 text-blue-100/80 leading-relaxed">Submit a referral in under 2 minutes. I'll contact the family directly to arrange an initial consultation.</p>
-            <Link href="/refer-a-client" className="block w-full text-center bg-white text-navy-blue px-6 py-4 rounded-full font-bold hover:bg-golden-amber hover:text-white transition-all shadow-lg hover:-translate-y-1">
+            <Link href="/refer-a-client" className="block w-full text-center bg-white text-navy-blue px-6 py-4 rounded-full font-bold hover:bg-golden-amber hover:text-white transition-all duration-300 shadow-lg hover:-translate-y-1">
               Open Referral Form →
             </Link>
           </div>
@@ -610,7 +611,7 @@ export default function Home() {
           </div>
 
           <div className="space-y-12">
-            <div className="bg-warm-white p-8 rounded-2xl border border-gray-100 flex gap-4">
+            <div className="bg-warm-white p-8 rounded-2xl border border-gray-100 flex gap-4 shadow-sm hover:shadow-md transition-shadow duration-300">
               <span className="text-golden-amber font-serif text-3xl leading-none mt-1">Q.</span>
               <div>
                 <h3 className="text-xl font-bold text-navy-blue mb-3">How do I know if my child needs speech therapy?</h3>
@@ -618,7 +619,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-warm-white p-8 rounded-2xl border border-gray-100 flex gap-4">
+            <div className="bg-warm-white p-8 rounded-2xl border border-gray-100 flex gap-4 shadow-sm hover:shadow-md transition-shadow duration-300">
               <span className="text-golden-amber font-serif text-3xl leading-none mt-1">Q.</span>
               <div>
                 <h3 className="text-xl font-bold text-navy-blue mb-3">What does a typical session look like?</h3>
@@ -626,7 +627,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-warm-white p-8 rounded-2xl border border-gray-100 flex gap-4">
+            <div className="bg-warm-white p-8 rounded-2xl border border-gray-100 flex gap-4 shadow-sm hover:shadow-md transition-shadow duration-300">
               <span className="text-golden-amber font-serif text-3xl leading-none mt-1">Q.</span>
               <div>
                 <h3 className="text-xl font-bold text-navy-blue mb-3">How much does speech therapy cost?</h3>
@@ -634,7 +635,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-warm-white p-8 rounded-2xl border border-gray-100 flex gap-4">
+            <div className="bg-warm-white p-8 rounded-2xl border border-gray-100 flex gap-4 shadow-sm hover:shadow-md transition-shadow duration-300">
               <span className="text-golden-amber font-serif text-3xl leading-none mt-1">Q.</span>
               <div>
                 <h3 className="text-xl font-bold text-navy-blue mb-3">Do you offer telehealth?</h3>
@@ -642,7 +643,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-warm-white p-8 rounded-2xl border border-gray-100 flex gap-4">
+            <div className="bg-warm-white p-8 rounded-2xl border border-gray-100 flex gap-4 shadow-sm hover:shadow-md transition-shadow duration-300">
               <span className="text-golden-amber font-serif text-3xl leading-none mt-1">Q.</span>
               <div>
                 <h3 className="text-xl font-bold text-navy-blue mb-3">What areas do you travel to?</h3>
@@ -650,7 +651,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-warm-white p-8 rounded-2xl border border-gray-100 flex gap-4">
+            <div className="bg-warm-white p-8 rounded-2xl border border-gray-100 flex gap-4 shadow-sm hover:shadow-md transition-shadow duration-300">
               <span className="text-golden-amber font-serif text-3xl leading-none mt-1">Q.</span>
               <div>
                 <h3 className="text-xl font-bold text-navy-blue mb-3">How do I get started?</h3>
@@ -686,9 +687,9 @@ export default function Home() {
       <section className="py-24 bg-golden-amber text-white text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIi8+PC9zdmc+')] opacity-30"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-navy-blue">Ready to help your child thrive?</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-navy-blue">Ready to help you or your child thrive?</h2>
           <p className="text-xl mb-10 max-w-2xl mx-auto text-navy-blue/80 font-medium">
-            Book a free discovery call to talk about your child's needs — no obligation, no pressure.
+            Book a free discovery call to talk about your needs — no obligation, no pressure.
           </p>
           <div className="text-xl font-bold mb-10 flex flex-wrap justify-center gap-8 text-navy-blue">
             <a href="tel:+61421608819" className="hover:text-white transition-colors flex items-center gap-3">
@@ -698,10 +699,15 @@ export default function Home() {
               <div className="bg-navy-blue/10 p-2.5 rounded-full flex items-center justify-center"><Mail className="w-5 h-5" /></div> admin@shineandspeak.com.au
             </a>
           </div>
-          {/* REPLACE: Swap /contact for your Calendly/TidyCal booking URL */}
-          <Link href="/contact" className="inline-flex items-center gap-2 bg-navy-blue text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-charcoal transition-all shadow-xl hover:-translate-y-1">
-            Book a Free Discovery Call <span>→</span>
-          </Link>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            {/* REPLACE: Swap /contact for your Calendly/TidyCal booking URL */}
+            <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-navy-blue text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-charcoal transition-all shadow-xl hover:-translate-y-1">
+              Book a Free Discovery Call <span>→</span>
+            </Link>
+            <Link href="/refer-a-client" className="inline-flex items-center justify-center gap-2 bg-white text-navy-blue px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all shadow-xl hover:-translate-y-1">
+              Refer a Client <span>→</span>
+            </Link>
+          </div>
         </div>
       </section>
     </main>
