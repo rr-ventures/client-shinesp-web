@@ -23,90 +23,23 @@ http {
     listen NGINX_PORT;
     server_name _;
 
-    # Root landing page
-    location = / {
-      root /app/root-public;
-      index index.html;
+    # Serve public/ static files directly with long-lived cache
+    location ~ \.(png|jpe?g|gif|webp|svg|ico|pdf|mp4|woff2?|ttf|eot)$ {
+      root /app/public;
+      expires 30d;
+      add_header Cache-Control "public";
     }
 
+    # Next.js static chunk assets
+    location /_next/static/ {
+      alias /app/.next/static/;
+      expires 1y;
+      add_header Cache-Control "public, immutable";
+    }
+
+    # Proxy everything else to the Next.js standalone server
     location / {
-      root /app/root-public;
-      try_files $uri $uri/ /index.html;
-    }
-
-    # v0 — serve public/ static files directly (standalone doesn't serve them)
-    location ~ ^/v0/(.+\.(?:png|jpe?g|gif|webp|svg|ico|pdf|mp4|woff2?|ttf|eot))$ {
-      alias /app/v0/public/$1;
-      expires 30d;
-      add_header Cache-Control "public";
-    }
-
-    # v0 app — proxy all other /v0/* to Next.js on port 3001
-    location /v0 {
       proxy_pass http://127.0.0.1:3001;
-      proxy_http_version 1.1;
-      proxy_set_header Upgrade $http_upgrade;
-      proxy_set_header Connection 'upgrade';
-      proxy_set_header Host $host;
-      proxy_set_header X-Real-IP $remote_addr;
-      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-      proxy_set_header X-Forwarded-Proto $scheme;
-      proxy_cache_bypass $http_upgrade;
-      proxy_read_timeout 300s;
-    }
-
-    # v1 — serve public/ static files directly
-    location ~ ^/v1/(.+\.(?:png|jpe?g|gif|webp|svg|ico|pdf|mp4|woff2?|ttf|eot))$ {
-      alias /app/v1/public/$1;
-      expires 30d;
-      add_header Cache-Control "public";
-    }
-
-    # v1 app — proxy all other /v1/* to Next.js on port 3002
-    location /v1 {
-      proxy_pass http://127.0.0.1:3002;
-      proxy_http_version 1.1;
-      proxy_set_header Upgrade $http_upgrade;
-      proxy_set_header Connection 'upgrade';
-      proxy_set_header Host $host;
-      proxy_set_header X-Real-IP $remote_addr;
-      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-      proxy_set_header X-Forwarded-Proto $scheme;
-      proxy_cache_bypass $http_upgrade;
-      proxy_read_timeout 300s;
-    }
-
-    # v2 — serve public/ static files directly
-    location ~ ^/v2/(.+\.(?:png|jpe?g|gif|webp|svg|ico|pdf|mp4|woff2?|ttf|eot))$ {
-      alias /app/v2/public/$1;
-      expires 30d;
-      add_header Cache-Control "public";
-    }
-
-    # v2 app — proxy all other /v2/* to Next.js on port 3003
-    location /v2 {
-      proxy_pass http://127.0.0.1:3003;
-      proxy_http_version 1.1;
-      proxy_set_header Upgrade $http_upgrade;
-      proxy_set_header Connection 'upgrade';
-      proxy_set_header Host $host;
-      proxy_set_header X-Real-IP $remote_addr;
-      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-      proxy_set_header X-Forwarded-Proto $scheme;
-      proxy_cache_bypass $http_upgrade;
-      proxy_read_timeout 300s;
-    }
-
-    # v3 — serve public/ static files directly
-    location ~ ^/v3/(.+\.(?:png|jpe?g|gif|webp|svg|ico|pdf|mp4|woff2?|ttf|eot))$ {
-      alias /app/v3/public/$1;
-      expires 30d;
-      add_header Cache-Control "public";
-    }
-
-    # v3 app — proxy all other /v3/* to Next.js on port 3004
-    location /v3 {
-      proxy_pass http://127.0.0.1:3004;
       proxy_http_version 1.1;
       proxy_set_header Upgrade $http_upgrade;
       proxy_set_header Connection 'upgrade';

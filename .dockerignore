@@ -6,19 +6,15 @@
 # Git
 .git
 
-# Non-version directories not needed in the build
-v1-app
-v2-app
+# Archived design versions — never built or deployed
+_archive
+
+# Non-build directories
 _temp
 docs
 deployment_logs
 .cursor
 
-# Misc dev files
-*.md
+# Dev files
 *.log
-generate-components.js
-generate-pages.js
-generate-placeholders.js
-generate_pages.py
 .cursorrules
