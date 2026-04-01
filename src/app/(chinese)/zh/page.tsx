@@ -40,32 +40,32 @@ export default function ChineseHomepage() {
             src="/shine_with_schoolkids.png"
             alt="Shine Yin Teoh, speech pathologist, working with children in a school setting"
             fill
-            className="object-cover saturate-[0.9] brightness-[0.95]"
+            className="object-cover saturate-[0.85] brightness-[1.05]"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#1A3F5C]/60 via-[#1A3F5C]/35 to-[#1A3F5C]/10"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-white/50 via-white/30 to-white/10"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-2xl">
-            <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold text-white mb-6 leading-[1.15] text-balance">
+            <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold text-navy-blue mb-6 leading-[1.15] text-balance drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
               悉尼言语治疗师
             </h1>
-            <p className="text-lg md:text-xl text-white/90 mb-10 leading-relaxed font-light drop-shadow-md">
+            <p className="text-lg md:text-xl text-charcoal mb-10 leading-relaxed font-medium drop-shadow-[0_1px_1px_rgba(255,255,255,0.6)]">
               帮助您或您的孩子自信沟通。个性化言语治疗 — 提供上门、学校或远程服务。提供中英双语服务。服务悉尼内西区及周边地区。
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 mb-10">
-              <Link href="/contact" className="btn-primary text-center text-lg py-4 shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-10">
+              <Link href="/contact" className="btn-primary text-center text-lg py-4 px-8 shadow-lg hover:-translate-y-1 transition-all duration-300 tracking-wide">
                 预约免费咨询
               </Link>
-              <Link href="/refer-a-client" className="text-center text-lg py-4 px-8 rounded-full font-semibold border-2 border-white text-white bg-white/15 backdrop-blur-sm hover:bg-white hover:text-navy-blue shadow-lg hover:-translate-y-1 transition-all duration-300">
+              <Link href="/refer-a-client" className="text-center text-lg py-4 px-8 rounded-full font-bold border-2 border-navy-blue text-navy-blue bg-white/70 backdrop-blur-sm hover:bg-navy-blue hover:text-white shadow-lg hover:-translate-y-1 transition-all duration-300 tracking-wide">
                 推荐客户
               </Link>
             </div>
-            <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-medium text-white/90">
-              <span className="flex items-center gap-2"><span className="w-5 h-5 rounded-full bg-sage-green flex items-center justify-center text-navy-blue text-xs">✓</span> 澳洲认证言语治疗师 (CPSP)</span>
-              <span className="flex items-center gap-2"><span className="w-5 h-5 rounded-full bg-sage-green flex items-center justify-center text-navy-blue text-xs">✓</span> NDIS 注册服务提供商</span>
-              <span className="flex items-center gap-2"><span className="w-5 h-5 rounded-full bg-sage-green flex items-center justify-center text-navy-blue text-xs">✓</span> Medicare 医疗保险提供商</span>
+            <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-navy-blue/80">
+              <span className="flex items-center gap-2"><span className="w-5 h-5 rounded-full bg-trust-teal/20 flex items-center justify-center text-trust-teal text-xs font-bold">✓</span> 澳洲认证言语治疗师 (CPSP)</span>
+              <span className="flex items-center gap-2"><span className="w-5 h-5 rounded-full bg-trust-teal/20 flex items-center justify-center text-trust-teal text-xs font-bold">✓</span> NDIS 注册服务提供商</span>
+              <span className="flex items-center gap-2"><span className="w-5 h-5 rounded-full bg-trust-teal/20 flex items-center justify-center text-trust-teal text-xs font-bold">✓</span> Medicare 医疗保险提供商</span>
             </div>
           </div>
         </div>
@@ -405,8 +405,8 @@ export default function ChineseHomepage() {
               阅读更多关于我的方法和资质 <span className="group-hover:translate-x-1 transition-transform">→</span>
             </Link>
           </div>
-          <div className="order-1 lg:order-2">
-            <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden premium-shadow group">
+          <div className="order-1 lg:order-2 flex justify-center">
+            <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden premium-shadow group">
               <div className="absolute inset-0 bg-navy-blue/5 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
               <Image
                 src="/shine-headshot-1200x1200.webp"
