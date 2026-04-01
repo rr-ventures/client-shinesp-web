@@ -122,18 +122,19 @@ export default function Home() {
             src="/shine_with_schoolkids.png"
             alt="Shine Yin Teoh, speech pathologist, working with children in a school setting"
             fill
-            className="object-cover saturate-[0.85] brightness-[1.05]"
+            className="object-cover saturate-[0.8] brightness-[1.0] contrast-[0.95]"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-white/50 via-white/30 to-white/10"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1A4D5C]/75 via-[#1A4D5C]/45 to-[#1A4D5C]/15"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0D2B3E]/30 via-transparent to-[#0D2B3E]/20"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-2xl">
-            <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold text-navy-blue mb-6 leading-[1.15] text-balance drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
+            <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold text-white mb-6 leading-[1.15] text-balance drop-shadow-lg">
               Speech Pathologist in Sydney NSW
             </h1>
-            <p className="text-lg md:text-xl text-charcoal mb-10 leading-relaxed font-medium drop-shadow-[0_1px_1px_rgba(255,255,255,0.6)]">
+            <p className="text-lg md:text-xl text-white/90 mb-10 leading-relaxed font-light drop-shadow-md">
               Personalised speech therapy delivered to your home, school, or online. Available in English and Mandarin. Serving Inner West Sydney and surrounds.
             </p>
             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-10">
@@ -141,14 +142,14 @@ export default function Home() {
               <Link href="/contact" className="btn-primary text-center text-lg py-4 px-8 shadow-lg hover:-translate-y-1 transition-all duration-300 tracking-wide">
                 Book a Free Discovery Call
               </Link>
-              <Link href="/refer-a-client" className="text-center text-lg py-4 px-8 rounded-full font-bold border-2 border-navy-blue text-navy-blue bg-white/70 backdrop-blur-sm hover:bg-navy-blue hover:text-white shadow-lg hover:-translate-y-1 transition-all duration-300 tracking-wide">
+              <Link href="/refer-a-client" className="text-center text-lg py-4 px-8 rounded-full font-bold border-2 border-white/80 text-white bg-white/15 backdrop-blur-sm hover:bg-white hover:text-navy-blue shadow-lg hover:-translate-y-1 transition-all duration-300 tracking-wide">
                 Refer a Client
               </Link>
             </div>
-            <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-navy-blue/80">
-              <span className="flex items-center gap-2"><span className="w-5 h-5 rounded-full bg-trust-teal/20 flex items-center justify-center text-trust-teal text-xs font-bold">✓</span> CPSP Certified</span>
-              <span className="flex items-center gap-2"><span className="w-5 h-5 rounded-full bg-trust-teal/20 flex items-center justify-center text-trust-teal text-xs font-bold">✓</span> NDIS Registered</span>
-              <span className="flex items-center gap-2"><span className="w-5 h-5 rounded-full bg-trust-teal/20 flex items-center justify-center text-trust-teal text-xs font-bold">✓</span> Medicare Provider</span>
+            <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-white/85">
+              <span className="flex items-center gap-2"><span className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center text-white text-xs font-bold">✓</span> CPSP Certified</span>
+              <span className="flex items-center gap-2"><span className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center text-white text-xs font-bold">✓</span> NDIS Registered</span>
+              <span className="flex items-center gap-2"><span className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center text-white text-xs font-bold">✓</span> Medicare Provider</span>
             </div>
           </div>
         </div>
@@ -471,7 +472,7 @@ export default function Home() {
             <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden premium-shadow group">
               <div className="absolute inset-0 bg-navy-blue/5 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
               <Image
-                src="/shine-headshot-1200x1200.webp"
+                src="/shine-headshot.webp"
                 alt="Shine Yin Teoh, Certified Practising Speech Pathologist"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -617,16 +618,16 @@ export default function Home() {
       <section className="py-24 bg-golden-amber text-white text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIi8+PC9zdmc+')] opacity-30"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-navy-blue">Ready to help you or your child thrive?</h2>
-          <p className="text-xl mb-10 max-w-2xl mx-auto text-navy-blue/80 font-medium">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">Ready to help you or your child thrive?</h2>
+          <p className="text-xl mb-10 max-w-2xl mx-auto text-white/85 font-medium">
             Book a free discovery call to talk about your needs — no obligation, no pressure.
           </p>
-          <div className="text-xl font-bold mb-10 flex flex-wrap justify-center gap-8 text-navy-blue">
-            <a href="tel:+61421608819" className="hover:text-white transition-colors flex items-center gap-3">
-              <div className="bg-navy-blue/10 p-2.5 rounded-full flex items-center justify-center"><Phone className="w-5 h-5" /></div> 0421 608 819
+          <div className="text-xl font-bold mb-10 flex flex-wrap justify-center gap-8 text-white">
+            <a href="tel:+61421608819" className="hover:text-white/70 transition-colors flex items-center gap-3">
+              <div className="bg-white/15 p-2.5 rounded-full flex items-center justify-center"><Phone className="w-5 h-5" /></div> 0421 608 819
             </a>
-            <a href="mailto:admin@shineandspeak.com.au" className="hover:text-white transition-colors flex items-center gap-3">
-              <div className="bg-navy-blue/10 p-2.5 rounded-full flex items-center justify-center"><Mail className="w-5 h-5" /></div> admin@shineandspeak.com.au
+            <a href="mailto:admin@shineandspeak.com.au" className="hover:text-white/70 transition-colors flex items-center gap-3">
+              <div className="bg-white/15 p-2.5 rounded-full flex items-center justify-center"><Mail className="w-5 h-5" /></div> admin@shineandspeak.com.au
             </a>
           </div>
           <div className="flex flex-col sm:flex-row justify-center gap-4">

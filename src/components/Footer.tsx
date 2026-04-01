@@ -117,7 +117,7 @@ export default function Footer() {
                 className="object-contain p-1"
               />
             </div>
-            <div className="text-center mt-2 text-xs text-blue-100/80 font-medium tracking-wide uppercase">Scan to Add on WeChat</div>
+            <div className="text-center mt-2 text-xs text-blue-100/80 font-medium tracking-wide">Scan to Add on WeChat</div>
           </div>
 
           <div className="mt-8 text-xs text-blue-100/80 space-y-2 font-medium tracking-wide uppercase">
