@@ -470,10 +470,9 @@ export default function Home() {
           <div className="order-1 lg:order-2">
             <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden premium-shadow group">
               <div className="absolute inset-0 bg-navy-blue/5 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
-              {/* REPLACE: Professional headshot of Shine Teoh, warm and approachable */}
               <Image
                 src="/shine-headshot-1200x1200.webp"
-                alt="Professional headshot of Shine Teoh"
+                alt="Shine Yin Teoh, Certified Practising Speech Pathologist"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
