@@ -93,20 +93,16 @@ export default function Footer() {
 
           <h3 className="text-lg font-serif font-medium mb-6 text-white tracking-wide">Follow Us</h3>
           <div className="flex gap-4 mb-8 text-sm">
-            {/* REPLACE: Add real LinkedIn URL */}
-            <a href="https://www.linkedin.com/company/shine-and-speak" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-golden-amber hover:text-navy-blue transition-all">in</a>
-            {/* REPLACE: Add real Facebook URL */}
-            <a href="https://www.facebook.com/shineandspeak" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-golden-amber hover:text-navy-blue transition-all">f</a>
-            {/* REPLACE: Add real Instagram URL */}
-            <a href="https://www.instagram.com/shineandspeak" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-golden-amber hover:text-navy-blue transition-all">ig</a>
+            <a href="https://www.facebook.com/people/Shine-and-Speak-Speech-Pathology/61575483066471/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-golden-amber hover:text-navy-blue transition-all">f</a>
+            <a href="https://www.instagram.com/shinenspeak" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-golden-amber hover:text-navy-blue transition-all">ig</a>
           </div>
 
-          {/* WeChat QR placeholder */}
+          {/* WeChat QR */}
           <div className="bg-white/5 p-4 rounded-2xl inline-block border border-white/10 backdrop-blur-sm">
             <div className="relative w-28 h-28 bg-white rounded-xl overflow-hidden shadow-inner">
               <Image
-                src="/wechat-qr-placeholder.webp"
-                alt="Scan to add on WeChat"
+                src="/wechat-qr.webp"
+                alt="Scan to add Shine and Speak on WeChat"
                 fill
                 className="object-contain p-2"
               />

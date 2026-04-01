@@ -34,16 +34,16 @@ export default function ChineseHomepage() {
       />
 
       {/* Section 1: HERO */}
-      <section className="relative min-h-[55vh] md:min-h-[60vh] flex items-center py-16 md:py-20 overflow-hidden">
+      <section className="relative min-h-[65vh] md:min-h-[70vh] flex items-center py-20 md:py-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/shine_with_schoolkids.png"
             alt="Shine Yin Teoh, speech pathologist, working with children in a school setting"
             fill
-            className="object-cover saturate-[0.85] brightness-[0.9]"
+            className="object-cover saturate-[0.9] brightness-[0.95]"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#1A3F5C]/75 via-[#1A3F5C]/50 to-[#1A3F5C]/15"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1A3F5C]/60 via-[#1A3F5C]/35 to-[#1A3F5C]/10"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
@@ -51,14 +51,14 @@ export default function ChineseHomepage() {
             <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold text-white mb-6 leading-[1.15] text-balance">
               悉尼言语治疗师
             </h1>
-            <p className="text-lg md:text-xl text-blue-50 mb-10 leading-relaxed font-light">
+            <p className="text-lg md:text-xl text-white/90 mb-10 leading-relaxed font-light drop-shadow-md">
               帮助您或您的孩子自信沟通。个性化言语治疗 — 提供上门、学校或远程服务。提供中英双语服务。服务悉尼内西区及周边地区。
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <Link href="/contact" className="btn-primary text-center text-lg py-4 shadow-lg hover:-translate-y-1 transition-all duration-300">
                 预约免费咨询
               </Link>
-              <Link href="/refer-a-client" className="btn-secondary text-center text-lg py-4 border-white text-white hover:bg-white hover:text-navy-blue shadow-lg hover:-translate-y-1 transition-all duration-300">
+              <Link href="/refer-a-client" className="text-center text-lg py-4 px-8 rounded-full font-semibold border-2 border-white text-white bg-white/15 backdrop-blur-sm hover:bg-white hover:text-navy-blue shadow-lg hover:-translate-y-1 transition-all duration-300">
                 推荐客户
               </Link>
             </div>
