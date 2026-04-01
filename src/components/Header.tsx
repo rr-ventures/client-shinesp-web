@@ -50,12 +50,12 @@ function NavDropdown({ label, links }: { label: string; links: { label: string; 
       onMouseLeave={() => setOpen(false)}
     >
       <button
-        className="flex items-center gap-1.5 text-charcoal hover:text-golden-amber transition text-sm font-medium py-2"
+        className="flex items-center gap-1.5 text-charcoal hover:text-trust-teal transition text-sm font-medium py-2"
         aria-expanded={open}
         aria-haspopup="true"
       >
         {label}
-        <svg className={`w-3.5 h-3.5 transition-transform duration-200 ${open ? "rotate-180 text-golden-amber" : "text-stone"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className={`w-3.5 h-3.5 transition-transform duration-200 ${open ? "rotate-180 text-trust-teal" : "text-stone"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
         </svg>
       </button>
@@ -105,8 +105,8 @@ export default function Header() {
 
         {/* Desktop top-bar items */}
         <div className="hidden lg:flex items-center gap-6">
-          <a href="tel:+61421608819" className="text-navy-blue font-medium text-sm hover:text-golden-amber transition flex items-center gap-2">
-            <span className="text-golden-amber">📞</span> 0421 608 819
+          <a href="tel:+61421608819" className="text-navy-blue font-medium text-sm hover:text-trust-teal transition flex items-center gap-2">
+            <span className="text-trust-teal">📞</span> 0421 608 819
           </a>
           {/* REPLACE: Insert Calendly/TidyCal booking URL below */}
           <Link
@@ -132,38 +132,46 @@ export default function Header() {
           )}
         </div>
 
-        {/* Mobile hamburger */}
-        <button
-          className="lg:hidden p-2 rounded-full text-navy-blue hover:bg-soft-blue transition"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label={mobileOpen ? "Close menu" : "Open menu"}
-          aria-expanded={mobileOpen}
-        >
-          {mobileOpen ? (
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          ) : (
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          )}
-        </button>
+        {/* Mobile utility bar: phone + primary CTA always visible */}
+        <div className="flex lg:hidden items-center gap-2">
+          <a href="tel:+61421608819" className="text-navy-blue font-medium text-xs hover:text-golden-amber transition flex items-center gap-1 px-2 py-1.5">
+            <span>📞</span>
+          </a>
+          <Link href="/contact" className="bg-golden-amber text-white text-xs font-bold px-3 py-1.5 rounded-full whitespace-nowrap">
+            Book Call
+          </Link>
+          <button
+            className="p-2 rounded-full text-navy-blue hover:bg-soft-blue transition"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileOpen}
+          >
+            {mobileOpen ? (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
+          </button>
+        </div>
       </div>
 
       {/* Desktop nav bar */}
       <nav className="hidden lg:block border-t border-gray-100 bg-white/50" aria-label="Main navigation">
         <div className="container mx-auto px-4 py-3 flex items-center justify-center gap-8">
           <NavDropdown label="Services" links={servicesLinks} />
-          <Link href="/how-it-works" className="text-sm font-medium text-charcoal hover:text-golden-amber transition">
+          <Link href="/how-it-works" className="text-sm font-medium text-charcoal hover:text-trust-teal transition">
             How It Works
           </Link>
           <NavDropdown label="Funding & Fees" links={fundingLinks} />
-          <Link href="/about" className="text-sm font-medium text-charcoal hover:text-golden-amber transition">
+          <Link href="/about" className="text-sm font-medium text-charcoal hover:text-trust-teal transition">
             About
           </Link>
           <NavDropdown label="Areas" links={areasLinks} />
-          <Link href="/contact" className="text-sm font-medium text-charcoal hover:text-golden-amber transition">
+          <Link href="/contact" className="text-sm font-medium text-charcoal hover:text-trust-teal transition">
             Contact
           </Link>
         </div>
@@ -213,7 +221,7 @@ export default function Header() {
               {mobileSection === "services" && (
                 <div className="bg-blue-50 px-4 py-2 space-y-1">
                   {servicesLinks.map((link) => (
-                    <Link key={link.href} href={link.href} onClick={() => setMobileOpen(false)} className="block py-2 text-navy-blue hover:text-golden-amber text-sm">
+                    <Link key={link.href} href={link.href} onClick={() => setMobileOpen(false)} className="block py-2 text-navy-blue hover:text-trust-teal text-sm">
                       {link.label}
                     </Link>
                   ))}
@@ -240,7 +248,7 @@ export default function Header() {
               {mobileSection === "funding" && (
                 <div className="bg-blue-50 px-4 py-2 space-y-1">
                   {fundingLinks.map((link) => (
-                    <Link key={link.href} href={link.href} onClick={() => setMobileOpen(false)} className="block py-2 text-navy-blue hover:text-golden-amber text-sm">
+                    <Link key={link.href} href={link.href} onClick={() => setMobileOpen(false)} className="block py-2 text-navy-blue hover:text-trust-teal text-sm">
                       {link.label}
                     </Link>
                   ))}
@@ -267,7 +275,7 @@ export default function Header() {
               {mobileSection === "areas" && (
                 <div className="bg-blue-50 px-4 py-2 space-y-1">
                   {areasLinks.map((link) => (
-                    <Link key={link.href} href={link.href} onClick={() => setMobileOpen(false)} className="block py-2 text-navy-blue hover:text-golden-amber text-sm">
+                    <Link key={link.href} href={link.href} onClick={() => setMobileOpen(false)} className="block py-2 text-navy-blue hover:text-trust-teal text-sm">
                       {link.label}
                     </Link>
                   ))}

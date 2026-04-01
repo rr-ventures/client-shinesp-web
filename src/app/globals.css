@@ -2,7 +2,9 @@
 
 @theme {
   --color-navy-blue: #112A46;
-  --color-golden-amber: #8B6B00; /* Deep gold — accessible on white (4.6:1) and dark navy (3.0:1 large text) */
+  --color-hero-overlay: #1A3F5C;
+  --color-trust-teal: #2A7B8E;
+  --color-golden-amber: #946B00; /* Accessible amber — 4.5:1+ white text on amber */
   --color-soft-blue: #F0F4F8;
   --color-sage-green: #E8EDE9;
   --color-warm-white: #FCFCFA;
@@ -63,7 +65,7 @@
     box-shadow: 0 4px 14px rgba(212, 175, 55, 0.3);
   }
   .btn-primary:hover {
-    background-color: #6B5200;
+    background-color: #7A5800;
     box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
     transform: translateY(-2px);
   }
